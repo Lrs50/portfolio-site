@@ -1,0 +1,40 @@
+{
+    "title": "Mon Portefeuille",
+    "author": "Lucas Reis",
+    "buttons": {
+        "theme": {
+            "light": "🌞 Clair",
+            "dark": "🌙 Sombre"
+          },
+      "language": "🇫🇷 Langue"
+    },
+    "nav": {
+      "about": "À propos",
+      "projects": "Projets",
+      "skills": "Compétences",
+      "contact": "Contact"
+    },
+    "sections": {
+      "about": {
+        "title": "À propos de moi",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elit risus, accumsan sit amet nisl eget, ultricies tincidunt velit. Mauris porttitor gravida risus, lacinia sollicitudin magna vulputate ut. In purus arcu, blandit ultrices rhoncus eget, blandit eu lorem. Quisque semper purus nisi, eget euismod ante tincidunt in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+      },
+      "projects": {
+        "title": "Mes Projets",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elit risus, accumsan sit amet nisl eget, ultricies tincidunt velit. Mauris porttitor gravida risus, lacinia sollicitudin magna vulputate ut. In purus arcu, blandit ultrices rhoncus eget, blandit eu lorem. Quisque semper purus nisi, eget euismod ante tincidunt in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+      },
+      "skills": {
+        "title": "Mes Compétences",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elit risus, accumsan sit amet nisl eget, ultricies tincidunt velit. Mauris porttitor gravida risus, lacinia sollicitudin magna vulputate ut. In purus arcu, blandit ultrices rhoncus eget, blandit eu lorem. Quisque semper purus nisi, eget euismod ante tincidunt in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+      },
+      "contact": {
+        "title": "Contact",
+        "form": {
+          "name": "Nom :",
+          "message": "Message :",
+          "submit": "Envoyer"
+        }
+      }
+    }
+  }
+  
