@@ -1,61 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-
-<head> 
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="Content-Language" content="pt-br"/>
-    <meta name="description" content="Portifólio de Lucas Reis, Desenvolvedor de Software, Cientista e Engenheiro de Dados.">
-    <title data-i18n="title"></title>
-    <link rel="stylesheet" href="style.css" />
-
-</head>
-
-<body> 
-
-    <header> 
-        <button id="tema" data-i18n-group="buttons.theme"></button>
-        <button id="lingua" data-i18n="buttons.language"></button>
-    </header>
-    <h1 data-i18n="author"></h1>
-    <nav>
-        <lu>
-            <li><a href="#sobre" data-i18n="nav.about"></a></li>
-            <li><a href="#projetos" data-i18n="nav.projects"></a></li>
-            <li><a href="#habilidades" data-i18n="nav.skills"></a></li>
-            <li><a href="#contato" data-i18n="nav.contact"></a></li>
-        </lu>
-    </nav>
-
-    <section id="sobre">
-        <h2 data-i18n="sections.about.title"></h2>
-        <p data-i18n="sections.about.text"></p>
-    </section>
-
-    <section id="projetos">
-        <h2 data-i18n="sections.projects.title"></h2>
-        <p data-i18n="sections.projects.text"></p>    
-    </section>
-    
-    <section id="Habilidades">
-        <h2 data-i18n="sections.skills.title"></h2>
-        <p data-i18n="sections.skills.text"></p>
-    </section>
-
-    <section id="contato">
-        <h2 data-i18n="sections.contact.title"></h2>
-        <form> 
-            <label for="nome" data-i18n="sections.contact.form.name"></label>
-            <input type="text" id="nome" name="nome" required/>
-
-            <label for="mensagem" data-i18n="sections.contact.form.message"></label>
-            <textarea id="mensagem" name="messagem" required></textarea>/>
-            
-            <button type="submit" data-i18n="sections.contact.form.submit"></button>
-        </form>
-    </section>
-
-    <script src="script.js"></script>
-</body>
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
