@@ -11,53 +11,31 @@ function NavItem({text,to }){
 
 export default function NavBar(){
 
-    // const menuRef = useRef(null)
-    // const buttonRef = useRef(null)
-    // const [menuOpen, setMenuOpen] = useState(false)
-
-    // useEffect(() => {
-    // function handleClickOutside(e) {
-    //     const clickedOutsideMenu = menuRef.current && !menuRef.current.contains(e.target)
-    //     const clickedButton = buttonRef.current && buttonRef.current.contains(e.target)
-
-    //     if (clickedOutsideMenu && !clickedButton) {
-    //     setMenuOpen(false)
-    //     }
-    // }
-
-//   document.addEventListener('mousedown', handleClickOutside)
-//   return () => document.removeEventListener('mousedown', handleClickOutside)
-// }, [])
+    const [selectedLang, setSelectedLang] = useState("🇬🇧");
+    const [userSession, setUserSession] = useState("Home");
 
     return (
         <nav className="w-[95%] mx-auto mt-4 px-3 py-2 flex items-center 
                         justify-between bg-black shadow-md rounded-full">
 
             <Dropdown
-                label="🌍"
-                options={["🇧🇷", "🇺🇸", "🇪🇸"]}
-                onSelect={(option) => console.log("Selected:", option)}
+                label={selectedLang}
+                options={["🇧🇷", "🇬🇧", "🇫🇷","🇪🇸"]}
+                onSelect={(option) => setSelectedLang(option)}
             />
             <h3 className="text-white text-xl px-6 whitespace-nowrap" >My Portfolio</h3>
 
-            {/* <button className="text-white text-3xl md:hidden px-4" onClick={() => setMenuOpen(!menuOpen)}>☰</button> */}
+            {/* NabBar MOBILE */}
+
             <Dropdown
-                label="☰"
+                className = "block md:hidden"
+                label={`☰ ${userSession}`}
                 options={["Home","Projects","About","Tools","Contact"]}
-                onSelect={(option) => console.log("Selected:", option)}
+                onSelect={(option) => setUserSession(option)}
                 position = "right"
                 
             />
-            {/* NabBar MOBILE */}
-            {/* <div className={`${menuOpen? 'flex':'hidden'}
-                            absolute top-[70px] right-[15px] flex-col items-center gap-2 
-                            bg-black p-4 rounded-xl shadow-lg z-50 md:hidden`}> 
-                <NavItem text="Home" to ="Home"/>
-                <NavItem text="Projects" to ="Projects"/>
-                <NavItem text="About" to ="About"/>
-                <NavItem text="Tools" to ="Tools"/>
-                <NavItem text="Contact" to ="Contact"/>
-            </div> */}
+ 
             {/* NabBar Desktop */}
             <div className="hidden md:flex md:flex-wrap md:gap-2 md:justify-end md:w-full"> 
                 <NavItem text="Home" to ="Home"/>

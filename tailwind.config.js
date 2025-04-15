@@ -9,7 +9,11 @@ module.exports = {
       colors:{
         mainPurple:'#701438',
         secondaryPurple:'#A3466A'
-      }
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        urbanist: ['Urbanist', 'sans-serif'],
+      },
     },
   },
   plugins: [],
