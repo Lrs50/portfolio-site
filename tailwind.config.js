@@ -14,6 +14,9 @@ module.exports = {
         sans: ['Inter', 'sans-serif'],
         urbanist: ['Urbanist', 'sans-serif'],
       },
+      screens: {
+        'desktop': '768px',       // custom small screen
+      },
     },
   },
   plugins: [],

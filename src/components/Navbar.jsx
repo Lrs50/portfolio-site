@@ -28,7 +28,7 @@ export default function NavBar(){
             {/* NabBar MOBILE */}
 
             <Dropdown
-                className = "block md:hidden"
+                className = "block desktop:hidden"
                 label={`☰ ${userSession}`}
                 options={["Home","Projects","About","Tools","Contact"]}
                 onSelect={(option) => setUserSession(option)}
@@ -37,7 +37,7 @@ export default function NavBar(){
             />
  
             {/* NabBar Desktop */}
-            <div className="hidden md:flex md:flex-wrap md:gap-2 md:justify-end md:w-full"> 
+            <div className="hidden desktop:flex desktop:flex-wrap desktop:gap-2 desktop:justify-end desktop:w-full"> 
                 <NavItem text="Home" to ="Home"/>
                 <NavItem text="Projects" to ="Projects"/>
                 <NavItem text="About" to ="About"/>
