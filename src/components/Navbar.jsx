@@ -23,7 +23,8 @@ export default function NavBar(){
                 options={["🇧🇷", "🇬🇧", "🇫🇷","🇪🇸"]}
                 onSelect={(option) => setSelectedLang(option)}
             />
-            <h3 className="text-white text-xl px-6 whitespace-nowrap" >My Portfolio</h3>
+            <h3 className="absolute left-1/2 -translate-x-1/2 text-white text-xl
+            desktop:static desktop:translate-x-0 desktop:left-auto  px-6 whitespace-nowrap" >My Portfolio</h3>
 
             {/* NabBar MOBILE */}
 
