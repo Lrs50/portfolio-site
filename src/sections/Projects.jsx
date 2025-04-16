@@ -41,6 +41,9 @@ function Project({ title = "", img = "", link = "" }) {
 }
 
 export default function Projects() {
+
+    const animation = { duration: 1000, easing: (t) => t };
+
     const [sliderRef,slider] = useKeenSlider({
         loop: true,
         renderMode: "performance",
@@ -49,21 +52,25 @@ export default function Projects() {
         spacing: 15,
         },
         dragSpeed: 0.5,
+        created(s) {
+            setTimeout(() => {
+                s.moveToIdx(s.track.details.abs + 1, true, animation);
+            }, 3000);
+        },
+        animationEnded(s) {
+            setTimeout(() => {
+              s.moveToIdx(s.track.details.abs + 1, true, animation);
+            }, 3000);
+        },
     });
+
     const intervalRef = useRef(null);
-    useEffect(() => {  
-        if (!slider.current) return;
 
-        // Criar um intervalo que muda para o próximo slide a cada 5 segundos
-        intervalRef.current = setInterval(() => {
-          const next = slider.current.track.details.abs + 1;
-          slider.current.moveToIdx(next); // chama o próximo slide
-        }, 3000);
-      
-        // Limpar o intervalo quando o componente for desmontado
-        return () => clearInterval(intervalRef.current);
-      }, [slider]);
-
+    const [sliderInstance, setSliderInstance] = useKeenSlider({
+      loop: true,
+      slides: { perView: 4, spacing: 15 },
+    });
+    
     const projects = [
         { title: "Projeto 1", img: "src/imgs/breakfast_timeseries.png", link: "#" },
         { title: "Projeto 2", img: "src/imgs/breakfast_timeseries.png", link: "#" },
@@ -83,7 +90,7 @@ export default function Projects() {
 
             <div
             ref={sliderRef}
-            className="keen-slider mt-12 px-4"
+            className="keen-slider mt-12"
             style={{ overflow: "visible" }}
             >
             {projects.map((proj, i) => (
