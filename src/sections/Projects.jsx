@@ -192,7 +192,6 @@ export default function Projects() {
 
 
     const [currentSlide, setCurrentSlide] = useState(0);
-    const animation = { duration: 1000, easing: (t) => t };
     const [sliderRef,slider] = useKeenSlider({
         loop: true,
         renderMode: "performance",
@@ -201,16 +200,6 @@ export default function Projects() {
         spacing: 15,
         },
         dragSpeed: 0.5,
-        created(s) {
-            setTimeout(() => {
-                s.moveToIdx(s.track.details.abs + 1, true, animation);
-            }, 10000);
-        },
-        animationEnded(s) {
-            setTimeout(() => {
-              s.moveToIdx(s.track.details.abs + 1, true, animation);
-            }, 10000);
-        },
         slideChanged(s) {
           setCurrentSlide(s.track.details.rel);
         },
