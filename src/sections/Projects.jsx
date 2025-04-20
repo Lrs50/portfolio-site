@@ -1,10 +1,67 @@
-import React, {useRef, useState,useEffect } from "react";
-import { FaArrowRight } from "react-icons/fa";
-import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import React, {useRef, useState,useEffect } from "react";
+import { BsBookmarkPlusFill } from "react-icons/bs";
+import { useKeenSlider } from "keen-slider/react";
+import { FaPython, FaGitAlt, FaDocker, FaLinux, FaAws, FaCode } from 'react-icons/fa';
+import {
+  SiC,
+  SiCplusplus,
+  SiUnity,
+  SiGnubash,
+  SiPandas,
+  SiNumpy,
+  SiApacheairflow,
+  SiStreamlit,
+  SiSelenium,
+  SiFastapi,
+  SiPytorch,
+  SiScikitlearn,
+  SiQiskit,
+  SiGooglecloud,
+  SiApachespark,
+} from 'react-icons/si';
+import { TbSql } from 'react-icons/tb';
+import { LiaChartBarSolid } from 'react-icons/lia';
+import { GiArtificialIntelligence } from 'react-icons/gi';
 
-function Project({ title = "", img = "", link = "" }) {
+
+const iconSources = {
+  python: { icon: FaPython, label: "Python" },
+  sql: { icon: TbSql, label: "SQL" },
+  c: { icon: SiC, label: "C" },
+  cplusplus: { icon: SiCplusplus, label: "C++" },
+  csharp: { icon: FaCode, label: "C#" },
+  unity: { icon: SiUnity, label: "Unity" },
+  bash: { icon: SiGnubash, label: "Bash" },
+  git: { icon: FaGitAlt, label: "Git" },
+  pandas: { icon: SiPandas, label: "Pandas" },
+  numpy: { icon: SiNumpy, label: "NumPy" },
+  pyspark: { icon: SiApachespark, label: "PySpark" },
+  airflow: { icon: SiApacheairflow, label: "Apache Airflow" },
+  streamlit: { icon: SiStreamlit, label: "Streamlit" },
+  selenium: { icon: SiSelenium, label: "Selenium" },
+  beautifulsoup: { icon: FaCode, label: "BeautifulSoup" },
+  fastapi: { icon: SiFastapi, label: "FastAPI" },
+  pytorch: { icon: SiPytorch, label: "PyTorch" },
+  scikitlearn: { icon: SiScikitlearn, label: "Scikit-Learn" },
+  prophet: { icon: LiaChartBarSolid, label: "Prophet" },
+  xgboost: { icon: GiArtificialIntelligence, label: "XGBoost" },
+  statsmodels: { icon: LiaChartBarSolid, label: "Statsmodels" },
+  pennylane: { icon: GiArtificialIntelligence, label: "Pennylane" },
+  qiskit: { icon: SiQiskit, label: "Qiskit" },
+  algoritmosgeneticos: { icon: GiArtificialIntelligence, label: "Algoritmos Genéticos" },
+  docker: { icon: FaDocker, label: "Docker" },
+  linux: { icon: FaLinux, label: "Linux" },
+  googlecloud: { icon: SiGooglecloud, label: "Google Cloud" },
+  aws: { icon: FaAws, label: "AWS" },
+};
+
+
+
+function Project({ title = "", img = "",desc="" , tools=[]}) {
+  const [showDetails, setShowDetails] = useState(false);
   return (
+    <>
     <div
       className="keen-slider__slide flex justify-center"
       style={{ overflow: "visible" }}
@@ -29,21 +86,109 @@ function Project({ title = "", img = "", link = "" }) {
             className="relative z-10 w-full rounded-3xl object-cover shadow-xl rounded-br-none"
           />
 
-          <div className="absolute bottom-1 right-1 bg-neutral-900 rounded-full p-3 shadow-lg z-20">
-            <a href={link} target="_blank" rel="noopener noreferrer">
-              <FaArrowRight className="text-white w-4 h-4 -rotate-45 transition hover:scale-125" />
-            </a>
+          <div className="absolute -bottom-9 -right-5 p-3 z-20">
+          <button onClick={() => setShowDetails(true)}>
+            <BsBookmarkPlusFill className="text-mainPurple w-16 h-16 transition hover:scale-125" />
+          </button>
           </div>
         </div>
       </div>
     </div>
+    {showDetails && (
+      <MoreDetails
+        title={title}
+        desc={desc}
+        tools={tools}
+        onClose={() => setShowDetails(false)}
+      />
+    )}
+    </>
+  );
+}
+
+function MoreDetails({ title = "", desc = "", tools = [], onClose }) {
+
+  return (
+    <div className="fixed inset-0 z-[999] bg-black/50 backdrop-blur-sm flex justify-center items-center p-6">
+    <div className="relative bg-offWhite rounded-3xl w-[70vw] max-w-4xl p-6 shadow-lg">
+      <button
+        onClick={onClose}
+        className="absolute top-3 right-3 text-black text-2xl hover:text-red-500"
+      >
+        &times;
+      </button>
+      
+      <p className="mb-5 text-center text-3xl font-semibold">{title}</p>
+  
+      <div className="mb-5">
+        <div className="flex items-center gap-2">
+          <p className="text-justify text-xs font-extralight">Ferramentas</p>
+          <hr className="flex-grow border-t border-black/20" />
+        </div>
+  
+        <div className="flex flex-wrap gap-2 justify-center">
+          {tools.map((tool) => {
+            const toolData = iconSources[tool];
+            if (!toolData) return null;
+            const { icon: Icon, label } = toolData;
+            return (
+              <div key={tool} className="relative group flex flex-col items-center">
+                <Icon className="text-[25px] text-gray-700 hover:scale-125" />
+                <div className="absolute -bottom-6 opacity-0 group-hover:opacity-100 transition bg-black text-white text-xs px-2 py-1 rounded pointer-events-none whitespace-nowrap z-50">
+                  {label}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+  
+        <hr className="flex-grow border-t border-black/20 mt-4" />
+      </div>
+  
+      <p className="text-justify">{desc}</p>
+    </div>
+  </div>
   );
 }
 
 export default function Projects() {
 
     const animation = { duration: 1000, easing: (t) => t };
+    const desc = `O preço do café e dos ovos disparou. Mas... e os outros itens do café da manhã?
 
+    Foi com essa dúvida que surgiu meu novo projeto: uma solução completa para prever os preços dos principais alimentos consumidos no café da manhã pelos próximos 6 meses. ☕🍞🥚
+    `;
+
+    const tools = [
+      "python",
+      "sql",
+      "c",
+      "cplusplus",
+      "csharp",
+      "unity",
+      "bash",
+      "git",
+      "pandas",
+      "numpy",
+      "pyspark",
+      "airflow",
+      "streamlit",
+      "selenium",
+      "beautifulsoup",
+      "fastapi",
+      "pytorch",
+      "scikitlearn",
+      "prophet",
+      "xgboost",
+      "statsmodels",
+      "pennylane",
+      "qiskit",
+      "algoritmosgeneticos",
+      "docker",
+      "linux",
+      "googlecloud",
+      "aws"
+    ];
     const [sliderRef,slider] = useKeenSlider({
         loop: true,
         renderMode: "performance",
@@ -55,12 +200,12 @@ export default function Projects() {
         created(s) {
             setTimeout(() => {
                 s.moveToIdx(s.track.details.abs + 1, true, animation);
-            }, 3000);
+            }, 5000);
         },
         animationEnded(s) {
             setTimeout(() => {
               s.moveToIdx(s.track.details.abs + 1, true, animation);
-            }, 3000);
+            }, 5000);
         },
     });
 
@@ -72,12 +217,12 @@ export default function Projects() {
     });
     
     const projects = [
-        { title: "Projeto 1", img: "src/imgs/breakfast_timeseries.png", link: "#" },
-        { title: "Projeto 2", img: "src/imgs/breakfast_timeseries.png", link: "#" },
-        { title: "Projeto 3", img: "src/imgs/breakfast_timeseries.png", link: "#" },
-        { title: "Projeto 4", img: "src/imgs/breakfast_timeseries.png", link: "#" },
-        { title: "Projeto 5", img: "src/imgs/breakfast_timeseries.png", link: "#" },
-        { title: "Projeto 6", img: "src/imgs/breakfast_timeseries.png", link: "#" },
+        { title: "Projeto 1", img: "src/imgs/breakfast_timeseries.png", desc:desc, tools:tools},
+        { title: "Projeto 2", img: "src/imgs/breakfast_timeseries.png", desc:desc, tools:tools},
+        { title: "Projeto 3", img: "src/imgs/breakfast_timeseries.png", desc:desc, tools:tools},
+        { title: "Projeto 4", img: "src/imgs/breakfast_timeseries.png", desc:desc, tools:tools},
+        { title: "Projeto 5", img: "src/imgs/breakfast_timeseries.png", desc:desc, tools:tools},
+        { title: "Projeto 6", img: "src/imgs/breakfast_timeseries.png", desc:desc, tools:tools},
     ];
 
 
@@ -94,10 +239,12 @@ export default function Projects() {
             style={{ overflow: "visible" }}
             >
             {projects.map((proj, i) => (
-                <Project key={i} title={proj.title} img={proj.img} link={proj.link} />
+                <Project key={i} title={proj.title} img={proj.img} desc={proj.desc} tools={proj.tools} />
             ))}
             </div>
         </div>
         </div>
+
+
     );
 }

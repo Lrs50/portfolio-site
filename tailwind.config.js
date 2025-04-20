@@ -8,7 +8,8 @@ module.exports = {
     extend: {
       colors:{
         mainPurple:'#701438',
-        secondaryPurple:'#A3466A'
+        secondaryPurple:'#A3466A',
+        offWhite:'#F2F4F7'
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
