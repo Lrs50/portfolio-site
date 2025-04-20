@@ -23,7 +23,7 @@ import {
 import { TbSql } from 'react-icons/tb';
 import { LiaChartBarSolid } from 'react-icons/lia';
 import { GiArtificialIntelligence } from 'react-icons/gi';
-
+import { IoIosArrowBack ,IoIosArrowForward } from "react-icons/io";
 
 const iconSources = {
   python: { icon: FaPython, label: "Python" },
@@ -153,7 +153,7 @@ function MoreDetails({ title = "", desc = "", tools = [], onClose }) {
 
 export default function Projects() {
 
-    const animation = { duration: 1000, easing: (t) => t };
+
     const desc = `O preço do café e dos ovos disparou. Mas... e os outros itens do café da manhã?
 
     Foi com essa dúvida que surgiu meu novo projeto: uma solução completa para prever os preços dos principais alimentos consumidos no café da manhã pelos próximos 6 meses. ☕🍞🥚
@@ -189,6 +189,10 @@ export default function Projects() {
       "googlecloud",
       "aws"
     ];
+
+
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const animation = { duration: 1000, easing: (t) => t };
     const [sliderRef,slider] = useKeenSlider({
         loop: true,
         renderMode: "performance",
@@ -200,20 +204,16 @@ export default function Projects() {
         created(s) {
             setTimeout(() => {
                 s.moveToIdx(s.track.details.abs + 1, true, animation);
-            }, 5000);
+            }, 10000);
         },
         animationEnded(s) {
             setTimeout(() => {
               s.moveToIdx(s.track.details.abs + 1, true, animation);
-            }, 5000);
+            }, 10000);
         },
-    });
-
-    const intervalRef = useRef(null);
-
-    const [sliderInstance, setSliderInstance] = useKeenSlider({
-      loop: true,
-      slides: { perView: 4, spacing: 15 },
+        slideChanged(s) {
+          setCurrentSlide(s.track.details.rel);
+        },
     });
     
     const projects = [
@@ -228,11 +228,23 @@ export default function Projects() {
 
     return (
         <div className="w-full py-24 bg-[url('./imgs/bg-texture.png')] overflow-x-hidden bg-cover bg-center">
-        <div className="-mt-10 ml-[20px]">
+        <div className="-mt-10 mx-[40px]">
             <h1 className="text-5xl whitespace-nowrap text-white font-medium leading right text-gray-900 font-inter">
             My <span className="text-mainPurple font-semibold">Projects</span>
             </h1>
 
+            <div className="relative  ">
+
+            <IoIosArrowForward 
+            className="absolute text-white text-7xl -right-10 top-1/2 transform -translate-y-1/2 z-10
+            hover:scale-125 transition-transform duration-300 cursor-pointer" 
+            onClick={() => slider.current?.next()}/>
+
+            <IoIosArrowBack
+            className="absolute text-white text-7xl -left-10 top-1/2 transform -translate-y-1/2 z-10
+            hover:scale-125 transition-transform duration-300 cursor-pointer"
+            onClick={() => slider.current?.prev()}/>
+            
             <div
             ref={sliderRef}
             className="keen-slider mt-12"
@@ -242,6 +254,17 @@ export default function Projects() {
                 <Project key={i} title={proj.title} img={proj.img} desc={proj.desc} tools={proj.tools} />
             ))}
             </div>
+            </div>
+        
+        </div>
+        <div className="flex flex-wrap items-center gap-1 justify-center mt-8">
+          
+          {[...Array(projects.length)].map((_,i) => {
+            if (i===currentSlide){
+              return <div className="rounded-full bg-mainPurple w-7 h-2"></div>
+            }
+            return <div className="rounded-full bg-offWhite justify-center w-2 h-2"></div>
+        })}
         </div>
         </div>
 
