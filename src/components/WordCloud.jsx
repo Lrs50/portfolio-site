@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import ReactWordcloud from 'react-wordcloud';
 
 const words = [
@@ -59,6 +59,8 @@ const words = [
 ];
 
 export default function WordCloudSection() {
+  const containerRef = useRef(null);
+  
   // Add custom callbacks for the word cloud
   const getCallback = useCallback((callback) => {
     return (word, event) => {
@@ -75,8 +77,8 @@ export default function WordCloudSection() {
       element.style.transition = `all ${transitionDuration}`;
       
       if (isActive) {
-        // Instead of scaling which moves the position, increase text size slightly
-        element.style.fontSize = `${parseInt(getComputedStyle(element).fontSize) * 1.15}px`;
+        // Increase font size
+        element.style.fontSize = `${parseInt(getComputedStyle(element).fontSize) * 1.25}px`;
         element.style.color = color;
         element.style.fontWeight = fontWeight;
         element.style.textShadow = textShadow;
@@ -119,8 +121,33 @@ export default function WordCloudSection() {
     ]
   };
 
+  // Using useEffect to remove overflow hidden from all SVG containers after rendering
+  useEffect(() => {
+    if (containerRef.current) {
+      // Give time for the word cloud to render
+      setTimeout(() => {
+        // Find all SVG elements and their parent containers
+        const svgElements = containerRef.current.querySelectorAll('svg');
+        const divElements = containerRef.current.querySelectorAll('div');
+        
+        // Remove overflow hidden from SVG elements
+        svgElements.forEach(svg => {
+          svg.style.overflow = 'visible';
+        });
+        
+        // Remove overflow hidden from all container divs
+        divElements.forEach(div => {
+          div.style.overflow = 'visible';
+        });
+      }, 1000);
+    }
+  }, []);
+
   return (
-    <div style={{ width: '100%', height: '500px' }}>
+    <div 
+      ref={containerRef}
+      className="w-full h-[500px] overflow-visible relative"
+    >
       <ReactWordcloud
         words={words}
         options={options}
