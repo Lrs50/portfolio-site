@@ -13,6 +13,7 @@ const words = [
   { text: "Time Series", value: 70 },
   { text: "Classification", value: 70 },
   { text: "Regression", value: 70 },
+  { text: "Quantum Computing", value: 70 },
   { text: "Python", value: 70 },
   { text: "SQL", value: 65 },
   { text: "Docker", value: 60 },
