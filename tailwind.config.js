@@ -9,7 +9,10 @@ module.exports = {
       colors:{
         mainPurple:'#701438',
         secondaryPurple:'#A3466A',
-        offWhite:'#F2F4F7'
+        offWhite:'#F2F4F7',
+        offBlack:'#272727',
+        pastelOrange: '#ffead5',
+        darkBlue : '#475467'
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

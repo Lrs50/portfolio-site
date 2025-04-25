@@ -218,7 +218,7 @@ export default function Projects() {
     return (
         <div className="w-full py-24 bg-[url('./imgs/bg-texture.png')] overflow-x-hidden bg-cover bg-center">
         <div className="-mt-10 mx-[40px]">
-            <h1 className="text-5xl whitespace-nowrap text-white font-medium leading right text-gray-900 font-inter">
+            <h1 className="text-5xl text-center text-white font-medium leading right text-gray-900 font-inter">
             My <span className="text-mainPurple font-semibold">Projects</span>
             </h1>
 
