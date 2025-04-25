@@ -63,7 +63,7 @@ export default function AboutMe() {
         My <span className="text-mainPurple font-semibold">Trajectory</span>
       </h1>
       
-      <div className="relative w-full max-w-3xl">
+      <div className="relative w-full max-w-3xl mb-10">
         {/* Dotted line that matches the circle's border-dashed style */}
         <div className="absolute left-1/2 top-0 bottom-0 w-0 border-l-2 border-dashed border-black -translate-x-[1px]"></div>
         
