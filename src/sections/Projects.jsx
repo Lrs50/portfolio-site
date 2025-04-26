@@ -25,7 +25,7 @@ import { TbSql } from 'react-icons/tb';
 import { LiaChartBarSolid } from 'react-icons/lia';
 import { GiArtificialIntelligence } from 'react-icons/gi';
 import { IoIosArrowBack ,IoIosArrowForward } from "react-icons/io";
-
+import { TbBrandGithubFilled,TbExternalLink } from 'react-icons/tb';
 
 const iconSources = {
   python: { icon: FaPython, label: "Python" },
@@ -59,7 +59,7 @@ const iconSources = {
 };
 
 
-function Project({ title = "", img = "",desc="" , tools=[]}) {
+function Project({ title = "", img = "",desc="",githubLink="", websiteLink="", tools=[]}) {
   const [showDetails, setShowDetails] = useState(false);
   return (
     <>
@@ -100,6 +100,8 @@ function Project({ title = "", img = "",desc="" , tools=[]}) {
         title={title}
         desc={desc}
         tools={tools}
+        githubLink={githubLink}
+        websiteLink={websiteLink}
         onClose={() => setShowDetails(false)}
       />
     )}
@@ -107,48 +109,73 @@ function Project({ title = "", img = "",desc="" , tools=[]}) {
   );
 }
 
-function MoreDetails({ title = "", desc = "", tools = [], onClose }) {
-
+function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "", tools = [], onClose }) {
   return (
     <div className="fixed inset-0 z-[999] bg-black/50 backdrop-blur-sm flex justify-center items-center p-6">
-    <div className="relative bg-offWhite rounded-3xl w-[70vw] max-w-4xl p-6 shadow-lg">
-      <button
-        onClick={onClose}
-        className="absolute top-3 right-3 text-black text-2xl hover:text-red-500"
-      >
-        &times;
-      </button>
-      
-      <p className="mb-5 text-center text-3xl font-semibold">{title}</p>
-  
-      <div className="mb-5">
-        <div className="flex items-center gap-2">
-          <p className="text-justify text-xs font-extralight">Ferramentas</p>
-          <hr className="flex-grow border-t border-black/20" />
-        </div>
-  
-        <div className="flex flex-wrap gap-2 justify-center">
-          {tools.map((tool) => {
-            const toolData = iconSources[tool];
-            if (!toolData) return null;
-            const { icon: Icon, label } = toolData;
-            return (
-              <div key={tool} className="relative group flex flex-col items-center">
-                <Icon className="text-[25px] text-gray-700 hover:scale-125" />
-                <div className="absolute -bottom-6 opacity-0 group-hover:opacity-100 transition bg-black text-white text-xs px-2 py-1 rounded pointer-events-none whitespace-nowrap z-50">
-                  {label}
+      <div className="relative bg-offWhite rounded-3xl w-[85vw] max-w-4xl p-6 shadow-lg">
+        <button
+          onClick={onClose}
+          className="absolute -top-1 right-2 text-black text-4xl hover:text-red-500"
+        >
+          &times;
+        </button>
+
+        <p className="mb-5 text-center text-3xl font-semibold">{title}</p>
+
+        <div className="mb-5">
+          <div className="flex items-center gap-2">
+            <p className="text-justify text-xs font-extralight">Ferramentas</p>
+            <hr className="flex-grow border-t border-black/20" />
+          </div>
+
+          <div className="flex flex-wrap gap-2 justify-center">
+            {tools.map((tool) => {
+              const toolData = iconSources[tool];
+              if (!toolData) return null;
+              const { icon: Icon, label } = toolData;
+              return (
+                <div key={tool} className="relative group flex flex-col items-center">
+                  <Icon className="text-[25px] text-gray-700 hover:scale-125 transition-transform duration-300 ease-in-out" />
+                  <div className="absolute -bottom-6 opacity-0 group-hover:opacity-100 transition bg-black text-white text-xs px-2 py-1 rounded pointer-events-none whitespace-nowrap z-50">
+                    {label}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
+
+          <hr className="flex-grow border-t border-black/20 mt-4" />
         </div>
-  
-        <hr className="flex-grow border-t border-black/20 mt-4" />
+
+        <p className="text-justify">{desc}</p>
+        
+        <hr className="flex-grow border-t border-black/20 my-4" />
+
+        <div className="flex items-center justify-start gap-4">
+          {githubLink && (
+            <button
+              className="flex items-center justify-start gap-1 hover:scale-110 transition-transform duration-300 ease-in-out"
+              onClick={() => window.open(githubLink, '_blank', 'noopener,noreferrer')}
+            >
+              <TbBrandGithubFilled className="text-black text-xl" />
+              <p className="text-black text-sm font-extralight">Github Link</p>
+            </button>
+          )}
+
+          {websiteLink && (
+            <button
+              className="flex items-center justify-start gap-1 hover:scale-110 transition-transform duration-300 ease-in-out"
+              onClick={() => window.open(websiteLink, '_blank', 'noopener,noreferrer')}
+            >
+              <TbExternalLink className="text-black text-xl" />
+              <p className="text-black text-sm font-extralight">Project Website</p>
+            </button>
+          )}
+        </div>
+
+        {(githubLink || websiteLink) && (<hr className="flex-grow border-t border-black/20 mt-4" />)}
       </div>
-  
-      <p className="text-justify">{desc}</p>
     </div>
-  </div>
   );
 }
 
@@ -208,7 +235,7 @@ export default function Projects() {
     });
     
     const projects = [
-        { title: "Projeto 1", img: "src/imgs/breakfast_timeseries.png", desc:desc, tools:tools},
+        { title: "Projeto 1", img: "src/imgs/breakfast_timeseries.png", desc:desc, tools:tools,githubLink:"https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",websiteLink:"https://breakfast-forecast.streamlit.app/"},
         { title: "Projeto 2", img: "src/imgs/breakfast_timeseries.png", desc:desc, tools:tools},
         { title: "Projeto 3", img: "src/imgs/breakfast_timeseries.png", desc:desc, tools:tools},
         { title: "Projeto 4", img: "src/imgs/breakfast_timeseries.png", desc:desc, tools:tools},
@@ -242,7 +269,7 @@ export default function Projects() {
             style={{ overflow: "visible" }}
             >
             {projects.map((proj, i) => (
-                <Project key={i} title={proj.title} img={proj.img} desc={proj.desc} tools={proj.tools} />
+                <Project key={i} title={proj.title} img={proj.img} desc={proj.desc} tools={proj.tools} githubLink={proj.githubLink} websiteLink={proj.websiteLink}/>
             ))}
             </div>
             </div>
