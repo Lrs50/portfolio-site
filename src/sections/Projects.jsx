@@ -197,7 +197,7 @@ export default function Projects() {
         loop: true,
         renderMode: "performance",
         slides: {
-        perView: isDesktop? 4 : 2,
+        perView: isDesktop? 4 : 1,
         spacing: 15,
 
         },
