@@ -93,8 +93,8 @@ const iconSources = {
   
   export default function Tools() {
     return (
-      <div className="w-full py-24 bg-[url('./imgs/bg-texture.png')] overflow-x-hidden bg-cover bg-center">
-        <h1 className="text-5xl text-center text-white font-medium font-inter mb-8 mx-10">
+      <div className="w-full py-12 bg-[url('./imgs/bg-texture.png')] overflow-x-hidden bg-cover bg-center">
+        <h1 className="text-3xl desktop:text-5xl text-center text-white font-medium font-inter mb-8 mx-10">
           The Tools That Power{" "}
           <span className="text-mainPurple font-semibold">My Code</span>
         </h1>
