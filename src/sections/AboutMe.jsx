@@ -35,9 +35,9 @@ export default function AboutMe() {
       <h1 className="text-5xl whitespace-nowrap text-black font-medium leading font-inter mb-8">
         About <span className="text-mainPurple font-semibold">Me</span>
       </h1>
-      <div className="flex flex-row w-full">
+      <div className="flex flex-col desktop:flex-row w-full">
         {/* Left side with text */}
-        <div className="w-1/2 flex flex-col justify-center px-10">
+        <div className="desktop:w-1/2 flex flex-col justify-center px-10">
           <p className="text-base text-gray-800 text-justify">
             I am Lucas Reis, a Computer Engineering graduate from the Federal University of Pernambuco (UFPE). 
             Originally from Bahia, I moved to Recife to advance my academic and professional journey in technology.
@@ -53,7 +53,7 @@ export default function AboutMe() {
         </div>
 
         {/* Right side with word cloud */}
-        <div className="w-1/2 flex items-center justify-center overflow">
+        <div className="desktop:w-1/2 flex items-center justify-center overflow">
           <WordCloudSection />
         </div>
       </div>
