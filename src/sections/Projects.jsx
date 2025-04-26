@@ -245,7 +245,7 @@ export default function Projects() {
 
 
     return (
-        <div className="w-full py-24 bg-[url('./imgs/bg-texture.png')] overflow-x-hidden bg-cover bg-center">
+        <div className="w-full py-20 bg-[url('./imgs/bg-texture.png')] overflow-x-hidden bg-cover bg-center">
         <div className="-mt-10 mx-[40px]">
             <h1 className="text-5xl text-center text-white font-medium leading right text-gray-900 font-inter">
             My <span className="text-mainPurple font-semibold">Projects</span>
@@ -275,15 +275,15 @@ export default function Projects() {
             </div>
         
         </div>
-        <div className="flex flex-wrap items-center gap-1 justify-center mt-8">
-          
-          {[...Array(projects.length)].map((_,i) => {
-            if (i===currentSlide){
-              return <div className="rounded-full bg-mainPurple w-7 h-2"></div>
-            }
-            return <div className="rounded-full bg-offWhite justify-center w-2 h-2"></div>
-        })}
-        </div>
+          <div className="flex flex-wrap items-center gap-1 justify-center mt-8">
+            
+            {[...Array(projects.length)].map((_,i) => {
+              if (i===currentSlide){
+                return <div className="rounded-full bg-mainPurple w-7 h-2"></div>
+              }
+              return <div className="rounded-full bg-offWhite justify-center w-2 h-2"></div>
+          })}
+          </div>
         </div>
 
 
