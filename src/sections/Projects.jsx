@@ -2,6 +2,7 @@ import "keen-slider/keen-slider.min.css";
 import React, {useRef, useState,useEffect } from "react";
 import { BsBookmarkPlusFill } from "react-icons/bs";
 import { useKeenSlider } from "keen-slider/react";
+import { useMediaQuery } from "react-responsive"
 import { FaPython, FaGitAlt, FaDocker, FaLinux, FaAws, FaCode } from 'react-icons/fa';
 import {
   SiC,
@@ -24,6 +25,7 @@ import { TbSql } from 'react-icons/tb';
 import { LiaChartBarSolid } from 'react-icons/lia';
 import { GiArtificialIntelligence } from 'react-icons/gi';
 import { IoIosArrowBack ,IoIosArrowForward } from "react-icons/io";
+
 
 const iconSources = {
   python: { icon: FaPython, label: "Python" },
@@ -55,7 +57,6 @@ const iconSources = {
   googlecloud: { icon: SiGooglecloud, label: "Google Cloud" },
   aws: { icon: FaAws, label: "AWS" },
 };
-
 
 
 function Project({ title = "", img = "",desc="" , tools=[]}) {
@@ -190,14 +191,15 @@ export default function Projects() {
       "aws"
     ];
 
-
+    const isDesktop = useMediaQuery({ minWidth: 768 })
     const [currentSlide, setCurrentSlide] = useState(0);
     const [sliderRef,slider] = useKeenSlider({
         loop: true,
         renderMode: "performance",
         slides: {
-        perView: 4,
+        perView: isDesktop? 4 : 2,
         spacing: 15,
+
         },
         dragSpeed: 0.5,
         slideChanged(s) {
