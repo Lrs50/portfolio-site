@@ -1,23 +1,32 @@
 import React,{ useEffect, useRef, useState } from "react";
 import Dropdown from "./Dropdown";
-function NavItem({text,to }){
+function NavItem({text,to,active  }){
     return (
-        <div className="relative group p-1 rounded-full w-auto px-5" >
-            <a href={`#${to }`} className=" text-white text-center whitespace-nowrap">{text}</a>
-
-            <span
-                className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-[3px] bg-mainPurple transition-all duration-500 group-hover:w-3/4"
-            ></span>
+        <div className="relative group p-1 rounded-full w-auto px-5">
+        <a href={`#${to}`} className="text-white text-center whitespace-nowrap">
+            {text}
+        </a>
+        <span
+            className={`absolute bottom-1 left-1/2 -translate-x-1/2 h-[3px] bg-mainPurple transition-all duration-500 ${
+            active ? "w-3/4" : "w-0 group-hover:w-3/4"
+            }`}
+        ></span>
         </div>
     );
 }
 
 
-export default function NavBar(){
+export default function NavBar({ activeSection }){
 
     const [selectedLang, setSelectedLang] = useState("🇬🇧");
     const [userSession, setUserSession] = useState("Home");
     const [isScrolled, setIsScrolled] = useState(false);
+
+
+    useEffect(() => {
+        const to = (activeSection==="Hero") ? "Home" : activeSection; 
+        setUserSession(to);
+      }, [activeSection]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -54,18 +63,25 @@ export default function NavBar(){
                 className = "block desktop:hidden"
                 label={`☰ ${userSession}`}
                 options={["Home","Projects","About","Tools","Contact"]}
-                onSelect={(option) => setUserSession(option)}
+                onSelect={(option) => {
+                    const to = (option==="Home") ? "Hero" : option; 
+                    setUserSession(option);
+                    const element = document.getElementById(to);
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
                 position = "right"
                 
             />
  
             {/* NabBar Desktop */}
             <div className="hidden desktop:flex desktop:flex-wrap desktop:gap-2 desktop:justify-end desktop:w-full"> 
-                <NavItem text="Home" to ="Home"/>
-                <NavItem text="Projects" to ="Projects"/>
-                <NavItem text="About" to ="About"/>
-                <NavItem text="Tools" to ="Tools"/>
-                <NavItem text="Contact" to ="Contact"/>
+                <NavItem text="Home" to="Hero" active={activeSection === "Hero"} />
+                <NavItem text="Projects" to="Projects" active={activeSection === "Projects"}/>
+                <NavItem text="About" to="About" active={activeSection === "About"}/>
+                <NavItem text="Tools" to="Tools" active={activeSection === "Tools"}/>
+                <NavItem text="Contact" to="Contact" active={activeSection === "Contact"}/>
             </div>
 
         </nav>

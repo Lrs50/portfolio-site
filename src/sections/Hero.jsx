@@ -4,7 +4,7 @@ import { TbBrandLinkedin ,  TbBrandGithubFilled, TbBrandMedium } from 'react-ico
 export default function Hero(){
 
     return (
-        <div className="flex justify-center flex-col mt-14">
+        <div className="flex justify-center flex-col">
             <span className="block mx-auto bg-white border border-black rounded-full px-5 py-1 text-base mt-8">
                 Hello!
             </span>
