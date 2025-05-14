@@ -81,12 +81,16 @@ function Project({ title = "", img = "",desc="",githubLink="", websiteLink="", t
           <div className="absolute inset-0 -translate-y-3 scale-[0.96] rounded-3xl
             bg-white/15 backdrop-blur-md border border-white/10 z-0 shadow-md" />
 
+          <button
+          onClick={() => setShowDetails(true)}
+          className="p-0 m-0 border-none bg-transparent appearance-none leading-none align-top"
+        >
           <img
             src={img}
             alt={title}
             className="relative z-10 w-full rounded-3xl object-cover shadow-xl rounded-br-none"
           />
-
+        </button>
           <div className="absolute -bottom-9 -right-5 p-3 z-20">
           <button onClick={() => setShowDetails(true)}>
             <BsBookmarkPlusFill className="text-mainPurple w-16 h-16 transition hover:scale-125" />
