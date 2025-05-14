@@ -1,16 +1,20 @@
 import React,{ useEffect, useRef, useState } from "react";
 import Dropdown from "./Dropdown";
-function NavItem({text,to,active  }){
+
+function NavItem({ text, to, active }) {
     return (
         <div className="relative group p-1 rounded-full w-auto px-5">
-        <a href={`#${to}`} className="text-white text-center whitespace-nowrap">
-            {text}
-        </a>
-        <span
-            className={`absolute bottom-1 left-1/2 -translate-x-1/2 h-[3px] bg-mainPurple transition-all duration-500 ${
-            active ? "w-3/4" : "w-0 group-hover:w-3/4"
-            }`}
-        ></span>
+            <a
+                href={`#${to}`}
+                className={`text-white text-center whitespace-nowrap transition-all duration-300 ${
+                    active ? "font-bold text-lg" : "font-normal text-base"
+                }`}
+            >
+                {text}
+            </a>
+            <span
+                className="absolute bottom-1 left-1/2 -translate-x-1/2 h-[3px] w-0 bg-mainPurple transition-all duration-500 group-hover:w-3/4"
+            ></span>
         </div>
     );
 }
