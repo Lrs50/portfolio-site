@@ -1,5 +1,5 @@
 import React,{ useEffect, useRef, useState } from "react";
-import { TbBrandLinkedin ,  TbBrandGithubFilled, TbBrandMedium } from 'react-icons/tb';
+import { TbBrandLinkedin ,  TbBrandGithubFilled, TbBrandMedium, TbBrandWhatsapp } from 'react-icons/tb';
 
 export default function Hero(){
 
@@ -33,14 +33,18 @@ export default function Hero(){
                             px-5 desktop:px-7 py-1 flex gap-3 desktop:gap-6 justify-center items-center shadow-lg z-20 
                             -mt-[50px] desktop:-mt-[80px] left-1/2 -translate-x-1/2">
                 <a href="https://www.linkedin.com/in/lucas-dos-reis-lrs/" target="_blank" rel="noopener noreferrer">
-                <TbBrandLinkedin  className="text-3xl desktop:text-5xl text-blue-600 hover:scale-125 transition-transform  z-30" />
+                <TbBrandLinkedin  className="text-3xl desktop:text-5xl text-[#0077B5] hover:scale-125 transition-transform  z-30" />
                 </a>
                 <a href="https://github.com/Lrs50" target="_blank" rel="noopener noreferrer">
-                    < TbBrandGithubFilled className="text-3xl desktop:text-5xl text-black hover:scale-125 transition-transform z-30" />
+                    < TbBrandGithubFilled className="text-3xl desktop:text-5xl text-[#181717] hover:scale-125 transition-transform z-30" />
                 </a>
                 <a href="https://medium.com/@lucasreissi" target="_blank" rel="noopener noreferrer">
                     <TbBrandMedium className="text-3xl desktop:text-5xl text-neutral-800 hover:scale-125 transition-transform z-30" />
                 </a>
+                <a href="https://wa.me/5575999646980" target="_blank" rel="noopener noreferrer">
+                    <TbBrandWhatsapp className="text-3xl desktop:text-5xl text-[#25D366] hover:scale-125 transition-transform z-30" />
+                </a>
+
             </div>
 
             </div>
