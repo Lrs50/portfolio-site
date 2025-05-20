@@ -249,47 +249,49 @@ export default function Projects() {
 
 
     return (
-        <div className="w-full py-20 bg-[url('./imgs/bg-texture.png')] overflow-x-hidden bg-cover bg-center">
-        <div className="-mt-10 mx-[40px]">
-            <h1 className="text-5xl text-center text-white font-medium leading right text-gray-900 font-inter">
-            My <span className="text-mainPurple font-semibold">Projects</span>
-            </h1>
+        <div className=" justify-center px-3">
+          <div className="w-full pt-16 pb-8 bg-[url('./imgs/bg-texture.png')] overflow-x-hidden 
+          bg-cover bg-center rounded-3xl">
+          <div className="-mt-10 mx-[40px]">
+              <h1 className="text-5xl text-center text-white font-medium leading right text-gray-900 font-inter">
+              My <span className="text-mainPurple font-semibold">Projects</span>
+              </h1>
 
-            <div className="relative  ">
+              <div className="relative  ">
 
-            <IoIosArrowForward 
-            className="absolute text-white text-7xl -right-10 top-1/2 transform -translate-y-1/2 z-10
-            hover:scale-125 transition-transform duration-300 cursor-pointer" 
-            onClick={() => slider.current?.next()}/>
+              <IoIosArrowForward 
+              className="absolute text-white text-7xl -right-10 top-1/2 transform -translate-y-1/2 z-10
+              hover:scale-125 transition-transform duration-300 cursor-pointer" 
+              onClick={() => slider.current?.next()}/>
 
-            <IoIosArrowBack
-            className="absolute text-white text-7xl -left-10 top-1/2 transform -translate-y-1/2 z-10
-            hover:scale-125 transition-transform duration-300 cursor-pointer"
-            onClick={() => slider.current?.prev()}/>
-            
-            <div
-            ref={sliderRef}
-            className="keen-slider mt-12"
-            style={{ overflow: "visible" }}
-            >
-            {projects.map((proj, i) => (
-                <Project key={i} title={proj.title} img={proj.img} desc={proj.desc} tools={proj.tools} githubLink={proj.githubLink} websiteLink={proj.websiteLink}/>
-            ))}
+              <IoIosArrowBack
+              className="absolute text-white text-7xl -left-10 top-1/2 transform -translate-y-1/2 z-10
+              hover:scale-125 transition-transform duration-300 cursor-pointer"
+              onClick={() => slider.current?.prev()}/>
+              
+              <div
+              ref={sliderRef}
+              className="keen-slider mt-12"
+              style={{ overflow: "visible" }}
+              >
+              {projects.map((proj, i) => (
+                  <Project key={i} title={proj.title} img={proj.img} desc={proj.desc} tools={proj.tools} githubLink={proj.githubLink} websiteLink={proj.websiteLink}/>
+              ))}
+              </div>
+              </div>
+          
+          </div>
+            <div className="flex flex-wrap items-center gap-1 justify-center mt-8">
+              
+              {[...Array(projects.length)].map((_,i) => {
+                if (i===currentSlide){
+                  return <div className="rounded-full bg-mainPurple w-7 h-2"></div>
+                }
+                return <div className="rounded-full bg-offWhite justify-center w-2 h-2"></div>
+            })}
             </div>
-            </div>
-        
-        </div>
-          <div className="flex flex-wrap items-center gap-1 justify-center mt-8">
-            
-            {[...Array(projects.length)].map((_,i) => {
-              if (i===currentSlide){
-                return <div className="rounded-full bg-mainPurple w-7 h-2"></div>
-              }
-              return <div className="rounded-full bg-offWhite justify-center w-2 h-2"></div>
-          })}
           </div>
         </div>
-
 
     );
 }

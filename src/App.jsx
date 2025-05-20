@@ -38,12 +38,13 @@ function useActiveSection(sectionIds) {
     return activeSection;
   }
 
+
 export default function App(){
     const activeSection = useActiveSection(["Hero", "Projects", "About", "Tools", "Contact"]);
     return (
-        <div>
+        <div className='bg-[#efefef]'>
             <NavBar activeSection={activeSection}/>
-            <section id="Hero" className='mt-16 scroll-mt-16'>
+              <section id="Hero" className='mt-16 scroll-mt-16'>
                 <Hero/>
             </section>
             <section id="Projects" className='scroll-mt-16'>
@@ -58,7 +59,6 @@ export default function App(){
             <section id="Contact" className='scroll-mt-16'>
                 <Contact/>
             </section>
-            
         </div>
         
     );

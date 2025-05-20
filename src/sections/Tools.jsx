@@ -93,42 +93,44 @@ const iconSources = {
   
   export default function Tools() {
     return (
-      <div className="w-full py-12 bg-[url('./imgs/bg-texture.png')] overflow-x-hidden bg-cover bg-center">
-        <h1 className="text-3xl desktop:text-5xl text-center text-white font-medium font-inter mb-8 mx-10">
-          The Tools That Power{" "}
-          <span className="text-mainPurple font-semibold">My Code</span>
-        </h1>
-  
-        <div className="bg-white/10 backdrop-blur-md flex justify-center items-center py-12 px-6 rounded-3xl mx-10 border border-white/20 shadow-lg">
-          <div className="flex flex-wrap gap-10 justify-center">
-            <ReturnIcons
-              title="Programming Languages"
-              iconsList={iconSources.programmingLanguages}
-            />
-            <ReturnIcons
-              title="Data Manipulation"
-              iconsList={iconSources.dataManipulation}
-            />
-            <ReturnIcons
-              title="Data Science"
-              iconsList={iconSources.dataScienceML}
-            />
-            <ReturnIcons
-              title="Web Development"
-              iconsList={iconSources.webDevelopment}
-            />
-            <ReturnIcons
-              title="DevOps & Cloud"
-              iconsList={iconSources.devOpsCloud}
-            />
-            <ReturnIcons
-              title="Quantum Computing"
-              iconsList={iconSources.quantumComputing}
-            />
-            <ReturnIcons
-              title="Optimization"
-              iconsList={iconSources.optimization}
-            />
+      <div className=" justify-center px-3 pb-3">
+        <div className="w-full py-12 bg-[url('./imgs/bg-texture.png')] overflow-x-hidden bg-cover bg-center rounded-3xl">
+          <h1 className="text-3xl desktop:text-5xl text-center text-white font-medium font-inter mb-8 mx-10">
+            The Tools That Power{" "}
+            <span className="text-mainPurple font-semibold">My Code</span>
+          </h1>
+    
+          <div className="bg-white/10 backdrop-blur-md flex justify-center items-center py-12 px-6 rounded-3xl mx-10 border border-white/20 shadow-lg">
+            <div className="flex flex-wrap gap-10 justify-center">
+              <ReturnIcons
+                title="Programming Languages"
+                iconsList={iconSources.programmingLanguages}
+              />
+              <ReturnIcons
+                title="Data Manipulation"
+                iconsList={iconSources.dataManipulation}
+              />
+              <ReturnIcons
+                title="Data Science"
+                iconsList={iconSources.dataScienceML}
+              />
+              <ReturnIcons
+                title="Web Development"
+                iconsList={iconSources.webDevelopment}
+              />
+              <ReturnIcons
+                title="DevOps & Cloud"
+                iconsList={iconSources.devOpsCloud}
+              />
+              <ReturnIcons
+                title="Quantum Computing"
+                iconsList={iconSources.quantumComputing}
+              />
+              <ReturnIcons
+                title="Optimization"
+                iconsList={iconSources.optimization}
+              />
+            </div>
           </div>
         </div>
       </div>
