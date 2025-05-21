@@ -4,7 +4,6 @@ import NavBar from './components/Navbar'
 import Hero from './sections/Hero'
 import Projects from './sections/Projects'
 import AboutMe from './sections/AboutMe'
-import Tools from './sections/Tools'
 import Contact from './sections/Contact'
 
 function useActiveSection(sectionIds) {
@@ -52,9 +51,6 @@ export default function App(){
             </section>
             <section id="About" className='scroll-mt-16'>
                 <AboutMe/>
-            </section>
-            <section id="Tools" className='scroll-mt-16'>
-                <Tools/>
             </section>
             <section id="Contact" className='scroll-mt-16'>
                 <Contact/>
