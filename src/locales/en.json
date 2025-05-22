@@ -1,0 +1,9 @@
+{
+  "nav": {
+    "portfolio": "My Portfolio",
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  }
+}

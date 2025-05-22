@@ -17,9 +17,9 @@ function TimeLinePoint({ title = "", info = "", desc = "", side = "right", color
         className={`absolute ${isLeft ? "right-[53%] text-right" : "left-[53%] text-left"} 
         top-1/2 -translate-y-1/2 max-w-[90%] transition-transform duration-300 ease-in-out group-hover:scale-105`}
       >
-        <span className="block text-sm font-semibold text-black leading-tight">{title}</span>
-        <span className="block text-xs text-gray-500 leading-tight">{info}</span>
-        <div className={`mt-1 text-[0.85rem] text-justify text-gray-700 italic ${
+        <span className="block text-[0.8rem] desktop:text-sm font-semibold text-black leading-tight">{title}</span>
+        <span className="block text-[0.6rem] desktop:text-xs text-gray-500 leading-tight">{info}</span>
+        <div className={`mt-1 text-[0.7rem] desktop:text-[0.85rem] text-justify text-gray-700 italic ${
           isLeft ? "border-r-2 pr-4" : "border-l-2 pl-4"
         } border-gray-300`}>
           {desc}
@@ -50,7 +50,7 @@ function Timeline() {
       if (numberOfItems <= 1) return; // No need to calculate gap with 0 or 1 items
       
       // Calculate the total height of all timeline items without gaps
-      let totalItemsHeight = 0;
+      let totalItemsHeight = 10;
       for (let i = 0; i < numberOfItems; i++) {
         totalItemsHeight += timelineItems[i].offsetHeight;
       }
@@ -167,10 +167,11 @@ function Timeline() {
 export default function AboutMe() {
   return (
     <div className="w-full bg-zinc-100">
-      <div className="w-full mx-auto grid desktop:grid-cols-2">
+      <div className="p-3">
+      <div className=" mx-auto grid grid-cols-1 desktop:w-full desktop:grid-cols-2 gap-3">
         
         {/* About Me block */}
-        <div className="bg-white rounded-3xl shadow-xl p-8 m-3">
+        <div className="bg-white rounded-3xl shadow-xl p-8">
           <h1 className="text-5xl text-center text-black font-medium font-inter mt-3 mb-4">
             About <span className="text-mainPurple font-semibold">Me</span>
           </h1>
@@ -193,11 +194,11 @@ export default function AboutMe() {
         </div>
 
         {/* Timeline block */}
-        <div className="bg-white rounded-3xl shadow-xl p-8 m-3">
+        <div className="bg-white rounded-3xl shadow-xl p-8">
           <Timeline />
         </div>
       </div>
-
+    </div>
     </div>
   );
 

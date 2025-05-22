@@ -251,7 +251,7 @@ export default function Projects() {
     return (
         <div className=" justify-center px-3">
           <div className="w-full pt-16 pb-8 bg-[url('./imgs/bg-texture.png')] overflow-x-hidden 
-          bg-cover bg-center rounded-3xl">
+          bg-cover bg-center rounded-3xl shadow-xl">
           <div className="-mt-10 mx-[40px]">
               <h1 className="text-5xl text-center text-white font-medium leading right text-gray-900 font-inter">
               My <span className="text-mainPurple font-semibold">Projects</span>
