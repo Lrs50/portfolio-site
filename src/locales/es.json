@@ -5,5 +5,74 @@
     "projects": "Proyectos",
     "about": "Acerca de",
     "contact": "Contacto"
+  },
+"hero": {
+  "hello": "¡HOLA!",
+  "introLine1": "Soy <1>Lucas</1>",
+  "introLine2": "Ingeniero en Computación",
+  "introLine3": "Construyendo aplicaciones inteligentes de principio a fin"
+},
+"aboutMe": {
+  "title": "Sobre <1>Mí</1>",
+  "history": [
+    "Soy Lucas Reis, graduado en Ingeniería Informática por la Universidad Federal de Pernambuco (UFPE). Originario de Bahía, me mudé a Recife para impulsar mi trayectoria académica y profesional en tecnología.",
+    "Tengo una sólida formación en ciencia de datos y MLOps, con experiencia en recolección, procesamiento, desarrollo y despliegue de modelos. He participado en investigaciones sobre redes 5G en colaboración con CIN/Motorola y redes neuronales cuánticas con una beca PIBIC. También fui vicepresidente de la Liga Académica de Computación Cuántica (LACIQ), fomentando la investigación y alianzas con la industria.",
+    "Actualmente me enfoco en construir pipelines de datos escalables, modelos predictivos e integrar sistemas de machine learning en entornos de producción. Tengo la intención de cursar una maestría en Ciencia de la Computación con enfoque en series temporales."
+  ],
+  "timeline": {
+    "title": "Mi <1>Trayectoria</1>",
+    "events": [
+      {
+        "title": "Inicio de la carrera en Ingeniería Informática",
+        "info": "Agosto 2018",
+        "desc": "Un sueño comenzaba.",
+        "side": "right"
+      },
+      {
+        "title": "Investigador en CIN/Motorola",
+        "info": "jul 2020 – may 2021",
+        "desc": "Investigación en redes 5G, automatización en Linux, Docker y análisis de paquetes.",
+        "side": "left"
+      },
+      {
+        "title": "Investigador PIBIC (CNPq)",
+        "info": "sep 2022 – oct 2023",
+        "desc": "Modelos de regresión cuánticos y clásicos con PyTorch y Pennylane.",
+        "side": "right"
+      },
+      {
+        "title": "Vicepresidente de LACIQ",
+        "info": "jul 2023 – nov 2024",
+        "desc": "Eventos y mentoría en ML cuántico, construcción de alianzas académicas.",
+        "side": "left"
+      },
+      {
+        "title": "Pasantía en Sebrae",
+        "info": "nov 2024 – abr 2025",
+        "desc": "Análisis de datos, modelos ML, integración con APIs y pipelines ETL.",
+        "side": "right"
+      },
+      {
+        "title": "¡Graduado!",
+        "info": "may 2025",
+        "desc": "En búsqueda de mi próximo gran desafío.",
+        "side": "left"
+      },
+      {
+        "title": "Maestría en Ciencia de la Computación",
+        "info": "Planeado",
+        "desc": "Planeo hacer una maestría enfocada en predicción de series temporales.",
+        "side": "right"
+      }
+    ]
   }
+},
+"contact": {
+  "title": "¿Tienes una idea genial de proyecto o solo quieres conectar?",
+  "highlight": "¡Hablemos!",
+  "placeholder": "Escribe tu mensaje...",
+  "button": "Enviar",
+  "success": "¡Mensaje enviado con éxito!",
+  "error": "¡Error al enviar el mensaje!"
+}
 }

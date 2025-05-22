@@ -5,5 +5,75 @@
     "projects": "Projets",
     "about": "À propos",
     "contact": "Contact"
+  },
+"hero": {
+  "hello": "SALUT !",
+  "introLine1": "Je suis <1>Lucas</1>",
+  "introLine2": "Ingénieur en informatique",
+  "introLine3": "Créateur d’applications intelligentes de bout en bout"
+},
+"aboutMe": {
+  "title": "À propos de <1>Moi</1>",
+  "history": [
+    "Je suis Lucas Reis, diplômé en ingénierie informatique de l'Université Fédérale de Pernambuco (UFPE). Originaire de Bahia, j'ai déménagé à Recife pour faire progresser ma carrière académique et professionnelle dans la technologie.",
+    "J'ai une solide expérience en science des données et MLOps, avec des compétences en collecte, traitement, développement et déploiement de modèles. J'ai mené des recherches sur les réseaux 5G avec le CIN/Motorola et sur les réseaux neuronaux quantiques avec une bourse PIBIC. J'ai également été vice-président de la Ligue Académique de Calcul Quantique (LACIQ), promouvant la recherche et les partenariats industriels.",
+    "Actuellement, je travaille sur des pipelines de données évolutifs, des modèles prédictifs et l'intégration de systèmes de machine learning en production. Je souhaite poursuivre un master en informatique avec un accent sur la prévision de séries temporelles."
+  ],
+  "timeline": {
+    "title": "Mon <1>Parcours</1>",
+    "events": [
+      {
+        "title": "Début du cursus en ingénierie informatique",
+        "info": "Août 2018",
+        "desc": "Un rêve commence.",
+        "side": "right"
+      },
+      {
+        "title": "Chercheur au CIN/Motorola",
+        "info": "juil 2020 – mai 2021",
+        "desc": "Recherche sur les réseaux 5G, automatisation avec Linux, Docker et analyse de paquets.",
+        "side": "left"
+      },
+      {
+        "title": "Chercheur PIBIC (CNPq)",
+        "info": "sept 2022 – oct 2023",
+        "desc": "Développement de modèles de régression quantiques/classiques avec PyTorch et Pennylane.",
+        "side": "right"
+      },
+      {
+        "title": "Vice-président de la LACIQ",
+        "info": "juil 2023 – nov 2024",
+        "desc": "Organisation d’événements sur le ML quantique, mentorat, partenariats académiques.",
+        "side": "left"
+      },
+      {
+        "title": "Stage chez Sebrae",
+        "info": "nov 2024 – avr 2025",
+        "desc": "Analyse de données, modèles ML, intégration API, pipelines ETL.",
+        "side": "right"
+      },
+      {
+        "title": "Diplômé !",
+        "info": "mai 2025",
+        "desc": "À la recherche de mon prochain grand défi.",
+        "side": "left"
+      },
+      {
+        "title": "Master en informatique",
+        "info": "Prévu",
+        "desc": "Je prévois de faire un master en prévision de séries temporelles.",
+        "side": "right"
+      }
+    ]
   }
+},
+"contact": {
+  "title": "Vous avez une idée de projet géniale ou vous voulez simplement échanger ?",
+  "highlight": "Discutons-en !",
+  "placeholder": "Écrivez votre message...",
+  "button": "Envoyer",
+  "success": "Message envoyé avec succès !",
+  "error": "Erreur lors de l'envoi du message !"
+}
+
 }

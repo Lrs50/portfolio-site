@@ -1,21 +1,29 @@
 import React,{ useEffect, useRef, useState } from "react";
 import { TbBrandLinkedin ,  TbBrandGithubFilled, TbBrandMedium, TbBrandWhatsapp } from 'react-icons/tb';
+import { Trans, useTranslation } from 'react-i18next';
 
 export default function Hero(){
-
+    const { t } = useTranslation();
     return (
         <div className="flex justify-center flex-col">
-            <span className="block mx-auto bg-white border border-black rounded-full px-5 py-1 text-base mt-8">
-                Hello!
+            <span className="block mx-auto bg-white/70 backdrop-blur-sm border border-black/40 rounded-full px-5 py-1 text-sm desktop:text-base font-semibold text-black tracking-wide mt-10 shadow-sm hover:shadow-md transition">
+            {t('hero.hello')}
             </span>
 
-            <div className="text-center mt-3">
-                <h1 className="text-4xl desktop:text-6xl font-medium leading right text-gray-900 font-urbanist">
-                   I'm <span className="text-mainPurple font-semibold">Lucas</span>, <br />
-                   Computer Engineer
+            <div className="text-center mt-6 px-4">
+                <h1 className="text-4xl desktop:text-6xl font-light leading-tight text-gray-900 font-urbanist max-w-4xl mx-auto">
+                    <Trans
+                    i18nKey="hero.introLine1"
+                    components={{ 1: <span className="text-mainPurple font-bold tracking-wide" /> }}
+                    />
+                    <br />
+                    <span className="text-black font-medium">{t('hero.introLine2')}</span>
+                    <br />
+                    <span className="text-gray-700 text-lg desktop:text-xl -mt-1 mb-1 block">
+                    {t('hero.introLine3')}
+                    </span>
                 </h1>
             </div>
-
             <div className="relative w-[410px] desktop:w-[700px] mx-auto mt-[65px] desktop:mt-[120px]">
                 <img
                 src="src\imgs\ellipse.png" 

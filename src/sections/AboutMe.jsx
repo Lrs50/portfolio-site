@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import WordCloudSection from '../components/WordCloud';
+import { Trans, useTranslation } from 'react-i18next';
 
 function TimeLinePoint({ title = "", info = "", desc = "", side = "right", color = "mainPurple" }) {
   const isLeft = side === "left";
@@ -29,12 +30,13 @@ function TimeLinePoint({ title = "", info = "", desc = "", side = "right", color
   );
 }
 
-
-
 function Timeline() {
   const containerRef = useRef(null);
   const timelineContentRef = useRef(null);
   const [gap, setGap] = useState(40); // Default gap
+  const { t } = useTranslation();
+
+  const events = t("aboutMe.timeline.events", { returnObjects: true });
 
   useEffect(() => {
     const updateGap = () => {
@@ -94,7 +96,10 @@ function Timeline() {
       style={{ minHeight: '100vh' }} // Ensure container has height
     >
       <h1 className="text-5xl whitespace-nowrap text-black font-medium font-inter mb-8">
-        My <span className="text-mainPurple font-semibold">Trajectory</span>
+        <Trans
+          i18nKey="aboutMe.timeline.title"
+          components={{ 1: <span className="text-mainPurple font-semibold">{t('aboutMe.timeline.title')}</span> }}
+          />
       </h1>
 
       <div className="relative w-full max-w-3xl my-5 flex-grow">
@@ -103,61 +108,16 @@ function Timeline() {
 
         {/* Timeline points */}
         <div ref={timelineContentRef} className="flex flex-col" style={{ gap: `${gap}px` }}>
-          <TimeLinePoint
-            title="Started Bachelor's in Computer Engineering"
-            info="August 2018"
-            desc="A dream began"
-            side="right"
-            color="mainPurple"
-          />
-
-          <TimeLinePoint
-            title="Researcher at CIN/Motorola"
-            info="Jul 2020 – May 2021"
-            desc="5G network research, Linux automation with Docker & Bash, packet analysis."
-            side="left"
-            color="mainPurple"
-          />
-
-          <TimeLinePoint
-            title="PIBIC Researcher (CNPq)"
-            info="Sep 2022 – Oct 2023"
-            desc="Developed quantum/classical regression models with PyTorch and Pennylane."
-            side="right"
-            color="mainPurple"
-          />
-
-          <TimeLinePoint
-            title="VP at LACIQ (Quantum Comp. League)"
-            info="Jul 2023 – Nov 2024"
-            desc="Led events/workshops in quantum ML, mentored students, built academic partnerships."
-            side="left"
-            color="mainPurple"
-          />
-
-          <TimeLinePoint
-            title="Internship at Sebrae"
-            info="Nov 2024 – Apr 2025"
-            desc="Data analysis, ML models, API integration, ETL pipelines, technical reports."
-            side="right"
-            color="mainPurple"
-          />
-
-          <TimeLinePoint
-            title="Graduated!"
-            info="May 2025"
-            desc="Looking for my next big challenge."
-            side="left"
-            color="mainPurple"
-          />
-
-          <TimeLinePoint
-            title="Master's in Computer Science"
-            info="Planned"
-            desc="I plan to pursue a Master's in Computer Science with a focus on time series forecasting."
-            side="right"
-            color="mainPurple"
-          />
+          {events.map((event, i) => (
+            <TimeLinePoint
+              key={i}
+              title={event.title}
+              info={event.info}
+              desc={event.desc}
+              side={event.side}
+              color="mainPurple"
+            />
+          ))}
         </div>
       </div>
     </section>
@@ -165,6 +125,10 @@ function Timeline() {
 }
 
 export default function AboutMe() {
+  const { t } = useTranslation();
+
+  const history = t("aboutMe.history", { returnObjects: true });
+
   return (
     <div className="w-full bg-zinc-100">
       <div className="p-3">
@@ -173,22 +137,20 @@ export default function AboutMe() {
         {/* About Me block */}
         <div className="bg-white rounded-3xl shadow-xl p-8">
           <h1 className="text-5xl text-center text-black font-medium font-inter mt-3 mb-4">
-            About <span className="text-mainPurple font-semibold">Me</span>
+              <Trans
+              i18nKey="aboutMe.title"
+              components={{ 1: <span className="text-mainPurple font-semibold">{t('aboutMe.title')}</span> }}
+              />
           </h1>
 
-          <p className="text-base text-gray-800 text-justify leading-relaxed">
-            I am Lucas Reis, a Computer Engineering graduate from the Federal University of Pernambuco (UFPE).
-            Originally from Bahia, I moved to Recife to advance my academic and professional journey in technology.
-            <br /><br />
-            I have a solid background in data science and MLOps, with experience in data collection, processing,
-            model development, and deployment. My academic experience includes research in 5G networks in
-            collaboration with CIN/Motorola and work on quantum neural networks through a PIBIC scholarship.
-            I also served as Vice President of the Quantum Computing League (LACIQ), fostering research and industry connections.
-            <br /><br />
-            Currently I focus on developing scalable data pipelines, building predictive models, and integrating
-            machine learning systems into production environments. I intend to pursue a master's degree in Computer
-            Science with a focus on time series forecasting.
-          </p>
+          {history.map((paragraph, i) => (
+            <p
+              key={i}
+              className="text-base text-gray-800 text-justify leading-relaxed mb-4"
+            >
+              {paragraph}
+            </p>
+          ))}
 
           <WordCloudSection />
         </div>
