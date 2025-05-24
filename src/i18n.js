@@ -6,9 +6,11 @@ import en from './locales/en.json';
 import pt from './locales/pt.json';
 import fr from './locales/fr.json';
 import es from './locales/es.json';
+import ja from './locales/ja.json';
+import ko from './locales/ko.json';
+import zh from './locales/zh.json';
 
-
-const supportedLanguages = ['en', 'pt', 'fr', 'es'];
+const supportedLanguages = ['en', 'pt', 'fr', 'es',"ja","ko","zh"];
 const browserLang = navigator.language.slice(0, 2);
 const initialLang = supportedLanguages.includes(browserLang) ? browserLang : 'en';
 
@@ -20,6 +22,9 @@ i18n
       pt: { translation: pt },
       fr: { translation: fr },
       es: { translation: es },
+      ja: { translation: ja },
+      ko: { translation: ko },
+      zh: { translation: zh },
     },
     lng: initialLang, // idioma padrão
     fallbackLng: 'en',

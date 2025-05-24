@@ -7,6 +7,9 @@ const emojiToLang = {
   "🇬🇧": "en",
   "🇫🇷": "fr",
   "🇪🇸": "es",
+  "🇯🇵":"ja",
+  "🇰🇷": "ko",
+  "🇨🇳": "zh"
 };
 
 const langToEmoji = {
@@ -14,6 +17,9 @@ const langToEmoji = {
   en: "🇬🇧",
   fr: "🇫🇷",
   es: "🇪🇸",
+  ja: "🇯🇵",
+  ko: "🇰🇷",
+  zh: "🇨🇳"
 };
 
 function NavItem({ text, to, active }) {
@@ -72,7 +78,7 @@ export default function NavBar({ activeSection }) {
       {/* Dropdown de idioma */}
       <Dropdown
         label={selectedLang}
-        options={["🇧🇷", "🇬🇧", "🇫🇷", "🇪🇸"]}
+        options={["🇧🇷", "🇬🇧", "🇫🇷", "🇪🇸", "🇯🇵", "🇰🇷", "🇨🇳"]}
         onSelect={(option) => {
           setSelectedLang(option);
           const langCode = emojiToLang[option];
