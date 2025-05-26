@@ -74,5 +74,34 @@
     "button": "发送",
     "success": "消息发送成功！",
     "error": "发送消息时出错！"
-  }
+  },
+  "project": {
+  "title": "我的<1>项目</1>",
+  "tool": "工具",
+  "githublink": "Github链接",
+  "websitelink": "项目网站",
+  "projects": [
+    {
+      "title": "早餐多少钱？",
+      "desc": "咖啡和鸡蛋的价格飞涨。但……早餐的其他食材呢？\n\n这就是我新项目的起点：一个完整的解决方案，用于预测未来6个月早餐主要食材的价格。☕🍞🥚",
+      "tools": [
+        "Python", "SQL", "Pandas", "NumPy", "ScikitLearn", "Airflow", "Git", "Docker", "Google Cloud", "FastAPI", "Streamlit", "Selenium", "BeautifulSoup", "Prophet", "遗传算法", "Bash", "Gemini", "Plotly"
+      ],
+      "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
+      "websiteLink": "https://breakfast-forecast.streamlit.app/",
+      "img": "src/imgs/breakfast_timeseries.png"
+    },
+    {
+      "title": "个人理财聊天机器人",
+      "desc": "一个智能且友好的WhatsApp机器人，可以帮助你管理财务。你可以记录支出、跟踪债务、设定预算，并通过简单对话提出问题。",
+      "tools": [
+        "Python", "FastAPI", "Ngrok", "Gemini", "Heyoo", "TinyDB", "Regex", "WhatsApp"
+      ],
+      "githubLink": "https://github.com/Lrs50/wpp-automation",
+      "websiteLink": "",
+      "img": "src/imgs/breakfast_timeseries.png"
+    }
+  ]
+}
+
 }

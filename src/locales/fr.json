@@ -74,6 +74,35 @@
   "button": "Envoyer",
   "success": "Message envoyé avec succès !",
   "error": "Erreur lors de l'envoi du message !"
+},
+"project": {
+  "title": "Mes <1>Projets</1>",
+  "tool": "Outils",
+  "githublink": "Lien Github",
+  "websitelink": "Site du Projet",
+  "projects": [
+    {
+      "title": "Combien Coûte le Petit Déjeuner ?",
+      "desc": "Le prix du café et des œufs a explosé. Mais... qu'en est-il des autres aliments du petit déjeuner ?\n\nC'est ainsi qu'est né mon nouveau projet : une solution complète pour prévoir les prix des principaux aliments consommés au petit déjeuner pour les 6 prochains mois. ☕🍞🥚",
+      "tools": [
+        "Python", "SQL", "Pandas", "NumPy", "ScikitLearn", "Airflow", "Git", "Docker", "Google Cloud", "FastAPI", "Streamlit", "Selenium", "BeautifulSoup", "Prophet", "Algorithme Génétique", "Bash", "Gemini", "Plotly"
+      ],
+      "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
+      "websiteLink": "https://breakfast-forecast.streamlit.app/",
+      "img": "src/imgs/breakfast_timeseries.png"
+    },
+    {
+      "title": "Chatbot Financier Personnel",
+      "desc": "Un bot WhatsApp intelligent et convivial qui vous aide à gérer votre argent. Vous pouvez enregistrer vos dépenses, suivre vos dettes, définir des budgets et poser des questions — le tout dans une conversation simple.",
+      "tools": [
+        "Python", "FastAPI", "Ngrok", "Gemini", "Heyoo", "TinyDB", "Regex", "WhatsApp"
+      ],
+      "githubLink": "https://github.com/Lrs50/wpp-automation",
+      "websiteLink": "",
+      "img": "src/imgs/breakfast_timeseries.png"
+    }
+  ]
 }
+
 
 }

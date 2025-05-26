@@ -74,5 +74,34 @@
     "button": "Send",
     "success": "Message sent successfully!",
     "error": "Error sending the message!"
+    },
+    "project":{
+      "title": "My <1>Projects</1>",
+      "tool":"Tools",
+      "githublink":"Github Link",
+      "websitelink":"Project Website",
+      "projects":[
+        {
+          "title": "How Much Does Breakfast Cost?",
+          "desc": "The price of coffee and eggs has skyrocketed. But... what about the other breakfast items?\n\nThat's what sparked my new project: a complete solution to forecast the prices of the main foods consumed at breakfast over the next 6 months. ☕🍞🥚",
+          "tools": [
+          "Python", "SQL","Pandas", "NumPy", "ScikitLearn", "Airflow", "Git", "Docker", "Google Cloud", "FastAPI", "Streamlit", "Selenium", "BeautifulSoup", "Prophet", "Algoritmo Genetico", "Bash", "Gemini", "Plotly"
+          ],
+          "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
+          "websiteLink": "https://breakfast-forecast.streamlit.app/",
+          "img":"src/imgs/breakfast_timeseries.png"
+        },
+        {
+        "title": "Personal Finance Chatbot",
+        "desc": "A smart and friendly WhatsApp bot that helps you manage your money. You can record your expenses, track your debts, set budgets, and ask questions — all in a simple conversation.",
+        "tools": [
+          "Python", "FastAPI", "Ngrok", "Gemini", "Heyoo", "TinyDB", "Regex", "WhatsApp"
+        ],
+        "githubLink": "https://github.com/Lrs50/wpp-automation",
+        "websiteLink": "",
+        "img":"src/imgs/breakfast_timeseries.png"
+      }
+
+      ]
     }
 }

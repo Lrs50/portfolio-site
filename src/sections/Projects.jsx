@@ -1,61 +1,76 @@
 import "keen-slider/keen-slider.min.css";
-import React, {useRef, useState,useEffect } from "react";
-import { BsBookmarkPlusFill } from "react-icons/bs";
+import React, { useState } from "react";
+import { BsBookmarkPlusFill, BsWhatsapp } from "react-icons/bs";
 import { useKeenSlider } from "keen-slider/react";
 import { useMediaQuery } from "react-responsive"
-import { FaPython, FaGitAlt, FaDocker, FaLinux, FaAws, FaCode } from 'react-icons/fa';
 import {
-  SiC,
-  SiCplusplus,
+  SiApacheairflow,
+  SiFastapi,
+  SiNumpy,
+  SiPandas,
+  SiScikitlearn,
+  SiSelenium,
+  SiStreamlit,
   SiUnity,
   SiGnubash,
-  SiPandas,
-  SiNumpy,
-  SiApacheairflow,
-  SiStreamlit,
-  SiSelenium,
-  SiFastapi,
-  SiPytorch,
-  SiScikitlearn,
-  SiQiskit,
   SiGooglecloud,
-  SiApachespark,
+  SiGooglegemini,
+  SiMicrogenetics,
+  SiPlotly,
 } from 'react-icons/si';
-import { TbSql } from 'react-icons/tb';
+import { FaGitAlt, FaPython, FaDocker, FaQuestionCircle } from 'react-icons/fa';
+import { TbSql, TbBrandGithubFilled, TbExternalLink } from 'react-icons/tb';
 import { LiaChartBarSolid } from 'react-icons/lia';
-import { GiArtificialIntelligence } from 'react-icons/gi';
-import { IoIosArrowBack ,IoIosArrowForward } from "react-icons/io";
-import { TbBrandGithubFilled,TbExternalLink } from 'react-icons/tb';
+import { BsGraphUpArrow } from 'react-icons/bs';
+import { MdOutlineSoupKitchen } from 'react-icons/md';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import { Trans, useTranslation } from 'react-i18next';
+import { SiNgrok } from "react-icons/si";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { HiOutlineChatBubbleLeftRight } from 'react-icons/hi2';
+import { FaDatabase } from "react-icons/fa";
+import { BsRegex } from "react-icons/bs";
+import { SiUv } from "react-icons/si";
+import { SiPydantic } from "react-icons/si";
+import { IoIosCodeDownload } from "react-icons/io";
+import { FaMasksTheater } from "react-icons/fa6";
+import { TbBrandCSharp } from "react-icons/tb";
+import { MdScreenSearchDesktop } from "react-icons/md";
+import { TbBlocks } from "react-icons/tb";
 
 const iconSources = {
+  uv:{icon:SiUv, label: "UV"},
+  pydantic:{icon:SiPydantic, label: "Pydantic"},
+  requests:{icon:IoIosCodeDownload, label: "Requests"},
+  playwright:{icon:FaMasksTheater, label: "Playwright"},
+  csharp:{icon:TbBrandCSharp, label: "C#"},
+  searchalgorithm:{icon:MdScreenSearchDesktop, label: "Search Algorithms"},
+  tkinter:{icon:TbBlocks, label: "TKinter"},
+  ngrok:{icon:SiNgrok, label: "Ngrok"},
+  whatsapp:{icon:IoLogoWhatsapp, label: "WhatsApp"},
+  heyoo:{icon:HiOutlineChatBubbleLeftRight, label: "Heyoo"},
+  tinydb:{icon:FaDatabase, label: "TinyDB"},
+  regex:{icon:BsRegex, label: "Regex"},
+  plotly:{icon:SiPlotly, label: "Plotly"},
+  gemini:{icon:SiGooglegemini, label: "Gemini"},
+  algoritmogenetico:{icon:SiMicrogenetics, label: "Genetic Algorithms"},
+  prophet:{icon:LiaChartBarSolid, label: "Facebook Prophet"},
   python: { icon: FaPython, label: "Python" },
   sql: { icon: TbSql, label: "SQL" },
-  c: { icon: SiC, label: "C" },
-  cplusplus: { icon: SiCplusplus, label: "C++" },
-  csharp: { icon: FaCode, label: "C#" },
   unity: { icon: SiUnity, label: "Unity" },
   bash: { icon: SiGnubash, label: "Bash" },
   git: { icon: FaGitAlt, label: "Git" },
   pandas: { icon: SiPandas, label: "Pandas" },
   numpy: { icon: SiNumpy, label: "NumPy" },
-  pyspark: { icon: SiApachespark, label: "PySpark" },
   airflow: { icon: SiApacheairflow, label: "Apache Airflow" },
   streamlit: { icon: SiStreamlit, label: "Streamlit" },
   selenium: { icon: SiSelenium, label: "Selenium" },
-  beautifulsoup: { icon: FaCode, label: "BeautifulSoup" },
+  beautifulsoup: { icon: MdOutlineSoupKitchen, label: "BeautifulSoup" },
   fastapi: { icon: SiFastapi, label: "FastAPI" },
-  pytorch: { icon: SiPytorch, label: "PyTorch" },
   scikitlearn: { icon: SiScikitlearn, label: "Scikit-Learn" },
-  prophet: { icon: LiaChartBarSolid, label: "Prophet" },
-  xgboost: { icon: GiArtificialIntelligence, label: "XGBoost" },
-  statsmodels: { icon: LiaChartBarSolid, label: "Statsmodels" },
-  pennylane: { icon: GiArtificialIntelligence, label: "Pennylane" },
-  qiskit: { icon: SiQiskit, label: "Qiskit" },
-  algoritmosgeneticos: { icon: GiArtificialIntelligence, label: "Algoritmos Genéticos" },
   docker: { icon: FaDocker, label: "Docker" },
-  linux: { icon: FaLinux, label: "Linux" },
   googlecloud: { icon: SiGooglecloud, label: "Google Cloud" },
-  aws: { icon: FaAws, label: "AWS" },
+  matplotlib:{ icon: BsGraphUpArrow, label: "Matplotlib" },
 };
 
 
@@ -70,12 +85,19 @@ function Project({ title = "", img = "",desc="",githubLink="", websiteLink="", t
       <div
         className="w-[300px] backdrop-blur-md bg-white/10 border border-white/20 rounded-3xl
         shadow-lg transition-transform duration-300 transform-gpu hover:scale-105 hover:z-30 z-10
-        px-3 pt-3 pb-6 rounded-br-none"
+        px-3 pt-3 pb-0 rounded-br-none"
       >
-        <h3 className="text-white text-lg mb-4">{title}</h3>
+        <div className="h-[3.8rem] flex items-center justify-center text-center px-0">
+          <h3
+            className="text-white text-[clamp(1.1rem,1.7vw,1.5rem)] font-semibold tracking-wide 
+            leading-tight line-clamp-2 overflow-hidden"
+          >
+            {title}
+          </h3>
+        </div>
         <hr className="w-full border-t border-white/20 mb-10" />
 
-        <div className="relative mt-8 -mb-6 -mx-3">
+        <div className="relative mt-8 -mx-3" style={{ marginBottom: '-12px' }}>
           <div className="absolute inset-0 -translate-y-6 scale-[0.92] rounded-3xl
             bg-white/10 backdrop-blur-md border border-white/10 z-0 shadow-md" />
           <div className="absolute inset-0 -translate-y-3 scale-[0.96] rounded-3xl
@@ -83,12 +105,12 @@ function Project({ title = "", img = "",desc="",githubLink="", websiteLink="", t
 
           <button
           onClick={() => setShowDetails(true)}
-          className="p-0 m-0 border-none bg-transparent appearance-none leading-none align-top"
+          className="p-0 m-0 border-none bg-transparent appearance-none leading-none block"
         >
           <img
             src={img}
             alt={title}
-            className="relative z-10 w-full rounded-3xl object-cover shadow-xl rounded-br-none"
+            className="relative z-10 w-full rounded-3xl object-cover shadow-xl rounded-br-none block"
           />
         </button>
           <div className="absolute -bottom-9 -right-5 p-3 z-20">
@@ -114,6 +136,7 @@ function Project({ title = "", img = "",desc="",githubLink="", websiteLink="", t
 }
 
 function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "", tools = [], onClose }) {
+  const { t } = useTranslation();
   return (
     <div className="fixed inset-0 z-[999] bg-black/50 backdrop-blur-sm flex justify-center items-center p-6">
       <div className="relative bg-offWhite rounded-3xl w-[85vw] max-w-4xl p-6 shadow-lg">
@@ -128,15 +151,17 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
 
         <div className="mb-5">
           <div className="flex items-center gap-2">
-            <p className="text-justify text-xs font-extralight">Ferramentas</p>
+            <p className="text-justify text-xs font-extralight">{t("project.tool")}</p>
             <hr className="flex-grow border-t border-black/20" />
           </div>
 
           <div className="flex flex-wrap gap-2 justify-center">
             {tools.map((tool) => {
-              const toolData = iconSources[tool];
-              if (!toolData) return null;
-              const { icon: Icon, label } = toolData;
+              const toolKey = tool.toLowerCase().replace(/\s+/g, '');
+              const toolData = iconSources[toolKey];
+              const Icon = toolData?.icon || FaQuestionCircle;
+              const label = toolData?.label || tool;
+
               return (
                 <div key={tool} className="relative group flex flex-col items-center">
                   <Icon className="text-[25px] text-gray-700 hover:scale-125 transition-transform duration-300 ease-in-out" />
@@ -162,7 +187,7 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
               onClick={() => window.open(githubLink, '_blank', 'noopener,noreferrer')}
             >
               <TbBrandGithubFilled className="text-black text-xl" />
-              <p className="text-black text-sm font-extralight">Github Link</p>
+              <p className="text-black text-sm font-extralight">{t("project.githublink")}</p>
             </button>
           )}
 
@@ -172,7 +197,7 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
               onClick={() => window.open(websiteLink, '_blank', 'noopener,noreferrer')}
             >
               <TbExternalLink className="text-black text-xl" />
-              <p className="text-black text-sm font-extralight">Project Website</p>
+              <p className="text-black text-sm font-extralight">{t("project.websitelink")}</p>
             </button>
           )}
         </div>
@@ -186,41 +211,8 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
 export default function Projects() {
 
 
-    const desc = `O preço do café e dos ovos disparou. Mas... e os outros itens do café da manhã?
-
-    Foi com essa dúvida que surgiu meu novo projeto: uma solução completa para prever os preços dos principais alimentos consumidos no café da manhã pelos próximos 6 meses. ☕🍞🥚
-    `;
-
-    const tools = [
-      "python",
-      "sql",
-      "c",
-      "cplusplus",
-      "csharp",
-      "unity",
-      "bash",
-      "git",
-      "pandas",
-      "numpy",
-      "pyspark",
-      "airflow",
-      "streamlit",
-      "selenium",
-      "beautifulsoup",
-      "fastapi",
-      "pytorch",
-      "scikitlearn",
-      "prophet",
-      "xgboost",
-      "statsmodels",
-      "pennylane",
-      "qiskit",
-      "algoritmosgeneticos",
-      "docker",
-      "linux",
-      "googlecloud",
-      "aws"
-    ];
+    const { t } = useTranslation();
+    const projects = t('project.projects', { returnObjects: true });
 
     const isDesktop = useMediaQuery({ minWidth: 768 })
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -238,25 +230,17 @@ export default function Projects() {
         },
     });
     
-    const projects = [
-        { title: "Projeto 1", img: "src/imgs/breakfast_timeseries.png", desc:desc, tools:tools,githubLink:"https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",websiteLink:"https://breakfast-forecast.streamlit.app/"},
-        { title: "Projeto 2", img: "src/imgs/breakfast_timeseries.png", desc:desc, tools:tools},
-        { title: "Projeto 3", img: "src/imgs/breakfast_timeseries.png", desc:desc, tools:tools},
-        { title: "Projeto 4", img: "src/imgs/breakfast_timeseries.png", desc:desc, tools:tools},
-        { title: "Projeto 5", img: "src/imgs/breakfast_timeseries.png", desc:desc, tools:tools},
-        { title: "Projeto 6", img: "src/imgs/breakfast_timeseries.png", desc:desc, tools:tools},
-    ];
-
-
     return (
         <div className=" justify-center px-3">
           <div className="w-full pt-16 pb-8 bg-[url('./imgs/bg-texture.png')] overflow-x-hidden 
           bg-cover bg-center rounded-3xl shadow-xl">
           <div className="-mt-10 mx-[40px]">
               <h1 className="text-5xl text-center text-white font-medium leading right text-gray-900 font-inter">
-              My <span className="text-mainPurple font-semibold">Projects</span>
+              <Trans
+              i18nKey="project.title"
+              components={{ 1: <span className="text-mainPurple font-semibold">{t('project.title')}</span> }}
+              />
               </h1>
-
               <div className="relative  ">
 
               <IoIosArrowForward 

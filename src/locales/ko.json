@@ -74,5 +74,34 @@
     "button": "보내기",
     "success": "메시지가 성공적으로 전송되었습니다!",
     "error": "메시지 전송 중 오류가 발생했습니다!"
-  }
+  },
+  "project": {
+  "title": "나의 <1>프로젝트</1>",
+  "tool": "도구",
+  "githublink": "Github 링크",
+  "websitelink": "프로젝트 웹사이트",
+  "projects": [
+    {
+      "title": "아침 식사는 얼마인가요?",
+      "desc": "커피와 계란 가격이 급등했습니다. 그렇다면 다른 아침 식사 항목은 어떨까요?\n\n이 질문에서 시작된 것이 이 프로젝트입니다. 다음 6개월 동안 주요 아침 식사 식품의 가격을 예측하는 완전한 솔루션입니다. ☕🍞🥚",
+      "tools": [
+        "Python", "SQL", "Pandas", "NumPy", "ScikitLearn", "Airflow", "Git", "Docker", "Google Cloud", "FastAPI", "Streamlit", "Selenium", "BeautifulSoup", "Prophet", "유전 알고리즘", "Bash", "Gemini", "Plotly"
+      ],
+      "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
+      "websiteLink": "https://breakfast-forecast.streamlit.app/",
+      "img": "src/imgs/breakfast_timeseries.png"
+    },
+    {
+      "title": "개인 재정 챗봇",
+      "desc": "WhatsApp에서 당신의 돈 관리를 도와주는 똑똑하고 친절한 챗봇입니다. 지출을 기록하고, 부채를 추적하고, 예산을 설정하며 간단한 대화로 질문할 수 있습니다.",
+      "tools": [
+        "Python", "FastAPI", "Ngrok", "Gemini", "Heyoo", "TinyDB", "Regex", "WhatsApp"
+      ],
+      "githubLink": "https://github.com/Lrs50/wpp-automation",
+      "websiteLink": "",
+      "img": "src/imgs/breakfast_timeseries.png"
+    }
+  ]
+}
+
 }
