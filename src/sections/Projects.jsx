@@ -176,7 +176,14 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
           <hr className="flex-grow border-t border-black/20 mt-4" />
         </div>
 
-        <p className="text-justify">{desc}</p>
+        <p className="text-justify">
+          {desc.split('\n').map((line, idx) => (
+            <React.Fragment key={idx}>
+              {line}
+              <br />
+            </React.Fragment>
+          ))}
+        </p>
         
         <hr className="flex-grow border-t border-black/20 my-4" />
 

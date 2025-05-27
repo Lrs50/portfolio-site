@@ -82,26 +82,75 @@
   "websitelink": "Site du Projet",
   "projects": [
     {
-      "title": "Combien Coûte le Petit Déjeuner ?",
-      "desc": "Le prix du café et des œufs a explosé. Mais... qu'en est-il des autres aliments du petit déjeuner ?\n\nC'est ainsi qu'est né mon nouveau projet : une solution complète pour prévoir les prix des principaux aliments consommés au petit déjeuner pour les 6 prochains mois. ☕🍞🥚",
+      "title": "Quel est le prix du petit-déjeuner ?",
+      "desc": "Le café et les œufs sont devenus bien plus chers...\n\nMais qu'en est-il des autres éléments du petit-déjeuner ?\n\nCe projet est né de cette question. J’ai conçu une solution complète capable de prévoir, sur les six prochains mois, le prix des principaux aliments consommés le matin. Tout le processus a été automatisé grâce au machine learning, au scraping, à la visualisation et aux APIs.",
       "tools": [
-        "Python", "SQL", "Pandas", "NumPy", "ScikitLearn", "Airflow", "Git", "Docker", "Google Cloud", "FastAPI", "Streamlit", "Selenium", "BeautifulSoup", "Prophet", "Algorithme Génétique", "Bash", "Gemini", "Plotly"
+        "Python", "SQL", "Pandas", "NumPy", "ScikitLearn", "Airflow", "Git", "Docker", "Google Cloud", "FastAPI", "Streamlit", "Selenium", "BeautifulSoup", "Prophet", "Algoritmo Genetico", "Bash", "Gemini", "Plotly"
       ],
       "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
       "websiteLink": "https://breakfast-forecast.streamlit.app/",
-      "img": "src/imgs/breakfast_timeseries.png"
+      "img": "src/imgs/breakfast_forecast.png"
     },
     {
-      "title": "Chatbot Financier Personnel",
-      "desc": "Un bot WhatsApp intelligent et convivial qui vous aide à gérer votre argent. Vous pouvez enregistrer vos dépenses, suivre vos dettes, définir des budgets et poser des questions — le tout dans une conversation simple.",
+      "title": "Chatbot de Gestion Financière Personnelle",
+      "desc": "Un bot WhatsApp qui vous accompagne dans la gestion de vos finances, de façon simple et conviviale.\n\nIl permet d’enregistrer des dépenses, suivre des dettes, définir un budget et obtenir des conseils personnalisés à tout moment.",
       "tools": [
         "Python", "FastAPI", "Ngrok", "Gemini", "Heyoo", "TinyDB", "Regex", "WhatsApp"
       ],
       "githubLink": "https://github.com/Lrs50/wpp-automation",
       "websiteLink": "",
-      "img": "src/imgs/breakfast_timeseries.png"
+      "img": "src/imgs/wpp_bot.png"
+    },
+    {
+      "title": "Scraper de Produits Industriels",
+      "desc": "Outil automatisé pour collecter et structurer des données sur des produits industriels.\n\nIl transforme des pages complexes en informations claires et prêtes à être intégrées dans des catalogues ou des outils d’analyse de marché.",
+      "tools": ["Python", "UV", "Pydantic", "Regex", "Requests", "Playwright", "BeautifulSoup"],
+      "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
+      "websiteLink": "",
+      "img": "src/imgs/industrial_scraper.png"
+    },
+    {
+      "title": "Evolvium",
+      "desc": "Une bibliothèque Python légère qui utilise des algorithmes génétiques pour résoudre des problèmes d’optimisation.\n\nFacile à prendre en main, elle est idéale pour l’expérimentation ou les projets réels nécessitant des solutions efficaces.",
+      "tools": ["Python", "Algoritmo Genetico", "NumPy", "Matplotlib"],
+      "githubLink": "https://github.com/Lrs50/Evolvium",
+      "websiteLink": "https://test.pypi.org/project/evolvium/",
+      "img": "src/imgs/evolvium.png"
+    },
+    {
+      "title": "8 Reines avec Algorithmes Génétiques",
+      "desc": "Simulation interactive du célèbre problème des 8 reines, résolu à l’aide d’algorithmes génétiques.\n\nUn moyen ludique et visuel de comprendre comment ces algorithmes construisent des solutions efficaces avec le temps.",
+      "tools": ["Csharp","Unity", "Algoritmo Genetico"],
+      "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
+      "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
+      "img": "src/imgs/8_queens.png"
+    },
+    {
+      "title": "Ybý-Mokoĩ",
+      "desc": "Un RPG 2D d’action inspiré de la mythologie Tupi-Guarani.\n\nLe joueur affronte des créatures légendaires, collecte des objets comme le guaraná et l’açaï, et explore la légende de l’origine de la nuit. Un jeu qui valorise la culture autochtone à travers une expérience immersive et éducative.",
+      "tools": ["Csharp","Unity"],
+      "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
+      "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
+      "img": "src/imgs/game_unity.png"
+    },
+    {
+      "title": "Agent Autonome avec Algorithmes de Recherche",
+      "desc": "Simulation dans laquelle un agent doit trouver le meilleur chemin à travers un environnement rempli d’obstacles.\n\nJ’ai testé plusieurs approches comme A*, la recherche gloutonne et des algorithmes génétiques, avec une interface claire et intuitive pour l’analyse visuelle.",
+      "tools": ["Unity", "Csharp", "Search Algorithm", "Algoritmo Genetico"],
+      "githubLink": "https://github.com/Lrs50/Projeto_SI",
+      "websiteLink": "https://lrs50.github.io/Projeto_SI/WebGLBuild/",
+      "img": "src/imgs/search_agent.png"
+    },
+    {
+      "title": "Générateur de Mots Mêlés",
+      "desc": "Application simple en Python pour créer des grilles de mots mêlés personnalisées.\n\nParfaite pour les enseignants, les élèves ou toute personne souhaitant concevoir rapidement des activités éducatives ou ludiques.",
+      "tools": ["Python", "Tkinter"],
+      "githubLink": "https://github.com/Lrs50/WordSearch",
+      "websiteLink": "",
+      "img": "src/imgs/wordsearch.png"
     }
   ]
+
 }
 
 

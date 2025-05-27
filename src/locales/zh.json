@@ -82,26 +82,73 @@
   "websitelink": "项目网站",
   "projects": [
     {
-      "title": "早餐多少钱？",
-      "desc": "咖啡和鸡蛋的价格飞涨。但……早餐的其他食材呢？\n\n这就是我新项目的起点：一个完整的解决方案，用于预测未来6个月早餐主要食材的价格。☕🍞🥚",
+      "title": "早餐到底多少钱？",
+      "desc": "最近咖啡和鸡蛋涨价了不少...\n\n那早餐的其他部分呢？\n\n这个项目源于我对这个问题的好奇。我构建了一个完整的系统，能够预测未来六个月早餐中主要食材的价格趋势。整个流程通过机器学习、网页爬取、数据可视化和 API 实现自动化。",
       "tools": [
-        "Python", "SQL", "Pandas", "NumPy", "ScikitLearn", "Airflow", "Git", "Docker", "Google Cloud", "FastAPI", "Streamlit", "Selenium", "BeautifulSoup", "Prophet", "遗传算法", "Bash", "Gemini", "Plotly"
+        "Python", "SQL", "Pandas", "NumPy", "ScikitLearn", "Airflow", "Git", "Docker", "Google Cloud", "FastAPI", "Streamlit", "Selenium", "BeautifulSoup", "Prophet", "Algoritmo Genetico", "Bash", "Gemini", "Plotly"
       ],
       "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
       "websiteLink": "https://breakfast-forecast.streamlit.app/",
-      "img": "src/imgs/breakfast_timeseries.png"
+      "img": "src/imgs/breakfast_forecast.png"
     },
     {
-      "title": "个人理财聊天机器人",
-      "desc": "一个智能且友好的WhatsApp机器人，可以帮助你管理财务。你可以记录支出、跟踪债务、设定预算，并通过简单对话提出问题。",
+      "title": "个人财务聊天机器人",
+      "desc": "这是一个集成在 WhatsApp 上的聊天机器人，专注于个人财务管理。\n\n你可以通过它记录支出、跟踪债务、设定预算，还能随时提出疑问并获得清晰的回答，简单易用且非常实用。",
       "tools": [
         "Python", "FastAPI", "Ngrok", "Gemini", "Heyoo", "TinyDB", "Regex", "WhatsApp"
       ],
       "githubLink": "https://github.com/Lrs50/wpp-automation",
       "websiteLink": "",
-      "img": "src/imgs/breakfast_timeseries.png"
+      "img": "src/imgs/wpp_bot.png"
+    },
+    {
+      "title": "工业产品数据爬取器",
+      "desc": "这是一个自动化工具，用于采集和整理工业品网站上的产品信息。\n\n它能将混乱或不规范的网页内容转化为结构清晰的数据，非常适合用于目录系统或市场分析。",
+      "tools": ["Python", "UV", "Pydantic", "Regex", "Requests", "Playwright", "BeautifulSoup"],
+      "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
+      "websiteLink": "",
+      "img": "src/imgs/industrial_scraper.png"
+    },
+    {
+      "title": "Evolvium 优化库",
+      "desc": "一个使用遗传算法解决优化问题的轻量级 Python 库。\n\n简单易用，适合快速测试思路，也可以应用于实际项目中寻找优质解法。",
+      "tools": ["Python", "Algoritmo Genetico", "NumPy", "Matplotlib"],
+      "githubLink": "https://github.com/Lrs50/Evolvium",
+      "websiteLink": "https://test.pypi.org/project/evolvium/",
+      "img": "src/imgs/evolvium.png"
+    },
+    {
+      "title": "遗传算法解决八皇后问题",
+      "desc": "通过遗传算法解决经典的八皇后问题，并配有可视化界面。\n\n这是一个生动有趣的方式，帮助你理解进化式算法如何逐步寻找问题的最优解。",
+      "tools": ["Csharp","Unity", "Algoritmo Genetico"],
+      "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
+      "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
+      "img": "src/imgs/8_queens.png"
+    },
+    {
+      "title": "Ybý-Mokoĩ 传说之夜",
+      "desc": "一款以图皮-瓜拉尼神话为灵感的 2D 动作 RPG。\n\n玩家可以与传说中的生物战斗，收集瓜拉纳和巴西莓等道具，体验“夜晚诞生”的神话故事。游戏既有趣味性，也致力于弘扬原住民文化。",
+      "tools": ["Csharp","Unity"],
+      "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
+      "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
+      "img": "src/imgs/game_unity.png"
+    },
+    {
+      "title": "基于搜索算法的自主智能体",
+      "desc": "在这个模拟项目中，一个智能体需要在充满障碍的环境中找到最佳路径。\n\n我实现并比较了多种搜索算法，如 A*、贪婪算法和遗传算法，并用直观的界面展示整个过程。",
+      "tools": ["Unity", "Csharp", "Search Algorithm", "Algoritmo Genetico"],
+      "githubLink": "https://github.com/Lrs50/Projeto_SI",
+      "websiteLink": "https://lrs50.github.io/Projeto_SI/WebGLBuild/",
+      "img": "src/imgs/search_agent.png"
+    },
+    {
+      "title": "单词搜索生成器",
+      "desc": "一个简单的 Python 应用程序，可根据输入词汇生成自定义单词搜索游戏。\n\n适合教师、学生或任何想快速创建教育活动和益智游戏的人使用。",
+      "tools": ["Python", "Tkinter"],
+      "githubLink": "https://github.com/Lrs50/WordSearch",
+      "websiteLink": "",
+      "img": "src/imgs/wordsearch.png"
     }
   ]
 }
-
 }

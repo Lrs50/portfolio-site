@@ -83,73 +83,74 @@
   "projects": [
     {
       "title": "Quanto Custa o Café da Manhã?",
-      "desc": "O preço do café e dos ovos disparou. Mas... e os outros itens do café da manhã?\n\nFoi assim que surgiu meu novo projeto: uma solução completa para prever os preços dos principais alimentos consumidos no café da manhã nos próximos 6 meses. ☕🍞🥚",
+      "desc": "Os preços do café e dos ovos subiram bastante...\n\nMas e o resto do café da manhã?\n\nEsse projeto nasceu dessa curiosidade. Desenvolvi uma solução completa para prever, pelos próximos 6 meses, o preço dos principais alimentos consumidos pela manhã. Todo o processo foi automatizado com machine learning, scraping, visualização e APIs.",
       "tools": [
         "Python", "SQL", "Pandas", "NumPy", "ScikitLearn", "Airflow", "Git", "Docker", "Google Cloud", "FastAPI", "Streamlit", "Selenium", "BeautifulSoup", "Prophet", "Algoritmo Genetico", "Bash", "Gemini", "Plotly"
       ],
       "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
       "websiteLink": "https://breakfast-forecast.streamlit.app/",
-      "img": "src/imgs/breakfast_timeseries.png"
+      "img": "src/imgs/breakfast_forecast.png"
     },
     {
       "title": "Chatbot Financeiro Pessoal",
-      "desc": "Um bot inteligente e amigável no WhatsApp que ajuda você a controlar seu dinheiro. Registre gastos, acompanhe dívidas, defina orçamentos e tire dúvidas — tudo em uma conversa simples.",
+      "desc": "Um bot no WhatsApp que conversa com você e ajuda a cuidar das suas finanças.\n\nCom ele, dá pra registrar despesas, acompanhar dívidas, definir orçamentos e tirar dúvidas de forma prática, rápida e acessível.",
       "tools": [
         "Python", "FastAPI", "Ngrok", "Gemini", "Heyoo", "TinyDB", "Regex", "WhatsApp"
       ],
       "githubLink": "https://github.com/Lrs50/wpp-automation",
       "websiteLink": "",
-      "img": "src/imgs/breakfast_timeseries.png"
+      "img": "src/imgs/wpp_bot.png"
     },
     {
-      "title": "Industrial Product Scraper",
-      "desc": "A tool that automatically collects detailed information about industrial products and organizes it into a structured format.",
+      "title": "Scraper de Produtos Industriais",
+      "desc": "Ferramenta que coleta e organiza dados de produtos industriais de forma automatizada.\n\nTransforma páginas confusas em informações limpas, estruturadas e prontas para sistemas de catalogação e análise de mercado.",
       "tools": ["Python", "UV", "Pydantic", "Regex", "Requests", "Playwright", "BeautifulSoup"],
       "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
       "websiteLink": "",
-      "img": "src/imgs/breakfast_timeseries.png"
+      "img": "src/imgs/industrial_scraper.png"
     },
     {
-    "title": "Evolvium",
-    "desc": "A Python library that uses genetic algorithms to solve optimization problems by evolving better solutions over time.",
-    "tools": ["Python", "Algoritmo Genetico", "NumPy", "Matplotlib"],
-    "githubLink": "https://github.com/Lrs50/Evolvium",
-    "websiteLink": "",
-    "img": "src/imgs/breakfast_timeseries.png"
-  },
-  {
-  "title": "8 Queens Solver with Genetic Algorithms",
-  "desc": "An interactive simulation that shows how evolution-inspired algorithms can solve the classic 8 queens puzzle.",
-  "tools": ["Csharp","Unity", "Algoritmo Genetico"],
-  "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
-  "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
-  "img": "src/imgs/breakfast_timeseries.png"
-  },
-  {
-  "title": "Ybý-Mokoĩ – 2D Indigenous Mythology Game",
-  "desc": "A 2D action RPG inspired by Tupi-Guarani mythology, where players collect items and battle legendary creatures in an educational and fun experience.",
-  "tools": ["Csharp","Unity"],
-  "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
-  "websiteLink": "",
-  "img": "src/imgs/breakfast_timeseries.png"
-  },
-  {
-  "title": "Autonomous Pathfinding Agent",
-  "desc": "An interactive simulation where an agent explores a complex environment to find a path to the goal using different search algorithms.",
-  "tools": ["Unity", "Csharp", "Search Algorithm", "Algoritmo Genetico"],
-  "githubLink": "https://github.com/Lrs50/Projeto_SI",
-  "websiteLink": "https://lrs50.github.io/Projeto_SI/WebGLBuild/",
-  "img": "src/imgs/breakfast_timeseries.png"
-},
-{
-  "title": "Word Search Generator",
-  "desc": "A simple desktop app that lets you create your own word search puzzles from custom word lists.",
-  "tools": ["Python", "Tkinter"],
-  "githubLink": "https://github.com/Lrs50/WordSearch",
-  "websiteLink": "",
-  "img": "src/imgs/breakfast_timeseries.png"
-}
+      "title": "Evolvium",
+      "desc": "Uma biblioteca em Python que usa algoritmos genéticos para resolver problemas de otimização.\n\nSimples de usar, versátil e ideal para testar ideias ou aplicar em projetos reais com foco em boas soluções.",
+      "tools": ["Python", "Algoritmo Genetico", "NumPy", "Matplotlib"],
+      "githubLink": "https://github.com/Lrs50/Evolvium",
+      "websiteLink": "https://test.pypi.org/project/evolvium/",
+      "img": "src/imgs/evolvium.png"
+    },
+    {
+      "title": "8 Rainhas com Algoritmos Genéticos",
+      "desc": "Simulação visual do problema das 8 rainhas usando algoritmos genéticos.\n\nUm jeito divertido de entender como soluções evoluem com o tempo e como a IA pode resolver problemas clássicos.",
+      "tools": ["Csharp","Unity", "Algoritmo Genetico"],
+      "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
+      "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
+      "img": "src/imgs/8_queens.png"
+    },
+    {
+      "title": "Ybý-Mokoĩ",
+      "desc": "Um RPG 2D de ação inspirado na mitologia Tupi-Guarani.\n\nO jogador enfrenta criaturas lendárias, coleta itens como guaraná e açaí, e vivencia a lenda da origem da noite. É uma homenagem à cultura indígena com jogabilidade envolvente e educativa.",
+      "tools": ["Csharp","Unity"],
+      "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
+      "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
+      "img": "src/imgs/game_unity.png"
+    },
+    {
+      "title": "Agente Autônomo com Algoritmos de Busca",
+      "desc": "Simulação onde um agente precisa encontrar o melhor caminho em um ambiente cheio de obstáculos.\n\nImplementei diferentes algoritmos de busca como A*, busca gulosa e até evolução genética, tudo visualizado de forma clara e intuitiva.",
+      "tools": ["Unity", "Csharp", "Search Algorithm", "Algoritmo Genetico"],
+      "githubLink": "https://github.com/Lrs50/Projeto_SI",
+      "websiteLink": "https://lrs50.github.io/Projeto_SI/WebGLBuild/",
+      "img": "src/imgs/search_agent.png"
+    },
+    {
+      "title": "Gerador de Caça-Palavras",
+      "desc": "Aplicativo simples feito em Python para criar caça-palavras personalizados.\n\nIdeal para professores, estudantes ou qualquer pessoa que queira montar atividades educativas de forma rápida e intuitiva.",
+      "tools": ["Python", "Tkinter"],
+      "githubLink": "https://github.com/Lrs50/WordSearch",
+      "websiteLink": "",
+      "img": "src/imgs/wordsearch.png"
+    }
   ]
+
 }
 
 }

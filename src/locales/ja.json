@@ -82,26 +82,75 @@
   "websitelink": "プロジェクトサイト",
   "projects": [
     {
-      "title": "朝食はいくら？",
-      "desc": "コーヒーと卵の価格が高騰しています。でも…他の朝食アイテムは？\n\nそんな疑問からこのプロジェクトが生まれました。今後6ヶ月間の朝食に使われる主要な食品の価格を予測する完全なソリューションです。☕🍞🥚",
+      "title": "朝食の値段はどれくらい？",
+      "desc": "コーヒーと卵の価格が大きく上昇しました\n\nでは、他の朝食食品はどうでしょうか？\n\nこの疑問からプロジェクトが始まりました。主要な朝食食材の価格を今後6ヶ月間予測するシステムを構築し、機械学習やスクレイピング、可視化、API連携を使って完全に自動化しています。",
       "tools": [
-        "Python", "SQL", "Pandas", "NumPy", "ScikitLearn", "Airflow", "Git", "Docker", "Google Cloud", "FastAPI", "Streamlit", "Selenium", "BeautifulSoup", "Prophet", "遺伝的アルゴリズム", "Bash", "Gemini", "Plotly"
+        "Python", "SQL", "Pandas", "NumPy", "ScikitLearn", "Airflow", "Git", "Docker", "Google Cloud", "FastAPI", "Streamlit", "Selenium", "BeautifulSoup", "Prophet", "Algoritmo Genetico", "Bash", "Gemini", "Plotly"
       ],
       "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
       "websiteLink": "https://breakfast-forecast.streamlit.app/",
-      "img": "src/imgs/breakfast_timeseries.png"
+      "img": "src/imgs/breakfast_forecast.png"
     },
     {
-      "title": "パーソナルファイナンスチャットボット",
-      "desc": "お金の管理を助けてくれる、スマートで親しみやすいWhatsAppボットです。支出を記録し、借金を追跡し、予算を設定し、簡単な会話で質問することができます。",
+      "title": "個人向けファイナンスチャットボット",
+      "desc": "WhatsAppで使えるファイナンスボットです。日々の会話感覚で、支出の記録、借金の管理、予算の設定、ちょっとした疑問の解決までサポートします。\n\nシンプルで実用的、誰でもすぐに使えます。",
       "tools": [
         "Python", "FastAPI", "Ngrok", "Gemini", "Heyoo", "TinyDB", "Regex", "WhatsApp"
       ],
       "githubLink": "https://github.com/Lrs50/wpp-automation",
       "websiteLink": "",
-      "img": "src/imgs/breakfast_timeseries.png"
+      "img": "src/imgs/wpp_bot.png"
+    },
+    {
+      "title": "工業製品データスクレーパー",
+      "desc": "工業製品に関するデータを自動で収集・整理するツールです。\n\n構造化されていないウェブページから、分析やカタログ登録に使えるクリーンな情報を抽出できます。",
+      "tools": ["Python", "UV", "Pydantic", "Regex", "Requests", "Playwright", "BeautifulSoup"],
+      "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
+      "websiteLink": "",
+      "img": "src/imgs/industrial_scraper.png"
+    },
+    {
+      "title": "Evolvium",
+      "desc": "Pythonで開発された遺伝的アルゴリズムライブラリです。\n\n使いやすく柔軟で、最適化問題へのアプローチや実験・研究に最適です。",
+      "tools": ["Python", "Algoritmo Genetico", "NumPy", "Matplotlib"],
+      "githubLink": "https://github.com/Lrs50/Evolvium",
+      "websiteLink": "https://test.pypi.org/project/evolvium/",
+      "img": "src/imgs/evolvium.png"
+    },
+    {
+      "title": "遺伝的アルゴリズムで解く8クイーン問題",
+      "desc": "クラシックな8クイーン問題を、遺伝的アルゴリズムで視覚的に解くシミュレーションです。\n\n進化の仕組みを学びたい人やAIの直感的な理解に役立ちます。",
+      "tools": ["Csharp","Unity", "Algoritmo Genetico"],
+      "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
+      "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
+      "img": "src/imgs/8_queens.png"
+    },
+    {
+      "title": "Ybý-Mokoĩ",
+      "desc": "トゥピ・グアラニ神話にインスパイアされた2DアクションRPGです。\n\n伝説の生物と戦い、グアラナやアサイーなどのアイテムを集めながら「夜の起源」の物語を体験します。先住民族文化を楽しく学べる作品です。",
+      "tools": ["Csharp","Unity"],
+      "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
+      "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
+      "img": "src/imgs/game_unity.png"
+    },
+    {
+      "title": "探索アルゴリズムによる自律エージェント",
+      "desc": "障害物のある環境で、最適な経路を見つけるエージェントのシミュレーションです。\n\nA*や貪欲法、遺伝的アルゴリズムなど複数の手法を視覚的に比較しながら試すことができます。",
+      "tools": ["Unity", "Csharp", "Search Algorithm", "Algoritmo Genetico"],
+      "githubLink": "https://github.com/Lrs50/Projeto_SI",
+      "websiteLink": "https://lrs50.github.io/Projeto_SI/WebGLBuild/",
+      "img": "src/imgs/search_agent.png"
+    },
+    {
+      "title": "ワードサーチ生成ツール",
+      "desc": "任意の単語リストからオリジナルのワードサーチ（言葉探し）を作成できるPythonアプリです。\n\n教育やレクリエーション用途に便利で、使い方もとても簡単です。",
+      "tools": ["Python", "Tkinter"],
+      "githubLink": "https://github.com/Lrs50/WordSearch",
+      "websiteLink": "",
+      "img": "src/imgs/wordsearch.png"
     }
   ]
 }
+
 
 }

@@ -80,28 +80,76 @@
       "tool":"Tools",
       "githublink":"Github Link",
       "websitelink":"Project Website",
-      "projects":[
-        {
-          "title": "How Much Does Breakfast Cost?",
-          "desc": "The price of coffee and eggs has skyrocketed. But... what about the other breakfast items?\n\nThat's what sparked my new project: a complete solution to forecast the prices of the main foods consumed at breakfast over the next 6 months. ☕🍞🥚",
-          "tools": [
-          "Python", "SQL","Pandas", "NumPy", "ScikitLearn", "Airflow", "Git", "Docker", "Google Cloud", "FastAPI", "Streamlit", "Selenium", "BeautifulSoup", "Prophet", "Algoritmo Genetico", "Bash", "Gemini", "Plotly"
-          ],
-          "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
-          "websiteLink": "https://breakfast-forecast.streamlit.app/",
-          "img":"src/imgs/breakfast_timeseries.png"
-        },
-        {
-        "title": "Personal Finance Chatbot",
-        "desc": "A smart and friendly WhatsApp bot that helps you manage your money. You can record your expenses, track your debts, set budgets, and ask questions — all in a simple conversation.",
-        "tools": [
-          "Python", "FastAPI", "Ngrok", "Gemini", "Heyoo", "TinyDB", "Regex", "WhatsApp"
-        ],
-        "githubLink": "https://github.com/Lrs50/wpp-automation",
-        "websiteLink": "",
-        "img":"src/imgs/breakfast_timeseries.png"
-      }
+  "projects": [
+    {
+      "title": "How Much Does Breakfast Cost?",
+      "desc": "Coffee and eggs have become more expensive...\n\nBut what about the rest of breakfast?\n\nThis project started with that question. I developed a complete solution to forecast, over the next 6 months, the prices of key breakfast foods. Everything was automated using machine learning, scraping, data visualization and APIs.",
+      "tools": [
+        "Python", "SQL", "Pandas", "NumPy", "ScikitLearn", "Airflow", "Git", "Docker", "Google Cloud", "FastAPI", "Streamlit", "Selenium", "BeautifulSoup", "Prophet", "Algoritmo Genetico", "Bash", "Gemini", "Plotly"
+      ],
+      "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
+      "websiteLink": "https://breakfast-forecast.streamlit.app/",
+      "img": "src/imgs/breakfast_forecast.png"
+    },
+    {
+      "title": "Personal Finance Chatbot",
+      "desc": "A WhatsApp chatbot that helps you manage your finances through conversation.\n\nIt allows you to log expenses, track debts, set budgets, and get financial tips in a fast, simple, and accessible way.",
+      "tools": [
+        "Python", "FastAPI", "Ngrok", "Gemini", "Heyoo", "TinyDB", "Regex", "WhatsApp"
+      ],
+      "githubLink": "https://github.com/Lrs50/wpp-automation",
+      "websiteLink": "",
+      "img": "src/imgs/wpp_bot.png"
+    },
+    {
+      "title": "Industrial Product Scraper",
+      "desc": "An automated tool to extract and structure product data from industrial websites.\n\nIt turns unstructured and messy pages into clean, organized information ready for catalog systems and market analysis.",
+      "tools": ["Python", "UV", "Pydantic", "Regex", "Requests", "Playwright", "BeautifulSoup"],
+      "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
+      "websiteLink": "",
+      "img": "src/imgs/industrial_scraper.png"
+    },
+    {
+      "title": "Evolvium",
+      "desc": "A lightweight Python library that uses genetic algorithms to solve optimization problems.\n\nSimple to use and ideal for experimentation or real-world projects that need good solutions without exact formulas.",
+      "tools": ["Python", "Algoritmo Genetico", "NumPy", "Matplotlib"],
+      "githubLink": "https://github.com/Lrs50/Evolvium",
+      "websiteLink": "https://test.pypi.org/project/evolvium/",
+      "img": "src/imgs/evolvium.png"
+    },
+    {
+      "title": "8 Queens with Genetic Algorithms",
+      "desc": "An interactive simulation of the classic 8 queens problem using genetic algorithms.\n\nIt’s a fun and visual way to understand how evolutionary algorithms build solutions over time.",
+      "tools": ["Csharp","Unity", "Algoritmo Genetico"],
+      "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
+      "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
+      "img": "src/imgs/8_queens.png"
+    },
+    {
+      "title": "Ybý-Mokoĩ",
+      "desc": "A 2D action RPG inspired by Tupi-Guarani mythology.\n\nThe player battles legendary creatures, collects items like guaraná and açaí, and experiences the story behind the origin of night. A creative and educational way to celebrate Indigenous culture through engaging gameplay.",
+      "tools": ["Csharp","Unity"],
+      "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
+      "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
+      "img": "src/imgs/game_unity.png"
+    },
+    {
+      "title": "Autonomous Agent with Search Algorithms",
+      "desc": "A simulation where an agent must find the best path in an environment full of obstacles.\n\nI implemented and compared different search strategies, including A*, greedy search, and even genetic algorithms, all within an intuitive visual interface.",
+      "tools": ["Unity", "Csharp", "Search Algorithm", "Algoritmo Genetico"],
+      "githubLink": "https://github.com/Lrs50/Projeto_SI",
+      "websiteLink": "https://lrs50.github.io/Projeto_SI/WebGLBuild/",
+      "img": "src/imgs/search_agent.png"
+    },
+    {
+      "title": "Word Search Generator",
+      "desc": "A simple Python app to create personalized word search puzzles.\n\nPerfect for educators, students, or anyone looking to quickly build educational games and fun printable activities.",
+      "tools": ["Python", "Tkinter"],
+      "githubLink": "https://github.com/Lrs50/WordSearch",
+      "websiteLink": "",
+      "img": "src/imgs/wordsearch.png"
+    }
+  ]
 
-      ]
     }
 }
