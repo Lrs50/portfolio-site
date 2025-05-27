@@ -15,9 +15,11 @@
 "aboutMe": {
   "title": "À propos de <1>Moi</1>",
   "history": [
-    "Je suis Lucas Reis, diplômé en ingénierie informatique de l'Université Fédérale de Pernambuco (UFPE). Originaire de Bahia, j'ai déménagé à Recife pour faire progresser ma carrière académique et professionnelle dans la technologie.",
-    "J'ai une solide expérience en science des données et MLOps, avec des compétences en collecte, traitement, développement et déploiement de modèles. J'ai mené des recherches sur les réseaux 5G avec le CIN/Motorola et sur les réseaux neuronaux quantiques avec une bourse PIBIC. J'ai également été vice-président de la Ligue Académique de Calcul Quantique (LACIQ), promouvant la recherche et les partenariats industriels.",
-    "Actuellement, je travaille sur des pipelines de données évolutifs, des modèles prédictifs et l'intégration de systèmes de machine learning en production. Je souhaite poursuivre un master en informatique avec un accent sur la prévision de séries temporelles."
+  "Je m'appelle Lucas Reis, ingénieur en informatique diplômé de l'Université Fédérale de Pernambuco (UFPE), avec une forte passion pour la création de solutions intelligentes et efficaces.",
+  "Originaire de Bahia, je me suis installé à Recife à l'âge de 18 ans pour développer ma carrière dans le domaine des technologies. Depuis, j’ai acquis une solide expérience en science des données, MLOps et ingénierie de l’apprentissage automatique, couvrant toutes les étapes d’un projet de données.",
+  "Pendant mes études, j’ai participé à des recherches sur les réseaux 5G avec le CIN/Motorola et sur les réseaux neuronaux quantiques via une bourse PIBIC. J’ai également été vice-président de la Ligue Académique de Calcul Quantique (LACIQ), favorisant les liens entre recherche et industrie.",
+  "Aujourd’hui, je me concentre sur le développement de pipelines de données robustes, de modèles prédictifs et de systèmes de machine learning prêts pour la production. Je prévois de poursuivre un master en informatique, avec un intérêt particulier pour la prévision de séries temporelles.",
+  "Je suis à l’aise avec l’ensemble du cycle de vie des projets de données, et je cherche toujours à livrer des solutions fiables, éthiques et à fort impact."
   ],
   "timeline": {
     "title": "Mon <1>Parcours</1>",

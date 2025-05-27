@@ -14,10 +14,12 @@
   },
   "aboutMe":{
     "title":"About <1>Me</1>",
-    "history":[
-            "I am Lucas Reis, a Computer Engineering graduate from the Federal University of Pernambuco (UFPE). Originally from Bahia, I moved to Recife to advance my academic and professional journey in technology.",
-            "I have a solid background in data science and MLOps, with experience in data collection, processing, model development, and deployment. My academic experience includes research in 5G networks in collaboration with CIN/Motorola and work on quantum neural networks through a PIBIC scholarship. I also served as Vice President of the Quantum Computing League (LACIQ), fostering research and industry connections.",
-            "Currently I focus on developing scalable data pipelines, building predictive models, and integrating machine learning systems into production environments. I intend to pursue a master's degree in Computer Science with a focus on time series forecasting."
+    "history": [
+      "I'm Lucas Reis, a computer engineer graduated from the Federal University of Pernambuco (UFPE), passionate about building intelligent and scalable solutions.",
+      "Originally from Bahia, I moved to Recife at the age of 18 to pursue my academic and professional goals in technology. Since then, I’ve gained solid experience in data science, MLOps, and machine learning engineering, handling projects from data collection to deployment.",
+      "During my undergraduate studies, I joined research projects on 5G networks in collaboration with CIN/Motorola and worked on quantum neural networks through a PIBIC scholarship. I also served as vice president of the Quantum Computing Academic League (LACIQ), promoting research and industry engagement.",
+      "Currently, I focus on developing robust data pipelines, predictive models, and machine learning systems ready for production. I plan to pursue a master's degree in computer science with a focus on time series forecasting.",
+      "I’m comfortable working across the entire data project lifecycle and committed to delivering impactful, ethical, and technically sound solutions."
     ],
     "timeline": {
         "title": "My <1>Trajectory</1>",

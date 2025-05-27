@@ -15,9 +15,11 @@
 "aboutMe": {
   "title": "Sobre <1>Mí</1>",
   "history": [
-    "Soy Lucas Reis, graduado en Ingeniería Informática por la Universidad Federal de Pernambuco (UFPE). Originario de Bahía, me mudé a Recife para impulsar mi trayectoria académica y profesional en tecnología.",
-    "Tengo una sólida formación en ciencia de datos y MLOps, con experiencia en recolección, procesamiento, desarrollo y despliegue de modelos. He participado en investigaciones sobre redes 5G en colaboración con CIN/Motorola y redes neuronales cuánticas con una beca PIBIC. También fui vicepresidente de la Liga Académica de Computación Cuántica (LACIQ), fomentando la investigación y alianzas con la industria.",
-    "Actualmente me enfoco en construir pipelines de datos escalables, modelos predictivos e integrar sistemas de machine learning en entornos de producción. Tengo la intención de cursar una maestría en Ciencia de la Computación con enfoque en series temporales."
+  "Soy Lucas Reis, ingeniero en computación egresado de la Universidad Federal de Pernambuco (UFPE), apasionado por crear soluciones inteligentes con impacto real.",
+  "Nací en Bahía y me mudé a Recife a los 18 años para desarrollar mi carrera en el área tecnológica. A lo largo de mi formación, adquirí experiencia sólida en ciencia de datos, MLOps e ingeniería de machine learning, trabajando en proyectos desde su inicio hasta su implementación en producción.",
+  "Participé en investigaciones sobre redes 5G en colaboración con el CIN/Motorola y exploré redes neuronales cuánticas gracias a una beca PIBIC. También fui vicepresidente de la Liga Académica de Computación Cuántica (LACIQ), impulsando iniciativas de investigación con conexión al mercado.",
+  "Actualmente me dedico al desarrollo de pipelines escalables, modelos predictivos y soluciones de machine learning listas para producción. Tengo la intención de cursar una maestría en computación con enfoque en series temporales.",
+  "Me adapto bien a todo el ciclo de vida de proyectos de datos, y busco siempre entregar soluciones técnicas, éticas y de alto valor para el negocio."
   ],
   "timeline": {
     "title": "Mi <1>Trayectoria</1>",

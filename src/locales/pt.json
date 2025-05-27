@@ -15,10 +15,13 @@
 "aboutMe": {
   "title": "Sobre <1>Mim</1>",
   "history": [
-    "Sou Lucas Reis, formado em Engenharia da Computação pela Universidade Federal de Pernambuco (UFPE). Natural da Bahia, mudei-me para o Recife para impulsionar minha trajetória acadêmica e profissional na área de tecnologia.",
-    "Tenho uma base sólida em ciência de dados e MLOps, com experiência em coleta, processamento, desenvolvimento e implantação de modelos. Atuei em pesquisas sobre redes 5G em parceria com o CIN/Motorola e também com redes neurais quânticas por meio de uma bolsa PIBIC. Fui vice-presidente da Liga Acadêmica de Computação Quântica (LACIQ), promovendo pesquisa e conexões com a indústria.",
-    "Atualmente, foco no desenvolvimento de pipelines de dados escaláveis, modelos preditivos e integração de sistemas de machine learning em produção. Pretendo cursar um mestrado em Ciência da Computação com foco em previsão de séries temporais."
+    "Sou Lucas Reis, engenheiro da computação formado pela Universidade Federal de Pernambuco (UFPE), com trajetória marcada pela curiosidade, multidisciplinaridade e paixão por construir soluções inteligentes.",
+    "Natural da Bahia, mudei-me para Recife aos 18 anos para seguir meu propósito na área de tecnologia. Desde então, venho acumulando experiências em ciência de dados, MLOps e engenharia de machine learning, atuando desde a coleta e preparação dos dados até o desenvolvimento, validação e implementação de modelos preditivos em produção.",
+    "Durante a graduação, participei de projetos de pesquisa em redes 5G em parceria com o CIN/Motorola e explorei o potencial de redes neurais quânticas por meio de uma bolsa PIBIC. Também atuei como vice-presidente da Liga Acadêmica de Computação Quântica (LACIQ), promovendo iniciativas que conectam pesquisa e indústria.",
+    "Hoje, concentro meus esforços no desenvolvimento de pipelines de dados escaláveis, automações inteligentes e soluções para previsão de séries temporais, área em que pretendo aprofundar meus estudos em um mestrado acadêmico.",
+    "Tenho facilidade para atuar em todas as etapas do ciclo de vida de projetos de dados, conciliando pensamento técnico e visão sistêmica para entregar soluções robustas, éticas e com impacto real."
   ],
+
   "timeline": {
     "title": "Minha <1>Trajetória</1>",
     "events": [
