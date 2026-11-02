@@ -11,7 +11,7 @@ Single-page personal portfolio. Vite 6 + React 19 + Tailwind 3, plain JavaScript
 - `src/main.jsx` → `src/App.jsx`: stacked sections (`Hero`, `Projects`, `About`, `Contact`) with anchor navigation. No router; `useActiveSection` (IntersectionObserver) drives the navbar.
 - `src/sections/` – page sections. `src/components/` – Navbar, Dropdown, WordCloud (Footer, Cardproject are unused).
 - `src/locales/{en,pt,fr,es,ja,ko,zh}.json` – all text AND project data.
-- `src/imgs/` – images. `src/i18n.js` – i18next setup.
+- `public/imgs/` – images served as-is at `/imgs/...` (avatar, ellipse, project cards). `src/imgs/` – only `bg-texture.png` (used from CSS, bundled by Vite). `src/i18n.js` – i18next setup.
 
 ## Conventions
 - Styling: Tailwind utility classes inline only (no CSS modules). Custom colors/fonts/`desktop` (768px) breakpoint in `tailwind.config.js`.
@@ -27,12 +27,12 @@ Single-page personal portfolio. Vite 6 + React 19 + Tailwind 3, plain JavaScript
 
 ## Add a project
 1. Add entry to `project.projects` in EVERY locale file (`title, img, desc, tools, githubLink, websiteLink`).
-2. Put image in `src/imgs/`.
+2. Put image in `public/imgs/` and set `img` to `"/imgs/x.png"`.
 3. New tool name → add icon to `iconSources` in `src/sections/Projects.jsx` (key = lowercase, no spaces).
 
 ## Gotchas
-- `img` paths in locale JSON are plain `"src/imgs/x.png"` strings (not Vite-processed); verify they resolve in `npm run build`.
+- `img` paths in locale JSON and `<img src>` in components are plain `/imgs/x.png` strings (not Vite-processed). They only work if the file is in `public/imgs/`; check `dist/imgs/` after `npm run build`.
 - `tailwind.config.js` uses CommonJS in a `"type": "module"` package; confirm it loads.
 - `Contact.jsx` uses hardcoded English `alert()`s and hardcoded EmailJS keys.
-- No deploy config in repo; no `vite.config`.
+- No deploy config in repo yet; `vite.config.js` only sets `base: "/"` (planned host: Cloudflare Pages, see `target/SPEC.md`).
 - `index.html` has static `lang="pt-br"`.

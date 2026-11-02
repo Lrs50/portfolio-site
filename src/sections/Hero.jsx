@@ -26,13 +26,13 @@ export default function Hero(){
             </div>
             <div className="relative w-[410px] desktop:w-[700px] mx-auto mt-[65px] desktop:mt-[120px]">
                 <img
-                src="src\imgs\ellipse.png" 
+                src="/imgs/ellipse.png"
                 alt="Purple ellipse" 
                 className="block w-[85%] z-0 mx-auto"
                 />
 
                 <img
-                src="src\imgs\avatar.png" 
+                src="/imgs/avatar.png"
                 alt="My picture" 
                 className="absolute z-10 bottom-0 left-1/2 -translate-x-1/2 "
                 />

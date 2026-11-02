@@ -95,7 +95,7 @@
       "tools": ["Python", "PennyLane", "Streamlit", "Plotly", "NumPy", "UV"],
       "githubLink": "https://github.com/Lrs50/quantum-dice",
       "websiteLink": "https://quantum-dice.streamlit.app",
-      "img": "src/imgs/quantum_dice.png"
+      "img": "/imgs/quantum_dice.png"
     },
     {
       "title": "早餐到底多少钱？",
@@ -105,7 +105,7 @@
       ],
       "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
       "websiteLink": "https://breakfast-forecast.streamlit.app/",
-      "img": "src/imgs/breakfast_forecast.png"
+      "img": "/imgs/breakfast_forecast.png"
     },
     {
       "title": "个人财务聊天机器人",
@@ -115,7 +115,7 @@
       ],
       "githubLink": "https://github.com/Lrs50/wpp-automation",
       "websiteLink": "",
-      "img": "src/imgs/wpp_bot.png"
+      "img": "/imgs/wpp_bot.png"
     },
     {
       "title": "工业产品数据爬取器",
@@ -123,7 +123,7 @@
       "tools": ["Python", "UV", "Pydantic", "Regex", "Requests", "Playwright", "BeautifulSoup"],
       "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
       "websiteLink": "",
-      "img": "src/imgs/industrial_scraper.png"
+      "img": "/imgs/industrial_scraper.png"
     },
     {
       "title": "Evolvium 优化库",
@@ -131,7 +131,7 @@
       "tools": ["Python", "Algoritmo Genetico", "NumPy", "Matplotlib"],
       "githubLink": "https://github.com/Lrs50/Evolvium",
       "websiteLink": "https://test.pypi.org/project/evolvium/",
-      "img": "src/imgs/evolvium.png"
+      "img": "/imgs/evolvium.png"
     },
     {
       "title": "遗传算法解决八皇后问题",
@@ -139,7 +139,7 @@
       "tools": ["Csharp","Unity", "Algoritmo Genetico"],
       "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
       "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
-      "img": "src/imgs/8_queens.png"
+      "img": "/imgs/8_queens.png"
     },
     {
       "title": "Ybý-Mokoĩ 传说之夜",
@@ -147,7 +147,7 @@
       "tools": ["Csharp","Unity"],
       "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
       "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
-      "img": "src/imgs/game_unity.png"
+      "img": "/imgs/game_unity.png"
     },
     {
       "title": "基于搜索算法的自主智能体",
@@ -155,7 +155,7 @@
       "tools": ["Unity", "Csharp", "Search Algorithm", "Algoritmo Genetico"],
       "githubLink": "https://github.com/Lrs50/Projeto_SI",
       "websiteLink": "https://lrs50.github.io/Projeto_SI/WebGLBuild/",
-      "img": "src/imgs/search_agent.png"
+      "img": "/imgs/search_agent.png"
     },
     {
       "title": "单词搜索生成器",
@@ -163,7 +163,7 @@
       "tools": ["Python", "Tkinter"],
       "githubLink": "https://github.com/Lrs50/WordSearch",
       "websiteLink": "",
-      "img": "src/imgs/wordsearch.png"
+      "img": "/imgs/wordsearch.png"
     }
   ]
 }
