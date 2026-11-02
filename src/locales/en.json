@@ -18,7 +18,7 @@
       "I'm Lucas Reis, a computer engineer graduated from the Federal University of Pernambuco (UFPE), passionate about building intelligent and scalable solutions.",
       "Originally from Bahia, I moved to Recife at the age of 18 to pursue my academic and professional goals in technology. Since then, I’ve gained solid experience in data science, MLOps, and machine learning engineering, handling projects from data collection to deployment.",
       "During my undergraduate studies, I joined research projects on 5G networks in collaboration with CIN/Motorola and worked on quantum neural networks through a PIBIC scholarship. I also served as vice president of the Quantum Computing Academic League (LACIQ), promoting research and industry engagement.",
-      "Currently, I focus on developing robust data pipelines, predictive models, and machine learning systems ready for production. I plan to pursue a master's degree in computer science with a focus on time series forecasting.",
+      "At Tractian, I worked as an AI engineer on the data foundation behind industrial AI. My work was full stack: I built web-scraping and data pipelines, LLM-based enrichment and AI agents, and took them from proof of concept to production. I'm now finishing a Master's in Computer Science at UFPE, researching quantum computing, meta-learning and model selection.",
       "I’m comfortable working across the entire data project lifecycle and committed to delivering impactful, ethical, and technically sound solutions."
     ],
     "timeline": {
@@ -61,10 +61,16 @@
             "side": "left"
             },
             {
-            "title": "Master's in Computer Science",
-            "info": "Planned",
-            "desc": "I plan to pursue a Master's in Computer Science with a focus on time series forecasting.",
+            "title": "AI Engineer at Tractian",
+            "info": "Jun 2025 – Oct 2026",
+            "desc": "Full-stack AI engineer: LLM agents + web-scraping data pipelines, from PoC to production.",
             "side": "right"
+            },
+            {
+            "title": "Master's in Computer Science (UFPE)",
+            "info": "Aug 2025 – Present",
+            "desc": "Research in quantum computing, meta-learning and model selection.",
+            "side": "left"
             }
             ]
         }
@@ -83,6 +89,14 @@
       "githublink":"Github Link",
       "websitelink":"Project Website",
   "projects": [
+    {
+      "title": "Quantum Dice",
+      "desc": "An interactive way to see quantum computing concepts at work.\n\nEvery random result comes from a simulated quantum circuit: a qubit is put in superposition with a Hadamard gate and measured, collapsing to 0 or 1. Rejection sampling avoids modulo bias.\n\nRoll dice, flip coins, draw groups and lottery winners, generate passwords, shuffle playlists and build color palettes, with Bloch sphere animations of each step.\n\nIt runs on a classical simulator, so the output is pseudo-random: an educational project, not a source of true randomness or for security-critical use.",
+      "tools": ["Python", "PennyLane", "Streamlit", "Plotly", "NumPy", "UV"],
+      "githubLink": "https://github.com/Lrs50/quantum-dice",
+      "websiteLink": "https://quantum-dice.streamlit.app",
+      "img": "src/imgs/quantum_dice.png"
+    },
     {
       "title": "How Much Does Breakfast Cost?",
       "desc": "Coffee and eggs have become more expensive...\n\nBut what about the rest of breakfast?\n\nThis project started with that question. I developed a complete solution to forecast, over the next 6 months, the prices of key breakfast foods. Everything was automated using machine learning, scraping, data visualization and APIs.",

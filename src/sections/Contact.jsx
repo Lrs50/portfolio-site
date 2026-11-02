@@ -63,7 +63,7 @@ export default function Contact(){
             </div>
             <div className="mt-5 mx-3">
                 <hr className="w-full border-t border-darkBlue/50 mb-1" />
-                <p className="text-center text-white font-light text-xs">Copyright © 2025  Lucas Reis. All Rights Reserved.</p>
+                <p className="text-center text-white font-light text-xs">Copyright © 2026  Lucas Reis. All Rights Reserved.</p>
                 <hr className="w-full border-t border-darkBlue/50 mb-3 mt-1" />
             </div>
             

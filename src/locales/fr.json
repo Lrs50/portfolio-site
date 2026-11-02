@@ -18,7 +18,7 @@
   "Je m'appelle Lucas Reis, ingénieur en informatique diplômé de l'Université Fédérale de Pernambuco (UFPE), avec une forte passion pour la création de solutions intelligentes et efficaces.",
   "Originaire de Bahia, je me suis installé à Recife à l'âge de 18 ans pour développer ma carrière dans le domaine des technologies. Depuis, j’ai acquis une solide expérience en science des données, MLOps et ingénierie de l’apprentissage automatique, couvrant toutes les étapes d’un projet de données.",
   "Pendant mes études, j’ai participé à des recherches sur les réseaux 5G avec le CIN/Motorola et sur les réseaux neuronaux quantiques via une bourse PIBIC. J’ai également été vice-président de la Ligue Académique de Calcul Quantique (LACIQ), favorisant les liens entre recherche et industrie.",
-  "Aujourd’hui, je me concentre sur le développement de pipelines de données robustes, de modèles prédictifs et de systèmes de machine learning prêts pour la production. Je prévois de poursuivre un master en informatique, avec un intérêt particulier pour la prévision de séries temporelles.",
+  "Chez Tractian, j'ai travaillé comme ingénieur IA sur la base de données derrière l'IA industrielle. Mon travail était full-stack : j'ai construit des pipelines de données et de web scraping, de l'enrichissement par LLM et des agents IA, et je les ai menés du PoC à la production. Je termine maintenant un master en informatique à l'UFPE, avec des recherches sur l'informatique quantique, le méta-apprentissage et la sélection de modèles.",
   "Je suis à l’aise avec l’ensemble du cycle de vie des projets de données, et je cherche toujours à livrer des solutions fiables, éthiques et à fort impact."
   ],
   "timeline": {
@@ -61,10 +61,16 @@
         "side": "left"
       },
       {
-        "title": "Master en informatique",
-        "info": "Prévu",
-        "desc": "Je prévois de faire un master en prévision de séries temporelles.",
+        "title": "Ingénieur IA chez Tractian",
+        "info": "juin 2025 – oct. 2026",
+        "desc": "Ingénieur IA full-stack : agents LLM + pipelines de web scraping, du PoC à la production.",
         "side": "right"
+      },
+      {
+        "title": "Master en informatique (UFPE)",
+        "info": "août 2025 – Présent",
+        "desc": "Recherche en informatique quantique, méta-apprentissage et sélection de modèles.",
+        "side": "left"
       }
     ]
   }
@@ -83,6 +89,14 @@
   "githublink": "Lien Github",
   "websitelink": "Site du Projet",
   "projects": [
+    {
+      "title": "Dés Quantiques",
+      "desc": "Une façon interactive de voir les concepts de l'informatique quantique à l'œuvre.\n\nChaque résultat aléatoire provient d'un circuit quantique simulé : un qubit est mis en superposition par une porte Hadamard puis mesuré, s'effondrant sur 0 ou 1. L'échantillonnage par rejet évite le biais du modulo.\n\nLancez des dés, tirez à pile ou face, formez des groupes, tirez au sort des gagnants, générez des mots de passe, mélangez des playlists et créez des palettes de couleurs, avec des animations de la sphère de Bloch à chaque étape.\n\nIl s'exécute sur un simulateur classique : la sortie est donc pseudo-aléatoire. C'est un projet éducatif, pas une source d'aléa véritable ni adapté à un usage critique pour la sécurité.",
+      "tools": ["Python", "PennyLane", "Streamlit", "Plotly", "NumPy", "UV"],
+      "githubLink": "https://github.com/Lrs50/quantum-dice",
+      "websiteLink": "https://quantum-dice.streamlit.app",
+      "img": "src/imgs/quantum_dice.png"
+    },
     {
       "title": "Quel est le prix du petit-déjeuner ?",
       "desc": "Le café et les œufs sont devenus bien plus chers...\n\nMais qu'en est-il des autres éléments du petit-déjeuner ?\n\nCe projet est né de cette question. J’ai conçu une solution complète capable de prévoir, sur les six prochains mois, le prix des principaux aliments consommés le matin. Tout le processus a été automatisé grâce au machine learning, au scraping, à la visualisation et aux APIs.",

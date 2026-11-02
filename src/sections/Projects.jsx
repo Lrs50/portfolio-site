@@ -34,11 +34,12 @@ import { SiUv } from "react-icons/si";
 import { SiPydantic } from "react-icons/si";
 import { IoIosCodeDownload } from "react-icons/io";
 import { FaMasksTheater } from "react-icons/fa6";
-import { TbBrandCSharp } from "react-icons/tb";
+import { TbBrandCSharp, TbAtom2 } from "react-icons/tb";
 import { MdScreenSearchDesktop } from "react-icons/md";
 import { TbBlocks } from "react-icons/tb";
 
 const iconSources = {
+  pennylane:{icon:TbAtom2, label: "PennyLane"},
   uv:{icon:SiUv, label: "UV"},
   pydantic:{icon:SiPydantic, label: "Pydantic"},
   requests:{icon:IoIosCodeDownload, label: "Requests"},

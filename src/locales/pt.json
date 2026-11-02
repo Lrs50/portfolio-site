@@ -18,7 +18,7 @@
     "Sou Lucas Reis, engenheiro da computação formado pela Universidade Federal de Pernambuco (UFPE), com trajetória marcada pela curiosidade, multidisciplinaridade e paixão por construir soluções inteligentes.",
     "Natural da Bahia, mudei-me para Recife aos 18 anos para seguir meu propósito na área de tecnologia. Desde então, venho acumulando experiências em ciência de dados, MLOps e engenharia de machine learning, atuando desde a coleta e preparação dos dados até o desenvolvimento, validação e implementação de modelos preditivos em produção.",
     "Durante a graduação, participei de projetos de pesquisa em redes 5G em parceria com o CIN/Motorola e explorei o potencial de redes neurais quânticas por meio de uma bolsa PIBIC. Também atuei como vice-presidente da Liga Acadêmica de Computação Quântica (LACIQ), promovendo iniciativas que conectam pesquisa e indústria.",
-    "Hoje, concentro meus esforços no desenvolvimento de pipelines de dados escaláveis, automações inteligentes e soluções para previsão de séries temporais, área em que pretendo aprofundar meus estudos em um mestrado acadêmico.",
+    "Na Tractian, atuei como engenheiro de IA na base de dados por trás da IA industrial. Meu trabalho foi full-stack: construí pipelines de dados e web scraping, enriquecimento com LLMs e agentes de IA, e levei tudo da prova de conceito à produção. Agora estou finalizando o mestrado em Ciência da Computação na UFPE, pesquisando computação quântica, meta-aprendizado e seleção de modelos.",
     "Tenho facilidade para atuar em todas as etapas do ciclo de vida de projetos de dados, conciliando pensamento técnico e visão sistêmica para entregar soluções robustas, éticas e com impacto real."
   ],
 
@@ -62,10 +62,16 @@
         "side": "left"
       },
       {
-        "title": "Mestrado em Ciência da Computação",
-        "info": "Planejado",
-        "desc": "Pretendo cursar mestrado com foco em previsão de séries temporais.",
+        "title": "Engenheiro de IA na Tractian",
+        "info": "jun 2025 – out 2026",
+        "desc": "Engenheiro de IA full-stack: agentes LLM + pipelines de web scraping, da PoC à produção.",
         "side": "right"
+      },
+      {
+        "title": "Mestrado em Ciência da Computação (UFPE)",
+        "info": "ago 2025 – Presente",
+        "desc": "Pesquisa em computação quântica, meta-aprendizado e seleção de modelos.",
+        "side": "left"
       }
     ]
   }
@@ -84,6 +90,14 @@
   "githublink": "Link do Github",
   "websitelink": "Site do Projeto",
   "projects": [
+    {
+      "title": "Dados Quânticos",
+      "desc": "Uma forma interativa de ver conceitos de computação quântica na prática.\n\nCada resultado aleatório vem de um circuito quântico simulado: um qubit é colocado em superposição com uma porta Hadamard e medido, colapsando para 0 ou 1. A amostragem por rejeição evita o viés do módulo.\n\nRole dados, jogue moedas, divida grupos, sorteie ganhadores, gere senhas, embaralhe playlists e crie paletas de cores, com animações da esfera de Bloch em cada etapa.\n\nRoda em um simulador clássico, então a saída é pseudoaleatória: é um projeto educacional, não uma fonte de aleatoriedade verdadeira nem serve para uso crítico de segurança.",
+      "tools": ["Python", "PennyLane", "Streamlit", "Plotly", "NumPy", "UV"],
+      "githubLink": "https://github.com/Lrs50/quantum-dice",
+      "websiteLink": "https://quantum-dice.streamlit.app",
+      "img": "src/imgs/quantum_dice.png"
+    },
     {
       "title": "Quanto Custa o Café da Manhã?",
       "desc": "Os preços do café e dos ovos subiram bastante...\n\nMas e o resto do café da manhã?\n\nEsse projeto nasceu dessa curiosidade. Desenvolvi uma solução completa para prever, pelos próximos 6 meses, o preço dos principais alimentos consumidos pela manhã. Todo o processo foi automatizado com machine learning, scraping, visualização e APIs.",
