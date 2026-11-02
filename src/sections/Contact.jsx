@@ -40,10 +40,10 @@ export default function Contact(){
     return (
         <div className="w-full bg-offBlack overflow-x-hidden bg-center">
             <div className="flex flex-wrap items-center gap-1 justify-center mt-10">
-                <h1 className="text-xl desktop:text-3xl text-white font-medium font-inter text-center mx-8">
+                <h2 className="text-xl desktop:text-3xl text-white font-medium font-inter text-center mx-8">
                 <Trans i18nKey="contact.title" />
-                <span className="text-mainPurple font-semibold"> {t("contact.highlight")}</span>
-                </h1>
+                <span className="text-[#f2789f] font-semibold"> {t("contact.highlight")}</span>
+                </h2>
 
                 <form
                     ref={form}
@@ -104,7 +104,7 @@ export default function Contact(){
                     </p>
                     <p className="text-gray-300 text-sm mt-1">
                         {t("contact.orEmail")}{" "}
-                        <a href={`mailto:${EMAIL}`} className="text-white underline hover:text-mainPurple">{EMAIL}</a>
+                        <a href={`mailto:${EMAIL}`} className="text-white underline hover:text-[#f2789f]">{EMAIL}</a>
                     </p>
                 </div>
             </div>

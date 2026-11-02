@@ -5,6 +5,7 @@
     "projects": "Proyectos",
     "about": "Acerca de",
     "contact": "Contacto",
+    "language": "Idioma",
     "resume": "Currículum"
   },
 "hero": {
@@ -12,6 +13,7 @@
   "introLine1": "Soy <1>Lucas</1>",
   "introLine2": "Ingeniero en Computación",
   "introLine3": "Construyendo aplicaciones inteligentes de principio a fin",
+  "photoAlt": "Foto de Lucas Reis",
   "linkedin": "LinkedIn",
   "github": "GitHub",
   "medium": "Medium",
@@ -96,6 +98,9 @@
   "title": "Mis <1>Proyectos</1>",
   "tool": "Herramientas",
   "githublink": "Enlace a Github",
+  "close": "Cerrar",
+  "prev": "Proyecto anterior",
+  "next": "Proyecto siguiente",
   "websitelink": "Sitio del Proyecto",
   "projects": [
     {

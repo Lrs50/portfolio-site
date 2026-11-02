@@ -5,6 +5,7 @@
     "projects": "프로젝트",
     "about": "소개",
     "contact": "연락처",
+    "language": "언어",
     "resume": "이력서"
   },
   "hero": {
@@ -12,6 +13,7 @@
     "introLine1": "저는 <1>루카스</1>입니다",
     "introLine2": "컴퓨터 엔지니어",
     "introLine3": "지능형 애플리케이션을 엔드 투 엔드로 구축합니다",
+    "photoAlt": "루카스 레이스의 사진",
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "medium": "Medium",
@@ -96,6 +98,9 @@
   "title": "나의 <1>프로젝트</1>",
   "tool": "도구",
   "githublink": "Github 링크",
+  "close": "닫기",
+  "prev": "이전 프로젝트",
+  "next": "다음 프로젝트",
   "websitelink": "프로젝트 웹사이트",
   "projects": [
     {

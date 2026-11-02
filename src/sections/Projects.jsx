@@ -1,5 +1,5 @@
 import "keen-slider/keen-slider.min.css";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { BsBookmarkPlusFill, BsWhatsapp } from "react-icons/bs";
 import { useKeenSlider } from "keen-slider/react";
 import { useMediaQuery } from "react-responsive"
@@ -77,6 +77,11 @@ const iconSources = {
 
 function Project({ title = "", img = "",desc="",githubLink="", websiteLink="", tools=[]}) {
   const [showDetails, setShowDetails] = useState(false);
+  const openerRef = useRef(null);
+  const closeDetails = () => {
+    setShowDetails(false);
+    openerRef.current?.focus();
+  };
   return (
     <>
     <div
@@ -105,7 +110,10 @@ function Project({ title = "", img = "",desc="",githubLink="", websiteLink="", t
             bg-white/15 backdrop-blur-md border border-white/10 z-0 shadow-md" />
 
           <button
+          ref={openerRef}
+          type="button"
           onClick={() => setShowDetails(true)}
+          aria-haspopup="dialog"
           className="p-0 m-0 border-none bg-transparent appearance-none leading-none block"
         >
           <img
@@ -119,8 +127,8 @@ function Project({ title = "", img = "",desc="",githubLink="", websiteLink="", t
           />
         </button>
           <div className="absolute -bottom-9 -right-5 p-3 z-20">
-          <button onClick={() => setShowDetails(true)}>
-            <BsBookmarkPlusFill className="text-mainPurple w-16 h-16 transition hover:scale-125" />
+          <button type="button" onClick={() => setShowDetails(true)} aria-label={title} aria-haspopup="dialog">
+            <BsBookmarkPlusFill aria-hidden="true" className="text-mainPurple w-16 h-16 transition hover:scale-125" />
           </button>
           </div>
         </div>
@@ -133,7 +141,7 @@ function Project({ title = "", img = "",desc="",githubLink="", websiteLink="", t
         tools={tools}
         githubLink={githubLink}
         websiteLink={websiteLink}
-        onClose={() => setShowDetails(false)}
+        onClose={closeDetails}
       />
     )}
     </>
@@ -142,17 +150,64 @@ function Project({ title = "", img = "",desc="",githubLink="", websiteLink="", t
 
 function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "", tools = [], onClose }) {
   const { t } = useTranslation();
+  const dialogRef = useRef(null);
+  const closeRef = useRef(null);
+  const onCloseRef = useRef(onClose);
+  onCloseRef.current = onClose;
+
+  // focus moves into the dialog, Escape closes it, Tab stays inside it, the page behind does not scroll
+  useEffect(() => {
+    closeRef.current?.focus();
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (e) => {
+      if (e.key === "Escape") {
+        onCloseRef.current();
+        return;
+      }
+      if (e.key !== "Tab") return;
+      const focusable = dialogRef.current?.querySelectorAll("a[href], button:not([disabled])");
+      if (!focusable || focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, []);
+
   return (
-    <div className="fixed inset-0 z-[999] bg-black/50 backdrop-blur-sm flex justify-center items-center p-6">
-      <div className="relative bg-offWhite rounded-3xl w-[85vw] max-w-4xl p-6 shadow-lg">
+    <div
+      className="fixed inset-0 z-[999] bg-black/50 backdrop-blur-sm flex justify-center items-center p-6"
+      onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}
+    >
+      <div
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="project-dialog-title"
+        className="relative bg-offWhite rounded-3xl w-[85vw] max-w-4xl max-h-[90vh] overflow-y-auto p-6 shadow-lg"
+      >
         <button
+          ref={closeRef}
+          type="button"
           onClick={onClose}
+          aria-label={t("project.close")}
           className="absolute -top-1 right-2 text-black text-4xl hover:text-red-500"
         >
-          &times;
+          <span aria-hidden="true">&times;</span>
         </button>
 
-        <p className="mb-5 text-center text-3xl font-semibold">{title}</p>
+        <h2 id="project-dialog-title" className="mb-5 text-center text-3xl font-semibold">{title}</h2>
 
         <div className="mb-5">
           <div className="flex items-center gap-2">
@@ -169,8 +224,8 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
 
               return (
                 <div key={tool} className="relative group flex flex-col items-center">
-                  <Icon className="text-[25px] text-gray-700 hover:scale-125 transition-transform duration-300 ease-in-out" />
-                  <div className="absolute -bottom-6 opacity-0 group-hover:opacity-100 transition bg-black text-white text-xs px-2 py-1 rounded pointer-events-none whitespace-nowrap z-50">
+                  <Icon role="img" aria-label={label} className="text-[25px] text-gray-700 hover:scale-125 transition-transform duration-300 ease-in-out" />
+                  <div aria-hidden="true" className="absolute -bottom-6 opacity-0 group-hover:opacity-100 transition bg-black text-white text-xs px-2 py-1 rounded pointer-events-none whitespace-nowrap z-50">
                     {label}
                   </div>
                 </div>
@@ -194,23 +249,27 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
 
         <div className="flex items-center justify-start gap-4">
           {githubLink && (
-            <button
+            <a
+              href={githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-start gap-1 hover:scale-110 transition-transform duration-300 ease-in-out"
-              onClick={() => window.open(githubLink, '_blank', 'noopener,noreferrer')}
             >
-              <TbBrandGithubFilled className="text-black text-xl" />
-              <p className="text-black text-sm font-extralight">{t("project.githublink")}</p>
-            </button>
+              <TbBrandGithubFilled aria-hidden="true" className="text-black text-xl" />
+              <span className="text-black text-sm font-extralight">{t("project.githublink")}</span>
+            </a>
           )}
 
           {websiteLink && (
-            <button
+            <a
+              href={websiteLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-start gap-1 hover:scale-110 transition-transform duration-300 ease-in-out"
-              onClick={() => window.open(websiteLink, '_blank', 'noopener,noreferrer')}
             >
-              <TbExternalLink className="text-black text-xl" />
-              <p className="text-black text-sm font-extralight">{t("project.websitelink")}</p>
-            </button>
+              <TbExternalLink aria-hidden="true" className="text-black text-xl" />
+              <span className="text-black text-sm font-extralight">{t("project.websitelink")}</span>
+            </a>
           )}
         </div>
 
@@ -247,23 +306,31 @@ export default function Projects() {
           <div className="w-full pt-16 pb-8 bg-[url('./imgs/bg-texture.png')] overflow-x-hidden 
           bg-cover bg-center rounded-3xl shadow-xl">
           <div className="-mt-10 mx-[40px]">
-              <h1 className="text-5xl text-center text-white font-medium leading right text-gray-900 font-inter">
+              <h2 className="text-5xl text-center text-white font-medium leading right text-gray-900 font-inter">
               <Trans
               i18nKey="project.title"
               components={{ 1: <span className="text-mainPurple font-semibold">{t('project.title')}</span> }}
               />
-              </h1>
-              <div className="relative  ">
+              </h2>
+              <div className="relative" role="region" aria-roledescription="carousel" aria-label={t("nav.projects")}>
 
-              <IoIosArrowForward 
-              className="absolute text-white text-7xl -right-10 top-1/2 transform -translate-y-1/2 z-10
-              hover:scale-125 transition-transform duration-300 cursor-pointer" 
-              onClick={() => slider.current?.next()}/>
+              <button
+              type="button"
+              aria-label={t("project.next")}
+              className="absolute -right-10 top-1/2 transform -translate-y-1/2 z-10
+              hover:scale-125 transition-transform duration-300"
+              onClick={() => slider.current?.next()}>
+                <IoIosArrowForward aria-hidden="true" className="text-white text-7xl" />
+              </button>
 
-              <IoIosArrowBack
-              className="absolute text-white text-7xl -left-10 top-1/2 transform -translate-y-1/2 z-10
-              hover:scale-125 transition-transform duration-300 cursor-pointer"
-              onClick={() => slider.current?.prev()}/>
+              <button
+              type="button"
+              aria-label={t("project.prev")}
+              className="absolute -left-10 top-1/2 transform -translate-y-1/2 z-10
+              hover:scale-125 transition-transform duration-300"
+              onClick={() => slider.current?.prev()}>
+                <IoIosArrowBack aria-hidden="true" className="text-white text-7xl" />
+              </button>
               
               <div
               ref={sliderRef}
@@ -277,13 +344,13 @@ export default function Projects() {
               </div>
           
           </div>
-            <div className="flex flex-wrap items-center gap-1 justify-center mt-8">
+            <div aria-hidden="true" className="flex flex-wrap items-center gap-1 justify-center mt-8">
               
               {[...Array(projects.length)].map((_,i) => {
                 if (i===currentSlide){
-                  return <div className="rounded-full bg-mainPurple w-7 h-2"></div>
+                  return <div key={i} className="rounded-full bg-mainPurple w-7 h-2"></div>
                 }
-                return <div className="rounded-full bg-offWhite justify-center w-2 h-2"></div>
+                return <div key={i} className="rounded-full bg-offWhite justify-center w-2 h-2"></div>
             })}
             </div>
           </div>

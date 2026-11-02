@@ -95,12 +95,12 @@ function Timeline() {
       ref={containerRef}
       style={{ minHeight: '100vh' }} // Ensure container has height
     >
-      <h1 className="text-5xl whitespace-nowrap text-black font-medium font-inter mb-8">
+      <h2 className="text-5xl whitespace-nowrap text-black font-medium font-inter mb-8">
         <Trans
           i18nKey="aboutMe.timeline.title"
           components={{ 1: <span className="text-mainPurple font-semibold">{t('aboutMe.timeline.title')}</span> }}
           />
-      </h1>
+      </h2>
 
       <div className="relative w-full max-w-3xl my-5 flex-grow">
         {/* Vertical dashed line */}
@@ -136,12 +136,12 @@ export default function AboutMe() {
         
         {/* About Me block */}
         <div className="bg-white rounded-3xl shadow-xl p-8">
-          <h1 className="text-5xl text-center text-black font-medium font-inter mt-3 mb-4">
+          <h2 className="text-5xl text-center text-black font-medium font-inter mt-3 mb-4">
               <Trans
               i18nKey="aboutMe.title"
               components={{ 1: <span className="text-mainPurple font-semibold">{t('aboutMe.title')}</span> }}
               />
-          </h1>
+          </h2>
 
           {history.map((paragraph, i) => (
             <p

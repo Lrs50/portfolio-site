@@ -33,14 +33,14 @@ export default function Hero(){
                 <img
                 src="/imgs/ellipse.webp"
                 width="1200" height="600"
-                alt="Purple ellipse" 
+                alt="" aria-hidden="true"
                 className="block w-[85%] z-0 mx-auto"
                 />
 
                 <img
                 src="/imgs/avatar.webp"
                 width="1400" height="935" fetchPriority="high"
-                alt="My picture" 
+                alt={t("hero.photoAlt")}
                 className="absolute z-10 bottom-0 left-1/2 -translate-x-1/2 pointer-events-none"
                 />
 

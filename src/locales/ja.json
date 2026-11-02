@@ -5,6 +5,7 @@
     "projects": "プロジェクト",
     "about": "概要",
     "contact": "連絡先",
+    "language": "言語",
     "resume": "履歴書"
   },
   "hero": {
@@ -12,6 +13,7 @@
     "introLine1": "私は<1>ルーカス</1>です",
     "introLine2": "コンピューターエンジニア",
     "introLine3": "インテリジェントなアプリケーションをエンドツーエンドで構築します",
+    "photoAlt": "ルーカス・レイスの写真",
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "medium": "Medium",
@@ -96,6 +98,9 @@
   "title": "私の<1>プロジェクト</1>",
   "tool": "ツール",
   "githublink": "GitHubリンク",
+  "close": "閉じる",
+  "prev": "前のプロジェクト",
+  "next": "次のプロジェクト",
   "websitelink": "プロジェクトサイト",
   "projects": [
     {

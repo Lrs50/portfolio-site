@@ -44,6 +44,7 @@ export default function App(){
     return (
         <div>
             <NavBar activeSection={activeSection}/>
+            <main>
               <section id="Hero" className='mt-16 scroll-mt-16'>
                 <Hero/>
             </section>
@@ -56,6 +57,7 @@ export default function App(){
             <section id="Contact" className='scroll-mt-16'>
                 <Suspense fallback={<div className="min-h-[50vh]" />}><Contact/></Suspense>
             </section>
+            </main>
         </div>
         
     );

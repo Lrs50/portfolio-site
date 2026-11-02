@@ -74,6 +74,7 @@ export default function NavBar({ activeSection }) {
       {/* Dropdown de idioma */}
       <Dropdown
         label={`🌐 ${currentLang.code.toUpperCase()}`}
+        ariaLabel={t("nav.language")}
         options={languages.map(optionLabel)}
         onSelect={(option) => {
           const langCode = labelToCode[option];
@@ -82,10 +83,10 @@ export default function NavBar({ activeSection }) {
       />
 
       {/* Título central traduzido */}
-      <h3 className="absolute left-1/2 -translate-x-1/2 text-white text-xl
+      <p className="absolute left-1/2 -translate-x-1/2 text-white text-xl
         desktop:static desktop:translate-x-0 desktop:left-auto  px-6 whitespace-nowrap">
         {t("nav.portfolio")}
-      </h3>
+      </p>
 
       {/* Dropdown MOBILE */}
       <Dropdown
