@@ -2,7 +2,6 @@ import React, { useEffect, useState, useMemo } from "react";
 import Dropdown from "./Dropdown";
 import { useTranslation } from "react-i18next";
 import { chooseLanguage } from "../i18n";
-import ResumeButton from "./ResumeButton";
 
 // Flag emoji do not render on Windows Chrome (they show as letters), so the native name is always shown too.
 const languages = [
@@ -29,7 +28,7 @@ function NavItem({ text, to, active }) {
       >
         {text}
       </a>
-      <span className="absolute bottom-1 left-1/2 -translate-x-1/2 h-[3px] w-0 bg-mainPurple transition-all duration-500 group-hover:w-3/4" />
+      <span className="absolute bottom-1 left-1/2 -translate-x-1/2 h-[3px] w-0 rounded-full bg-glow shadow-glow transition-all duration-500 group-hover:w-3/4" />
     </div>
   );
 }
@@ -68,7 +67,7 @@ export default function NavBar({ activeSection }) {
   return (
     <nav
       className={`fixed left-1/2 -translate-x-1/2 mx-auto flex items-center 
-        justify-between bg-black shadow-md z-[100] transition-all duration-300 ease-in-out
+        justify-between bg-ink/70 backdrop-blur-md border border-white/10 shadow-glass z-[100] transition-all duration-300 ease-in-out
         ${isScrolled ? "w-full top-0 px-2" : "w-[95%] px-3 py-1 top-2 rounded-full"}`}
     >
       {/* Dropdown de idioma */}
@@ -116,7 +115,6 @@ export default function NavBar({ activeSection }) {
         <NavItem text={t("nav.projects")} to="Projects" active={activeSection === "Projects"} />
         <NavItem text={t("nav.about")} to="About" active={activeSection === "About"} />
         <NavItem text={t("nav.contact")} to="Contact" active={activeSection === "Contact"} />
-        <ResumeButton className="px-4 py-1 text-sm" />
       </div>
     </nav>
   );

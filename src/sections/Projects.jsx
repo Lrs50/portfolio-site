@@ -89,25 +89,32 @@ function Project({ title = "", img = "",desc="",githubLink="", websiteLink="", t
       style={{ overflow: "visible" }}
     >
       <div
-        className="w-[300px] backdrop-blur-md bg-white/10 border border-white/20 rounded-3xl
-        shadow-lg transition-transform duration-300 transform-gpu hover:scale-105 hover:z-30 z-10
+        onPointerMove={(e) => {
+          const r = e.currentTarget.getBoundingClientRect();
+          e.currentTarget.style.setProperty("--x", `${e.clientX - r.left}px`);
+          e.currentTarget.style.setProperty("--y", `${e.clientY - r.top}px`);
+        }}
+        className="group relative w-[300px] backdrop-blur-md bg-white/[0.04] border border-white/10 rounded-3xl
+        shadow-glass transition-transform duration-300 transform-gpu hover:scale-105 hover:z-30 z-10
         px-3 pt-3 pb-0 rounded-br-none"
       >
+        {/* soft light that follows the pointer */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 rounded-3xl rounded-br-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[radial-gradient(260px_circle_at_var(--x)_var(--y),rgba(255,111,174,0.12),transparent_70%)]" />
         <div className="h-[3.8rem] flex items-center justify-center text-center px-0">
           <h3
-            className="text-white text-[clamp(1.1rem,1.7vw,1.5rem)] font-semibold tracking-wide 
+            className="text-white text-[clamp(1.1rem,1.7vw,1.5rem)] font-semibold tracking-wide
             leading-tight line-clamp-2 overflow-hidden"
           >
             {title}
           </h3>
         </div>
-        <hr className="w-full border-t border-white/20 mb-10" />
+        <hr className="w-full border-t border-white/10 mb-10" />
 
         <div className="relative mt-8 -mx-3" style={{ marginBottom: '-12px' }}>
           <div className="absolute inset-0 -translate-y-6 scale-[0.92] rounded-3xl
-            bg-white/10 backdrop-blur-md border border-white/10 z-0 shadow-md" />
+            bg-white/[0.05] backdrop-blur-md border border-white/10 z-0" />
           <div className="absolute inset-0 -translate-y-3 scale-[0.96] rounded-3xl
-            bg-white/15 backdrop-blur-md border border-white/10 z-0 shadow-md" />
+            bg-white/[0.08] backdrop-blur-md border border-white/10 z-0" />
 
           <button
           ref={openerRef}
@@ -123,12 +130,12 @@ function Project({ title = "", img = "",desc="",githubLink="", websiteLink="", t
             height="534"
             loading="lazy"
             decoding="async"
-            className="relative z-10 w-full rounded-3xl object-cover shadow-xl rounded-br-none block"
+            className="relative z-10 w-full rounded-3xl object-cover shadow-glass rounded-br-none block"
           />
         </button>
           <div className="absolute -bottom-9 -right-5 p-3 z-20">
           <button type="button" onClick={() => setShowDetails(true)} aria-label={title} aria-haspopup="dialog">
-            <BsBookmarkPlusFill aria-hidden="true" className="text-mainPurple w-16 h-16 transition hover:scale-125" />
+            <BsBookmarkPlusFill aria-hidden="true" className="text-glow w-16 h-16 transition hover:scale-125" />
           </button>
           </div>
         </div>
@@ -187,7 +194,7 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
 
   return (
     <div
-      className="fixed inset-0 z-[999] bg-black/50 backdrop-blur-sm flex justify-center items-center p-6"
+      className="fixed inset-0 z-[999] bg-ink/70 backdrop-blur-sm flex justify-center items-center p-6"
       onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
       <div
@@ -195,24 +202,24 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
         role="dialog"
         aria-modal="true"
         aria-labelledby="project-dialog-title"
-        className="relative bg-offWhite rounded-3xl w-[85vw] max-w-4xl max-h-[90vh] overflow-y-auto p-6 shadow-lg"
+        className="relative bg-ink2 border border-white/10 text-white/80 rounded-3xl w-[85vw] max-w-4xl max-h-[90vh] overflow-y-auto p-6 shadow-glass"
       >
         <button
           ref={closeRef}
           type="button"
           onClick={onClose}
           aria-label={t("project.close")}
-          className="absolute -top-1 right-2 text-black text-4xl hover:text-red-500"
+          className="absolute -top-1 right-2 text-white/70 text-4xl hover:text-white"
         >
           <span aria-hidden="true">&times;</span>
         </button>
 
-        <h2 id="project-dialog-title" className="mb-5 text-center text-3xl font-semibold">{title}</h2>
+        <h2 id="project-dialog-title" className="mb-5 text-center text-3xl font-semibold text-white">{title}</h2>
 
         <div className="mb-5">
           <div className="flex items-center gap-2">
-            <p className="text-justify text-xs font-extralight">{t("project.tool")}</p>
-            <hr className="flex-grow border-t border-black/20" />
+            <p className="text-justify text-xs text-white/60">{t("project.tool")}</p>
+            <hr className="flex-grow border-t border-white/10" />
           </div>
 
           <div className="flex flex-wrap gap-2 justify-center">
@@ -224,8 +231,8 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
 
               return (
                 <div key={tool} className="relative group flex flex-col items-center">
-                  <Icon role="img" aria-label={label} className="text-[25px] text-gray-700 hover:scale-125 transition-transform duration-300 ease-in-out" />
-                  <div aria-hidden="true" className="absolute -bottom-6 opacity-0 group-hover:opacity-100 transition bg-black text-white text-xs px-2 py-1 rounded pointer-events-none whitespace-nowrap z-50">
+                  <Icon role="img" aria-label={label} className="text-[25px] text-white/70 hover:text-white hover:scale-125 transition-transform duration-300 ease-in-out" />
+                  <div aria-hidden="true" className="absolute -bottom-6 opacity-0 group-hover:opacity-100 transition bg-ink border border-white/10 text-white text-xs px-2 py-1 rounded pointer-events-none whitespace-nowrap z-50">
                     {label}
                   </div>
                 </div>
@@ -233,7 +240,7 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
             })}
           </div>
 
-          <hr className="flex-grow border-t border-black/20 mt-4" />
+          <hr className="flex-grow border-t border-white/10 mt-4" />
         </div>
 
         <p className="text-justify">
@@ -245,7 +252,7 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
           ))}
         </p>
         
-        <hr className="flex-grow border-t border-black/20 my-4" />
+        <hr className="flex-grow border-t border-white/10 my-4" />
 
         <div className="flex items-center justify-start gap-4">
           {githubLink && (
@@ -255,8 +262,8 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
               rel="noopener noreferrer"
               className="flex items-center justify-start gap-1 hover:scale-110 transition-transform duration-300 ease-in-out"
             >
-              <TbBrandGithubFilled aria-hidden="true" className="text-black text-xl" />
-              <span className="text-black text-sm font-extralight">{t("project.githublink")}</span>
+              <TbBrandGithubFilled aria-hidden="true" className="text-white text-xl" />
+              <span className="text-white text-sm">{t("project.githublink")}</span>
             </a>
           )}
 
@@ -267,13 +274,13 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
               rel="noopener noreferrer"
               className="flex items-center justify-start gap-1 hover:scale-110 transition-transform duration-300 ease-in-out"
             >
-              <TbExternalLink aria-hidden="true" className="text-black text-xl" />
-              <span className="text-black text-sm font-extralight">{t("project.websitelink")}</span>
+              <TbExternalLink aria-hidden="true" className="text-white text-xl" />
+              <span className="text-white text-sm">{t("project.websitelink")}</span>
             </a>
           )}
         </div>
 
-        {(githubLink || websiteLink) && (<hr className="flex-grow border-t border-black/20 mt-4" />)}
+        {(githubLink || websiteLink) && (<hr className="flex-grow border-t border-white/10 mt-4" />)}
       </div>
     </div>
   );
@@ -302,14 +309,19 @@ export default function Projects() {
     });
     
     return (
-        <div className=" justify-center px-3">
-          <div className="w-full pt-16 pb-8 bg-[url('./imgs/bg-texture.png')] overflow-x-hidden 
-          bg-cover bg-center rounded-3xl shadow-xl">
+        <div className="relative isolate justify-center px-3">
+          {/* light pool under the carousel */}
+          <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[1100px] h-[520px] rounded-full bg-[radial-gradient(closest-side,rgba(167,139,250,0.14),rgba(226,54,127,0.08)_55%,transparent)]" />
+          </div>
+          {/* framed panel: dark glass lit from the top, a sibling of the About cards but not identical */}
+          <div className="w-full pt-16 pb-8 overflow-x-hidden rounded-3xl border border-white/10 shadow-glass backdrop-blur-md
+          bg-[radial-gradient(120%_70%_at_50%_0%,rgba(255,111,174,0.10),transparent_60%),linear-gradient(to_bottom,rgba(255,255,255,0.06),rgba(255,255,255,0.02))]">
           <div className="-mt-10 mx-[40px]">
-              <h2 className="text-5xl text-center text-white font-medium leading right text-gray-900 font-inter">
+              <h2 className="text-5xl text-center text-white font-medium font-inter">
               <Trans
               i18nKey="project.title"
-              components={{ 1: <span className="text-mainPurple font-semibold">{t('project.title')}</span> }}
+              components={{ 1: <span className="text-glow font-semibold">{t('project.title')}</span> }}
               />
               </h2>
               <div className="relative" role="region" aria-roledescription="carousel" aria-label={t("nav.projects")}>
@@ -320,7 +332,7 @@ export default function Projects() {
               className="absolute -right-10 top-1/2 transform -translate-y-1/2 z-10
               hover:scale-125 transition-transform duration-300"
               onClick={() => slider.current?.next()}>
-                <IoIosArrowForward aria-hidden="true" className="text-white text-7xl" />
+                <IoIosArrowForward aria-hidden="true" className="text-white/60 hover:text-white transition-colors text-7xl" />
               </button>
 
               <button
@@ -329,9 +341,9 @@ export default function Projects() {
               className="absolute -left-10 top-1/2 transform -translate-y-1/2 z-10
               hover:scale-125 transition-transform duration-300"
               onClick={() => slider.current?.prev()}>
-                <IoIosArrowBack aria-hidden="true" className="text-white text-7xl" />
+                <IoIosArrowBack aria-hidden="true" className="text-white/60 hover:text-white transition-colors text-7xl" />
               </button>
-              
+
               <div
               ref={sliderRef}
               className="keen-slider mt-12"
@@ -342,15 +354,15 @@ export default function Projects() {
               ))}
               </div>
               </div>
-          
+
           </div>
             <div aria-hidden="true" className="flex flex-wrap items-center gap-1 justify-center mt-8">
-              
+
               {[...Array(projects.length)].map((_,i) => {
                 if (i===currentSlide){
-                  return <div key={i} className="rounded-full bg-mainPurple w-7 h-2"></div>
+                  return <div key={i} className="rounded-full bg-glow w-7 h-2 transition-all"></div>
                 }
-                return <div key={i} className="rounded-full bg-offWhite justify-center w-2 h-2"></div>
+                return <div key={i} className="rounded-full bg-white/25 justify-center w-2 h-2 transition-all"></div>
             })}
             </div>
           </div>

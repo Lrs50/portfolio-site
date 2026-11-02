@@ -12,8 +12,10 @@ export default function ResumeButton({ className = "" }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center gap-2 rounded-full bg-mainPurple text-white font-semibold whitespace-nowrap transition hover:brightness-110 ${className}`}
+      className={`group relative overflow-hidden inline-flex items-center gap-2 rounded-full bg-mainPurple text-white font-semibold whitespace-nowrap transition duration-300 hover:-translate-y-0.5 hover:bg-[#8a1a47] ${className}`}
     >
+      {/* light sheen that sweeps across on hover */}
+      <span aria-hidden="true" className="pointer-events-none absolute inset-y-0 -left-1/2 w-1/2 -skew-x-12 bg-white/25 -translate-x-full transition-transform duration-700 group-hover:translate-x-[300%]" />
       <TbFileCv aria-hidden="true" />
       {t("nav.resume")}
     </a>

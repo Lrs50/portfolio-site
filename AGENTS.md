@@ -8,13 +8,14 @@ Single-page personal portfolio. Vite 6 + React 19 + Tailwind 3, plain JavaScript
 
 ## Layout
 - `index.html` – Vite entry (mounts `#app`).
+- `src/components/LavaDome.jsx`: the dark purple lava-lamp half-circle behind the Hero photo (SVG goo filter + CSS `wax` keyframes in `tailwind.config.js`).
 - `src/main.jsx` → `src/App.jsx`: stacked sections (`Hero`, `Projects`, `About`, `Contact`) with anchor navigation. No router; `useActiveSection` (IntersectionObserver) drives the navbar.
 - `src/sections/` – page sections. `src/components/` – Navbar, Dropdown, WordCloud (Footer, Cardproject are unused).
 - `src/locales/{en,pt,fr,es,ja,ko,zh}.json` – all text AND project data.
-- `public/imgs/` – WebP images served as-is at `/imgs/...` (avatar, ellipse, project cards; ~800 px wide cards, 1400 px avatar). `src/imgs/` – only `bg-texture.png` (used from CSS, bundled by Vite). `src/i18n.js` – i18next setup.
+- `public/imgs/` – WebP images served as-is at `/imgs/...` (avatar, project cards; ~800 px wide cards, 1400 px avatar). `src/imgs/` – only `bg-texture.png` (used from CSS, bundled by Vite). `src/i18n.js` – i18next setup.
 
 ## Conventions
-- Styling: Tailwind utility classes inline only (no CSS modules). Custom colors/fonts/`desktop` (768px) breakpoint in `tailwind.config.js`.
+- Styling: Tailwind utility classes inline only (no CSS modules). Dark theme: page `bg-ink`, cards as dark glass (`bg-white/[0.04] border-white/10 shadow-glass`), headings white, highlights `text-glow`, soft radial "light pools" behind sections; no glowing text or buttons. Never `text-mainPurple` on dark (fails contrast). Custom colors/fonts/`desktop` (768px) breakpoint in `tailwind.config.js`.
 - Components: PascalCase `.jsx`, local `useState`/`useEffect`, no global store.
 - All user-facing text goes through `react-i18next` (`t()` / `<Trans>`); never hardcode strings.
 - Commits: `type: short lowercase description` (`add:`, `feat:`, `fix:`, `del:`), no body.

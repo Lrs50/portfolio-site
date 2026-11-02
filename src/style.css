@@ -7,6 +7,29 @@ html {
     scroll-behavior: smooth;
   }
 
+body {
+  @apply bg-ink text-white/90;
+}
+
+/* fine grain over the whole page: hides gradient banding and gives a printed feel */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 300;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27160%27 height=%27160%27%3E%3Cfilter id=%27n%27%3E%3CfeTurbulence type=%27fractalNoise%27 baseFrequency=%270.9%27 numOctaves=%272%27 stitchTiles=%27stitch%27/%3E%3C/filter%3E%3Crect width=%27100%25%27 height=%27100%25%27 filter=%27url(%23n)%27/%3E%3C/svg%3E");
+}
+
+/* visible keyboard focus on the dark background */
+:focus-visible {
+  outline: 2px solid #ff6fae;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
 /* respect the OS setting for reduced motion */
 @media (prefers-reduced-motion: reduce) {
   html {

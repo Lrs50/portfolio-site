@@ -38,17 +38,23 @@ export default function Contact(){
     };
 
     return (
-        <div className="w-full bg-offBlack overflow-x-hidden bg-center">
-            <div className="flex flex-wrap items-center gap-1 justify-center mt-10">
-                <h2 className="text-xl desktop:text-3xl text-white font-medium font-inter text-center mx-8">
+        <div className="relative isolate w-full overflow-x-hidden pt-10">
+            {/* light pool under the form */}
+            <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[420px] rounded-full bg-[radial-gradient(closest-side,rgba(226,54,127,0.14),transparent)]" />
+            </div>
+            <div className="w-[92%] desktop:w-[1000px] mx-auto">
+                <h2 className="text-xl desktop:text-2xl text-white font-medium font-inter text-center">
                 <Trans i18nKey="contact.title" />
-                <span className="text-[#f2789f] font-semibold"> {t("contact.highlight")}</span>
+                <span className="text-glow font-semibold"> {t("contact.highlight")}</span>
                 </h2>
 
                 <form
                     ref={form}
                     onSubmit={sendEmail}
-                    className="relative w-[90%] desktop:w-[600px] my-5 mx-auto flex flex-col border border-white shadow-md rounded-3xl bg-offBlack"
+                    className="relative mt-5 flex flex-col gap-3
+                    desktop:flex-row desktop:items-center desktop:gap-0 desktop:border desktop:border-white/15 desktop:bg-white/[0.04] desktop:backdrop-blur-md desktop:shadow-glass desktop:rounded-full desktop:pl-5 desktop:pr-1.5 desktop:py-1.5
+                    desktop:focus-within:border-glow/60 desktop:focus-within:ring-2 desktop:focus-within:ring-glow/20 transition"
                     >
                     {/* honeypot, hidden from people and screen readers */}
                     <input
@@ -60,58 +66,52 @@ export default function Contact(){
                         className="absolute left-[-9999px] w-px h-px opacity-0"
                     />
 
-                    <div className="flex items-center border-b border-white/30 mx-4 mt-3">
-                        <MdEmail className="text-mainPurple text-2xl shrink-0" aria-hidden="true" />
+                    <div className="flex items-center gap-3 border border-white/15 bg-white/[0.04] rounded-2xl px-4
+                    desktop:border-0 desktop:border-r desktop:border-white/15 desktop:bg-transparent desktop:rounded-none desktop:px-0 desktop:pr-4 desktop:w-[360px] desktop:shrink-0">
+                        <MdEmail className="text-glow text-2xl shrink-0" aria-hidden="true" />
                         <input
                             type="email"
                             name="email"
                             placeholder={t("contact.emailPlaceholder")}
                             aria-label={t("contact.emailPlaceholder")}
-                            className="flex-1 ml-3 py-2 bg-transparent text-white placeholder-gray-400 outline-none"
+                            className="flex-1 min-w-0 py-3 bg-transparent text-white placeholder-white/50 outline-none"
                             required
                         />
                     </div>
 
-                    <div className="relative flex">
-                        <textarea
-                            name="message"
-                            placeholder={t("contact.placeholder")}
-                            aria-label={t("contact.placeholder")}
-                            rows="1"
-                            className="flex-1 mt-4 mb-3 ml-5 mr-[90px] bg-transparent text-white placeholder-gray-400 outline-none resize-none overflow-hidden"
-                            required
-                            onInput={(e) => {
-                            e.target.style.height = "auto";
-                            e.target.style.height = `${e.target.scrollHeight}px`;
-                            }}
-                        />
+                    <textarea
+                        name="message"
+                        placeholder={t("contact.placeholder")}
+                        aria-label={t("contact.placeholder")}
+                        rows="4"
+                        className="w-full border border-white/15 bg-white/[0.04] desktop:bg-transparent rounded-2xl px-4 py-3 text-white placeholder-white/50 outline-none resize-none
+                        desktop:flex-1 desktop:border-0 desktop:rounded-none desktop:h-11 desktop:py-2.5 desktop:px-4"
+                        required
+                    />
 
-                        <button
-                            type="submit"
-                            disabled={status === "sending"}
-                            className="absolute right-1 bottom-2 bg-mainPurple text-white text-sm px-4 py-2
-                            rounded-3xl hover:scale-110 transition-all duration-300 disabled:opacity-60 disabled:hover:scale-100 disabled:cursor-wait"
-                        >
-                            {status === "sending" ? t("contact.sending") : t("contact.button")}
-                        </button>
-                    </div>
+                    <button
+                        type="submit"
+                        disabled={status === "sending"}
+                        className="self-end bg-mainPurple text-white font-semibold px-8 py-3 rounded-full
+                        desktop:py-2.5 desktop:shrink-0 hover:brightness-110 transition disabled:opacity-60 disabled:cursor-wait"
+                    >
+                        {status === "sending" ? t("contact.sending") : t("contact.button")}
+                    </button>
                 </form>
 
-                <div className="w-full text-center">
-                    <p role="status" aria-live="polite" className={`min-h-[1.5rem] text-sm ${status === "error" ? "text-red-400" : "text-green-400"}`}>
-                        {status === "success" && t("contact.success")}
-                        {status === "error" && t("contact.error")}
-                    </p>
-                    <p className="text-gray-300 text-sm mt-1">
-                        {t("contact.orEmail")}{" "}
-                        <a href={`mailto:${EMAIL}`} className="text-white underline hover:text-[#f2789f]">{EMAIL}</a>
-                    </p>
-                </div>
+                <p role="status" aria-live="polite" className={`min-h-[1.5rem] mt-3 text-sm text-center ${status === "error" ? "text-red-400" : "text-green-400"}`}>
+                    {status === "success" && t("contact.success")}
+                    {status === "error" && t("contact.error")}
+                </p>
+                <p className="text-white/60 text-sm text-center mt-1">
+                    {t("contact.orEmail")}{" "}
+                    <a href={`mailto:${EMAIL}`} className="text-white font-medium underline hover:text-glow">{EMAIL}</a>
+                </p>
             </div>
-            <div className="mt-5 mx-3">
-                <hr className="w-full border-t border-darkBlue/50 mb-1" />
-                <p className="text-center text-white font-light text-xs">Copyright © 2026  Lucas Reis. All Rights Reserved.</p>
-                <hr className="w-full border-t border-darkBlue/50 mb-3 mt-1" />
+            <div className="mt-8 mx-3">
+                <div className="h-px w-full bg-gradient-to-r from-transparent via-white/15 to-transparent mb-2" />
+                <p className="text-center text-white/60 font-light text-xs">Copyright © 2026  Lucas Reis. All Rights Reserved.</p>
+                <div className="h-3" />
             </div>
 
         </div>

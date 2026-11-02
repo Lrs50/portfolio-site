@@ -85,7 +85,7 @@ export default function WordCloudSection() {
       
       // Apply styling changes but not transform directly
       const transitionDuration = '0.3s';
-      const color = isActive ? "#F2789F" : null; // Highlight color when hovered
+      const color = isActive ? "#ffffff" : null; // Highlight color when hovered
       const fontWeight = isActive ? "bold" : null;
       const textShadow = isActive ? "0px 0px 5px rgba(242, 120, 159, 0.3)" : null;
 
@@ -127,13 +127,13 @@ export default function WordCloudSection() {
     transitionDuration: 600,
     deterministic: true,
     colors: [
-      "#701438", // main brand color
-      "#8C1E4B", // deep rose
-      "#B33666", // pink-magenta
-      "#DA5B89", // softer pink
-      "#F2789F", // bright accent
-      "#555555", // neutral dark gray
-      "#888888", // medium gray
+      "#ff6fae", // glow pink
+      "#ff9ccb", // light pink
+      "#f2789f", // rose
+      "#c4a7ff", // lilac
+      "#a78bfa", // violet
+      "#e6def0", // soft white
+      "#b3a6c4", // muted lavender
     ]
   };
 
