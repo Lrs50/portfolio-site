@@ -99,14 +99,6 @@
   "websitelink": "プロジェクトサイト",
   "projects": [
     {
-      "title": "量子サイコロ",
-      "desc": "量子コンピューティングの概念を実際に動かして確かめられるインタラクティブなアプリです。\n\nすべての乱数結果は、シミュレートされた量子回路から得られます。量子ビットをアダマールゲートで重ね合わせ状態にして測定し、0か1に収縮させます。棄却サンプリングによりモジュロバイアスを避けています。\n\nサイコロ、コイン投げ、グループ分け、くじ引き、パスワード生成、プレイリストのシャッフル、カラーパレット作成ができ、各ステップをブロッホ球のアニメーションで表示します。\n\n古典的なシミュレーター上で動作するため、出力は擬似乱数です。教育目的のプロジェクトであり、真の乱数源ではなく、セキュリティが重要な用途には向きません。",
-      "tools": ["Python", "PennyLane", "Streamlit", "Plotly", "NumPy", "UV"],
-      "githubLink": "https://github.com/Lrs50/quantum-dice",
-      "websiteLink": "https://quantum-dice.streamlit.app",
-      "img": "/imgs/quantum_dice.png"
-    },
-    {
       "title": "朝食の値段はどれくらい？",
       "desc": "コーヒーと卵の価格が大きく上昇しました\n\nでは、他の朝食食品はどうでしょうか？\n\nこの疑問からプロジェクトが始まりました。主要な朝食食材の価格を今後6ヶ月間予測するシステムを構築し、機械学習やスクレイピング、可視化、API連携を使って完全に自動化しています。",
       "tools": [
@@ -114,7 +106,15 @@
       ],
       "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
       "websiteLink": "https://breakfast-forecast.streamlit.app/",
-      "img": "/imgs/breakfast_forecast.png"
+      "img": "/imgs/breakfast_forecast.webp"
+    },
+    {
+      "title": "工業製品データスクレーパー",
+      "desc": "工業製品に関するデータを自動で収集・整理するツールです。\n\n構造化されていないウェブページから、分析やカタログ登録に使えるクリーンな情報を抽出できます。",
+      "tools": ["Python", "UV", "Pydantic", "Regex", "Requests", "Playwright", "BeautifulSoup"],
+      "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
+      "websiteLink": "",
+      "img": "/imgs/industrial_scraper.webp"
     },
     {
       "title": "個人向けファイナンスチャットボット",
@@ -124,15 +124,15 @@
       ],
       "githubLink": "https://github.com/Lrs50/wpp-automation",
       "websiteLink": "",
-      "img": "/imgs/wpp_bot.png"
+      "img": "/imgs/wpp_bot.webp"
     },
     {
-      "title": "工業製品データスクレーパー",
-      "desc": "工業製品に関するデータを自動で収集・整理するツールです。\n\n構造化されていないウェブページから、分析やカタログ登録に使えるクリーンな情報を抽出できます。",
-      "tools": ["Python", "UV", "Pydantic", "Regex", "Requests", "Playwright", "BeautifulSoup"],
-      "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
-      "websiteLink": "",
-      "img": "/imgs/industrial_scraper.png"
+      "title": "量子サイコロ",
+      "desc": "量子コンピューティングの概念を実際に動かして確かめられるインタラクティブなアプリです。\n\nすべての乱数結果は、シミュレートされた量子回路から得られます。量子ビットをアダマールゲートで重ね合わせ状態にして測定し、0か1に収縮させます。棄却サンプリングによりモジュロバイアスを避けています。\n\nサイコロ、コイン投げ、グループ分け、くじ引き、パスワード生成、プレイリストのシャッフル、カラーパレット作成ができ、各ステップをブロッホ球のアニメーションで表示します。\n\n古典的なシミュレーター上で動作するため、出力は擬似乱数です。教育目的のプロジェクトであり、真の乱数源ではなく、セキュリティが重要な用途には向きません。",
+      "tools": ["Python", "PennyLane", "Streamlit", "Plotly", "NumPy", "UV"],
+      "githubLink": "https://github.com/Lrs50/quantum-dice",
+      "websiteLink": "https://quantum-dice.streamlit.app",
+      "img": "/imgs/quantum_dice.webp"
     },
     {
       "title": "Evolvium",
@@ -140,23 +140,7 @@
       "tools": ["Python", "Algoritmo Genetico", "NumPy", "Matplotlib"],
       "githubLink": "https://github.com/Lrs50/Evolvium",
       "websiteLink": "https://test.pypi.org/project/evolvium/",
-      "img": "/imgs/evolvium.png"
-    },
-    {
-      "title": "遺伝的アルゴリズムで解く8クイーン問題",
-      "desc": "クラシックな8クイーン問題を、遺伝的アルゴリズムで視覚的に解くシミュレーションです。\n\n進化の仕組みを学びたい人やAIの直感的な理解に役立ちます。",
-      "tools": ["Csharp","Unity", "Algoritmo Genetico"],
-      "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
-      "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
-      "img": "/imgs/8_queens.png"
-    },
-    {
-      "title": "Ybý-Mokoĩ",
-      "desc": "トゥピ・グアラニ神話にインスパイアされた2DアクションRPGです。\n\n伝説の生物と戦い、グアラナやアサイーなどのアイテムを集めながら「夜の起源」の物語を体験します。先住民族文化を楽しく学べる作品です。",
-      "tools": ["Csharp","Unity"],
-      "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
-      "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
-      "img": "/imgs/game_unity.png"
+      "img": "/imgs/evolvium.webp"
     },
     {
       "title": "探索アルゴリズムによる自律エージェント",
@@ -164,7 +148,15 @@
       "tools": ["Unity", "Csharp", "Search Algorithm", "Algoritmo Genetico"],
       "githubLink": "https://github.com/Lrs50/Projeto_SI",
       "websiteLink": "https://lrs50.github.io/Projeto_SI/WebGLBuild/",
-      "img": "/imgs/search_agent.png"
+      "img": "/imgs/search_agent.webp"
+    },
+    {
+      "title": "遺伝的アルゴリズムで解く8クイーン問題",
+      "desc": "クラシックな8クイーン問題を、遺伝的アルゴリズムで視覚的に解くシミュレーションです。\n\n進化の仕組みを学びたい人やAIの直感的な理解に役立ちます。",
+      "tools": ["Csharp","Unity", "Algoritmo Genetico"],
+      "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
+      "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
+      "img": "/imgs/8_queens.webp"
     },
     {
       "title": "ワードサーチ生成ツール",
@@ -172,7 +164,15 @@
       "tools": ["Python", "Tkinter"],
       "githubLink": "https://github.com/Lrs50/WordSearch",
       "websiteLink": "",
-      "img": "/imgs/wordsearch.png"
+      "img": "/imgs/wordsearch.webp"
+    },
+    {
+      "title": "Ybý-Mokoĩ",
+      "desc": "トゥピ・グアラニ神話にインスパイアされた2DアクションRPGです。\n\n伝説の生物と戦い、グアラナやアサイーなどのアイテムを集めながら「夜の起源」の物語を体験します。先住民族文化を楽しく学べる作品です。",
+      "tools": ["Csharp","Unity"],
+      "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
+      "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
+      "img": "/imgs/game_unity.webp"
     }
   ]
 }

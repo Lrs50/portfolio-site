@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- fonts load without blocking the first paint (display=swap shows fallback text meanwhile) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap"></noscript>
+    <!-- the avatar is the largest element on first screen: start fetching it before the JS runs -->
+    <link rel="preload" as="image" href="/imgs/avatar.webp" type="image/webp" fetchpriority="high">
 
     <title>Lucas Reis | Computer Engineer</title>
     <meta name="description" content="Portfolio of Lucas Reis: computer engineer building AI, full-stack and data systems. Former AI engineer at Tractian, finishing a Master's at UFPE." />

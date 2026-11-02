@@ -99,14 +99,6 @@
   "websitelink": "프로젝트 웹사이트",
   "projects": [
     {
-      "title": "양자 주사위",
-      "desc": "양자 컴퓨팅 개념이 실제로 동작하는 모습을 볼 수 있는 인터랙티브 앱입니다.\n\n모든 무작위 결과는 시뮬레이션된 양자 회로에서 나옵니다. 큐비트를 아다마르 게이트로 중첩 상태로 만든 뒤 측정하면 0 또는 1로 붕괴합니다. 기각 샘플링으로 모듈로 편향을 피합니다.\n\n주사위 굴리기, 동전 던지기, 그룹 나누기, 추첨, 비밀번호 생성, 플레이리스트 섞기, 색상 팔레트 만들기를 할 수 있으며, 각 단계를 블로흐 구 애니메이션으로 보여줍니다.\n\n고전 시뮬레이터에서 실행되므로 출력은 의사 난수입니다. 교육용 프로젝트이며 진정한 난수원이 아니고 보안이 중요한 용도에는 적합하지 않습니다.",
-      "tools": ["Python", "PennyLane", "Streamlit", "Plotly", "NumPy", "UV"],
-      "githubLink": "https://github.com/Lrs50/quantum-dice",
-      "websiteLink": "https://quantum-dice.streamlit.app",
-      "img": "/imgs/quantum_dice.png"
-    },
-    {
       "title": "아침 식사는 얼마나 들까요?",
       "desc": "커피와 계란 가격이 많이 올랐습니다.\n\n그렇다면 다른 아침 식사 재료는 어떨까요?\n\n이 프로젝트는 바로 이 궁금증에서 출발했습니다. 앞으로 6개월간 주요 아침 식품의 가격을 예측하는 자동화된 솔루션을 개발했습니다. 머신러닝, 웹 스크래핑, 데이터 시각화, API를 모두 활용했습니다.",
       "tools": [
@@ -114,7 +106,15 @@
       ],
       "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
       "websiteLink": "https://breakfast-forecast.streamlit.app/",
-      "img": "/imgs/breakfast_forecast.png"
+      "img": "/imgs/breakfast_forecast.webp"
+    },
+    {
+      "title": "산업 제품 스크래퍼",
+      "desc": "산업용 웹사이트에서 제품 데이터를 자동으로 수집하고 구조화하는 도구입니다.\n\n복잡한 페이지를 정리된 형식으로 변환해, 카탈로그 시스템이나 시장 분석에 바로 활용할 수 있습니다.",
+      "tools": ["Python", "UV", "Pydantic", "Regex", "Requests", "Playwright", "BeautifulSoup"],
+      "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
+      "websiteLink": "",
+      "img": "/imgs/industrial_scraper.webp"
     },
     {
       "title": "개인 금융 챗봇",
@@ -124,15 +124,15 @@
       ],
       "githubLink": "https://github.com/Lrs50/wpp-automation",
       "websiteLink": "",
-      "img": "/imgs/wpp_bot.png"
+      "img": "/imgs/wpp_bot.webp"
     },
     {
-      "title": "산업 제품 스크래퍼",
-      "desc": "산업용 웹사이트에서 제품 데이터를 자동으로 수집하고 구조화하는 도구입니다.\n\n복잡한 페이지를 정리된 형식으로 변환해, 카탈로그 시스템이나 시장 분석에 바로 활용할 수 있습니다.",
-      "tools": ["Python", "UV", "Pydantic", "Regex", "Requests", "Playwright", "BeautifulSoup"],
-      "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
-      "websiteLink": "",
-      "img": "/imgs/industrial_scraper.png"
+      "title": "양자 주사위",
+      "desc": "양자 컴퓨팅 개념이 실제로 동작하는 모습을 볼 수 있는 인터랙티브 앱입니다.\n\n모든 무작위 결과는 시뮬레이션된 양자 회로에서 나옵니다. 큐비트를 아다마르 게이트로 중첩 상태로 만든 뒤 측정하면 0 또는 1로 붕괴합니다. 기각 샘플링으로 모듈로 편향을 피합니다.\n\n주사위 굴리기, 동전 던지기, 그룹 나누기, 추첨, 비밀번호 생성, 플레이리스트 섞기, 색상 팔레트 만들기를 할 수 있으며, 각 단계를 블로흐 구 애니메이션으로 보여줍니다.\n\n고전 시뮬레이터에서 실행되므로 출력은 의사 난수입니다. 교육용 프로젝트이며 진정한 난수원이 아니고 보안이 중요한 용도에는 적합하지 않습니다.",
+      "tools": ["Python", "PennyLane", "Streamlit", "Plotly", "NumPy", "UV"],
+      "githubLink": "https://github.com/Lrs50/quantum-dice",
+      "websiteLink": "https://quantum-dice.streamlit.app",
+      "img": "/imgs/quantum_dice.webp"
     },
     {
       "title": "Evolvium",
@@ -140,23 +140,7 @@
       "tools": ["Python", "Algoritmo Genetico", "NumPy", "Matplotlib"],
       "githubLink": "https://github.com/Lrs50/Evolvium",
       "websiteLink": "https://test.pypi.org/project/evolvium/",
-      "img": "/imgs/evolvium.png"
-    },
-    {
-      "title": "유전 알고리즘으로 푸는 8퀸 문제",
-      "desc": "유전 알고리즘을 통해 고전적인 8퀸 문제를 시각적으로 풀어보는 시뮬레이션입니다.\n\n시간에 따라 해결책이 진화하는 과정을 직관적으로 이해할 수 있어 교육용으로도 좋습니다.",
-      "tools": ["Csharp","Unity", "Algoritmo Genetico"],
-      "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
-      "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
-      "img": "/imgs/8_queens.png"
-    },
-    {
-      "title": "Ybý-Mokoĩ",
-      "desc": "투피 과라니 신화를 바탕으로 한 2D 액션 RPG 게임입니다.\n\n전설 속 생물을 물리치고 과일을 수집하며, 밤의 기원에 대한 이야기를 체험할 수 있습니다. 원주민 문화를 교육적이고 흥미로운 방식으로 전달합니다.",
-      "tools": ["Csharp","Unity"],
-      "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
-      "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
-      "img": "/imgs/game_unity.png"
+      "img": "/imgs/evolvium.webp"
     },
     {
       "title": "탐색 알고리즘을 활용한 자율 에이전트",
@@ -164,7 +148,15 @@
       "tools": ["Unity", "Csharp", "Search Algorithm", "Algoritmo Genetico"],
       "githubLink": "https://github.com/Lrs50/Projeto_SI",
       "websiteLink": "https://lrs50.github.io/Projeto_SI/WebGLBuild/",
-      "img": "/imgs/search_agent.png"
+      "img": "/imgs/search_agent.webp"
+    },
+    {
+      "title": "유전 알고리즘으로 푸는 8퀸 문제",
+      "desc": "유전 알고리즘을 통해 고전적인 8퀸 문제를 시각적으로 풀어보는 시뮬레이션입니다.\n\n시간에 따라 해결책이 진화하는 과정을 직관적으로 이해할 수 있어 교육용으로도 좋습니다.",
+      "tools": ["Csharp","Unity", "Algoritmo Genetico"],
+      "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
+      "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
+      "img": "/imgs/8_queens.webp"
     },
     {
       "title": "단어 찾기 퍼즐 생성기",
@@ -172,7 +164,15 @@
       "tools": ["Python", "Tkinter"],
       "githubLink": "https://github.com/Lrs50/WordSearch",
       "websiteLink": "",
-      "img": "/imgs/wordsearch.png"
+      "img": "/imgs/wordsearch.webp"
+    },
+    {
+      "title": "Ybý-Mokoĩ",
+      "desc": "투피 과라니 신화를 바탕으로 한 2D 액션 RPG 게임입니다.\n\n전설 속 생물을 물리치고 과일을 수집하며, 밤의 기원에 대한 이야기를 체험할 수 있습니다. 원주민 문화를 교육적이고 흥미로운 방식으로 전달합니다.",
+      "tools": ["Csharp","Unity"],
+      "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
+      "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
+      "img": "/imgs/game_unity.webp"
     }
   ]
 }

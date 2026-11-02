@@ -31,13 +31,15 @@ export default function Hero(){
             </div>
             <div className="relative w-[410px] desktop:w-[700px] mx-auto mt-[65px] desktop:mt-[120px]">
                 <img
-                src="/imgs/ellipse.png"
+                src="/imgs/ellipse.webp"
+                width="1200" height="600"
                 alt="Purple ellipse" 
                 className="block w-[85%] z-0 mx-auto"
                 />
 
                 <img
-                src="/imgs/avatar.png"
+                src="/imgs/avatar.webp"
+                width="1400" height="935" fetchPriority="high"
                 alt="My picture" 
                 className="absolute z-10 bottom-0 left-1/2 -translate-x-1/2 pointer-events-none"
                 />

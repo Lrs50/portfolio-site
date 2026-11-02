@@ -11,7 +11,7 @@ Single-page personal portfolio. Vite 6 + React 19 + Tailwind 3, plain JavaScript
 - `src/main.jsx` → `src/App.jsx`: stacked sections (`Hero`, `Projects`, `About`, `Contact`) with anchor navigation. No router; `useActiveSection` (IntersectionObserver) drives the navbar.
 - `src/sections/` – page sections. `src/components/` – Navbar, Dropdown, WordCloud (Footer, Cardproject are unused).
 - `src/locales/{en,pt,fr,es,ja,ko,zh}.json` – all text AND project data.
-- `public/imgs/` – images served as-is at `/imgs/...` (avatar, ellipse, project cards). `src/imgs/` – only `bg-texture.png` (used from CSS, bundled by Vite). `src/i18n.js` – i18next setup.
+- `public/imgs/` – WebP images served as-is at `/imgs/...` (avatar, ellipse, project cards; ~800 px wide cards, 1400 px avatar). `src/imgs/` – only `bg-texture.png` (used from CSS, bundled by Vite). `src/i18n.js` – i18next setup.
 
 ## Conventions
 - Styling: Tailwind utility classes inline only (no CSS modules). Custom colors/fonts/`desktop` (768px) breakpoint in `tailwind.config.js`.
@@ -27,11 +27,11 @@ Single-page personal portfolio. Vite 6 + React 19 + Tailwind 3, plain JavaScript
 
 ## Add a project
 1. Add entry to `project.projects` in EVERY locale file (`title, img, desc, tools, githubLink, websiteLink`).
-2. Put image in `public/imgs/` and set `img` to `"/imgs/x.png"`.
+2. Put the image in `public/imgs/` as WebP (about 800 px wide) and set `img` to `"/imgs/x.webp"`.
 3. New tool name → add icon to `iconSources` in `src/sections/Projects.jsx` (key = lowercase, no spaces).
 
 ## Gotchas
-- `img` paths in locale JSON and `<img src>` in components are plain `/imgs/x.png` strings (not Vite-processed). They only work if the file is in `public/imgs/`; check `dist/imgs/` after `npm run build`.
+- `img` paths in locale JSON and `<img src>` in components are plain `/imgs/x.webp` strings (not Vite-processed). They only work if the file is in `public/imgs/`; check `dist/imgs/` after `npm run build`.
 - `tailwind.config.js` uses CommonJS in a `"type": "module"` package; confirm it loads.
 - `Contact.jsx` sends through EmailJS with hardcoded public keys. The EmailJS template needs Reply-To set to `{{email}}`. A hidden `website` field is a honeypot.
 - No deploy config in repo yet; `vite.config.js` only sets `base: "/"` (planned host: Cloudflare Pages, see `target/SPEC.md`).

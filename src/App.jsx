@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, lazy, Suspense } from 'react';
 import React from 'react'
 import NavBar from './components/Navbar'
 import Hero from './sections/Hero'
-import Projects from './sections/Projects'
-import AboutMe from './sections/AboutMe'
-import Contact from './sections/Contact'
+// below the fold: loaded in separate chunks so the Hero paints sooner
+const Projects = lazy(() => import('./sections/Projects'))
+const AboutMe = lazy(() => import('./sections/AboutMe'))
+const Contact = lazy(() => import('./sections/Contact'))
 
 function useActiveSection(sectionIds) {
     const [activeSection, setActiveSection] = useState("");
@@ -47,13 +48,13 @@ export default function App(){
                 <Hero/>
             </section>
             <section id="Projects" className='scroll-mt-16'>
-                <Projects/>
+                <Suspense fallback={<div className="min-h-screen" />}><Projects/></Suspense>
             </section>
             <section id="About" className='scroll-mt-16'>
-                <AboutMe/>
+                <Suspense fallback={<div className="min-h-screen" />}><AboutMe/></Suspense>
             </section>
             <section id="Contact" className='scroll-mt-16'>
-                <Contact/>
+                <Suspense fallback={<div className="min-h-[50vh]" />}><Contact/></Suspense>
             </section>
         </div>
         

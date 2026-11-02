@@ -99,14 +99,6 @@
       "websitelink":"Project Website",
   "projects": [
     {
-      "title": "Quantum Dice",
-      "desc": "An interactive way to see quantum computing concepts at work.\n\nEvery random result comes from a simulated quantum circuit: a qubit is put in superposition with a Hadamard gate and measured, collapsing to 0 or 1. Rejection sampling avoids modulo bias.\n\nRoll dice, flip coins, draw groups and lottery winners, generate passwords, shuffle playlists and build color palettes, with Bloch sphere animations of each step.\n\nIt runs on a classical simulator, so the output is pseudo-random: an educational project, not a source of true randomness or for security-critical use.",
-      "tools": ["Python", "PennyLane", "Streamlit", "Plotly", "NumPy", "UV"],
-      "githubLink": "https://github.com/Lrs50/quantum-dice",
-      "websiteLink": "https://quantum-dice.streamlit.app",
-      "img": "/imgs/quantum_dice.png"
-    },
-    {
       "title": "How Much Does Breakfast Cost?",
       "desc": "Coffee and eggs have become more expensive...\n\nBut what about the rest of breakfast?\n\nThis project started with that question. I developed a complete solution to forecast, over the next 6 months, the prices of key breakfast foods. Everything was automated using machine learning, scraping, data visualization and APIs.",
       "tools": [
@@ -114,7 +106,15 @@
       ],
       "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
       "websiteLink": "https://breakfast-forecast.streamlit.app/",
-      "img": "/imgs/breakfast_forecast.png"
+      "img": "/imgs/breakfast_forecast.webp"
+    },
+    {
+      "title": "Industrial Product Scraper",
+      "desc": "An automated tool to extract and structure product data from industrial websites.\n\nIt turns unstructured and messy pages into clean, organized information ready for catalog systems and market analysis.",
+      "tools": ["Python", "UV", "Pydantic", "Regex", "Requests", "Playwright", "BeautifulSoup"],
+      "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
+      "websiteLink": "",
+      "img": "/imgs/industrial_scraper.webp"
     },
     {
       "title": "Personal Finance Chatbot",
@@ -124,15 +124,15 @@
       ],
       "githubLink": "https://github.com/Lrs50/wpp-automation",
       "websiteLink": "",
-      "img": "/imgs/wpp_bot.png"
+      "img": "/imgs/wpp_bot.webp"
     },
     {
-      "title": "Industrial Product Scraper",
-      "desc": "An automated tool to extract and structure product data from industrial websites.\n\nIt turns unstructured and messy pages into clean, organized information ready for catalog systems and market analysis.",
-      "tools": ["Python", "UV", "Pydantic", "Regex", "Requests", "Playwright", "BeautifulSoup"],
-      "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
-      "websiteLink": "",
-      "img": "/imgs/industrial_scraper.png"
+      "title": "Quantum Dice",
+      "desc": "An interactive way to see quantum computing concepts at work.\n\nEvery random result comes from a simulated quantum circuit: a qubit is put in superposition with a Hadamard gate and measured, collapsing to 0 or 1. Rejection sampling avoids modulo bias.\n\nRoll dice, flip coins, draw groups and lottery winners, generate passwords, shuffle playlists and build color palettes, with Bloch sphere animations of each step.\n\nIt runs on a classical simulator, so the output is pseudo-random: an educational project, not a source of true randomness or for security-critical use.",
+      "tools": ["Python", "PennyLane", "Streamlit", "Plotly", "NumPy", "UV"],
+      "githubLink": "https://github.com/Lrs50/quantum-dice",
+      "websiteLink": "https://quantum-dice.streamlit.app",
+      "img": "/imgs/quantum_dice.webp"
     },
     {
       "title": "Evolvium",
@@ -140,23 +140,7 @@
       "tools": ["Python", "Algoritmo Genetico", "NumPy", "Matplotlib"],
       "githubLink": "https://github.com/Lrs50/Evolvium",
       "websiteLink": "https://test.pypi.org/project/evolvium/",
-      "img": "/imgs/evolvium.png"
-    },
-    {
-      "title": "8 Queens with Genetic Algorithms",
-      "desc": "An interactive simulation of the classic 8 queens problem using genetic algorithms.\n\nIt’s a fun and visual way to understand how evolutionary algorithms build solutions over time.",
-      "tools": ["Csharp","Unity", "Algoritmo Genetico"],
-      "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
-      "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
-      "img": "/imgs/8_queens.png"
-    },
-    {
-      "title": "Ybý-Mokoĩ",
-      "desc": "A 2D action RPG inspired by Tupi-Guarani mythology.\n\nThe player battles legendary creatures, collects items like guaraná and açaí, and experiences the story behind the origin of night. A creative and educational way to celebrate Indigenous culture through engaging gameplay.",
-      "tools": ["Csharp","Unity"],
-      "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
-      "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
-      "img": "/imgs/game_unity.png"
+      "img": "/imgs/evolvium.webp"
     },
     {
       "title": "Autonomous Agent with Search Algorithms",
@@ -164,7 +148,15 @@
       "tools": ["Unity", "Csharp", "Search Algorithm", "Algoritmo Genetico"],
       "githubLink": "https://github.com/Lrs50/Projeto_SI",
       "websiteLink": "https://lrs50.github.io/Projeto_SI/WebGLBuild/",
-      "img": "/imgs/search_agent.png"
+      "img": "/imgs/search_agent.webp"
+    },
+    {
+      "title": "8 Queens with Genetic Algorithms",
+      "desc": "An interactive simulation of the classic 8 queens problem using genetic algorithms.\n\nIt’s a fun and visual way to understand how evolutionary algorithms build solutions over time.",
+      "tools": ["Csharp","Unity", "Algoritmo Genetico"],
+      "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
+      "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
+      "img": "/imgs/8_queens.webp"
     },
     {
       "title": "Word Search Generator",
@@ -172,7 +164,15 @@
       "tools": ["Python", "Tkinter"],
       "githubLink": "https://github.com/Lrs50/WordSearch",
       "websiteLink": "",
-      "img": "/imgs/wordsearch.png"
+      "img": "/imgs/wordsearch.webp"
+    },
+    {
+      "title": "Ybý-Mokoĩ",
+      "desc": "A 2D action RPG inspired by Tupi-Guarani mythology.\n\nThe player battles legendary creatures, collects items like guaraná and açaí, and experiences the story behind the origin of night. A creative and educational way to celebrate Indigenous culture through engaging gameplay.",
+      "tools": ["Csharp","Unity"],
+      "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
+      "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
+      "img": "/imgs/game_unity.webp"
     }
   ]
 

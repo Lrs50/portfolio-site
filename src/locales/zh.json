@@ -99,14 +99,6 @@
   "websitelink": "项目网站",
   "projects": [
     {
-      "title": "量子骰子",
-      "desc": "一个可以直观看到量子计算概念运作的交互式应用。\n\n每个随机结果都来自模拟的量子电路：用Hadamard门将量子比特置于叠加态并测量，使其坍缩为0或1。拒绝采样可避免取模偏差。\n\n可以掷骰子、抛硬币、分组、抽奖、生成密码、打乱播放列表和生成配色方案，每一步都配有布洛赫球动画。\n\n它运行在经典模拟器上，因此输出是伪随机的：这是一个教学项目，不是真随机数来源，也不适用于对安全要求高的场景。",
-      "tools": ["Python", "PennyLane", "Streamlit", "Plotly", "NumPy", "UV"],
-      "githubLink": "https://github.com/Lrs50/quantum-dice",
-      "websiteLink": "https://quantum-dice.streamlit.app",
-      "img": "/imgs/quantum_dice.png"
-    },
-    {
       "title": "早餐到底多少钱？",
       "desc": "最近咖啡和鸡蛋涨价了不少...\n\n那早餐的其他部分呢？\n\n这个项目源于我对这个问题的好奇。我构建了一个完整的系统，能够预测未来六个月早餐中主要食材的价格趋势。整个流程通过机器学习、网页爬取、数据可视化和 API 实现自动化。",
       "tools": [
@@ -114,7 +106,15 @@
       ],
       "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
       "websiteLink": "https://breakfast-forecast.streamlit.app/",
-      "img": "/imgs/breakfast_forecast.png"
+      "img": "/imgs/breakfast_forecast.webp"
+    },
+    {
+      "title": "工业产品数据爬取器",
+      "desc": "这是一个自动化工具，用于采集和整理工业品网站上的产品信息。\n\n它能将混乱或不规范的网页内容转化为结构清晰的数据，非常适合用于目录系统或市场分析。",
+      "tools": ["Python", "UV", "Pydantic", "Regex", "Requests", "Playwright", "BeautifulSoup"],
+      "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
+      "websiteLink": "",
+      "img": "/imgs/industrial_scraper.webp"
     },
     {
       "title": "个人财务聊天机器人",
@@ -124,15 +124,15 @@
       ],
       "githubLink": "https://github.com/Lrs50/wpp-automation",
       "websiteLink": "",
-      "img": "/imgs/wpp_bot.png"
+      "img": "/imgs/wpp_bot.webp"
     },
     {
-      "title": "工业产品数据爬取器",
-      "desc": "这是一个自动化工具，用于采集和整理工业品网站上的产品信息。\n\n它能将混乱或不规范的网页内容转化为结构清晰的数据，非常适合用于目录系统或市场分析。",
-      "tools": ["Python", "UV", "Pydantic", "Regex", "Requests", "Playwright", "BeautifulSoup"],
-      "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
-      "websiteLink": "",
-      "img": "/imgs/industrial_scraper.png"
+      "title": "量子骰子",
+      "desc": "一个可以直观看到量子计算概念运作的交互式应用。\n\n每个随机结果都来自模拟的量子电路：用Hadamard门将量子比特置于叠加态并测量，使其坍缩为0或1。拒绝采样可避免取模偏差。\n\n可以掷骰子、抛硬币、分组、抽奖、生成密码、打乱播放列表和生成配色方案，每一步都配有布洛赫球动画。\n\n它运行在经典模拟器上，因此输出是伪随机的：这是一个教学项目，不是真随机数来源，也不适用于对安全要求高的场景。",
+      "tools": ["Python", "PennyLane", "Streamlit", "Plotly", "NumPy", "UV"],
+      "githubLink": "https://github.com/Lrs50/quantum-dice",
+      "websiteLink": "https://quantum-dice.streamlit.app",
+      "img": "/imgs/quantum_dice.webp"
     },
     {
       "title": "Evolvium 优化库",
@@ -140,23 +140,7 @@
       "tools": ["Python", "Algoritmo Genetico", "NumPy", "Matplotlib"],
       "githubLink": "https://github.com/Lrs50/Evolvium",
       "websiteLink": "https://test.pypi.org/project/evolvium/",
-      "img": "/imgs/evolvium.png"
-    },
-    {
-      "title": "遗传算法解决八皇后问题",
-      "desc": "通过遗传算法解决经典的八皇后问题，并配有可视化界面。\n\n这是一个生动有趣的方式，帮助你理解进化式算法如何逐步寻找问题的最优解。",
-      "tools": ["Csharp","Unity", "Algoritmo Genetico"],
-      "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
-      "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
-      "img": "/imgs/8_queens.png"
-    },
-    {
-      "title": "Ybý-Mokoĩ 传说之夜",
-      "desc": "一款以图皮-瓜拉尼神话为灵感的 2D 动作 RPG。\n\n玩家可以与传说中的生物战斗，收集瓜拉纳和巴西莓等道具，体验“夜晚诞生”的神话故事。游戏既有趣味性，也致力于弘扬原住民文化。",
-      "tools": ["Csharp","Unity"],
-      "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
-      "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
-      "img": "/imgs/game_unity.png"
+      "img": "/imgs/evolvium.webp"
     },
     {
       "title": "基于搜索算法的自主智能体",
@@ -164,7 +148,15 @@
       "tools": ["Unity", "Csharp", "Search Algorithm", "Algoritmo Genetico"],
       "githubLink": "https://github.com/Lrs50/Projeto_SI",
       "websiteLink": "https://lrs50.github.io/Projeto_SI/WebGLBuild/",
-      "img": "/imgs/search_agent.png"
+      "img": "/imgs/search_agent.webp"
+    },
+    {
+      "title": "遗传算法解决八皇后问题",
+      "desc": "通过遗传算法解决经典的八皇后问题，并配有可视化界面。\n\n这是一个生动有趣的方式，帮助你理解进化式算法如何逐步寻找问题的最优解。",
+      "tools": ["Csharp","Unity", "Algoritmo Genetico"],
+      "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
+      "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
+      "img": "/imgs/8_queens.webp"
     },
     {
       "title": "单词搜索生成器",
@@ -172,7 +164,15 @@
       "tools": ["Python", "Tkinter"],
       "githubLink": "https://github.com/Lrs50/WordSearch",
       "websiteLink": "",
-      "img": "/imgs/wordsearch.png"
+      "img": "/imgs/wordsearch.webp"
+    },
+    {
+      "title": "Ybý-Mokoĩ 传说之夜",
+      "desc": "一款以图皮-瓜拉尼神话为灵感的 2D 动作 RPG。\n\n玩家可以与传说中的生物战斗，收集瓜拉纳和巴西莓等道具，体验“夜晚诞生”的神话故事。游戏既有趣味性，也致力于弘扬原住民文化。",
+      "tools": ["Csharp","Unity"],
+      "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
+      "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
+      "img": "/imgs/game_unity.webp"
     }
   ]
 }

@@ -111,6 +111,10 @@ function Project({ title = "", img = "",desc="",githubLink="", websiteLink="", t
           <img
             src={img}
             alt={title}
+            width="800"
+            height="534"
+            loading="lazy"
+            decoding="async"
             className="relative z-10 w-full rounded-3xl object-cover shadow-xl rounded-br-none block"
           />
         </button>

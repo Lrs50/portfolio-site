@@ -99,14 +99,6 @@
   "websitelink": "Sitio del Proyecto",
   "projects": [
     {
-      "title": "Dados Cuánticos",
-      "desc": "Una forma interactiva de ver conceptos de computación cuántica en acción.\n\nCada resultado aleatorio proviene de un circuito cuántico simulado: un qubit se pone en superposición con una puerta Hadamard y se mide, colapsando a 0 o 1. El muestreo por rechazo evita el sesgo del módulo.\n\nLanza dados, tira monedas, divide grupos, sortea ganadores, genera contraseñas, mezcla listas de reproducción y crea paletas de colores, con animaciones de la esfera de Bloch en cada paso.\n\nSe ejecuta en un simulador clásico, así que la salida es pseudoaleatoria: es un proyecto educativo, no una fuente de aleatoriedad verdadera ni apta para uso crítico de seguridad.",
-      "tools": ["Python", "PennyLane", "Streamlit", "Plotly", "NumPy", "UV"],
-      "githubLink": "https://github.com/Lrs50/quantum-dice",
-      "websiteLink": "https://quantum-dice.streamlit.app",
-      "img": "/imgs/quantum_dice.png"
-    },
-    {
       "title": "¿Cuánto Cuesta el Desayuno?",
       "desc": "El café y los huevos subieron bastante de precio...\n\n¿Pero qué pasa con el resto del desayuno?\n\nEste proyecto surgió de esa duda. Desarrollé una solución integral para prever, durante los próximos 6 meses, el precio de los principales alimentos consumidos por la mañana. Todo el proceso fue automatizado con machine learning, scraping, visualización de datos y APIs.",
       "tools": [
@@ -114,7 +106,15 @@
       ],
       "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
       "websiteLink": "https://breakfast-forecast.streamlit.app/",
-      "img": "/imgs/breakfast_forecast.png"
+      "img": "/imgs/breakfast_forecast.webp"
+    },
+    {
+      "title": "Scraper de Productos Industriales",
+      "desc": "Herramienta automatizada que recolecta y organiza datos de productos industriales.\n\nConvierte páginas desordenadas en información clara, estructurada y lista para catálogos y análisis de mercado.",
+      "tools": ["Python", "UV", "Pydantic", "Regex", "Requests", "Playwright", "BeautifulSoup"],
+      "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
+      "websiteLink": "",
+      "img": "/imgs/industrial_scraper.webp"
     },
     {
       "title": "Chatbot Financiero Personal",
@@ -124,15 +124,15 @@
       ],
       "githubLink": "https://github.com/Lrs50/wpp-automation",
       "websiteLink": "",
-      "img": "/imgs/wpp_bot.png"
+      "img": "/imgs/wpp_bot.webp"
     },
     {
-      "title": "Scraper de Productos Industriales",
-      "desc": "Herramienta automatizada que recolecta y organiza datos de productos industriales.\n\nConvierte páginas desordenadas en información clara, estructurada y lista para catálogos y análisis de mercado.",
-      "tools": ["Python", "UV", "Pydantic", "Regex", "Requests", "Playwright", "BeautifulSoup"],
-      "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
-      "websiteLink": "",
-      "img": "/imgs/industrial_scraper.png"
+      "title": "Dados Cuánticos",
+      "desc": "Una forma interactiva de ver conceptos de computación cuántica en acción.\n\nCada resultado aleatorio proviene de un circuito cuántico simulado: un qubit se pone en superposición con una puerta Hadamard y se mide, colapsando a 0 o 1. El muestreo por rechazo evita el sesgo del módulo.\n\nLanza dados, tira monedas, divide grupos, sortea ganadores, genera contraseñas, mezcla listas de reproducción y crea paletas de colores, con animaciones de la esfera de Bloch en cada paso.\n\nSe ejecuta en un simulador clásico, así que la salida es pseudoaleatoria: es un proyecto educativo, no una fuente de aleatoriedad verdadera ni apta para uso crítico de seguridad.",
+      "tools": ["Python", "PennyLane", "Streamlit", "Plotly", "NumPy", "UV"],
+      "githubLink": "https://github.com/Lrs50/quantum-dice",
+      "websiteLink": "https://quantum-dice.streamlit.app",
+      "img": "/imgs/quantum_dice.webp"
     },
     {
       "title": "Evolvium",
@@ -140,23 +140,7 @@
       "tools": ["Python", "Algoritmo Genetico", "NumPy", "Matplotlib"],
       "githubLink": "https://github.com/Lrs50/Evolvium",
       "websiteLink": "https://test.pypi.org/project/evolvium/",
-      "img": "/imgs/evolvium.png"
-    },
-    {
-      "title": "8 Reinas con Algoritmos Genéticos",
-      "desc": "Simulación visual del clásico problema de las 8 reinas usando algoritmos evolutivos.\n\nUna forma intuitiva y didáctica de comprender cómo las soluciones pueden evolucionar con el tiempo.",
-      "tools": ["Csharp","Unity", "Algoritmo Genetico"],
-      "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
-      "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
-      "img": "/imgs/8_queens.png"
-    },
-    {
-      "title": "Ybý-Mokoĩ",
-      "desc": "Un RPG de acción en 2D inspirado en la mitología Tupi-Guaraní.\n\nEl jugador se enfrenta a criaturas legendarias, recolecta elementos como guaraná y açaí, y vive el relato del origen de la noche. Una experiencia educativa y entretenida que rinde homenaje a la cultura indígena.",
-      "tools": ["Csharp","Unity"],
-      "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
-      "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
-      "img": "/imgs/game_unity.png"
+      "img": "/imgs/evolvium.webp"
     },
     {
       "title": "Agente Autónomo con Algoritmos de Búsqueda",
@@ -164,7 +148,15 @@
       "tools": ["Unity", "Csharp", "Search Algorithm", "Algoritmo Genetico"],
       "githubLink": "https://github.com/Lrs50/Projeto_SI",
       "websiteLink": "https://lrs50.github.io/Projeto_SI/WebGLBuild/",
-      "img": "/imgs/search_agent.png"
+      "img": "/imgs/search_agent.webp"
+    },
+    {
+      "title": "8 Reinas con Algoritmos Genéticos",
+      "desc": "Simulación visual del clásico problema de las 8 reinas usando algoritmos evolutivos.\n\nUna forma intuitiva y didáctica de comprender cómo las soluciones pueden evolucionar con el tiempo.",
+      "tools": ["Csharp","Unity", "Algoritmo Genetico"],
+      "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
+      "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
+      "img": "/imgs/8_queens.webp"
     },
     {
       "title": "Generador de Sopas de Letras",
@@ -172,7 +164,15 @@
       "tools": ["Python", "Tkinter"],
       "githubLink": "https://github.com/Lrs50/WordSearch",
       "websiteLink": "",
-      "img": "/imgs/wordsearch.png"
+      "img": "/imgs/wordsearch.webp"
+    },
+    {
+      "title": "Ybý-Mokoĩ",
+      "desc": "Un RPG de acción en 2D inspirado en la mitología Tupi-Guaraní.\n\nEl jugador se enfrenta a criaturas legendarias, recolecta elementos como guaraná y açaí, y vive el relato del origen de la noche. Una experiencia educativa y entretenida que rinde homenaje a la cultura indígena.",
+      "tools": ["Csharp","Unity"],
+      "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
+      "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
+      "img": "/imgs/game_unity.webp"
     }
   ]
 }
