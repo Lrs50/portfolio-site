@@ -1,26 +1,21 @@
 import React, { useEffect, useState, useMemo } from "react";
 import Dropdown from "./Dropdown";
 import { useTranslation } from "react-i18next";
+import { chooseLanguage } from "../i18n";
 
-const emojiToLang = {
-  "🇧🇷": "pt",
-  "🇬🇧": "en",
-  "🇫🇷": "fr",
-  "🇪🇸": "es",
-  "🇯🇵":"ja",
-  "🇰🇷": "ko",
-  "🇨🇳": "zh"
-};
+// Flag emoji do not render on Windows Chrome (they show as letters), so the native name is always shown too.
+const languages = [
+  { code: "pt", flag: "🇧🇷", name: "Português" },
+  { code: "en", flag: "🇬🇧", name: "English" },
+  { code: "fr", flag: "🇫🇷", name: "Français" },
+  { code: "es", flag: "🇪🇸", name: "Español" },
+  { code: "ja", flag: "🇯🇵", name: "日本語" },
+  { code: "ko", flag: "🇰🇷", name: "한국어" },
+  { code: "zh", flag: "🇨🇳", name: "中文" },
+];
 
-const langToEmoji = {
-  pt: "🇧🇷",
-  en: "🇬🇧",
-  fr: "🇫🇷",
-  es: "🇪🇸",
-  ja: "🇯🇵",
-  ko: "🇰🇷",
-  zh: "🇨🇳"
-};
+const optionLabel = (l) => `${l.flag} ${l.name}`;
+const labelToCode = Object.fromEntries(languages.map((l) => [optionLabel(l), l.code]));
 
 function NavItem({ text, to, active }) {
   return (
@@ -41,7 +36,7 @@ function NavItem({ text, to, active }) {
 export default function NavBar({ activeSection }) {
   const { t, i18n } = useTranslation();
 
-  const [selectedLang, setSelectedLang] = useState(langToEmoji[i18n.language]);
+  const currentLang = languages.find((l) => l.code === i18n.language) ?? languages[1];
   const [userSession, setUserSession] = useState("Hero");
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -77,12 +72,11 @@ export default function NavBar({ activeSection }) {
     >
       {/* Dropdown de idioma */}
       <Dropdown
-        label={selectedLang}
-        options={["🇧🇷", "🇬🇧", "🇫🇷", "🇪🇸", "🇯🇵", "🇰🇷", "🇨🇳"]}
+        label={`🌐 ${currentLang.code.toUpperCase()}`}
+        options={languages.map(optionLabel)}
         onSelect={(option) => {
-          setSelectedLang(option);
-          const langCode = emojiToLang[option];
-          if (langCode) i18n.changeLanguage(langCode);
+          const langCode = labelToCode[option];
+          if (langCode) chooseLanguage(langCode);
         }}
       />
 
