@@ -33,4 +33,10 @@ i18n
     },
   });
 
+// keep <html lang> in sync with the UI language (screen readers, translation prompts, SEO)
+document.documentElement.lang = i18n.language;
+i18n.on('languageChanged', (lng) => {
+  document.documentElement.lang = lng;
+});
+
 export default i18n;
