@@ -1,6 +1,7 @@
 import React,{ useEffect, useRef, useState } from "react";
 import { TbBrandLinkedin ,  TbBrandGithubFilled, TbBrandMedium, TbBrandWhatsapp } from 'react-icons/tb';
 import { Trans, useTranslation } from 'react-i18next';
+import ResumeButton from '../components/ResumeButton';
 
 export default function Hero(){
     const { t } = useTranslation();
@@ -23,6 +24,7 @@ export default function Hero(){
                     {t('hero.introLine3')}
                     </span>
                 </h1>
+                <ResumeButton className="relative z-0 mt-6 px-6 py-2 text-base shadow-md" />
             </div>
             <div className="relative w-[410px] desktop:w-[700px] mx-auto mt-[65px] desktop:mt-[120px]">
                 <img
@@ -34,7 +36,7 @@ export default function Hero(){
                 <img
                 src="/imgs/avatar.png"
                 alt="My picture" 
-                className="absolute z-10 bottom-0 left-1/2 -translate-x-1/2 "
+                className="absolute z-10 bottom-0 left-1/2 -translate-x-1/2 pointer-events-none"
                 />
 
             <div className="absolute backdrop-blur-md bg-white/10 border border-white/20 rounded-full 

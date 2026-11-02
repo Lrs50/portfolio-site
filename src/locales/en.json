@@ -4,7 +4,8 @@
     "home": "Home",
     "projects": "Projects",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "resume": "Resume"
   },
   "hero": {
     "hello": "HELLO!",

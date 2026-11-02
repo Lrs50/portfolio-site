@@ -2,6 +2,7 @@ import React, { useEffect, useState, useMemo } from "react";
 import Dropdown from "./Dropdown";
 import { useTranslation } from "react-i18next";
 import { chooseLanguage } from "../i18n";
+import ResumeButton from "./ResumeButton";
 
 // Flag emoji do not render on Windows Chrome (they show as letters), so the native name is always shown too.
 const languages = [
@@ -114,6 +115,7 @@ export default function NavBar({ activeSection }) {
         <NavItem text={t("nav.projects")} to="Projects" active={activeSection === "Projects"} />
         <NavItem text={t("nav.about")} to="About" active={activeSection === "About"} />
         <NavItem text={t("nav.contact")} to="Contact" active={activeSection === "Contact"} />
+        <ResumeButton className="px-4 py-1 text-sm" />
       </div>
     </nav>
   );

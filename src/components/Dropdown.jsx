@@ -32,7 +32,7 @@ export default function Dropdown({label="Dropdown",options=[],onSelect,position=
         <div ref={dropdownRef} className={`relative inline-block text-left ${className}`}> 
             <button
             onClick={() => setOpen(!open)}
-            className="relative bg-black text-white px-4 py-2 rounded group overflow-hidden"
+            className="relative bg-black text-white px-4 py-2 rounded group overflow-hidden whitespace-nowrap"
             >
             {label}
             

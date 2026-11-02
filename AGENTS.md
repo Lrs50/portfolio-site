@@ -20,10 +20,10 @@ Single-page personal portfolio. Vite 6 + React 19 + Tailwind 3, plain JavaScript
 - Commits: `type: short lowercase description` (`add:`, `feat:`, `fix:`, `del:`), no body.
 
 ## i18n
-- Detection: `navigator.language` on load only, fallback `en`. Not persisted.
+- Language order: saved choice (localStorage `lang`, set only by `chooseLanguage()` in `src/i18n.js`), then `navigator.language`, then `en`.
 - Arrays read with `t(key, { returnObjects: true })`; markup uses `<1>…</1>` placeholders with `<Trans components>`.
 - Keep locale files in sync: same keys in every file (en.json is the reference).
-- Add a language: new `src/locales/<code>.json`; register in `src/i18n.js` (import, `supportedLanguages`, `resources`); add flag to `emojiToLang`, `langToEmoji` and the `Dropdown` options in `src/components/Navbar.jsx`.
+- Add a language: new `src/locales/<code>.json`; register in `src/i18n.js` (import, `supportedLanguages`, `resources`); add it to the `languages` array in `src/components/Navbar.jsx`.
 
 ## Add a project
 1. Add entry to `project.projects` in EVERY locale file (`title, img, desc, tools, githubLink, websiteLink`).
@@ -35,4 +35,4 @@ Single-page personal portfolio. Vite 6 + React 19 + Tailwind 3, plain JavaScript
 - `tailwind.config.js` uses CommonJS in a `"type": "module"` package; confirm it loads.
 - `Contact.jsx` uses hardcoded English `alert()`s and hardcoded EmailJS keys.
 - No deploy config in repo yet; `vite.config.js` only sets `base: "/"` (planned host: Cloudflare Pages, see `target/SPEC.md`).
-- `index.html` has static `lang="pt-br"`.
+- The Resume button (`ResumeButton`) redirects to `VITE_RESUME_URL_EN` / `VITE_RESUME_URL_PT` from `.env` (PT when the site language is `pt`). No React Vite plugin, so every `.jsx` needs `import React from "react"`.

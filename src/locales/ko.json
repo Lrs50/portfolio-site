@@ -4,7 +4,8 @@
     "home": "홈",
     "projects": "프로젝트",
     "about": "소개",
-    "contact": "연락처"
+    "contact": "연락처",
+    "resume": "이력서"
   },
   "hero": {
     "hello": "안녕하세요!",
