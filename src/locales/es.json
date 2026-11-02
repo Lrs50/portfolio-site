@@ -11,7 +11,12 @@
   "hello": "¡HOLA!",
   "introLine1": "Soy <1>Lucas</1>",
   "introLine2": "Ingeniero en Computación",
-  "introLine3": "Construyendo aplicaciones inteligentes de principio a fin"
+  "introLine3": "Construyendo aplicaciones inteligentes de principio a fin",
+  "linkedin": "LinkedIn",
+  "github": "GitHub",
+  "medium": "Medium",
+  "whatsapp": "WhatsApp",
+  "email": "Correo electrónico"
 },
 "aboutMe": {
   "title": "Sobre <1>Mí</1>",

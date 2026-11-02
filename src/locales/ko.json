@@ -11,7 +11,12 @@
     "hello": "안녕하세요!",
     "introLine1": "저는 <1>루카스</1>입니다",
     "introLine2": "컴퓨터 엔지니어",
-    "introLine3": "지능형 애플리케이션을 엔드 투 엔드로 구축합니다"
+    "introLine3": "지능형 애플리케이션을 엔드 투 엔드로 구축합니다",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "medium": "Medium",
+    "whatsapp": "WhatsApp",
+    "email": "이메일"
   },
   "aboutMe": {
     "title": "<1>저</1>에 대해",

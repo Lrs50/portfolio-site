@@ -11,7 +11,12 @@
     "hello": "こんにちは！",
     "introLine1": "私は<1>ルーカス</1>です",
     "introLine2": "コンピューターエンジニア",
-    "introLine3": "インテリジェントなアプリケーションをエンドツーエンドで構築します"
+    "introLine3": "インテリジェントなアプリケーションをエンドツーエンドで構築します",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "medium": "Medium",
+    "whatsapp": "WhatsApp",
+    "email": "メール"
   },
   "aboutMe": {
     "title": "<1>私</1>について",

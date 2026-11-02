@@ -11,7 +11,12 @@
     "hello": "你好！",
     "introLine1": "我是<1>Lucas</1>",
     "introLine2": "计算机工程师",
-    "introLine3": "构建端到端的智能应用程序"
+    "introLine3": "构建端到端的智能应用程序",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "medium": "Medium",
+    "whatsapp": "WhatsApp",
+    "email": "电子邮件"
   },
   "aboutMe": {
     "title": "关于<1>我</1>",
