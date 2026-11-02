@@ -86,6 +86,9 @@
     "highlight": "让我们聊聊！",
     "placeholder": "写下你的留言...",
     "button": "发送",
+    "emailPlaceholder": "你的邮箱",
+    "sending": "发送中...",
+    "orEmail": "或发送邮件至",
     "success": "消息发送成功！",
     "error": "发送消息时出错！"
   },

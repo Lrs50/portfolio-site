@@ -86,6 +86,9 @@
     "highlight": "대화해요!",
     "placeholder": "메시지를 작성하세요...",
     "button": "보내기",
+    "emailPlaceholder": "이메일 주소",
+    "sending": "전송 중...",
+    "orEmail": "또는 이메일로 연락하기",
     "success": "메시지가 성공적으로 전송되었습니다!",
     "error": "메시지 전송 중 오류가 발생했습니다!"
   },

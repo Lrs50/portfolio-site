@@ -86,6 +86,9 @@
     "highlight": "お話ししましょう！",
     "placeholder": "メッセージを入力してください...",
     "button": "送信",
+    "emailPlaceholder": "メールアドレス",
+    "sending": "送信中...",
+    "orEmail": "または次のアドレスへ",
     "success": "メッセージが正常に送信されました！",
     "error": "メッセージの送信中にエラーが発生しました！"
   },

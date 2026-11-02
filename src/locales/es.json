@@ -86,6 +86,9 @@
   "highlight": "¡Hablemos!",
   "placeholder": "Escribe tu mensaje...",
   "button": "Enviar",
+  "emailPlaceholder": "Tu correo electrónico",
+  "sending": "Enviando...",
+  "orEmail": "O escríbeme a",
   "success": "¡Mensaje enviado con éxito!",
   "error": "¡Error al enviar el mensaje!"
 },

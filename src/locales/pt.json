@@ -87,6 +87,9 @@
   "highlight": "Vamos conversar!",
   "placeholder": "Escreva sua mensagem...",
   "button": "Enviar",
+  "emailPlaceholder": "Seu e-mail",
+  "sending": "Enviando...",
+  "orEmail": "Ou escreva para",
   "success": "Mensagem enviada com sucesso!",
   "error": "Erro ao enviar a mensagem!"
 },

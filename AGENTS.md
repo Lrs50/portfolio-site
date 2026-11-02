@@ -33,6 +33,6 @@ Single-page personal portfolio. Vite 6 + React 19 + Tailwind 3, plain JavaScript
 ## Gotchas
 - `img` paths in locale JSON and `<img src>` in components are plain `/imgs/x.png` strings (not Vite-processed). They only work if the file is in `public/imgs/`; check `dist/imgs/` after `npm run build`.
 - `tailwind.config.js` uses CommonJS in a `"type": "module"` package; confirm it loads.
-- `Contact.jsx` uses hardcoded English `alert()`s and hardcoded EmailJS keys.
+- `Contact.jsx` sends through EmailJS with hardcoded public keys. The EmailJS template needs Reply-To set to `{{email}}`. A hidden `website` field is a honeypot.
 - No deploy config in repo yet; `vite.config.js` only sets `base: "/"` (planned host: Cloudflare Pages, see `target/SPEC.md`).
 - The Resume button (`ResumeButton`) redirects to `VITE_RESUME_URL_EN` / `VITE_RESUME_URL_PT` from `.env` (PT when the site language is `pt`). No React Vite plugin, so every `.jsx` needs `import React from "react"`.

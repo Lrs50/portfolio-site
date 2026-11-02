@@ -86,6 +86,9 @@
     "highlight": "Let’s chat!",
     "placeholder": "Write your message...",
     "button": "Send",
+    "emailPlaceholder": "Your email",
+    "sending": "Sending...",
+    "orEmail": "Or email me at",
     "success": "Message sent successfully!",
     "error": "Error sending the message!"
     },
