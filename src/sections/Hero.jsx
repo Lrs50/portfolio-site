@@ -21,13 +21,14 @@ export default function Hero(){
             </span>
 
             <div style={{ animationDelay: "150ms" }} className="animate-rise text-center mt-6 px-4">
-                <h1 className="text-[clamp(1.75rem,8.4vw,2.25rem)] desktop:text-6xl font-light leading-tight text-white font-urbanist max-w-4xl mx-auto [text-wrap:balance]">
+                <h1 style={{ "--n": t('hero.introLine2').length }} className="text-[min(2.25rem,calc((100vw_-_2rem)/(var(--n)*0.55)))] desktop:text-6xl font-light leading-tight text-white font-urbanist max-w-4xl mx-auto [text-wrap:balance]">
                     <Trans
                     i18nKey="hero.introLine1"
                     components={{ 1: <span className="font-bold tracking-wide text-glow" /> }}
                     />
                     <br />
-                    <span className="text-white font-medium">{t('hero.introLine2')}</span>
+                    {/* both headline lines share one size. On phones it shrinks with the length of this line (--n on the h1) so long titles like "Engenheiro da Computação" stay on one line */}
+                    <span className="text-white font-medium whitespace-nowrap">{t('hero.introLine2')}</span>
                     <br />
                     <span className="text-white/70 text-base desktop:text-xl mt-2 mb-1 block">
                     {t('hero.introLine3')}
