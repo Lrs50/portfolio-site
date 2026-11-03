@@ -51,7 +51,7 @@ export default function Dropdown({label="Dropdown",options=[],onSelect,position=
             aria-haspopup="true"
             aria-expanded={open}
             aria-label={ariaLabel ? `${ariaLabel}: ${label}` : undefined}
-            className="relative bg-transparent text-white px-4 py-2 rounded group overflow-hidden whitespace-nowrap"
+            className="relative bg-transparent text-white px-2.5 desktop:px-4 py-2 rounded group overflow-hidden whitespace-nowrap"
             >
             {label}
 

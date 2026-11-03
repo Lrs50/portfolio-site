@@ -95,7 +95,7 @@ function Timeline() {
       ref={containerRef}
       style={{ minHeight: '100vh' }} // Ensure container has height
     >
-      <h2 className="text-5xl whitespace-nowrap text-white font-medium font-inter mb-8">
+      <h2 className="text-[clamp(1.875rem,9vw,3rem)] desktop:text-5xl text-center text-white font-medium font-inter mb-8 [text-wrap:balance]">
         <Trans
           i18nKey="aboutMe.timeline.title"
           components={{ 1: <span className="text-glow font-semibold">{t('aboutMe.timeline.title')}</span> }}
@@ -141,7 +141,7 @@ export default function AboutMe() {
         
         {/* About Me block */}
         <div className="bg-white/[0.04] border border-white/10 backdrop-blur-md rounded-3xl shadow-glass p-8">
-          <h2 className="text-5xl text-center text-white font-medium font-inter mt-3 mb-4">
+          <h2 className="text-[clamp(1.875rem,9vw,3rem)] desktop:text-5xl text-center text-white font-medium font-inter mt-3 mb-4 [text-wrap:balance]">
               <Trans
               i18nKey="aboutMe.title"
               components={{ 1: <span className="text-glow font-semibold">{t('aboutMe.title')}</span> }}

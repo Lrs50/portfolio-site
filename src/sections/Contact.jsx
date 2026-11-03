@@ -67,7 +67,7 @@ export default function Contact(){
                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[420px] rounded-full bg-[radial-gradient(closest-side,rgba(226,54,127,0.14),transparent)]" />
             </div>
             <div className="w-[92%] desktop:w-[1000px] mx-auto">
-                <h2 className="text-xl desktop:text-2xl text-white font-medium font-inter text-center">
+                <h2 className="text-[clamp(1.05rem,5vw,1.25rem)] desktop:text-2xl text-white font-medium font-inter text-center [text-wrap:balance]">
                 <Trans i18nKey="contact.title" />
                 <span className="text-glow font-semibold"> {t("contact.highlight")}</span>
                 </h2>

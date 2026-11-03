@@ -318,7 +318,7 @@ export default function Projects() {
           <div className="w-full pt-16 pb-8 overflow-x-hidden rounded-3xl border border-white/10 shadow-glass backdrop-blur-md
           bg-[radial-gradient(120%_70%_at_50%_0%,rgba(255,111,174,0.10),transparent_60%),linear-gradient(to_bottom,rgba(255,255,255,0.06),rgba(255,255,255,0.02))]">
           <div className="-mt-10 mx-[40px]">
-              <h2 className="text-5xl text-center text-white font-medium font-inter">
+              <h2 className="text-[clamp(1.875rem,9vw,3rem)] desktop:text-5xl text-center text-white font-medium font-inter [text-wrap:balance]">
               <Trans
               i18nKey="project.title"
               components={{ 1: <span className="text-glow font-semibold">{t('project.title')}</span> }}

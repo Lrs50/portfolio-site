@@ -21,7 +21,7 @@ export default function Hero(){
             </span>
 
             <div style={{ animationDelay: "150ms" }} className="animate-rise text-center mt-6 px-4">
-                <h1 className="text-4xl desktop:text-6xl font-light leading-tight text-white font-urbanist max-w-4xl mx-auto">
+                <h1 className="text-[clamp(1.75rem,8.4vw,2.25rem)] desktop:text-6xl font-light leading-tight text-white font-urbanist max-w-4xl mx-auto [text-wrap:balance]">
                     <Trans
                     i18nKey="hero.introLine1"
                     components={{ 1: <span className="font-bold tracking-wide text-glow" /> }}
@@ -29,13 +29,13 @@ export default function Hero(){
                     <br />
                     <span className="text-white font-medium">{t('hero.introLine2')}</span>
                     <br />
-                    <span className="text-white/70 text-lg desktop:text-xl -mt-1 mb-1 block">
+                    <span className="text-white/70 text-base desktop:text-xl mt-2 mb-1 block">
                     {t('hero.introLine3')}
                     </span>
                 </h1>
-                <ResumeButton className="relative z-0 mt-6 px-6 py-2 text-base" />
+                <ResumeButton className="relative z-0 mt-6 -translate-y-2.5 px-6 py-2 text-base" />
             </div>
-            <div className="relative w-full max-w-[410px] desktop:max-w-none desktop:w-[700px] mx-auto mt-[45px] desktop:mt-[10px]">
+            <div className="relative w-full max-w-[410px] desktop:max-w-none desktop:w-[700px] mx-auto mt-[57px] desktop:mt-[24px]">
                 <LavaDome className="relative block left-1/2 -translate-x-1/2 w-[95%] desktop:w-[118%] max-w-none z-0" />
 
                 <img
@@ -49,16 +49,16 @@ export default function Hero(){
                             px-5 desktop:px-7 py-1 flex gap-3 desktop:gap-6 justify-center items-center shadow-glass z-20 
                             -mt-[50px] desktop:-mt-[80px] left-1/2 -translate-x-1/2">
                 <a href="https://www.linkedin.com/in/lucas-dos-reis-lrs/" aria-label={t("hero.linkedin")} target="_blank" rel="noopener noreferrer">
-                <TbBrandLinkedin  className="text-3xl desktop:text-5xl text-[#4aa3df] hover:scale-125 transition-transform  z-30" />
+                <TbBrandLinkedin  className="text-3xl desktop:text-5xl text-[#2f8fe0] hover:scale-125 transition-transform  z-30" />
                 </a>
                 <a href="https://github.com/Lrs50" aria-label={t("hero.github")} target="_blank" rel="noopener noreferrer">
-                    < TbBrandGithubFilled className="text-3xl desktop:text-5xl text-white hover:scale-125 transition-transform z-30" />
+                    < TbBrandGithubFilled className="text-3xl desktop:text-5xl text-[#a371f7] hover:scale-125 transition-transform z-30" />
                 </a>
                 <a href="https://medium.com/@lucasreissi" aria-label={t("hero.medium")} target="_blank" rel="noopener noreferrer">
                     <TbBrandMedium className="text-3xl desktop:text-5xl text-white hover:scale-125 transition-transform z-30" />
                 </a>
                 <a href={`mailto:${EMAIL}`} aria-label={t("hero.email")}>
-                    <TbMail className="text-3xl desktop:text-5xl text-white hover:scale-125 transition-transform z-30" />
+                    <TbMail className="text-3xl desktop:text-5xl text-[#ea4335] hover:scale-125 transition-transform z-30" />
                 </a>
                 <a href={`https://wa.me/5575999646980?text=${encodeURIComponent(t("hero.whatsappMessage"))}`} aria-label={t("hero.whatsapp")} target="_blank" rel="noopener noreferrer">
                     <TbBrandWhatsapp className="text-3xl desktop:text-5xl text-[#25D366] hover:scale-125 transition-transform z-30" />

@@ -67,7 +67,7 @@ export default function NavBar({ activeSection }) {
   return (
     <nav
       className={`fixed left-1/2 -translate-x-1/2 mx-auto flex items-center 
-        justify-between bg-ink/70 backdrop-blur-md border border-white/10 shadow-glass z-[100] transition-all duration-300 ease-in-out
+        font-urbanist justify-between bg-ink/70 backdrop-blur-md border border-white/10 shadow-glass z-[100] transition-all duration-300 ease-in-out
         ${isScrolled ? "w-full top-0 px-2" : "w-[95%] px-3 py-1 top-2 rounded-full"}`}
     >
       {/* Dropdown de idioma */}
@@ -82,8 +82,8 @@ export default function NavBar({ activeSection }) {
       />
 
       {/* Título central traduzido */}
-      <p className="absolute left-1/2 -translate-x-1/2 text-white text-xl
-        desktop:static desktop:translate-x-0 desktop:left-auto  px-6 whitespace-nowrap">
+      <p className="flex-1 min-w-0 truncate text-center text-white text-[clamp(0.95rem,4.2vw,1.25rem)] px-1
+        desktop:flex-none desktop:text-left desktop:text-xl desktop:px-6 whitespace-nowrap">
         {t("nav.portfolio")}
       </p>
 
