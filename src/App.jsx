@@ -7,6 +7,9 @@ const Projects = lazy(() => import('./sections/Projects'))
 const AboutMe = lazy(() => import('./sections/AboutMe'))
 const Contact = lazy(() => import('./sections/Contact'))
 
+// kept outside the component so the observer effect does not re-run on every render
+const SECTION_IDS = ["Hero", "Projects", "About", "Contact"];
+
 function useActiveSection(sectionIds) {
     const [activeSection, setActiveSection] = useState("");
   
@@ -40,7 +43,7 @@ function useActiveSection(sectionIds) {
 
 
 export default function App(){
-    const activeSection = useActiveSection(["Hero", "Projects", "About", "Tools", "Contact"]);
+    const activeSection = useActiveSection(SECTION_IDS);
     return (
         <div>
             <NavBar activeSection={activeSection}/>

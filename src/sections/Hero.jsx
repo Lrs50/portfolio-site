@@ -1,4 +1,4 @@
-import React,{ useEffect, useRef, useState } from "react";
+import React from "react";
 import { TbBrandLinkedin ,  TbBrandGithubFilled, TbBrandMedium, TbBrandWhatsapp, TbMail } from 'react-icons/tb';
 import { Trans, useTranslation } from 'react-i18next';
 import ResumeButton from '../components/ResumeButton';
