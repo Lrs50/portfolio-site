@@ -1,0 +1,185 @@
+{
+  "nav": {
+    "portfolio": "我的作品集",
+    "home": "首页",
+    "projects": "项目",
+    "about": "关于",
+    "contact": "联系",
+    "language": "语言",
+    "resume": "简历"
+  },
+  "hero": {
+    "hello": "你好！",
+    "introLine1": "我是<1>Lucas</1>",
+    "introLine2": "计算机工程师",
+    "introLine3": "构建端到端的智能应用程序",
+    "photoAlt": "Lucas Reis 的照片",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "medium": "Medium",
+    "whatsapp": "WhatsApp",
+    "whatsappMessage": "你好，Lucas！我看了你的作品集，想和你聊聊一个机会。",
+    "email": "电子邮件"
+  },
+  "aboutMe": {
+    "title": "关于<1>我</1>",
+    "history": [
+  "我叫Lucas Reis，是一名毕业于巴西伯南布哥联邦大学（UFPE）的计算机工程师，热衷于构建智能、高效且具备实际影响力的技术解决方案。",
+  "我来自巴伊亚州，在18岁时搬到累西腓，开始了我在科技领域的学习和职业发展之路。在数据科学、MLOps和机器学习工程方面，我拥有全面的项目经验，从数据收集到模型部署均有涉及。",
+  "在本科期间，我参与了与CIN/Motorola合作的5G网络研究项目，并通过PIBIC奖学金深入探索了量子神经网络的应用。此外，我还担任过量子计算学术联盟（LACIQ）的副主席，推动学术与产业的合作。",
+  "在Tractian，我作为AI工程师负责支撑工业AI的数据基础。我的工作是全栈的：构建网页抓取与数据管道、基于LLM的数据增强和AI智能体，并将它们从概念验证推进到生产。目前我即将完成UFPE的计算机科学硕士学业，研究量子计算、元学习与模型选择。",
+  "我能够胜任从项目构想到交付的完整生命周期，致力于交付技术可靠、道德合规且具备业务价值的解决方案。"
+  ],
+    "timeline": {
+      "title": "我的<1>轨迹</1>",
+      "events": [
+        {
+          "title": "开始攻读计算机工程学士学位",
+          "info": "2018年8月",
+          "desc": "梦想开始了",
+          "side": "right"
+        },
+        {
+          "title": "CIN/Motorola研究员",
+          "info": "2020年7月 – 2021年5月",
+          "desc": "5G网络研究，使用Docker和Bash进行Linux自动化，数据包分析。",
+          "side": "left"
+        },
+        {
+          "title": "PIBIC研究员（CNPq）",
+          "info": "2022年9月 – 2023年10月",
+          "desc": "使用PyTorch和Pennylane开发量子/经典回归模型。",
+          "side": "right"
+        },
+        {
+          "title": "LACIQ（量子计算联盟）副主席",
+          "info": "2023年7月 – 2024年11月",
+          "desc": "领导量子机器学习的活动/研讨会，指导学生，建立学术合作关系。",
+          "side": "left"
+        },
+        {
+          "title": "Sebrae实习",
+          "info": "2024年11月 – 2025年4月",
+          "desc": "数据分析、机器学习模型、API集成、ETL管道、技术报告。",
+          "side": "right"
+        },
+        {
+          "title": "毕业！",
+          "info": "2025年5月",
+          "desc": "寻找下一个重大挑战。",
+          "side": "left"
+        },
+        {
+          "title": "Tractian AI工程师",
+          "info": "2025年6月 – 2026年10月",
+          "desc": "全栈AI工程师：LLM智能体与网页抓取数据管道，从概念验证到生产。",
+          "side": "right"
+        },
+        {
+          "title": "计算机科学硕士（UFPE）",
+          "info": "2025年8月 – 至今",
+          "desc": "研究量子计算、元学习与模型选择。",
+          "side": "left"
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "有一个很棒的项目想法或只是想联系？",
+    "highlight": "让我们聊聊！",
+    "placeholder": "写下你的留言...",
+    "button": "发送",
+    "emailPlaceholder": "你的邮箱",
+    "sending": "发送中...",
+    "orEmail": "或发送邮件至",
+    "success": "消息发送成功！",
+    "error": "发送消息时出错！"
+  },
+  "project": {
+  "title": "我的<1>项目</1>",
+  "tool": "工具",
+  "githublink": "Github链接",
+  "close": "关闭",
+  "prev": "上一个项目",
+  "next": "下一个项目",
+  "websitelink": "项目网站",
+  "projects": [
+    {
+      "title": "早餐到底多少钱？",
+      "desc": "最近咖啡和鸡蛋涨价了不少...\n\n那早餐的其他部分呢？\n\n这个项目源于我对这个问题的好奇。我构建了一个完整的系统，能够预测未来六个月早餐中主要食材的价格趋势。整个流程通过机器学习、网页爬取、数据可视化和 API 实现自动化。",
+      "tools": [
+        "Python", "SQL", "Pandas", "NumPy", "ScikitLearn", "Airflow", "Git", "Docker", "Google Cloud", "FastAPI", "Streamlit", "Selenium", "BeautifulSoup", "Prophet", "Algoritmo Genetico", "Bash", "Gemini", "Plotly"
+      ],
+      "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
+      "websiteLink": "https://breakfast-forecast.streamlit.app/",
+      "img": "/imgs/breakfast_forecast.webp"
+    },
+    {
+      "title": "工业产品数据爬取器",
+      "desc": "这是一个自动化工具，用于采集和整理工业品网站上的产品信息。\n\n它能将混乱或不规范的网页内容转化为结构清晰的数据，非常适合用于目录系统或市场分析。",
+      "tools": ["Python", "UV", "Pydantic", "Regex", "Requests", "Playwright", "BeautifulSoup"],
+      "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
+      "websiteLink": "",
+      "img": "/imgs/industrial_scraper.webp"
+    },
+    {
+      "title": "个人财务聊天机器人",
+      "desc": "这是一个集成在 WhatsApp 上的聊天机器人，专注于个人财务管理。\n\n你可以通过它记录支出、跟踪债务、设定预算，还能随时提出疑问并获得清晰的回答，简单易用且非常实用。",
+      "tools": [
+        "Python", "FastAPI", "Ngrok", "Gemini", "Heyoo", "TinyDB", "Regex", "WhatsApp"
+      ],
+      "githubLink": "https://github.com/Lrs50/wpp-automation",
+      "websiteLink": "",
+      "img": "/imgs/wpp_bot.webp"
+    },
+    {
+      "title": "量子骰子",
+      "desc": "一个可以直观看到量子计算概念运作的交互式应用。\n\n每个随机结果都来自模拟的量子电路：用Hadamard门将量子比特置于叠加态并测量，使其坍缩为0或1。拒绝采样可避免取模偏差。\n\n可以掷骰子、抛硬币、分组、抽奖、生成密码、打乱播放列表和生成配色方案，每一步都配有布洛赫球动画。\n\n它运行在经典模拟器上，因此输出是伪随机的：这是一个教学项目，不是真随机数来源，也不适用于对安全要求高的场景。",
+      "tools": ["Python", "PennyLane", "Streamlit", "Plotly", "NumPy", "UV"],
+      "githubLink": "https://github.com/Lrs50/quantum-dice",
+      "websiteLink": "https://quantum-dice.streamlit.app",
+      "img": "/imgs/quantum_dice.webp"
+    },
+    {
+      "title": "Evolvium 优化库",
+      "desc": "一个使用遗传算法解决优化问题的轻量级 Python 库。\n\n简单易用，适合快速测试思路，也可以应用于实际项目中寻找优质解法。",
+      "tools": ["Python", "Algoritmo Genetico", "NumPy", "Matplotlib"],
+      "githubLink": "https://github.com/Lrs50/Evolvium",
+      "websiteLink": "https://test.pypi.org/project/evolvium/",
+      "img": "/imgs/evolvium.webp"
+    },
+    {
+      "title": "基于搜索算法的自主智能体",
+      "desc": "在这个模拟项目中，一个智能体需要在充满障碍的环境中找到最佳路径。\n\n我实现并比较了多种搜索算法，如 A*、贪婪算法和遗传算法，并用直观的界面展示整个过程。",
+      "tools": ["Unity", "Csharp", "Search Algorithm", "Algoritmo Genetico"],
+      "githubLink": "https://github.com/Lrs50/Projeto_SI",
+      "websiteLink": "https://lrs50.github.io/Projeto_SI/WebGLBuild/",
+      "img": "/imgs/search_agent.webp"
+    },
+    {
+      "title": "遗传算法解决八皇后问题",
+      "desc": "通过遗传算法解决经典的八皇后问题，并配有可视化界面。\n\n这是一个生动有趣的方式，帮助你理解进化式算法如何逐步寻找问题的最优解。",
+      "tools": ["Csharp","Unity", "Algoritmo Genetico"],
+      "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
+      "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
+      "img": "/imgs/8_queens.webp"
+    },
+    {
+      "title": "单词搜索生成器",
+      "desc": "一个简单的 Python 应用程序，可根据输入词汇生成自定义单词搜索游戏。\n\n适合教师、学生或任何想快速创建教育活动和益智游戏的人使用。",
+      "tools": ["Python", "Tkinter"],
+      "githubLink": "https://github.com/Lrs50/WordSearch",
+      "websiteLink": "",
+      "img": "/imgs/wordsearch.webp"
+    },
+    {
+      "title": "Ybý-Mokoĩ 传说之夜",
+      "desc": "一款以图皮-瓜拉尼神话为灵感的 2D 动作 RPG。\n\n玩家可以与传说中的生物战斗，收集瓜拉纳和巴西莓等道具，体验“夜晚诞生”的神话故事。游戏既有趣味性，也致力于弘扬原住民文化。",
+      "tools": ["Csharp","Unity"],
+      "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
+      "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
+      "img": "/imgs/game_unity.webp"
+    }
+  ]
+}
+}

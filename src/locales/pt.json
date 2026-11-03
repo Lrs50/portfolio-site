@@ -1,0 +1,188 @@
+{
+"nav": {
+    "portfolio": "Meu Portfólio",
+    "home": "Início",
+    "projects": "Projetos",
+    "about": "Sobre",
+    "contact": "Contato",
+  "language": "Idioma",
+  "resume": "Currículo"
+},
+"hero": {
+  "hello": "OLÁ!",
+  "introLine1": "Eu sou <1>Lucas</1>",
+  "introLine2": "Engenheiro da Computação",
+  "introLine3": "Construindo aplicações inteligentes de ponta a ponta",
+  "photoAlt": "Foto de Lucas Reis",
+  "linkedin": "LinkedIn",
+  "github": "GitHub",
+  "medium": "Medium",
+  "whatsapp": "WhatsApp",
+  "whatsappMessage": "Olá, Lucas! Vi seu portfólio e gostaria de conversar com você sobre uma oportunidade.",
+  "email": "E-mail"
+},
+"aboutMe": {
+  "title": "Sobre <1>Mim</1>",
+  "history": [
+    "Sou Lucas Reis, engenheiro da computação formado pela Universidade Federal de Pernambuco (UFPE), com trajetória marcada pela curiosidade, multidisciplinaridade e paixão por construir soluções inteligentes.",
+    "Natural da Bahia, mudei-me para Recife aos 18 anos para seguir meu propósito na área de tecnologia. Desde então, venho acumulando experiências em ciência de dados, MLOps e engenharia de machine learning, atuando desde a coleta e preparação dos dados até o desenvolvimento, validação e implementação de modelos preditivos em produção.",
+    "Durante a graduação, participei de projetos de pesquisa em redes 5G em parceria com o CIN/Motorola e explorei o potencial de redes neurais quânticas por meio de uma bolsa PIBIC. Também atuei como vice-presidente da Liga Acadêmica de Computação Quântica (LACIQ), promovendo iniciativas que conectam pesquisa e indústria.",
+    "Na Tractian, atuei como engenheiro de IA na base de dados por trás da IA industrial. Meu trabalho foi full-stack: construí pipelines de dados e web scraping, enriquecimento com LLMs e agentes de IA, e levei tudo da prova de conceito à produção. Agora estou finalizando o mestrado em Ciência da Computação na UFPE, pesquisando computação quântica, meta-aprendizado e seleção de modelos.",
+    "Tenho facilidade para atuar em todas as etapas do ciclo de vida de projetos de dados, conciliando pensamento técnico e visão sistêmica para entregar soluções robustas, éticas e com impacto real."
+  ],
+
+  "timeline": {
+    "title": "Minha <1>Trajetória</1>",
+    "events": [
+      {
+        "title": "Início do curso de Engenharia da Computação",
+        "info": "Agosto de 2018",
+        "desc": "O início de um sonho.",
+        "side": "right"
+      },
+      {
+        "title": "Pesquisador no CIN/Motorola",
+        "info": "jul 2020 – mai 2021",
+        "desc": "Pesquisa em redes 5G, automação com Linux, Docker e análise de pacotes.",
+        "side": "left"
+      },
+      {
+        "title": "Pesquisador PIBIC (CNPq)",
+        "info": "set 2022 – out 2023",
+        "desc": "Desenvolvimento de modelos de regressão quânticos e clássicos com PyTorch e Pennylane.",
+        "side": "right"
+      },
+      {
+        "title": "Vice-presidente da LACIQ",
+        "info": "jul 2023 – nov 2024",
+        "desc": "Liderança de eventos em ML quântico, mentoria e articulações acadêmicas.",
+        "side": "left"
+      },
+      {
+        "title": "Estágio no Sebrae",
+        "info": "nov 2024 – abr 2025",
+        "desc": "Análise de dados, modelos de ML, integração com APIs e pipelines de ETL.",
+        "side": "right"
+      },
+      {
+        "title": "Formado!",
+        "info": "mai 2025",
+        "desc": "Em busca do próximo grande desafio.",
+        "side": "left"
+      },
+      {
+        "title": "Engenheiro de IA na Tractian",
+        "info": "jun 2025 – out 2026",
+        "desc": "Engenheiro de IA full-stack: agentes LLM + pipelines de web scraping, da PoC à produção.",
+        "side": "right"
+      },
+      {
+        "title": "Mestrado em Ciência da Computação (UFPE)",
+        "info": "ago 2025 – Presente",
+        "desc": "Pesquisa em computação quântica, meta-aprendizado e seleção de modelos.",
+        "side": "left"
+      }
+    ]
+  }
+},
+"contact": {
+  "title": "Tem uma ideia de projeto incrível ou quer apenas se conectar?",
+  "highlight": "Vamos conversar!",
+  "placeholder": "Escreva sua mensagem...",
+  "button": "Enviar",
+  "emailPlaceholder": "Seu e-mail",
+  "sending": "Enviando...",
+  "orEmail": "Ou escreva para",
+  "success": "Mensagem enviada com sucesso!",
+  "error": "Erro ao enviar a mensagem!"
+},
+"project": {
+  "title": "Meus <1>Projetos</1>",
+  "tool": "Ferramentas",
+  "githublink": "Link do Github",
+  "close": "Fechar",
+  "prev": "Projeto anterior",
+  "next": "Próximo projeto",
+  "websitelink": "Site do Projeto",
+  "projects": [
+    {
+      "title": "Quanto Custa o Café da Manhã?",
+      "desc": "Os preços do café e dos ovos subiram bastante...\n\nMas e o resto do café da manhã?\n\nEsse projeto nasceu dessa curiosidade. Desenvolvi uma solução completa para prever, pelos próximos 6 meses, o preço dos principais alimentos consumidos pela manhã. Todo o processo foi automatizado com machine learning, scraping, visualização e APIs.",
+      "tools": [
+        "Python", "SQL", "Pandas", "NumPy", "ScikitLearn", "Airflow", "Git", "Docker", "Google Cloud", "FastAPI", "Streamlit", "Selenium", "BeautifulSoup", "Prophet", "Algoritmo Genetico", "Bash", "Gemini", "Plotly"
+      ],
+      "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
+      "websiteLink": "https://breakfast-forecast.streamlit.app/",
+      "img": "/imgs/breakfast_forecast.webp"
+    },
+    {
+      "title": "Scraper de Produtos Industriais",
+      "desc": "Ferramenta que coleta e organiza dados de produtos industriais de forma automatizada.\n\nTransforma páginas confusas em informações limpas, estruturadas e prontas para sistemas de catalogação e análise de mercado.",
+      "tools": ["Python", "UV", "Pydantic", "Regex", "Requests", "Playwright", "BeautifulSoup"],
+      "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
+      "websiteLink": "",
+      "img": "/imgs/industrial_scraper.webp"
+    },
+    {
+      "title": "Chatbot Financeiro Pessoal",
+      "desc": "Um bot no WhatsApp que conversa com você e ajuda a cuidar das suas finanças.\n\nCom ele, dá pra registrar despesas, acompanhar dívidas, definir orçamentos e tirar dúvidas de forma prática, rápida e acessível.",
+      "tools": [
+        "Python", "FastAPI", "Ngrok", "Gemini", "Heyoo", "TinyDB", "Regex", "WhatsApp"
+      ],
+      "githubLink": "https://github.com/Lrs50/wpp-automation",
+      "websiteLink": "",
+      "img": "/imgs/wpp_bot.webp"
+    },
+    {
+      "title": "Dados Quânticos",
+      "desc": "Uma forma interativa de ver conceitos de computação quântica na prática.\n\nCada resultado aleatório vem de um circuito quântico simulado: um qubit é colocado em superposição com uma porta Hadamard e medido, colapsando para 0 ou 1. A amostragem por rejeição evita o viés do módulo.\n\nRole dados, jogue moedas, divida grupos, sorteie ganhadores, gere senhas, embaralhe playlists e crie paletas de cores, com animações da esfera de Bloch em cada etapa.\n\nRoda em um simulador clássico, então a saída é pseudoaleatória: é um projeto educacional, não uma fonte de aleatoriedade verdadeira nem serve para uso crítico de segurança.",
+      "tools": ["Python", "PennyLane", "Streamlit", "Plotly", "NumPy", "UV"],
+      "githubLink": "https://github.com/Lrs50/quantum-dice",
+      "websiteLink": "https://quantum-dice.streamlit.app",
+      "img": "/imgs/quantum_dice.webp"
+    },
+    {
+      "title": "Evolvium",
+      "desc": "Uma biblioteca em Python que usa algoritmos genéticos para resolver problemas de otimização.\n\nSimples de usar, versátil e ideal para testar ideias ou aplicar em projetos reais com foco em boas soluções.",
+      "tools": ["Python", "Algoritmo Genetico", "NumPy", "Matplotlib"],
+      "githubLink": "https://github.com/Lrs50/Evolvium",
+      "websiteLink": "https://test.pypi.org/project/evolvium/",
+      "img": "/imgs/evolvium.webp"
+    },
+    {
+      "title": "Agente Autônomo com Algoritmos de Busca",
+      "desc": "Simulação onde um agente precisa encontrar o melhor caminho em um ambiente cheio de obstáculos.\n\nImplementei diferentes algoritmos de busca como A*, busca gulosa e até evolução genética, tudo visualizado de forma clara e intuitiva.",
+      "tools": ["Unity", "Csharp", "Search Algorithm", "Algoritmo Genetico"],
+      "githubLink": "https://github.com/Lrs50/Projeto_SI",
+      "websiteLink": "https://lrs50.github.io/Projeto_SI/WebGLBuild/",
+      "img": "/imgs/search_agent.webp"
+    },
+    {
+      "title": "8 Rainhas com Algoritmos Genéticos",
+      "desc": "Simulação visual do problema das 8 rainhas usando algoritmos genéticos.\n\nUm jeito divertido de entender como soluções evoluem com o tempo e como a IA pode resolver problemas clássicos.",
+      "tools": ["Csharp","Unity", "Algoritmo Genetico"],
+      "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
+      "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
+      "img": "/imgs/8_queens.webp"
+    },
+    {
+      "title": "Gerador de Caça-Palavras",
+      "desc": "Aplicativo simples feito em Python para criar caça-palavras personalizados.\n\nIdeal para professores, estudantes ou qualquer pessoa que queira montar atividades educativas de forma rápida e intuitiva.",
+      "tools": ["Python", "Tkinter"],
+      "githubLink": "https://github.com/Lrs50/WordSearch",
+      "websiteLink": "",
+      "img": "/imgs/wordsearch.webp"
+    },
+    {
+      "title": "Ybý-Mokoĩ",
+      "desc": "Um RPG 2D de ação inspirado na mitologia Tupi-Guarani.\n\nO jogador enfrenta criaturas lendárias, coleta itens como guaraná e açaí, e vivencia a lenda da origem da noite. É uma homenagem à cultura indígena com jogabilidade envolvente e educativa.",
+      "tools": ["Csharp","Unity"],
+      "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
+      "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
+      "img": "/imgs/game_unity.webp"
+    }
+  ]
+
+}
+
+}
