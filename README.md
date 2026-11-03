@@ -19,21 +19,23 @@ npm run preview   # serve the build
 
 ## Configuration
 
-Public values in `.env.production` (template in `.env.example`):
+All variables are listed in `.env.example`.
 
-| Variable | Purpose |
-|---|---|
-| `VITE_SITE_URL` | Site address (link preview, canonical tag) |
-| `VITE_RESUME_URL_EN` | Resume button link (English and other languages) |
-| `VITE_RESUME_URL_PT` | Resume button link (Portuguese) |
+| Variable | Purpose | Set in |
+|---|---|---|
+| `VITE_SITE_URL` | Site address (link preview, canonical tag) | `.env.production` |
+| `VITE_RESUME_URL_EN` | Resume button link (English and other languages) | `.env.production` |
+| `VITE_RESUME_URL_PT` | Resume button link (Portuguese) | `.env.production` |
+| `VITE_EMAILJS_SERVICE_ID` | EmailJS service for the contact form | `.env.local` and Cloudflare |
+| `VITE_EMAILJS_TEMPLATE_ID` | EmailJS template for the contact form | `.env.local` and Cloudflare |
+| `VITE_EMAILJS_PUBLIC_KEY` | EmailJS public key | `.env.local` and Cloudflare |
 
-Empty resume values make the button return to the main page.
-
-The contact form needs `VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID` and `VITE_EMAILJS_PUBLIC_KEY`. They are not committed: use `.env.local` locally and the Cloudflare Pages build variables for the live site.
+- Empty resume values make the Resume button return to the main page.
+- The EmailJS values are not committed. Use `.env.local` locally (git-ignored) and the Cloudflare Pages variables or secrets for the live site. Without them the contact form shows an error.
 
 ## Deploy
 
-Cloudflare Pages from `master`: build `npm run build`, output `dist`.
+Cloudflare Pages from `master`: build `npm run build`, output `dist`. Add the three EmailJS variables in the project settings (Variables and Secrets) before deploying.
 
 ## Contributing
 
