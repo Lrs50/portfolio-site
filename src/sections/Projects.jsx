@@ -240,7 +240,7 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
         role="dialog"
         aria-modal="true"
         aria-labelledby="project-dialog-title"
-        className="relative bg-ink2 border border-white/10 text-white/80 rounded-3xl w-[85vw] max-w-4xl max-h-[85vh] max-h-[85dvh] overflow-y-auto overscroll-contain p-6 shadow-glass"
+        className="relative bg-ink2 border border-white/10 text-white/80 rounded-3xl w-[92vw] desktop:w-[85vw] max-w-4xl max-h-[85vh] max-h-[85dvh] overflow-y-auto overscroll-contain p-6 shadow-glass"
       >
         <button
           ref={closeRef}
@@ -257,8 +257,8 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
           id="project-dialog-title"
           text={title}
           max={30}
-          min={18}
-          className="mb-5 px-6 text-center font-semibold leading-tight text-white"
+          min={15}
+          className="mb-5 px-4 text-center font-semibold leading-tight text-white"
         />
 
         <div className="mb-5">
