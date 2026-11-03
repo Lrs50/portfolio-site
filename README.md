@@ -29,6 +29,8 @@ Public values in `.env.production` (template in `.env.example`):
 
 Empty resume values make the button return to the main page.
 
+The contact form needs `VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID` and `VITE_EMAILJS_PUBLIC_KEY`. They are not committed: use `.env.local` locally and the Cloudflare Pages build variables for the live site.
+
 ## Deploy
 
 Cloudflare Pages from `master`: build `npm run build`, output `dist`.

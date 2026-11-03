@@ -90,7 +90,7 @@
   "highlight": "Vamos conversar!",
   "placeholder": "Escreva sua mensagem...",
   "button": "Enviar",
-  "emailPlaceholder": "Seu e-mail",
+  "emailPlaceholder": "Seu e-mail (opcional)",
   "sending": "Enviando...",
   "orEmail": "Ou escreva para",
   "success": "Mensagem enviada com sucesso!",

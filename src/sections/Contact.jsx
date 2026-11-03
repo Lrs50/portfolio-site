@@ -5,6 +5,12 @@ import { useTranslation, Trans } from "react-i18next";
 
 const EMAIL = "lrs5@cin.ufpe.br";
 
+// EmailJS ids come from env variables (.env.local on this machine, Cloudflare variables when deployed),
+// so they are not committed. They still end up in the built site, because the browser needs them to send.
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
 export default function Contact(){
 
     const form = useRef();
@@ -23,17 +29,34 @@ export default function Contact(){
             return;
         }
 
+        // The template only needs {{message}}. The optional email goes at the end of the text Lucas receives.
+        // This label is read by Lucas in his inbox, not shown on the site, so it is not translated.
+        const message = form.current.message.value.trim();
+        const reply = form.current.email.value.trim();
+        const text = reply ? message + "\n\nReply to: " + reply : message;
+
+        if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+            console.error("EmailJS is not configured: set VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID and VITE_EMAILJS_PUBLIC_KEY");
+            setStatus("error");
+            return;
+        }
+
         setStatus("sending");
         emailjs
-        .sendForm('service_xz6t3ie', 'template_6l5soqa', form.current, 'jgEEv4emIIWqhlLIB')
-        .then(() => {
-          setStatus("success");
-          form.current.reset();
-          form.current.message.style.height = "auto";
-        })
-        .catch((error) => {
-          console.error("Error:", error.text);
-          setStatus("error");
+        .send(SERVICE_ID, TEMPLATE_ID, { message: text }, { publicKey: PUBLIC_KEY })
+        .then(
+          () => true,
+          (error) => {
+            console.error("EmailJS error", error?.status, error?.text);
+            return false;
+          }
+        )
+        .then((delivered) => {
+          setStatus(delivered ? "success" : "error");
+          // clear the fields only after a delivered message, so a failed send keeps what was typed
+          if (delivered && form.current) {
+            form.current.reset();
+          }
         });
     };
 
@@ -75,7 +98,6 @@ export default function Contact(){
                             placeholder={t("contact.emailPlaceholder")}
                             aria-label={t("contact.emailPlaceholder")}
                             className="flex-1 min-w-0 py-3 bg-transparent text-white placeholder-white/50 outline-none"
-                            required
                         />
                     </div>
 

@@ -89,7 +89,7 @@
     "highlight": "Let’s chat!",
     "placeholder": "Write your message...",
     "button": "Send",
-    "emailPlaceholder": "Your email",
+    "emailPlaceholder": "Your email (optional)",
     "sending": "Sending...",
     "orEmail": "Or email me at",
     "success": "Message sent successfully!",

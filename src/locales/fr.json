@@ -89,7 +89,7 @@
   "highlight": "Discutons-en !",
   "placeholder": "Écrivez votre message...",
   "button": "Envoyer",
-  "emailPlaceholder": "Votre e-mail",
+  "emailPlaceholder": "Votre e-mail (facultatif)",
   "sending": "Envoi...",
   "orEmail": "Ou écrivez-moi à",
   "success": "Message envoyé avec succès !",
