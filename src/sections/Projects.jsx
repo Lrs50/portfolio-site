@@ -1,6 +1,7 @@
 import "keen-slider/keen-slider.min.css";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
 import { BsBookmarkPlusFill, BsWhatsapp } from "react-icons/bs";
+import { createPortal } from "react-dom";
 import { useKeenSlider } from "keen-slider/react";
 import { useMediaQuery } from "react-responsive"
 import {
@@ -75,6 +76,41 @@ const iconSources = {
 };
 
 
+// A title that stays within two lines: it starts at `max` px and shrinks one pixel at a time (down to `min`)
+// until the text fits. It re-fits when the text changes (language), when the width changes and when fonts finish loading.
+// line-clamp-2 stays as a last resort, so the box never grows past two lines.
+function FitTitle({ as: Tag = "h3", text, max, min, className = "", ...rest }) {
+  const ref = useRef(null);
+
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    let lastWidth = -1;
+    const fit = () => {
+      let size = max;
+      el.style.fontSize = size + "px";
+      while (size > min && el.scrollHeight > el.clientHeight + 1) {
+        size -= 1;
+        el.style.fontSize = size + "px";
+      }
+      lastWidth = el.clientWidth;
+    };
+    fit();
+    const observer = new ResizeObserver(() => {
+      if (el.clientWidth !== lastWidth) fit();
+    });
+    observer.observe(el);
+    document.fonts?.ready.then(fit);
+    return () => observer.disconnect();
+  }, [text, max, min]);
+
+  return (
+    <Tag ref={ref} className={`line-clamp-2 ${className}`} {...rest}>
+      {text}
+    </Tag>
+  );
+}
+
 function Project({ title = "", img = "",desc="",githubLink="", websiteLink="", tools=[]}) {
   const [showDetails, setShowDetails] = useState(false);
   const openerRef = useRef(null);
@@ -94,19 +130,19 @@ function Project({ title = "", img = "",desc="",githubLink="", websiteLink="", t
           e.currentTarget.style.setProperty("--x", `${e.clientX - r.left}px`);
           e.currentTarget.style.setProperty("--y", `${e.clientY - r.top}px`);
         }}
-        className="group relative w-[300px] backdrop-blur-md bg-white/[0.04] border border-white/10 rounded-3xl
+        className="group relative w-full max-w-[300px] backdrop-blur-md bg-white/[0.04] border border-white/10 rounded-3xl
         shadow-glass transition-transform duration-300 transform-gpu hover:scale-105 hover:z-30 z-10
         px-3 pt-3 pb-0 rounded-br-none"
       >
         {/* soft light that follows the pointer */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 rounded-3xl rounded-br-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[radial-gradient(260px_circle_at_var(--x)_var(--y),rgba(255,111,174,0.12),transparent_70%)]" />
         <div className="h-[3.8rem] flex items-center justify-center text-center px-0">
-          <h3
-            className="text-white text-[clamp(1.1rem,1.7vw,1.5rem)] font-semibold tracking-wide
-            leading-tight line-clamp-2 overflow-hidden"
-          >
-            {title}
-          </h3>
+          <FitTitle
+            text={title}
+            max={22}
+            min={13}
+            className="w-full text-white font-semibold tracking-wide leading-tight overflow-hidden"
+          />
         </div>
         <hr className="w-full border-t border-white/10 mb-10" />
 
@@ -192,7 +228,9 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
     };
   }, []);
 
-  return (
+  // rendered straight into <body>: inside the section, the panel's backdrop-blur would make `fixed` relative to the panel,
+  // so the dark filter would cover only the Projects box and the navbar would stay on top
+  return createPortal(
     <div
       className="fixed inset-0 z-[999] bg-ink/70 backdrop-blur-sm flex justify-center items-center p-6"
       onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}
@@ -202,7 +240,7 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
         role="dialog"
         aria-modal="true"
         aria-labelledby="project-dialog-title"
-        className="relative bg-ink2 border border-white/10 text-white/80 rounded-3xl w-[85vw] max-w-4xl max-h-[90vh] overflow-y-auto p-6 shadow-glass"
+        className="relative bg-ink2 border border-white/10 text-white/80 rounded-3xl w-[85vw] max-w-4xl max-h-[85vh] max-h-[85dvh] overflow-y-auto overscroll-contain p-6 shadow-glass"
       >
         <button
           ref={closeRef}
@@ -214,7 +252,14 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
           <span aria-hidden="true">&times;</span>
         </button>
 
-        <h2 id="project-dialog-title" className="mb-5 text-center text-3xl font-semibold text-white">{title}</h2>
+        <FitTitle
+          as="h2"
+          id="project-dialog-title"
+          text={title}
+          max={30}
+          min={18}
+          className="mb-5 px-6 text-center font-semibold leading-tight text-white"
+        />
 
         <div className="mb-5">
           <div className="flex items-center gap-2">
@@ -282,7 +327,8 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
 
         {(githubLink || websiteLink) && (<hr className="flex-grow border-t border-white/10 mt-4" />)}
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
 
@@ -309,13 +355,13 @@ export default function Projects() {
     });
     
     return (
-        <div className="relative isolate justify-center px-3">
+        <div className="relative isolate justify-center px-3 overflow-x-clip">
           {/* light pool under the carousel */}
           <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[1100px] h-[520px] rounded-full bg-[radial-gradient(closest-side,rgba(167,139,250,0.14),rgba(226,54,127,0.08)_55%,transparent)]" />
           </div>
           {/* framed panel: dark glass lit from the top, a sibling of the About cards but not identical */}
-          <div className="w-full pt-16 pb-8 overflow-x-hidden rounded-3xl border border-white/10 shadow-glass backdrop-blur-md
+          <div className="w-full pt-16 pb-8 overflow-visible desktop:overflow-x-hidden rounded-3xl border border-white/10 shadow-glass backdrop-blur-md
           bg-[radial-gradient(120%_70%_at_50%_0%,rgba(255,111,174,0.10),transparent_60%),linear-gradient(to_bottom,rgba(255,255,255,0.06),rgba(255,255,255,0.02))]">
           <div className="-mt-10 mx-[40px]">
               <h2 className="text-[clamp(1.875rem,9vw,3rem)] desktop:text-5xl text-center text-white font-medium font-inter [text-wrap:balance]">
