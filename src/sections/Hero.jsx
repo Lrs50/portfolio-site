@@ -91,11 +91,11 @@ export default function Hero(){
 
             {/* where the work happened, as plain names */}
             <div className="border-y border-white/10 bg-ink2/60">
-                <div className="mx-auto w-full max-w-[1400px] min-[1920px]:max-w-[1680px] px-4 desktop:px-8 py-5 flex flex-wrap items-baseline gap-x-8 gap-y-2">
-                    <p className="text-sm text-mist">{t('hero.proofLabel')}</p>
-                    <ul className="flex flex-wrap gap-x-8 gap-y-2">
+                <div className="mx-auto w-full max-w-[1400px] min-[1920px]:max-w-[1680px] px-4 desktop:px-8 py-3 desktop:py-5 flex flex-wrap items-baseline gap-x-8 gap-y-1 desktop:gap-y-2">
+                    <p className="text-xs desktop:text-sm text-mist">{t('hero.proofLabel')}</p>
+                    <ul className="flex flex-wrap gap-x-3 gap-y-1 desktop:gap-x-8 desktop:gap-y-2">
                         {places.map((p) => (
-                            <li key={p} className="text-base font-semibold text-bone/90">{p}</li>
+                            <li key={p} className="text-sm desktop:text-base font-semibold text-bone/90">{p}</li>
                         ))}
                     </ul>
                 </div>
