@@ -1,3 +1,5 @@
+ 
+
 # Style guide
 
 The rules every section of the site follows. `tailwind.config.js` holds the values. This file says when to use them. If the two disagree, fix one of them in the same change.
@@ -11,16 +13,16 @@ The rules every section of the site follows. `tailwind.config.js` holds the valu
 
 ## Color
 
-| Token | Hex | Use | Contrast on `ink` |
-|---|---|---|---|
-| `ink` | `#0b0610` | Page background | n/a |
-| `ink2` | `#140a1a` | Raised areas, dialogs, the proof strip | n/a |
-| `wine` | `#701438` | Brand. Buttons, timeline dots, the lava dome. Shapes only | 1.76:1, never text |
-| `wineHover` | `#8a1a47` | Hover state of wine buttons | n/a |
-| `rose` | `#d58aa6` | Accent text, active nav underline, carousel dot, focus ring | 7.65:1 |
-| `bone` | `#ede8ec` | Headings, names, important labels | 16.56:1 |
-| `mist` | `#a79cae` | Secondary text: dates, tool lists, captions | 7.64:1 |
-| `white/75` to `white/80` | | Body text | about 11:1 |
+| Token                        | Hex         | Use                                                         | Contrast on `ink` |
+| ---------------------------- | ----------- | ----------------------------------------------------------- | ------------------- |
+| `ink`                      | `#0b0610` | Page background                                             | n/a                 |
+| `ink2`                     | `#140a1a` | Raised areas, dialogs, the proof strip                      | n/a                 |
+| `wine`                     | `#701438` | Brand. Buttons, timeline dots, the lava dome. Shapes only   | 1.76:1, never text  |
+| `wineHover`                | `#8a1a47` | Hover state of wine buttons                                 | n/a                 |
+| `rose`                     | `#d58aa6` | Accent text, active nav underline, carousel dot, focus ring | 7.65:1              |
+| `bone`                     | `#ede8ec` | Headings, names, important labels                           | 16.56:1             |
+| `mist`                     | `#a79cae` | Secondary text: dates, tool lists, captions                 | 7.64:1              |
+| `white/75` to `white/80` |             | Body text                                                   | about 11:1          |
 
 White text on `wine` is 11.38:1, so buttons stay readable.
 
@@ -32,20 +34,23 @@ Never use wine for text. Never put brand colors on icons (no LinkedIn blue, no W
 
 ## Typography
 
+The root size is 15 px (`html { font-size: 93.75% }` in `src/style.css`), so every rem value, type and spacing, sits one step smaller than the browser default.
+
 One family: **Bricolage Grotesque** (variable: weight 300 to 800, width 75 to 100, optical size 12 to 96). It is loaded in `index.html` and set as `font-sans`. Japanese, Korean and Chinese fall back to the system font.
 
-| Role | Classes |
-|---|---|
-| Name (h1) | `font-display font-extrabold text-bone leading-[0.86] text-[clamp(3.5rem,16vw,8.5rem)]` |
-| Section heading (h2) | `font-display font-extrabold text-bone leading-none text-[clamp(2.25rem,7vw,3.5rem)]`, the same in every panel |
-| Card or dialog title | `font-display-sm font-bold text-bone` |
-| Lead text | `text-lg text-mist leading-relaxed` |
-| Body | `text-base text-white/80 leading-relaxed`, max `68ch` |
-| Small print | `text-sm` or `text-xs text-mist` |
+| Role                 | Classes                                                                                                          |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Name (h1)            | `font-display font-extrabold text-bone leading-[0.86] text-[clamp(3rem,13vw,6.5rem)]`                        |
+| Section heading (h2) | `font-display font-extrabold text-bone leading-none text-[clamp(1.9rem,5vw,2.75rem)]`, the same in every panel (contact: `clamp(1.4rem,3.2vw,1.9rem)`) |
+| Card or dialog title | `font-display-sm font-bold text-bone`                                                                          |
+| Lead text            | `text-lg text-mist leading-relaxed`                                                                            |
+| Body                 | `text-[0.95rem] text-white/80 leading-relaxed`, max `68ch`                                                        |
+| Small print          | `text-sm` or `text-xs text-mist`                                                                             |
 
 `font-display` (condensed, `wdth 80`) is for large type only. Below about 28 px use `font-display-sm` (`wdth 92`) so titles stay readable. Both live in `src/style.css`.
 
 Do not:
+
 - Color or bold a single word inside a heading.
 - Use all caps labels, eyebrow labels above headings or numbered markers (01 / 02) for content that is not a sequence.
 - Add a second font family or a monospace face for labels.
@@ -80,6 +85,8 @@ Do not:
 
 **Trajectory**: two sided timeline on a dashed center line. Text alternates left and right, dates in mist. Dots are wine until the rose fill reaches them.
 
+**Recommendations panel** (moving strip): heading and the LinkedIn link on top, then a strip of cards that drifts sideways. Card (`w-[min(78vw,20rem)]`, `rounded-2xl border-white/10 bg-ink2/70 p-4`): source chip ("LinkedIn" or "Reference letter") and month, a headline phrase cut from their own words (`font-display-sm font-bold text-[1rem]`), the quote (`0.86rem`, `text-white/80`), then avatar initials (briefcase for the manager, credited by role only), name, role and relationship, plus "Translated from …" when needed. The strip's edges fade into the panel with a mask.
+
 **Contact panel**: two columns on desktop (`minmax(0,1fr)` and `minmax(0,1.3fr)`, `gap-12`), stacked on phones. Left: a small heading (`font-display-sm font-bold text-[clamp(1.6rem,4vw,2.25rem)]`, smaller than section headings on purpose), one line in mist, the email link. Right: the form as one card (`rounded-2xl border-white/15 bg-white/[0.04]`, rose border on focus) with the email row, the message and a footer row holding the status text and the Send button.
 
 **Carousel controls**: round outline buttons (`w-11 h-11 border-white/15`) next to the heading. Position dots: `w-1.5` white/25, the active one `w-6 bg-rose`.
@@ -87,8 +94,10 @@ Do not:
 ## Motion
 
 Motion is allowed where it says something. Current set, nothing else:
+
 - Hero load: elements rise in with `animate-rise` and staggered `animationDelay` (0, 120, 150, 220, 320 ms).
 - Lava dome: slow drift (`wax`, 26 s) and a lean toward a mouse pointer. Touch input is ignored.
+- Recommendations: the card strip drifts left continuously (`animate-marquee`, 36 s per loop, set by `LOOP_SECONDS` in `Recommendations.jsx`; the list is rendered twice and moved by half its width) and stops while the mouse is over it or focus is inside it. Reduced motion: a still row scrolled by hand.
 - Panels: each section box fades in and rises 24 px once when it enters the view (`src/components/Reveal.jsx`, 700 ms). The right panel of a pair starts 120 ms later.
 - Projects: the cards rise in once, 90 ms apart, starting 250 ms after the panel appears.
 - Skills cloud: the words assemble from the center once, biggest first (about 1 s). Then, with a mouse, words within 120 px of the pointer slide up to 26 px away, and the word under the pointer grows to 1.3x, turns white and bold with a soft pink glow while the others fade to 55%. On touch, a tap makes the word stand out for a moment without pushing.
@@ -102,14 +111,14 @@ Motion is allowed where it says something. Current set, nothing else:
 - Buttons say what happens: "Try it live", "Watch video", "View package", "Send".
 - Errors say what failed and what to do next.
 
-| Before | After |
-|---|---|
-| HELLO! | (removed) |
-| I'm Lucas / Computer Engineer | Lucas Reis / Computer Engineer |
-| A dream began | Computer Engineering at UFPE. |
-| Graduated! Looking for my next big challenge. | Graduated in Computer Engineering. Bachelor's degree from UFPE. |
-| Got an awesome project idea or just want to connect? Let's chat! | Want to talk about a role or a project? Send me a message. |
-| Error sending the message! | The message was not sent. Try again or email me directly. |
+| Before                                                           | After                                                           |
+| ---------------------------------------------------------------- | --------------------------------------------------------------- |
+| HELLO!                                                           | (removed)                                                       |
+| I'm Lucas / Computer Engineer                                    | Lucas Reis / Computer Engineer                                  |
+| A dream began                                                    | Computer Engineering at UFPE.                                   |
+| Graduated! Looking for my next big challenge.                    | Graduated in Computer Engineering. Bachelor's degree from UFPE. |
+| Got an awesome project idea or just want to connect? Let's chat! | Want to talk about a role or a project? Send me a message.      |
+| Error sending the message!                                       | The message was not sent. Try again or email me directly.       |
 
 All text goes through the locale files. Every language gets the same change.
 

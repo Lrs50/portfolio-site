@@ -61,6 +61,7 @@ export default function NavBar({ activeSection }) {
     Hero: t("nav.home"),
     Projects: t("nav.projects"),
     About: t("nav.about"),
+    Recommendations: t("nav.recommendations"),
     Contact: t("nav.contact"),
   }), [t]);
 
@@ -114,6 +115,7 @@ export default function NavBar({ activeSection }) {
         <NavItem text={t("nav.home")} to="Hero" active={activeSection === "Hero"} />
         <NavItem text={t("nav.projects")} to="Projects" active={activeSection === "Projects"} />
         <NavItem text={t("nav.about")} to="About" active={activeSection === "About"} />
+        <NavItem text={t("nav.recommendations")} to="Recommendations" active={activeSection === "Recommendations"} />
         <NavItem text={t("nav.contact")} to="Contact" active={activeSection === "Contact"} />
       </div>
     </nav>

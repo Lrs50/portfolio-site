@@ -11,7 +11,7 @@ Single-page personal portfolio. Vite 6 + React 19 + Tailwind 3, plain JavaScript
 
 - `index.html`: Vite entry (mounts `#app`, holds the title, social preview tags and fonts).
 - `src/main.jsx` → `src/App.jsx`: stacked sections with anchor navigation. No router. `Projects`, `AboutMe` and `Contact` are lazy-loaded; `useActiveSection` (IntersectionObserver) drives the navbar.
-- `src/sections/`: `Hero`, `Projects`, `AboutMe`, `Contact`.
+- `src/sections/`: `Hero`, `Projects`, `AboutMe`, `Recommendations`, `Contact`.
 - `src/components/`: `Navbar`, `Dropdown`, `ResumeButton`, `WordCloud`, `Reveal` (fades and raises a section panel once when it scrolls into view), `LavaDome` (the lava-lamp half-circle behind the Hero photo: pure SVG with a goo filter, animated by the `wax` keyframes in `tailwind.config.js`).
 - `src/locales/{en,pt,fr,es,ja,ko,zh}.json`: all text AND project data. `src/i18n.js`: i18next setup.
 - `src/contact.js`: the public email address, used by `Hero` and `Contact`.
@@ -37,7 +37,8 @@ Single-page personal portfolio. Vite 6 + React 19 + Tailwind 3, plain JavaScript
 - No claims the site cannot back up. Quantum Dice runs on a classical simulator, so its output is pseudo-random.
 - No internal product names and no invented metrics.
 - Keep "Computer Engineer" as the positioning.
-- Never publish the Tractian reference letter (it contains personal data).
+- Never publish the Tractian reference letter file or anything from it beyond the two opinion quotes in `recommendations.manager` (it contains personal data and internal names). The manager is credited by role only, never by name, unless Lucas confirms he agreed.
+- Recommendation quotes are cut from the real texts, never reworded or invented. Translations stay faithful and carry the `translatedFrom` note.
 - Write plainly, without dashes or filler.
 
 ## i18n
@@ -56,7 +57,7 @@ Single-page personal portfolio. Vite 6 + React 19 + Tailwind 3, plain JavaScript
 ## Gotchas
 
 - `img` paths in locale JSON and `<img src>` are plain `/imgs/x.webp` strings (not processed by Vite). They only work if the file is in `public/imgs/`; check `dist/imgs/` after a build.
-- `tailwind.config.js` is CommonJS in a `"type": "module"` package; confirm it loads after edits.
+- `tailwind.config.js` is CommonJS in a `"type": "module"` package; confirm it loads after edits. The dev server does not always pick up config changes (new colors, keyframes, animations): stop it, make sure no old `node` process still holds port 5173, and start it again.
 - Env values are public (Vite bakes `VITE_*` into the bundle): keep them in `.env.production`, list new ones in `.env.example`, never put private keys there. `ResumeButton` opens `VITE_RESUME_URL_EN` / `VITE_RESUME_URL_PT` (PT when the language is `pt`) in a new tab; while they are empty it links to `/` in the same tab.
 - `Contact.jsx` sends through EmailJS (`emailjs.send`). Service ID, template ID and public key come from `VITE_EMAILJS_*` variables kept out of git: `.env.local` locally (git-ignored via `*.local`) and the Cloudflare Pages variables or secrets when deployed (set in the project Settings, then Variables and Secrets; secrets work as well). Without them the form shows the error state. They still end up in the built site, so restrict the allowed origins in the EmailJS dashboard. The template body only needs `{{message}}`; the visitor's email is optional and is appended to the message as a `Reply to:` line. A hidden `website` field is a honeypot. If sends fail, read the status in the browser console (`EmailJS error <status> <text>`): 412 "Invalid grant" means the email service (Gmail) must be reconnected in the EmailJS dashboard.
 - Deployed on Cloudflare Pages from `master` (build `npm run build`, output `dist`); Node is pinned in `.node-version`.

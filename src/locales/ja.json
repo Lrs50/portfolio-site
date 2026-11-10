@@ -6,7 +6,8 @@
     "about": "概要",
     "contact": "連絡先",
     "language": "言語",
-    "resume": "履歴書"
+    "resume": "履歴書",
+    "recommendations": "推薦"
   },
   "hero": {
     "introLine1": "Lucas Reis",
@@ -261,5 +262,68 @@
     "code": "コード",
     "prev": "前のプロジェクト",
     "next": "次のプロジェクト"
+  },
+  "recommendations": {
+    "title": "推薦",
+    "readAll": "LinkedInで推薦文の全文を読む",
+    "translatedFrom": {
+      "pt": "ポルトガル語から翻訳",
+      "en": "英語から翻訳"
+    },
+    "manager": {
+      "quote": "Lucasはすぐにチームで最も信頼できるエンジニアの一人になり、私は大規模で自由度の高いプロジェクトを安心して任せるようになりました。Lucasを迷わず推薦します[…]。信頼でき、好奇心旺盛で、急速に成長しているエンジニアです。",
+      "role": "Engineering Manager, Tractian",
+      "relation": "直属の上司",
+      "lang": "pt",
+      "headline": "チームで最も信頼できるエンジニアの一人",
+      "date": "2026-10",
+      "source": "letter"
+    },
+    "items": [
+      {
+        "name": "Edimilson Lima Jr",
+        "role": "Software Engineer, Tractian",
+        "relation": "Tractianの同じチームの先輩エンジニア",
+        "quote": "複雑な問題を調査し、クリーンで持続可能な解決策を実装する優れた分析力を持っています。アーキテクチャを議論したり新機能を設計したりするとき、彼の貢献はいつも的確で思慮深いものでした。",
+        "lang": "pt",
+        "headline": "クリーンで持続可能な解決策",
+        "date": "2026-11",
+        "source": "linkedin"
+      },
+      {
+        "name": "Luiza Souza Simões",
+        "role": "機械学習エンジニア, Tractian",
+        "relation": "Tractianの同じチーム",
+        "quote": "共通のタスクで素晴らしいパートナーでした。いつも進んで助け、耳を傾け、教えてくれ、成果物の質も高く、目に見えて成長していました。",
+        "lang": "en",
+        "headline": "いつも進んで助け、耳を傾け、教えてくれる",
+        "date": "2026-10",
+        "source": "linkedin"
+      },
+      {
+        "name": "Bruno Reis",
+        "role": "AI Data Acquisition Engineer, MineMind",
+        "relation": "Tractianの同じチーム",
+        "quote": "Lucasは、技術力の面でも、日々の人との関わり方の面でも、卓越したプロフェッショナルです。もう一つ常に印象に残っていたのは、成果物の品質へのこだわりです。",
+        "lang": "pt",
+        "headline": "卓越したプロフェッショナル",
+        "date": "2026-10",
+        "source": "linkedin"
+      },
+      {
+        "name": "Cláudio Alves Monteiro",
+        "role": "シニアデータサイエンティスト",
+        "relation": "Sebraeでの直属の上司",
+        "quote": "その一例が予測プロジェクトで、Lucasは時系列モデルと遺伝的アルゴリズムを組み合わせ、モデルの性能を大きく向上させました。",
+        "lang": "pt",
+        "headline": "モデルの性能を大きく向上",
+        "date": "2025-05",
+        "source": "linkedin"
+      }
+    ],
+    "sources": {
+      "linkedin": "LinkedIn",
+      "letter": "推薦状"
+    }
   }
 }

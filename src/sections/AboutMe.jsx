@@ -121,7 +121,7 @@ function Timeline() {
       className="flex flex-col items-center w-full h-full px-2" 
       ref={containerRef}
     >
-      <h2 className="self-start font-display font-extrabold text-bone text-[clamp(2.25rem,7vw,3.5rem)] leading-none mb-8">
+      <h2 className="self-start font-display font-extrabold text-bone text-[clamp(1.9rem,5vw,2.75rem)] leading-none mb-8">
         {t('aboutMe.timeline.title')}
       </h2>
 
@@ -165,14 +165,14 @@ export default function AboutMe() {
         {/* About Me block */}
         <Reveal className="h-full">
         <div className="h-full rounded-3xl border border-white/10 bg-white/[0.03] shadow-glass backdrop-blur-md p-6 desktop:p-10">
-          <h2 className="font-display font-extrabold text-bone text-[clamp(2.25rem,7vw,3.5rem)] leading-none mb-8">
+          <h2 className="font-display font-extrabold text-bone text-[clamp(1.9rem,5vw,2.75rem)] leading-none mb-8">
               {t('aboutMe.title')}
           </h2>
 
           {history.map((paragraph, i) => (
             <p
               key={i}
-              className="text-base text-white/80 leading-relaxed mb-4 max-w-[68ch]"
+              className="text-[0.95rem] text-white/80 leading-relaxed mb-4 max-w-[68ch]"
             >
               {paragraph}
             </p>

@@ -4,6 +4,8 @@
 
 html {
     scroll-behavior: smooth;
+    /* 15 px base: the whole type scale and the rem based spacing sit one step smaller */
+    font-size: 93.75%;
   }
 
 body {

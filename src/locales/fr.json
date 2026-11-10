@@ -6,7 +6,8 @@
     "about": "À propos",
     "contact": "Contact",
     "language": "Langue",
-    "resume": "CV"
+    "resume": "CV",
+    "recommendations": "Recommandations"
   },
   "hero": {
     "introLine1": "Lucas Reis",
@@ -261,5 +262,68 @@
     "code": "Code",
     "prev": "Projet précédent",
     "next": "Projet suivant"
+  },
+  "recommendations": {
+    "title": "Recommandations",
+    "readAll": "Lire les recommandations complètes sur LinkedIn",
+    "translatedFrom": {
+      "pt": "Traduit du portugais",
+      "en": "Traduit de l'anglais"
+    },
+    "manager": {
+      "quote": "Lucas est rapidement devenu l'un des ingénieurs les plus fiables de l'équipe, et je lui ai confié de grands projets ouverts en toute confiance. Je recommande Lucas sans réserve […]. C'est un ingénieur fiable, curieux et qui progresse rapidement.",
+      "role": "Engineering Manager, Tractian",
+      "relation": "Manager direct",
+      "lang": "pt",
+      "headline": "L'un des ingénieurs les plus fiables de l'équipe",
+      "date": "2026-10",
+      "source": "letter"
+    },
+    "items": [
+      {
+        "name": "Edimilson Lima Jr",
+        "role": "Software Engineer, Tractian",
+        "relation": "Ingénieur senior dans la même équipe chez Tractian",
+        "quote": "Il a une excellente capacité d'analyse pour étudier des problèmes complexes et mettre en œuvre des solutions propres et durables. Chaque fois que nous devions discuter d'architecture ou concevoir de nouvelles fonctionnalités, ses contributions étaient précises et réfléchies.",
+        "lang": "pt",
+        "headline": "Des solutions propres et durables",
+        "date": "2026-11",
+        "source": "linkedin"
+      },
+      {
+        "name": "Luiza Souza Simões",
+        "role": "Ingénieure Machine Learning, Tractian",
+        "relation": "Même équipe chez Tractian",
+        "quote": "Il a été un excellent partenaire dans nos tâches communes, toujours prêt à aider, écouter et transmettre, avec des livrables de bonne qualité et une progression remarquable.",
+        "lang": "en",
+        "headline": "Toujours prêt à aider, écouter et transmettre",
+        "date": "2026-10",
+        "source": "linkedin"
+      },
+      {
+        "name": "Bruno Reis",
+        "role": "AI Data Acquisition Engineer, MineMind",
+        "relation": "Même équipe chez Tractian",
+        "quote": "Lucas est un professionnel exceptionnel, tant par sa compétence technique que par sa façon d'interagir avec les gens au quotidien. Ce qui m'a toujours frappé aussi, c'est son engagement envers la qualité de ses livrables.",
+        "lang": "pt",
+        "headline": "Un professionnel exceptionnel",
+        "date": "2026-10",
+        "source": "linkedin"
+      },
+      {
+        "name": "Cláudio Alves Monteiro",
+        "role": "Data Scientist senior",
+        "relation": "Superviseur direct chez Sebrae",
+        "quote": "Un exemple a été un projet de prévision dans lequel Lucas a combiné des modèles de séries temporelles avec des algorithmes génétiques, améliorant nettement les performances des modèles.",
+        "lang": "pt",
+        "headline": "Améliorant nettement les performances des modèles",
+        "date": "2025-05",
+        "source": "linkedin"
+      }
+    ],
+    "sources": {
+      "linkedin": "LinkedIn",
+      "letter": "Lettre de référence"
+    }
   }
 }

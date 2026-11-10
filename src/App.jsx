@@ -5,10 +5,11 @@ import Hero from './sections/Hero'
 // below the fold: loaded in separate chunks so the Hero paints sooner
 const Projects = lazy(() => import('./sections/Projects'))
 const AboutMe = lazy(() => import('./sections/AboutMe'))
+const Recommendations = lazy(() => import('./sections/Recommendations'))
 const Contact = lazy(() => import('./sections/Contact'))
 
 // kept outside the component so the observer effect does not re-run on every render
-const SECTION_IDS = ["Hero", "Projects", "About", "Contact"];
+const SECTION_IDS = ["Hero", "Projects", "About", "Recommendations", "Contact"];
 
 function useActiveSection(sectionIds) {
     const [activeSection, setActiveSection] = useState("");
@@ -56,6 +57,9 @@ export default function App(){
             </section>
             <section id="About" className='scroll-mt-16'>
                 <Suspense fallback={<div className="min-h-screen" />}><AboutMe/></Suspense>
+            </section>
+            <section id="Recommendations" className='scroll-mt-16'>
+                <Suspense fallback={<div className="min-h-[60vh]" />}><Recommendations/></Suspense>
             </section>
             <section id="Contact" className='scroll-mt-16'>
                 <Suspense fallback={<div className="min-h-[50vh]" />}><Contact/></Suspense>

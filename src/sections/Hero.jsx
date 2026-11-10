@@ -35,13 +35,13 @@ export default function Hero(){
 
             <div className="mx-auto w-full max-w-[1400px] min-[1920px]:max-w-[1680px] px-4 desktop:px-8 pt-10 desktop:pt-24 grid gap-10 desktop:grid-cols-[1fr_1.15fr] desktop:items-end">
                 <div className="desktop:pb-20">
-                    <h1 style={{ animationDelay: "0ms" }} className="animate-rise font-display font-extrabold text-bone leading-[0.86] text-[clamp(3.5rem,16vw,8.5rem)]">
+                    <h1 style={{ animationDelay: "0ms" }} className="animate-rise font-display font-extrabold text-bone leading-[0.86] text-[clamp(3rem,13vw,6.5rem)]">
                         {t('hero.introLine1')}
                     </h1>
-                    <p style={{ animationDelay: "120ms" }} className="animate-rise mt-5 text-xl desktop:text-2xl font-medium text-bone">
+                    <p style={{ animationDelay: "120ms" }} className="animate-rise mt-4 text-lg desktop:text-xl font-medium text-bone">
                         {t('hero.introLine2')}
                     </p>
-                    <p style={{ animationDelay: "220ms" }} className="animate-rise mt-3 max-w-[34ch] text-lg leading-relaxed text-mist">
+                    <p style={{ animationDelay: "220ms" }} className="animate-rise mt-3 max-w-[36ch] text-base leading-relaxed text-mist">
                         {t('hero.introLine3')}
                     </p>
 
@@ -85,7 +85,7 @@ export default function Hero(){
                     <p className="text-sm text-mist">{t('hero.proofLabel')}</p>
                     <ul className="flex flex-wrap gap-x-8 gap-y-2">
                         {places.map((p) => (
-                            <li key={p} className="text-lg font-semibold text-bone/90">{p}</li>
+                            <li key={p} className="text-base font-semibold text-bone/90">{p}</li>
                         ))}
                     </ul>
                 </div>

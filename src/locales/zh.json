@@ -6,7 +6,8 @@
     "about": "关于",
     "contact": "联系",
     "language": "语言",
-    "resume": "简历"
+    "resume": "简历",
+    "recommendations": "推荐"
   },
   "hero": {
     "introLine1": "Lucas Reis",
@@ -261,5 +262,68 @@
     "code": "代码",
     "prev": "上一个项目",
     "next": "下一个项目"
+  },
+  "recommendations": {
+    "title": "推荐",
+    "readAll": "在 LinkedIn 上阅读完整推荐",
+    "translatedFrom": {
+      "pt": "译自葡萄牙语",
+      "en": "译自英语"
+    },
+    "manager": {
+      "quote": "Lucas 很快成为团队中最值得信赖的工程师之一，我开始放心地把大型、开放式的项目交给他。我毫无保留地推荐 Lucas[…]。他是一位可靠、好奇且成长迅速的工程师。",
+      "role": "Engineering Manager, Tractian",
+      "relation": "直属经理",
+      "lang": "pt",
+      "headline": "团队中最值得信赖的工程师之一",
+      "date": "2026-10",
+      "source": "letter"
+    },
+    "items": [
+      {
+        "name": "Edimilson Lima Jr",
+        "role": "Software Engineer, Tractian",
+        "relation": "Tractian 同团队的资深工程师",
+        "quote": "他具备出色的分析能力，能够深入研究复杂问题，并实现简洁、可持续的解决方案。每当我们需要讨论架构或设计新功能时，他的贡献都精准而周到。",
+        "lang": "pt",
+        "headline": "简洁、可持续的解决方案",
+        "date": "2026-11",
+        "source": "linkedin"
+      },
+      {
+        "name": "Luiza Souza Simões",
+        "role": "机器学习工程师, Tractian",
+        "relation": "Tractian 同团队",
+        "quote": "他在我们的共同任务中是一位很棒的伙伴，总是乐于帮助、倾听和传授，交付质量好，成长也非常明显。",
+        "lang": "en",
+        "headline": "总是乐于帮助、倾听和传授",
+        "date": "2026-10",
+        "source": "linkedin"
+      },
+      {
+        "name": "Bruno Reis",
+        "role": "AI Data Acquisition Engineer, MineMind",
+        "relation": "Tractian 同团队",
+        "quote": "Lucas 是一位出色的专业人士，无论是技术能力，还是日常与人相处的方式。另一点一直让我印象深刻的，是他对交付质量的坚持。",
+        "lang": "pt",
+        "headline": "一位出色的专业人士",
+        "date": "2026-10",
+        "source": "linkedin"
+      },
+      {
+        "name": "Cláudio Alves Monteiro",
+        "role": "高级数据科学家",
+        "relation": "Sebrae 的直属上级",
+        "quote": "一个例子是一个预测项目，Lucas 将时间序列模型与遗传算法结合，显著提升了模型的性能。",
+        "lang": "pt",
+        "headline": "显著提升了模型的性能",
+        "date": "2025-05",
+        "source": "linkedin"
+      }
+    ],
+    "sources": {
+      "linkedin": "LinkedIn",
+      "letter": "推荐信"
+    }
   }
 }

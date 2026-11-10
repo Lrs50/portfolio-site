@@ -6,7 +6,8 @@
     "about": "소개",
     "contact": "연락처",
     "language": "언어",
-    "resume": "이력서"
+    "resume": "이력서",
+    "recommendations": "추천"
   },
   "hero": {
     "introLine1": "Lucas Reis",
@@ -261,5 +262,68 @@
     "code": "코드",
     "prev": "이전 프로젝트",
     "next": "다음 프로젝트"
+  },
+  "recommendations": {
+    "title": "추천",
+    "readAll": "LinkedIn에서 추천서 전문 읽기",
+    "translatedFrom": {
+      "pt": "포르투갈어에서 번역",
+      "en": "영어에서 번역"
+    },
+    "manager": {
+      "quote": "Lucas는 빠르게 팀에서 가장 신뢰받는 엔지니어 중 한 명이 되었고, 저는 크고 열린 프로젝트를 전적으로 믿고 맡기게 되었습니다. Lucas를 주저 없이 추천합니다[…]. 신뢰할 수 있고, 호기심이 많으며, 빠르게 성장하는 엔지니어입니다.",
+      "role": "Engineering Manager, Tractian",
+      "relation": "직속 상사",
+      "lang": "pt",
+      "headline": "팀에서 가장 신뢰받는 엔지니어 중 한 명",
+      "date": "2026-10",
+      "source": "letter"
+    },
+    "items": [
+      {
+        "name": "Edimilson Lima Jr",
+        "role": "Software Engineer, Tractian",
+        "relation": "Tractian 같은 팀의 선임 엔지니어",
+        "quote": "복잡한 문제를 조사하고 깔끔하고 지속 가능한 해결책을 구현하는 뛰어난 분석력을 갖추고 있습니다. 아키텍처를 논의하거나 새로운 기능을 설계할 때마다 그의 기여는 정확하고 사려 깊었습니다.",
+        "lang": "pt",
+        "headline": "깔끔하고 지속 가능한 해결책",
+        "date": "2026-11",
+        "source": "linkedin"
+      },
+      {
+        "name": "Luiza Souza Simões",
+        "role": "머신러닝 엔지니어, Tractian",
+        "relation": "Tractian 같은 팀",
+        "quote": "함께한 업무에서 훌륭한 파트너였습니다. 언제나 기꺼이 돕고, 듣고, 가르쳐 주었으며, 결과물의 품질이 좋았고 눈에 띄게 성장했습니다.",
+        "lang": "en",
+        "headline": "언제나 기꺼이 돕고, 듣고, 가르쳐 주는",
+        "date": "2026-10",
+        "source": "linkedin"
+      },
+      {
+        "name": "Bruno Reis",
+        "role": "AI Data Acquisition Engineer, MineMind",
+        "relation": "Tractian 같은 팀",
+        "quote": "Lucas는 기술적 역량뿐 아니라 일상에서 사람들과 관계를 맺는 방식에서도 뛰어난 전문가입니다. 또 하나 늘 눈에 띄었던 점은 결과물의 품질에 대한 그의 책임감이었습니다.",
+        "lang": "pt",
+        "headline": "뛰어난 전문가",
+        "date": "2026-10",
+        "source": "linkedin"
+      },
+      {
+        "name": "Cláudio Alves Monteiro",
+        "role": "시니어 데이터 사이언티스트",
+        "relation": "Sebrae 직속 상사",
+        "quote": "한 예로 예측 프로젝트에서 Lucas는 시계열 모델과 유전 알고리즘을 결합해 모델 성능을 크게 향상시켰습니다.",
+        "lang": "pt",
+        "headline": "모델 성능을 크게 향상",
+        "date": "2025-05",
+        "source": "linkedin"
+      }
+    ],
+    "sources": {
+      "linkedin": "LinkedIn",
+      "letter": "추천서"
+    }
   }
 }

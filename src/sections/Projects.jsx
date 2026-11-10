@@ -195,10 +195,10 @@ function ProjectCard({ project, index, revealed }) {
           />
         </button>
         <div className="flex flex-1 flex-col p-5">
-          <h3 className="font-display-sm font-bold text-bone text-[1.3rem] leading-tight line-clamp-2 min-h-[2.5em]">
+          <h3 className="font-display-sm font-bold text-bone text-[1.15rem] leading-tight line-clamp-2 min-h-[2.5em]">
             {project.title}
           </h3>
-          <p className="mt-2 flex-1 text-[0.95rem] leading-relaxed text-white/75 line-clamp-3">{project.summary}</p>
+          <p className="mt-2 flex-1 text-[0.9rem] leading-relaxed text-white/75 line-clamp-3">{project.summary}</p>
           <ul className="mt-4 flex flex-wrap gap-x-3 gap-y-1 text-xs text-mist">
             {project.tools.slice(0, 4).map((tool) => <li key={tool}>{toolLabel(tool)}</li>)}
             {extra > 0 && <li>+{extra}</li>}
@@ -371,7 +371,7 @@ export default function Projects() {
     <Reveal>
     <div ref={sectionRef} className="rounded-3xl border border-white/10 bg-white/[0.03] shadow-glass backdrop-blur-md p-6 desktop:p-10">
       <div className="flex items-end justify-between gap-6">
-        <h2 className="font-display font-extrabold text-bone text-[clamp(2.25rem,7vw,3.5rem)] leading-none">
+        <h2 className="font-display font-extrabold text-bone text-[clamp(1.9rem,5vw,2.75rem)] leading-none">
           {t('project.title')}
         </h2>
         <div className="flex gap-3">
