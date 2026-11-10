@@ -36,16 +36,10 @@ module.exports = {
           from: { opacity: "0", transform: "translateY(16px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
-        // the recommendations strip: the list is rendered twice, so moving by half its width loops seamlessly
-        marquee: {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-50%)" },
-        },
       },
       animation: {
         wax: "wax 26s ease-in-out infinite alternate",
         rise: "rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both",
-        marquee: "marquee 36s linear infinite",
       },
       screens: {
         'desktop': '768px',

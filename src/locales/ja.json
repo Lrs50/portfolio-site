@@ -266,6 +266,8 @@
   "recommendations": {
     "title": "推薦",
     "readAll": "LinkedInで推薦文の全文を読む",
+    "prev": "前の推薦",
+    "next": "次の推薦",
     "translatedFrom": {
       "pt": "ポルトガル語から翻訳",
       "en": "英語から翻訳"

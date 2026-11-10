@@ -266,6 +266,8 @@
   "recommendations": {
     "title": "Recomendaciones",
     "readAll": "Leer las recomendaciones completas en LinkedIn",
+    "prev": "Recomendación anterior",
+    "next": "Siguiente recomendación",
     "translatedFrom": {
       "pt": "Traducido del portugués",
       "en": "Traducido del inglés"

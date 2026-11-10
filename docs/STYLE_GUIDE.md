@@ -85,7 +85,7 @@ Do not:
 
 **Skills cloud** (`WordCloud.jsx`, built on `d3-cloud`): the original word list and palette, no buttons or labels. Font sizes scale with the panel width so every word fits (taller cloud on phones). The drawing is `aria-hidden`; a visually hidden list carries the words for screen readers.
 
-**Trajectory**: two sided timeline on a dashed center line. Text alternates left and right, dates in mist. Dots are wine until the rose fill reaches them.
+**Trajectory**: from 768 px, a two sided timeline on a dashed center line, text alternating left and right. On phones it is one sided (line on the left, all text to its right) so the text has room. Each row is as tall as its text, so entries never overlap. Dates in mist. Dots are wine until the rose fill reaches them.
 
 **Recommendations panel** (moving strip): heading and the LinkedIn link on top, then a strip of cards that drifts sideways. Card (`w-[min(78vw,20rem)]`, `rounded-2xl border-white/10 bg-ink2/70 p-4`): source chip ("LinkedIn" or "Reference letter") and month, a headline phrase cut from their own words (`font-display-sm font-bold text-[1rem]`), the quote (`0.86rem`, `text-white/80`), then avatar initials (briefcase for the manager, credited by role only), name, role and relationship, plus "Translated from …" when needed. The strip's edges fade into the panel with a mask.
 
@@ -101,7 +101,7 @@ Motion is allowed where it says something. Current set, nothing else:
 - Lava dome: slow drift (`wax`, 26 s) and a lean toward a mouse pointer. Touch input is ignored. The photo and the glass sheen shift a few pixels against the wax so wax, glass and person sit on separate planes. No lighting filter on the wax: it reads as plastic.
 - Cursor light: a soft wine glow (560 px) follows a mouse behind the panels (`src/components/CursorLight.jsx`). Mouse only.
 - Lit borders: panels and project cards within 300 px of a mouse show a rose ring on the border nearest the pointer and a faint wash inside. It follows scrolling and clears when the pointer leaves the window or a touch or pen is used. Mouse only.
-- Recommendations: the card strip drifts left continuously (`animate-marquee`, 36 s per loop, set by `LOOP_SECONDS` in `Recommendations.jsx`; the list is rendered twice and moved by half its width) and stops while the mouse is over it or focus is inside it. Reduced motion: a still row scrolled by hand.
+- Recommendations: the card strip drifts left continuously (36 s per loop, set by `LOOP_SECONDS` in `Recommendations.jsx`; the list is rendered twice and the offset wraps at half its width) and stops while the mouse is over it or focus is inside it. The round arrows next to the heading (same as Projects) slide it one card back or forward (450 ms ease out), then the drift goes on. Reduced motion: a still row, scrolled by hand or one card per arrow click.
 - Panels: each section box fades in and rises 24 px once when it enters the view (`src/components/Reveal.jsx`, 700 ms). The right panel of a pair starts 120 ms later.
 - Projects: the cards rise in once, 90 ms apart, starting 250 ms after the panel appears.
 - Skills cloud: the words assemble from the center once, biggest first (about 1 s). Then, with a mouse, words within 120 px of the pointer slide up to 26 px away, and the word under the pointer grows to 1.3x, turns white and bold with a soft pink glow while the others fade to 55%. On touch, a tap makes the word stand out for a moment without pushing.

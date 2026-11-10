@@ -266,6 +266,8 @@
   "recommendations": {
     "title": "推荐",
     "readAll": "在 LinkedIn 上阅读完整推荐",
+    "prev": "上一条推荐",
+    "next": "下一条推荐",
     "translatedFrom": {
       "pt": "译自葡萄牙语",
       "en": "译自英语"

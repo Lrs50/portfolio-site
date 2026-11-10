@@ -266,6 +266,8 @@
   "recommendations": {
     "title": "추천",
     "readAll": "LinkedIn에서 추천서 전문 읽기",
+    "prev": "이전 추천",
+    "next": "다음 추천",
     "translatedFrom": {
       "pt": "포르투갈어에서 번역",
       "en": "영어에서 번역"
