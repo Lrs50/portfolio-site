@@ -72,6 +72,12 @@ const LEAN = {
   transition: "transform 1.6s cubic-bezier(0.2, 0.7, 0.2, 1)",
 };
 
+// The glass sheen sits on a nearer plane than the wax, so it shifts the other way.
+const SHEEN_SHIFT = {
+  transform: "translate(calc(var(--px, 0) * -10px), 0)",
+  transition: LEAN.transition,
+};
+
 export default function LavaDome({ className = "" }) {
   return (
     <svg
@@ -135,7 +141,9 @@ export default function LavaDome({ className = "" }) {
         </g>
 
         {/* glass sheen on the left */}
-        <rect width="1200" height="600" fill="url(#lava-sheen)" />
+        <g style={SHEEN_SHIFT} className="motion-reduce:![transform:none]">
+          <rect x="-20" width="1240" height="600" fill="url(#lava-sheen)" />
+        </g>
       </g>
 
       {/* thin bright rim so it reads as glass */}

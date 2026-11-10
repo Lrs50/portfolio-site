@@ -64,9 +64,14 @@ export default function Recommendations() {
   };
 
   return (
+    <div className="relative isolate w-full">
+    {/* faint wine light on the left, so the panels alternate down the page */}
+    <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+      <div className="absolute left-[-10%] top-1/2 -translate-y-1/2 w-[800px] h-[500px] rounded-full bg-[radial-gradient(closest-side,rgba(112,20,56,0.20),transparent)]" />
+    </div>
     <div className="mx-auto w-full max-w-[1400px] min-[1920px]:max-w-[1680px] px-4 desktop:px-8 pt-6 desktop:pt-8">
       <Reveal>
-        <div className="rounded-3xl border border-white/10 bg-white/[0.03] shadow-glass backdrop-blur-md py-6 desktop:py-10 overflow-hidden">
+        <div className="spotlight rounded-3xl border border-white/10 bg-white/[0.03] shadow-glass backdrop-blur-md py-6 desktop:py-10 overflow-hidden">
           <div className="px-6 desktop:px-10 flex flex-wrap items-end justify-between gap-x-6 gap-y-3">
             <h2 className="font-display font-extrabold text-bone text-[clamp(1.9rem,5vw,2.75rem)] leading-none">
               {t("recommendations.title")}
@@ -109,6 +114,7 @@ export default function Recommendations() {
           )}
         </div>
       </Reveal>
+    </div>
     </div>
   );
 }

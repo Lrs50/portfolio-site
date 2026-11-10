@@ -2,6 +2,7 @@ import { useEffect, useState, lazy, Suspense } from 'react';
 import React from 'react'
 import NavBar from './components/Navbar'
 import Hero from './sections/Hero'
+import CursorLight from './components/CursorLight'
 // below the fold: loaded in separate chunks so the Hero paints sooner
 const Projects = lazy(() => import('./sections/Projects'))
 const AboutMe = lazy(() => import('./sections/AboutMe'))
@@ -48,7 +49,8 @@ export default function App(){
     return (
         <div>
             <NavBar activeSection={activeSection}/>
-            <main>
+            <CursorLight/>
+            <main className='relative z-10'>
               <section id="Hero" className='mt-16 scroll-mt-16'>
                 <Hero/>
             </section>

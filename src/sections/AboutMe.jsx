@@ -164,7 +164,7 @@ export default function AboutMe() {
         
         {/* About Me block */}
         <Reveal className="h-full">
-        <div className="h-full rounded-3xl border border-white/10 bg-white/[0.03] shadow-glass backdrop-blur-md p-6 desktop:p-10">
+        <div className="spotlight h-full rounded-3xl border border-white/10 bg-white/[0.03] shadow-glass backdrop-blur-md p-6 desktop:p-10">
           <h2 className="font-display font-extrabold text-bone text-[clamp(1.9rem,5vw,2.75rem)] leading-none mb-8">
               {t('aboutMe.title')}
           </h2>
@@ -184,7 +184,7 @@ export default function AboutMe() {
 
         {/* Timeline block */}
         <Reveal delay={120} className="h-full">
-        <div className="h-full rounded-3xl border border-white/10 bg-white/[0.03] shadow-glass backdrop-blur-md p-6 desktop:p-10 flex">
+        <div className="spotlight h-full rounded-3xl border border-white/10 bg-white/[0.03] shadow-glass backdrop-blur-md p-6 desktop:p-10 flex">
           <Timeline />
         </div>
         </Reveal>

@@ -174,7 +174,7 @@ function ProjectCard({ project, index, revealed }) {
     <div className="keen-slider__slide">
       <article
         style={{ animationDelay: `${250 + Math.min(index, 3) * 90}ms` }}
-        className={`group h-full flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-ink2/60 transition-colors duration-300 hover:border-white/25
+        className={`spotlight group h-full flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-ink2/60 transition-colors duration-300 hover:border-white/25
         ${revealed ? "animate-rise" : "opacity-0"}`}
       >
         <button
@@ -367,9 +367,14 @@ export default function Projects() {
   const arrow = "grid place-items-center w-11 h-11 rounded-full border border-white/15 text-white/75 hover:text-white hover:border-white/40 transition-colors";
 
   return (
+    <div className="relative isolate w-full">
+    {/* faint wine light on the left, so the panels alternate down the page */}
+    <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+      <div className="absolute left-[-15%] top-1/3 w-[900px] h-[600px] rounded-full bg-[radial-gradient(closest-side,rgba(112,20,56,0.24),transparent)]" />
+    </div>
     <div className="mx-auto w-full max-w-[1400px] min-[1920px]:max-w-[1680px] px-4 desktop:px-8 pt-8">
     <Reveal>
-    <div ref={sectionRef} className="rounded-3xl border border-white/10 bg-white/[0.03] shadow-glass backdrop-blur-md p-6 desktop:p-10">
+    <div ref={sectionRef} className="spotlight rounded-3xl border border-white/10 bg-white/[0.03] shadow-glass backdrop-blur-md p-6 desktop:p-10">
       <div className="flex items-end justify-between gap-6">
         <h2 className="font-display font-extrabold text-bone text-[clamp(1.9rem,5vw,2.75rem)] leading-none">
           {t('project.title')}
@@ -399,6 +404,7 @@ export default function Projects() {
       </div>
     </div>
     </Reveal>
+    </div>
     </div>
   );
 }

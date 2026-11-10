@@ -12,7 +12,7 @@ Single-page personal portfolio. Vite 6 + React 19 + Tailwind 3, plain JavaScript
 - `index.html`: Vite entry (mounts `#app`, holds the title, social preview tags and fonts).
 - `src/main.jsx` → `src/App.jsx`: stacked sections with anchor navigation. No router. `Projects`, `AboutMe` and `Contact` are lazy-loaded; `useActiveSection` (IntersectionObserver) drives the navbar.
 - `src/sections/`: `Hero`, `Projects`, `AboutMe`, `Recommendations`, `Contact`.
-- `src/components/`: `Navbar`, `Dropdown`, `ResumeButton`, `WordCloud`, `Reveal` (fades and raises a section panel once when it scrolls into view), `LavaDome` (the lava-lamp half-circle behind the Hero photo: pure SVG with a goo filter, animated by the `wax` keyframes in `tailwind.config.js`).
+- `src/components/`: `Navbar`, `Dropdown`, `ResumeButton`, `WordCloud`, `Reveal` (fades and raises a section panel once when it scrolls into view), `LavaDome` (the lava-lamp half-circle behind the Hero photo: pure SVG with a goo filter, animated by the `wax` keyframes in `tailwind.config.js`; the photo and glass sheen shift against the wax lean for depth), `CursorLight` (mounted once in `App`: the wine glow that follows a mouse and the lit border on every `.spotlight` element, ring drawn in `src/style.css`).
 - `src/locales/{en,pt,fr,es,ja,ko,zh}.json`: all text AND project data. `src/i18n.js`: i18next setup.
 - `src/contact.js`: the public email address, used by `Hero` and `Contact`.
 - `public/imgs/`: WebP images served at `/imgs/...` (avatar 1400 px, project cards about 800 px).

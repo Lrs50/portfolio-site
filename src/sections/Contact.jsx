@@ -68,7 +68,7 @@ export default function Contact(){
             </div>
             <div className="mx-auto w-full max-w-[1400px] min-[1920px]:max-w-[1680px] px-4 desktop:px-8">
             <Reveal>
-            <div className="rounded-3xl border border-white/10 bg-white/[0.03] shadow-glass backdrop-blur-md p-6 desktop:p-10
+            <div className="spotlight rounded-3xl border border-white/10 bg-white/[0.03] shadow-glass backdrop-blur-md p-6 desktop:p-10
                 grid gap-8 desktop:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] desktop:gap-12 desktop:items-start">
                 <div>
                     <h2 className="font-display-sm font-bold text-bone text-[clamp(1.4rem,3.2vw,1.9rem)] leading-tight max-w-[18ch] [text-wrap:balance]">

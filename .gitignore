@@ -28,3 +28,4 @@ target/
 # crash dumps from the shell
 *.stackdump
 specs.md
+superpowers/

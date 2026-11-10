@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { TbBrandLinkedin, TbBrandGithubFilled, TbBrandMedium, TbBrandWhatsapp, TbMail } from 'react-icons/tb';
 import { useTranslation } from 'react-i18next';
 import ResumeButton from '../components/ResumeButton';
@@ -7,19 +7,27 @@ import { EMAIL } from '../contact';
 
 const iconLink = "text-white/70 hover:text-white transition-colors";
 
+// the photo is centred with -50%; the parallax adds a small shift opposite the wax lean
+const PHOTO_STILL = { transform: "translateX(-50%)" };
+const PHOTO_PARALLAX = {
+    transform: "translate(calc(-50% + var(--px, 0) * -6px), calc(var(--py, 0) * -3px))",
+    transition: "transform 1.6s cubic-bezier(0.2, 0.7, 0.2, 1)",
+};
+
 export default function Hero(){
     const { t } = useTranslation();
     const places = t('hero.places', { returnObjects: true });
     const lampRef = useRef(null);
+    const [still] = useState(() => window.matchMedia("(prefers-reduced-motion: reduce)").matches);
 
     // the wax leans toward a mouse pointer (touch and pen are ignored). The values go from -1 to 1.
     const onPointerMove = (e) => {
         if (e.pointerType !== "mouse" || !lampRef.current) return;
         const r = lampRef.current.getBoundingClientRect();
-        const x = ((e.clientX - r.left) / r.width) * 2 - 1;
-        const y = ((e.clientY - r.top) / r.height) * 2 - 1;
-        lampRef.current.style.setProperty("--px", Math.max(-1, Math.min(1, x)).toFixed(3));
-        lampRef.current.style.setProperty("--py", Math.max(-1, Math.min(1, y)).toFixed(3));
+        const x = Math.max(-1, Math.min(1, ((e.clientX - r.left) / r.width) * 2 - 1));
+        const y = Math.max(-1, Math.min(1, ((e.clientY - r.top) / r.height) * 2 - 1));
+        lampRef.current.style.setProperty("--px", x.toFixed(3));
+        lampRef.current.style.setProperty("--py", y.toFixed(3));
     };
     const onPointerLeave = () => {
         lampRef.current?.style.setProperty("--px", "0");
@@ -70,11 +78,13 @@ export default function Hero(){
                 {/* the lamp: the one bold element of the page */}
                 <div ref={lampRef} style={{ animationDelay: "150ms" }} className="animate-rise relative w-full max-w-[720px] mx-auto desktop:mx-0 desktop:justify-self-end">
                     <LavaDome className="block w-full" />
+                    {/* the photo sits on the nearest plane: it shifts a little against the wax */}
                     <img
                         src="/imgs/avatar.webp"
                         width="1400" height="935" fetchPriority="high"
                         alt={t("hero.photoAlt")}
-                        className="absolute z-10 bottom-0 left-1/2 -translate-x-1/2 w-[92%] pointer-events-none"
+                        style={still ? PHOTO_STILL : PHOTO_PARALLAX}
+                        className="absolute z-10 bottom-0 left-1/2 w-[92%] pointer-events-none"
                     />
                 </div>
             </div>

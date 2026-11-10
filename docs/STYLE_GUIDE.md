@@ -26,6 +26,8 @@ The rules every section of the site follows. `tailwind.config.js` holds the valu
 
 White text on `wine` is 11.38:1, so buttons stay readable.
 
+The lit border ring (`.spotlight` in `src/style.css`) uses rose at `rgba(213,138,166,0.55)`. It is a shape, never text. The cursor light is wine at `rgba(112,20,56,0.22)`, the same family as the light pools.
+
 Borders are `white/10` (default) and `white/25` to `white/40` (hover). Light pools behind sections use wine only, at low opacity (`rgba(112,20,56,0.18)` to `0.38`).
 
 Never use wine for text. Never put brand colors on icons (no LinkedIn blue, no WhatsApp green).
@@ -71,7 +73,7 @@ Do not:
 
 ## Components
 
-**Panel** (Projects, About, Trajectory, Contact): `rounded-3xl border border-white/10 bg-white/[0.03] shadow-glass backdrop-blur-md p-6 desktop:p-10`. One recipe for every section.
+**Panel** (Projects, About, Trajectory, Recommendations, Contact): `spotlight rounded-3xl border border-white/10 bg-white/[0.03] shadow-glass backdrop-blur-md p-6 desktop:p-10`. One recipe for every section. Each section also has one wine light pool behind it, alternating sides down the page (Hero right, Projects left, About right, Recommendations left, Contact center).
 
 **Project card** (carousel, 1 per view on phones, 2 from 768 px, 3 from 1100 px, 4 from 1500 px): `rounded-2xl border border-white/10 bg-ink2/60`, hover changes only the border to `white/25`. Image on top (3:2), then title, one-line `summary`, up to four tools plus a count, then links behind a `white/10` divider.
 
@@ -96,14 +98,16 @@ Do not:
 Motion is allowed where it says something. Current set, nothing else:
 
 - Hero load: elements rise in with `animate-rise` and staggered `animationDelay` (0, 120, 150, 220, 320 ms).
-- Lava dome: slow drift (`wax`, 26 s) and a lean toward a mouse pointer. Touch input is ignored.
+- Lava dome: slow drift (`wax`, 26 s) and a lean toward a mouse pointer. Touch input is ignored. The photo and the glass sheen shift a few pixels against the wax so wax, glass and person sit on separate planes. No lighting filter on the wax: it reads as plastic.
+- Cursor light: a soft wine glow (560 px) follows a mouse behind the panels (`src/components/CursorLight.jsx`). Mouse only.
+- Lit borders: panels and project cards within 300 px of a mouse show a rose ring on the border nearest the pointer and a faint wash inside. It follows scrolling and clears when the pointer leaves the window or a touch or pen is used. Mouse only.
 - Recommendations: the card strip drifts left continuously (`animate-marquee`, 36 s per loop, set by `LOOP_SECONDS` in `Recommendations.jsx`; the list is rendered twice and moved by half its width) and stops while the mouse is over it or focus is inside it. Reduced motion: a still row scrolled by hand.
 - Panels: each section box fades in and rises 24 px once when it enters the view (`src/components/Reveal.jsx`, 700 ms). The right panel of a pair starts 120 ms later.
 - Projects: the cards rise in once, 90 ms apart, starting 250 ms after the panel appears.
 - Skills cloud: the words assemble from the center once, biggest first (about 1 s). Then, with a mouse, words within 120 px of the pointer slide up to 26 px away, and the word under the pointer grows to 1.3x, turns white and bold with a soft pink glow while the others fade to 55%. On touch, a tap makes the word stand out for a moment without pushing.
 - Trajectory: the center line fills in rose as the reader scrolls (reading point at 65% of the viewport) and the dots light up as it reaches them.
 - Hover changes color, border or image brightness, never size. The skills cloud is the one exception.
-- `prefers-reduced-motion` stops the animations (global rule in `src/style.css`), the dome lean (`motion-reduce:`), the cloud stagger, push and scale (only the color change stays) and the timeline fill (drawn in full).
+- `prefers-reduced-motion` stops the animations (global rule in `src/style.css`), the dome lean and parallax (`motion-reduce:` and a `matchMedia` check in `Hero.jsx`), the cursor light (not drawn), the cloud stagger, push and scale (only the color change stays) and the timeline fill (drawn in full).
 
 ## Copy
 
