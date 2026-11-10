@@ -1,6 +1,6 @@
 {
   "nav": {
-    "portfolio": "내 포트폴리오",
+    "portfolio": "Lucas Reis",
     "home": "홈",
     "projects": "프로젝트",
     "about": "소개",
@@ -9,34 +9,41 @@
     "resume": "이력서"
   },
   "hero": {
-    "hello": "안녕하세요!",
-    "introLine1": "저는 <1>루카스</1>입니다",
+    "introLine1": "Lucas Reis",
     "introLine2": "컴퓨터 엔지니어",
-    "introLine3": "지능형 애플리케이션을 엔드 투 엔드로 구축합니다",
+    "introLine3": "AI 에이전트와 데이터 파이프라인을 만들고, 개념 증명부터 프로덕션까지 이끕니다.",
     "photoAlt": "루카스 레이스의 사진",
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "medium": "Medium",
     "whatsapp": "WhatsApp",
     "whatsappMessage": "안녕하세요, 루카스님! 포트폴리오를 보고 기회에 대해 이야기를 나누고 싶어 연락드립니다.",
-    "email": "이메일"
+    "email": "이메일",
+    "proofLabel": "일하고 공부한 곳",
+    "places": [
+      "Tractian",
+      "UFPE",
+      "CIn/Motorola",
+      "Sebrae",
+      "CNPq"
+    ]
   },
   "aboutMe": {
-    "title": "<1>저</1>에 대해",
+    "title": "소개",
     "history": [
-  "저는 루카스 헤이스입니다. 페르남부쿠 연방대학교(UFPE)에서 컴퓨터 공학을 전공했으며, 효율적이고 지능적인 기술 솔루션 개발에 열정을 가지고 있습니다.",
-  "브라질 바이에아 주 출신으로, 18세에 헤시피로 이주하여 기술 분야에서의 학업과 커리어를 본격적으로 시작했습니다. 데이터 사이언스, MLOps, 머신러닝 엔지니어링 등 다양한 영역에서 프로젝트 경험을 쌓았습니다.",
-  "학부 과정 중에는 CIN/Motorola와의 협업을 통해 5G 네트워크 관련 연구에 참여했으며, PIBIC 장학 프로그램을 통해 양자 신경망에 대한 연구도 수행했습니다. 또한 양자 컴퓨팅 학술 리그(LACIQ)에서 부회장을 맡아 산업과의 연계를 추진했습니다.",
-  "Tractian에서는 산업용 AI를 뒷받침하는 데이터 기반을 다루는 AI 엔지니어로 일했습니다. 풀스택으로 일하며 웹 스크래핑 및 데이터 파이프라인, LLM 기반 데이터 보강, AI 에이전트를 구축하고 PoC부터 프로덕션까지 이끌었습니다. 지금은 UFPE에서 컴퓨터 과학 석사 과정을 마무리하며 양자 컴퓨팅, 메타러닝, 모델 선택을 연구하고 있습니다.",
-  "프로젝트의 전 과정을 책임감 있게 수행하며, 윤리적이고 실용적인 기술 솔루션을 제공하는 것을 목표로 합니다."
+      "저는 루카스 헤이스입니다. 페르남부쿠 연방대학교(UFPE)에서 컴퓨터 공학을 전공했으며, 효율적이고 지능적인 기술 솔루션 개발에 열정을 가지고 있습니다.",
+      "브라질 바이에아 주 출신으로, 18세에 헤시피로 이주하여 기술 분야에서의 학업과 커리어를 본격적으로 시작했습니다. 데이터 사이언스, MLOps, 머신러닝 엔지니어링 등 다양한 영역에서 프로젝트 경험을 쌓았습니다.",
+      "학부 과정 중에는 CIN/Motorola와의 협업을 통해 5G 네트워크 관련 연구에 참여했으며, PIBIC 장학 프로그램을 통해 양자 신경망에 대한 연구도 수행했습니다. 또한 양자 컴퓨팅 학술 리그(LACIQ)에서 부회장을 맡아 산업과의 연계를 추진했습니다.",
+      "Tractian에서는 산업용 AI를 뒷받침하는 데이터 기반을 다루는 AI 엔지니어로 일했습니다. 풀스택으로 일하며 웹 스크래핑 및 데이터 파이프라인, LLM 기반 데이터 보강, AI 에이전트를 구축하고 PoC부터 프로덕션까지 이끌었습니다. 지금은 UFPE에서 컴퓨터 과학 석사 과정을 마무리하며 양자 컴퓨팅, 메타러닝, 모델 선택을 연구하고 있습니다.",
+      "프로젝트의 전 과정을 책임감 있게 수행하며, 윤리적이고 실용적인 기술 솔루션을 제공하는 것을 목표로 합니다."
     ],
     "timeline": {
-      "title": "나의<1>여정</1>",
+      "title": "경력",
       "events": [
         {
           "title": "컴퓨터 공학 학사 과정 시작",
           "info": "2018년 8월",
-          "desc": "꿈이 시작되었습니다",
+          "desc": "UFPE 컴퓨터공학 전공.",
           "side": "right"
         },
         {
@@ -64,9 +71,9 @@
           "side": "right"
         },
         {
-          "title": "졸업!",
+          "title": "컴퓨터공학 졸업",
           "info": "2025년 5월",
-          "desc": "다음 큰 도전을 찾고 있습니다.",
+          "desc": "UFPE 학사 학위.",
           "side": "left"
         },
         {
@@ -85,103 +92,174 @@
     }
   },
   "contact": {
-    "title": "멋진 프로젝트 아이디어가 있거나 그냥 연결하고 싶으신가요?",
-    "highlight": "대화해요!",
+    "title": "채용이나 프로젝트에 대해 이야기하고 싶으신가요?",
+    "highlight": "메시지를 보내 주세요.",
     "placeholder": "메시지를 작성하세요...",
     "button": "보내기",
     "emailPlaceholder": "이메일 주소 (선택)",
     "sending": "전송 중...",
     "orEmail": "또는 이메일로 연락하기",
-    "success": "메시지가 성공적으로 전송되었습니다!",
-    "error": "메시지 전송 중 오류가 발생했습니다!"
+    "success": "메시지를 보냈습니다.",
+    "error": "메시지를 보내지 못했습니다. 다시 시도하거나 이메일로 직접 연락해 주세요."
   },
   "project": {
-  "title": "나의 <1>프로젝트</1>",
-  "tool": "도구",
-  "githublink": "Github 링크",
-  "close": "닫기",
-  "prev": "이전 프로젝트",
-  "next": "다음 프로젝트",
-  "websitelink": "프로젝트 웹사이트",
-  "projects": [
-    {
-      "title": "아침 식사는 얼마나 들까요?",
-      "desc": "커피와 계란 가격이 많이 올랐습니다.\n\n그렇다면 다른 아침 식사 재료는 어떨까요?\n\n이 프로젝트는 바로 이 궁금증에서 출발했습니다. 앞으로 6개월간 주요 아침 식품의 가격을 예측하는 자동화된 솔루션을 개발했습니다. 머신러닝, 웹 스크래핑, 데이터 시각화, API를 모두 활용했습니다.",
-      "tools": [
-        "Python", "SQL", "Pandas", "NumPy", "ScikitLearn", "Airflow", "Git", "Docker", "Google Cloud", "FastAPI", "Streamlit", "Selenium", "BeautifulSoup", "Prophet", "Algoritmo Genetico", "Bash", "Gemini", "Plotly"
-      ],
-      "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
-      "websiteLink": "https://breakfast-forecast.streamlit.app/",
-      "img": "/imgs/breakfast_forecast.webp"
-    },
-    {
-      "title": "산업 제품 스크래퍼",
-      "desc": "산업용 웹사이트에서 제품 데이터를 자동으로 수집하고 구조화하는 도구입니다.\n\n복잡한 페이지를 정리된 형식으로 변환해, 카탈로그 시스템이나 시장 분석에 바로 활용할 수 있습니다.",
-      "tools": ["Python", "UV", "Pydantic", "Regex", "Requests", "Playwright", "BeautifulSoup"],
-      "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
-      "websiteLink": "",
-      "img": "/imgs/industrial_scraper.webp"
-    },
-    {
-      "title": "개인 금융 챗봇",
-      "desc": "WhatsApp에서 대화하듯 사용할 수 있는 챗봇으로, 개인 재정 관리를 돕습니다.\n\n지출을 기록하고, 부채를 추적하며, 예산을 설정하고, 간단한 질문도 손쉽게 해결할 수 있어 실용적이고 접근성이 뛰어납니다.",
-      "tools": [
-        "Python", "FastAPI", "Ngrok", "Gemini", "Heyoo", "TinyDB", "Regex", "WhatsApp"
-      ],
-      "githubLink": "https://github.com/Lrs50/wpp-automation",
-      "websiteLink": "",
-      "img": "/imgs/wpp_bot.webp"
-    },
-    {
-      "title": "양자 주사위",
-      "desc": "양자 컴퓨팅 개념이 실제로 동작하는 모습을 볼 수 있는 인터랙티브 앱입니다.\n\n모든 무작위 결과는 시뮬레이션된 양자 회로에서 나옵니다. 큐비트를 아다마르 게이트로 중첩 상태로 만든 뒤 측정하면 0 또는 1로 붕괴합니다. 기각 샘플링으로 모듈로 편향을 피합니다.\n\n주사위 굴리기, 동전 던지기, 그룹 나누기, 추첨, 비밀번호 생성, 플레이리스트 섞기, 색상 팔레트 만들기를 할 수 있으며, 각 단계를 블로흐 구 애니메이션으로 보여줍니다.\n\n고전 시뮬레이터에서 실행되므로 출력은 의사 난수입니다. 교육용 프로젝트이며 진정한 난수원이 아니고 보안이 중요한 용도에는 적합하지 않습니다.",
-      "tools": ["Python", "PennyLane", "Streamlit", "Plotly", "NumPy", "UV"],
-      "githubLink": "https://github.com/Lrs50/quantum-dice",
-      "websiteLink": "https://quantum-dice.streamlit.app",
-      "img": "/imgs/quantum_dice.webp"
-    },
-    {
-      "title": "Evolvium",
-      "desc": "유전 알고리즘을 사용하여 최적화 문제를 해결하는 Python 라이브러리입니다.\n\n간편하게 사용할 수 있고, 실험이나 실제 프로젝트 모두에 적합한 유연한 도구입니다.",
-      "tools": ["Python", "Algoritmo Genetico", "NumPy", "Matplotlib"],
-      "githubLink": "https://github.com/Lrs50/Evolvium",
-      "websiteLink": "https://test.pypi.org/project/evolvium/",
-      "img": "/imgs/evolvium.webp"
-    },
-    {
-      "title": "탐색 알고리즘을 활용한 자율 에이전트",
-      "desc": "에이전트가 장애물 사이를 지나 목표 지점까지 가장 효율적인 경로를 찾는 시뮬레이션입니다.\n\nA*, 탐욕적 탐색, 유전 알고리즘 등을 비교하며 직관적으로 시각화했습니다.",
-      "tools": ["Unity", "Csharp", "Search Algorithm", "Algoritmo Genetico"],
-      "githubLink": "https://github.com/Lrs50/Projeto_SI",
-      "websiteLink": "https://lrs50.github.io/Projeto_SI/WebGLBuild/",
-      "img": "/imgs/search_agent.webp"
-    },
-    {
-      "title": "유전 알고리즘으로 푸는 8퀸 문제",
-      "desc": "유전 알고리즘을 통해 고전적인 8퀸 문제를 시각적으로 풀어보는 시뮬레이션입니다.\n\n시간에 따라 해결책이 진화하는 과정을 직관적으로 이해할 수 있어 교육용으로도 좋습니다.",
-      "tools": ["Csharp","Unity", "Algoritmo Genetico"],
-      "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
-      "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
-      "img": "/imgs/8_queens.webp"
-    },
-    {
-      "title": "단어 찾기 퍼즐 생성기",
-      "desc": "Python으로 제작한 간단한 응용 프로그램으로, 사용자가 원하는 단어 리스트를 입력하면 맞춤형 퍼즐을 생성합니다.\n\n교육 활동이나 레크리에이션 용도로 활용하기 좋습니다.",
-      "tools": ["Python", "Tkinter"],
-      "githubLink": "https://github.com/Lrs50/WordSearch",
-      "websiteLink": "",
-      "img": "/imgs/wordsearch.webp"
-    },
-    {
-      "title": "Ybý-Mokoĩ",
-      "desc": "투피 과라니 신화를 바탕으로 한 2D 액션 RPG 게임입니다.\n\n전설 속 생물을 물리치고 과일을 수집하며, 밤의 기원에 대한 이야기를 체험할 수 있습니다. 원주민 문화를 교육적이고 흥미로운 방식으로 전달합니다.",
-      "tools": ["Csharp","Unity"],
-      "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
-      "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
-      "img": "/imgs/game_unity.webp"
-    }
-  ]
-}
-
-
+    "title": "프로젝트",
+    "tool": "도구",
+    "githublink": "Github 링크",
+    "close": "닫기",
+    "websitelink": "프로젝트 웹사이트",
+    "projects": [
+      {
+        "title": "아침 식사는 얼마나 들까요?",
+        "desc": "커피와 계란 가격이 많이 올랐습니다.\n\n그렇다면 다른 아침 식사 재료는 어떨까요?\n\n이 프로젝트는 바로 이 궁금증에서 출발했습니다. 앞으로 6개월간 주요 아침 식품의 가격을 예측하는 자동화된 솔루션을 개발했습니다. 머신러닝, 웹 스크래핑, 데이터 시각화, API를 모두 활용했습니다.",
+        "tools": [
+          "Python",
+          "SQL",
+          "Pandas",
+          "NumPy",
+          "ScikitLearn",
+          "Airflow",
+          "Git",
+          "Docker",
+          "Google Cloud",
+          "FastAPI",
+          "Streamlit",
+          "Selenium",
+          "BeautifulSoup",
+          "Prophet",
+          "Algoritmo Genetico",
+          "Bash",
+          "Gemini",
+          "Plotly"
+        ],
+        "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
+        "websiteLink": "https://breakfast-forecast.streamlit.app/",
+        "img": "/imgs/breakfast_forecast.webp",
+        "summary": "브라질 아침 식사 식품 가격을 6개월 앞까지 예측합니다. 스크래핑부터 라이브 대시보드까지."
+      },
+      {
+        "title": "산업 제품 스크래퍼",
+        "desc": "산업용 웹사이트에서 제품 데이터를 자동으로 수집하고 구조화하는 도구입니다.\n\n복잡한 페이지를 정리된 형식으로 변환해, 카탈로그 시스템이나 시장 분석에 바로 활용할 수 있습니다.",
+        "tools": [
+          "Python",
+          "UV",
+          "Pydantic",
+          "Regex",
+          "Requests",
+          "Playwright",
+          "BeautifulSoup"
+        ],
+        "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
+        "websiteLink": "",
+        "img": "/imgs/industrial_scraper.webp",
+        "summary": "지저분한 산업 제품 페이지를 깔끔하게 구조화된 카탈로그 데이터로 바꿉니다."
+      },
+      {
+        "title": "개인 금융 챗봇",
+        "desc": "WhatsApp에서 대화하듯 사용할 수 있는 챗봇으로, 개인 재정 관리를 돕습니다.\n\n지출을 기록하고, 부채를 추적하며, 예산을 설정하고, 간단한 질문도 손쉽게 해결할 수 있어 실용적이고 접근성이 뛰어납니다.",
+        "tools": [
+          "Python",
+          "FastAPI",
+          "Ngrok",
+          "Gemini",
+          "Heyoo",
+          "TinyDB",
+          "Regex",
+          "WhatsApp"
+        ],
+        "githubLink": "https://github.com/Lrs50/wpp-automation",
+        "websiteLink": "",
+        "img": "/imgs/wpp_bot.webp",
+        "summary": "평범한 메시지로 지출, 부채, 예산을 기록하는 WhatsApp 봇."
+      },
+      {
+        "title": "양자 주사위",
+        "desc": "양자 컴퓨팅 개념이 실제로 동작하는 모습을 볼 수 있는 인터랙티브 앱입니다.\n\n모든 무작위 결과는 시뮬레이션된 양자 회로에서 나옵니다. 큐비트를 아다마르 게이트로 중첩 상태로 만든 뒤 측정하면 0 또는 1로 붕괴합니다. 기각 샘플링으로 모듈로 편향을 피합니다.\n\n주사위 굴리기, 동전 던지기, 그룹 나누기, 추첨, 비밀번호 생성, 플레이리스트 섞기, 색상 팔레트 만들기를 할 수 있으며, 각 단계를 블로흐 구 애니메이션으로 보여줍니다.\n\n고전 시뮬레이터에서 실행되므로 출력은 의사 난수입니다. 교육용 프로젝트이며 진정한 난수원이 아니고 보안이 중요한 용도에는 적합하지 않습니다.",
+        "tools": [
+          "Python",
+          "PennyLane",
+          "Streamlit",
+          "Plotly",
+          "NumPy",
+          "UV"
+        ],
+        "githubLink": "https://github.com/Lrs50/quantum-dice",
+        "websiteLink": "https://quantum-dice.streamlit.app",
+        "img": "/imgs/quantum_dice.webp",
+        "summary": "시뮬레이션된 양자 회로로 굴리는 주사위, 동전, 추첨. 블로흐 구 애니메이션 포함."
+      },
+      {
+        "title": "Evolvium",
+        "desc": "유전 알고리즘을 사용하여 최적화 문제를 해결하는 Python 라이브러리입니다.\n\n간편하게 사용할 수 있고, 실험이나 실제 프로젝트 모두에 적합한 유연한 도구입니다.",
+        "tools": [
+          "Python",
+          "Algoritmo Genetico",
+          "NumPy",
+          "Matplotlib"
+        ],
+        "githubLink": "https://github.com/Lrs50/Evolvium",
+        "websiteLink": "https://test.pypi.org/project/evolvium/",
+        "img": "/imgs/evolvium.webp",
+        "summary": "유전 알고리즘 최적화를 위한 작은 Python 라이브러리. TestPyPI에 공개."
+      },
+      {
+        "title": "탐색 알고리즘을 활용한 자율 에이전트",
+        "desc": "에이전트가 장애물 사이를 지나 목표 지점까지 가장 효율적인 경로를 찾는 시뮬레이션입니다.\n\nA*, 탐욕적 탐색, 유전 알고리즘 등을 비교하며 직관적으로 시각화했습니다.",
+        "tools": [
+          "Unity",
+          "Csharp",
+          "Search Algorithm",
+          "Algoritmo Genetico"
+        ],
+        "githubLink": "https://github.com/Lrs50/Projeto_SI",
+        "websiteLink": "https://lrs50.github.io/Projeto_SI/WebGLBuild/",
+        "img": "/imgs/search_agent.webp",
+        "summary": "A*, 탐욕 탐색, 유전 알고리즘으로 장애물 사이의 경로를 찾는 에이전트."
+      },
+      {
+        "title": "유전 알고리즘으로 푸는 8퀸 문제",
+        "desc": "유전 알고리즘을 통해 고전적인 8퀸 문제를 시각적으로 풀어보는 시뮬레이션입니다.\n\n시간에 따라 해결책이 진화하는 과정을 직관적으로 이해할 수 있어 교육용으로도 좋습니다.",
+        "tools": [
+          "Csharp",
+          "Unity",
+          "Algoritmo Genetico"
+        ],
+        "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
+        "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
+        "img": "/imgs/8_queens.webp",
+        "summary": "유전 알고리즘이 세대를 거듭하며 8퀸 문제를 풉니다."
+      },
+      {
+        "title": "단어 찾기 퍼즐 생성기",
+        "desc": "Python으로 제작한 간단한 응용 프로그램으로, 사용자가 원하는 단어 리스트를 입력하면 맞춤형 퍼즐을 생성합니다.\n\n교육 활동이나 레크리에이션 용도로 활용하기 좋습니다.",
+        "tools": [
+          "Python",
+          "Tkinter"
+        ],
+        "githubLink": "https://github.com/Lrs50/WordSearch",
+        "websiteLink": "",
+        "img": "/imgs/wordsearch.webp",
+        "summary": "맞춤형 단어 찾기 퍼즐을 만드는 데스크톱 앱."
+      },
+      {
+        "title": "Ybý-Mokoĩ",
+        "desc": "투피 과라니 신화를 바탕으로 한 2D 액션 RPG 게임입니다.\n\n전설 속 생물을 물리치고 과일을 수집하며, 밤의 기원에 대한 이야기를 체험할 수 있습니다. 원주민 문화를 교육적이고 흥미로운 방식으로 전달합니다.",
+        "tools": [
+          "Csharp",
+          "Unity"
+        ],
+        "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
+        "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
+        "img": "/imgs/game_unity.webp",
+        "summary": "투피 과라니 신화에서 영감을 받은 2D 액션 RPG."
+      }
+    ],
+    "tryLive": "라이브로 체험",
+    "watch": "영상 보기",
+    "package": "패키지 보기",
+    "details": "자세히 보기",
+    "code": "코드",
+    "prev": "이전 프로젝트",
+    "next": "다음 프로젝트"
+  }
 }

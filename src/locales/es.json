@@ -1,6 +1,6 @@
 {
   "nav": {
-    "portfolio": "Mi Portafolio",
+    "portfolio": "Lucas Reis",
     "home": "Inicio",
     "projects": "Proyectos",
     "about": "Acerca de",
@@ -8,180 +8,258 @@
     "language": "Idioma",
     "resume": "Currículum"
   },
-"hero": {
-  "hello": "¡HOLA!",
-  "introLine1": "Soy <1>Lucas</1>",
-  "introLine2": "Ingeniero en Computación",
-  "introLine3": "Construyendo aplicaciones inteligentes de principio a fin",
-  "photoAlt": "Foto de Lucas Reis",
-  "linkedin": "LinkedIn",
-  "github": "GitHub",
-  "medium": "Medium",
-  "whatsapp": "WhatsApp",
-  "whatsappMessage": "¡Hola, Lucas! Vi tu portafolio y me gustaría hablar contigo sobre una oportunidad.",
-  "email": "Correo electrónico"
-},
-"aboutMe": {
-  "title": "Sobre <1>Mí</1>",
-  "history": [
-  "Soy Lucas Reis, ingeniero en computación egresado de la Universidad Federal de Pernambuco (UFPE), apasionado por crear soluciones inteligentes con impacto real.",
-  "Nací en Bahía y me mudé a Recife a los 18 años para desarrollar mi carrera en el área tecnológica. A lo largo de mi formación, adquirí experiencia sólida en ciencia de datos, MLOps e ingeniería de machine learning, trabajando en proyectos desde su inicio hasta su implementación en producción.",
-  "Participé en investigaciones sobre redes 5G en colaboración con el CIN/Motorola y exploré redes neuronales cuánticas gracias a una beca PIBIC. También fui vicepresidente de la Liga Académica de Computación Cuántica (LACIQ), impulsando iniciativas de investigación con conexión al mercado.",
-  "En Tractian trabajé como ingeniero de IA en la base de datos detrás de la IA industrial. Mi trabajo fue full-stack: construí pipelines de datos y web scraping, enriquecimiento con LLMs y agentes de IA, y los llevé de la prueba de concepto a producción. Ahora estoy terminando la maestría en Ciencia de la Computación en la UFPE, investigando computación cuántica, metaaprendizaje y selección de modelos.",
-  "Me adapto bien a todo el ciclo de vida de proyectos de datos, y busco siempre entregar soluciones técnicas, éticas y de alto valor para el negocio."
-  ],
-  "timeline": {
-    "title": "Mi <1>Trayectoria</1>",
-    "events": [
-      {
-        "title": "Inicio de la carrera en Ingeniería Informática",
-        "info": "Agosto 2018",
-        "desc": "Un sueño comenzaba.",
-        "side": "right"
-      },
-      {
-        "title": "Investigador en CIN/Motorola",
-        "info": "jul 2020 – may 2021",
-        "desc": "Investigación en redes 5G, automatización en Linux, Docker y análisis de paquetes.",
-        "side": "left"
-      },
-      {
-        "title": "Investigador PIBIC (CNPq)",
-        "info": "sep 2022 – oct 2023",
-        "desc": "Modelos de regresión cuánticos y clásicos con PyTorch y Pennylane.",
-        "side": "right"
-      },
-      {
-        "title": "Vicepresidente de LACIQ",
-        "info": "jul 2023 – nov 2024",
-        "desc": "Eventos y mentoría en ML cuántico, construcción de alianzas académicas.",
-        "side": "left"
-      },
-      {
-        "title": "Pasantía en Sebrae",
-        "info": "nov 2024 – abr 2025",
-        "desc": "Análisis de datos, modelos ML, integración con APIs y pipelines ETL.",
-        "side": "right"
-      },
-      {
-        "title": "¡Graduado!",
-        "info": "may 2025",
-        "desc": "En búsqueda de mi próximo gran desafío.",
-        "side": "left"
-      },
-      {
-        "title": "Ingeniero de IA en Tractian",
-        "info": "jun 2025 – oct 2026",
-        "desc": "Ingeniero de IA full-stack: agentes LLM + pipelines de web scraping, de la PoC a producción.",
-        "side": "right"
-      },
-      {
-        "title": "Maestría en Ciencia de la Computación (UFPE)",
-        "info": "ago 2025 – Presente",
-        "desc": "Investigación en computación cuántica, metaaprendizaje y selección de modelos.",
-        "side": "left"
-      }
+  "hero": {
+    "introLine1": "Lucas Reis",
+    "introLine2": "Ingeniero en Computación",
+    "introLine3": "Construyo agentes de IA y pipelines de datos y los llevo de la prueba de concepto a producción.",
+    "photoAlt": "Foto de Lucas Reis",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "medium": "Medium",
+    "whatsapp": "WhatsApp",
+    "whatsappMessage": "¡Hola, Lucas! Vi tu portafolio y me gustaría hablar contigo sobre una oportunidad.",
+    "email": "Correo electrónico",
+    "proofLabel": "Trabajé y estudié en",
+    "places": [
+      "Tractian",
+      "UFPE",
+      "CIn/Motorola",
+      "Sebrae",
+      "CNPq"
     ]
-  }
-},
-"contact": {
-  "title": "¿Tienes una idea genial de proyecto o solo quieres conectar?",
-  "highlight": "¡Hablemos!",
-  "placeholder": "Escribe tu mensaje...",
-  "button": "Enviar",
-  "emailPlaceholder": "Tu correo electrónico (opcional)",
-  "sending": "Enviando...",
-  "orEmail": "O escríbeme a",
-  "success": "¡Mensaje enviado con éxito!",
-  "error": "¡Error al enviar el mensaje!"
-},
-"project": {
-  "title": "Mis <1>Proyectos</1>",
-  "tool": "Herramientas",
-  "githublink": "Enlace a Github",
-  "close": "Cerrar",
-  "prev": "Proyecto anterior",
-  "next": "Proyecto siguiente",
-  "websitelink": "Sitio del Proyecto",
-  "projects": [
-    {
-      "title": "¿Cuánto Cuesta el Desayuno?",
-      "desc": "El café y los huevos subieron bastante de precio...\n\n¿Pero qué pasa con el resto del desayuno?\n\nEste proyecto surgió de esa duda. Desarrollé una solución integral para prever, durante los próximos 6 meses, el precio de los principales alimentos consumidos por la mañana. Todo el proceso fue automatizado con machine learning, scraping, visualización de datos y APIs.",
-      "tools": [
-        "Python", "SQL", "Pandas", "NumPy", "ScikitLearn", "Airflow", "Git", "Docker", "Google Cloud", "FastAPI", "Streamlit", "Selenium", "BeautifulSoup", "Prophet", "Algoritmo Genetico", "Bash", "Gemini", "Plotly"
-      ],
-      "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
-      "websiteLink": "https://breakfast-forecast.streamlit.app/",
-      "img": "/imgs/breakfast_forecast.webp"
-    },
-    {
-      "title": "Scraper de Productos Industriales",
-      "desc": "Herramienta automatizada que recolecta y organiza datos de productos industriales.\n\nConvierte páginas desordenadas en información clara, estructurada y lista para catálogos y análisis de mercado.",
-      "tools": ["Python", "UV", "Pydantic", "Regex", "Requests", "Playwright", "BeautifulSoup"],
-      "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
-      "websiteLink": "",
-      "img": "/imgs/industrial_scraper.webp"
-    },
-    {
-      "title": "Chatbot Financiero Personal",
-      "desc": "Un bot en WhatsApp que conversa contigo y te ayuda a organizar tus finanzas.\n\nPermite registrar gastos, seguir deudas, establecer presupuestos y resolver dudas de forma práctica, rápida y accesible.",
-      "tools": [
-        "Python", "FastAPI", "Ngrok", "Gemini", "Heyoo", "TinyDB", "Regex", "WhatsApp"
-      ],
-      "githubLink": "https://github.com/Lrs50/wpp-automation",
-      "websiteLink": "",
-      "img": "/imgs/wpp_bot.webp"
-    },
-    {
-      "title": "Dados Cuánticos",
-      "desc": "Una forma interactiva de ver conceptos de computación cuántica en acción.\n\nCada resultado aleatorio proviene de un circuito cuántico simulado: un qubit se pone en superposición con una puerta Hadamard y se mide, colapsando a 0 o 1. El muestreo por rechazo evita el sesgo del módulo.\n\nLanza dados, tira monedas, divide grupos, sortea ganadores, genera contraseñas, mezcla listas de reproducción y crea paletas de colores, con animaciones de la esfera de Bloch en cada paso.\n\nSe ejecuta en un simulador clásico, así que la salida es pseudoaleatoria: es un proyecto educativo, no una fuente de aleatoriedad verdadera ni apta para uso crítico de seguridad.",
-      "tools": ["Python", "PennyLane", "Streamlit", "Plotly", "NumPy", "UV"],
-      "githubLink": "https://github.com/Lrs50/quantum-dice",
-      "websiteLink": "https://quantum-dice.streamlit.app",
-      "img": "/imgs/quantum_dice.webp"
-    },
-    {
-      "title": "Evolvium",
-      "desc": "Una biblioteca en Python que utiliza algoritmos genéticos para resolver problemas de optimización.\n\nEs sencilla, flexible y perfecta tanto para pruebas como para proyectos reales que requieren soluciones eficientes.",
-      "tools": ["Python", "Algoritmo Genetico", "NumPy", "Matplotlib"],
-      "githubLink": "https://github.com/Lrs50/Evolvium",
-      "websiteLink": "https://test.pypi.org/project/evolvium/",
-      "img": "/imgs/evolvium.webp"
-    },
-    {
-      "title": "Agente Autónomo con Algoritmos de Búsqueda",
-      "desc": "Simulación en la que un agente debe encontrar el mejor camino en un entorno con obstáculos.\n\nImplementé varios algoritmos de búsqueda, como A*, búsqueda voraz y evolución genética, todo visualizado de forma clara e intuitiva.",
-      "tools": ["Unity", "Csharp", "Search Algorithm", "Algoritmo Genetico"],
-      "githubLink": "https://github.com/Lrs50/Projeto_SI",
-      "websiteLink": "https://lrs50.github.io/Projeto_SI/WebGLBuild/",
-      "img": "/imgs/search_agent.webp"
-    },
-    {
-      "title": "8 Reinas con Algoritmos Genéticos",
-      "desc": "Simulación visual del clásico problema de las 8 reinas usando algoritmos evolutivos.\n\nUna forma intuitiva y didáctica de comprender cómo las soluciones pueden evolucionar con el tiempo.",
-      "tools": ["Csharp","Unity", "Algoritmo Genetico"],
-      "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
-      "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
-      "img": "/imgs/8_queens.webp"
-    },
-    {
-      "title": "Generador de Sopas de Letras",
-      "desc": "Aplicación sencilla en Python para crear sopas de letras personalizadas.\n\nIdeal para docentes, estudiantes o cualquier persona que desee diseñar actividades educativas de manera ágil y fácil.",
-      "tools": ["Python", "Tkinter"],
-      "githubLink": "https://github.com/Lrs50/WordSearch",
-      "websiteLink": "",
-      "img": "/imgs/wordsearch.webp"
-    },
-    {
-      "title": "Ybý-Mokoĩ",
-      "desc": "Un RPG de acción en 2D inspirado en la mitología Tupi-Guaraní.\n\nEl jugador se enfrenta a criaturas legendarias, recolecta elementos como guaraná y açaí, y vive el relato del origen de la noche. Una experiencia educativa y entretenida que rinde homenaje a la cultura indígena.",
-      "tools": ["Csharp","Unity"],
-      "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
-      "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
-      "img": "/imgs/game_unity.webp"
+  },
+  "aboutMe": {
+    "title": "Sobre mí",
+    "history": [
+      "Soy Lucas Reis, ingeniero en computación egresado de la Universidad Federal de Pernambuco (UFPE), apasionado por crear soluciones inteligentes con impacto real.",
+      "Nací en Bahía y me mudé a Recife a los 18 años para desarrollar mi carrera en el área tecnológica. A lo largo de mi formación, adquirí experiencia sólida en ciencia de datos, MLOps e ingeniería de machine learning, trabajando en proyectos desde su inicio hasta su implementación en producción.",
+      "Participé en investigaciones sobre redes 5G en colaboración con el CIN/Motorola y exploré redes neuronales cuánticas gracias a una beca PIBIC. También fui vicepresidente de la Liga Académica de Computación Cuántica (LACIQ), impulsando iniciativas de investigación con conexión al mercado.",
+      "En Tractian trabajé como ingeniero de IA en la base de datos detrás de la IA industrial. Mi trabajo fue full-stack: construí pipelines de datos y web scraping, enriquecimiento con LLMs y agentes de IA, y los llevé de la prueba de concepto a producción. Ahora estoy terminando la maestría en Ciencia de la Computación en la UFPE, investigando computación cuántica, metaaprendizaje y selección de modelos.",
+      "Me adapto bien a todo el ciclo de vida de proyectos de datos, y busco siempre entregar soluciones técnicas, éticas y de alto valor para el negocio."
+    ],
+    "timeline": {
+      "title": "Trayectoria",
+      "events": [
+        {
+          "title": "Inicio de la carrera en Ingeniería Informática",
+          "info": "Agosto 2018",
+          "desc": "Ingeniería en Computación en la UFPE.",
+          "side": "right"
+        },
+        {
+          "title": "Investigador en CIN/Motorola",
+          "info": "jul 2020 – may 2021",
+          "desc": "Investigación en redes 5G, automatización en Linux, Docker y análisis de paquetes.",
+          "side": "left"
+        },
+        {
+          "title": "Investigador PIBIC (CNPq)",
+          "info": "sep 2022 – oct 2023",
+          "desc": "Modelos de regresión cuánticos y clásicos con PyTorch y Pennylane.",
+          "side": "right"
+        },
+        {
+          "title": "Vicepresidente de LACIQ",
+          "info": "jul 2023 – nov 2024",
+          "desc": "Eventos y mentoría en ML cuántico, construcción de alianzas académicas.",
+          "side": "left"
+        },
+        {
+          "title": "Pasantía en Sebrae",
+          "info": "nov 2024 – abr 2025",
+          "desc": "Análisis de datos, modelos ML, integración con APIs y pipelines ETL.",
+          "side": "right"
+        },
+        {
+          "title": "Graduado en Ingeniería en Computación",
+          "info": "may 2025",
+          "desc": "Licenciatura por la UFPE.",
+          "side": "left"
+        },
+        {
+          "title": "Ingeniero de IA en Tractian",
+          "info": "jun 2025 – oct 2026",
+          "desc": "Ingeniero de IA full-stack: agentes LLM + pipelines de web scraping, de la PoC a producción.",
+          "side": "right"
+        },
+        {
+          "title": "Maestría en Ciencia de la Computación (UFPE)",
+          "info": "ago 2025 – Presente",
+          "desc": "Investigación en computación cuántica, metaaprendizaje y selección de modelos.",
+          "side": "left"
+        }
+      ]
     }
-  ]
-}
-
-
+  },
+  "contact": {
+    "title": "¿Quieres hablar de un puesto o de un proyecto?",
+    "highlight": "Envíame un mensaje.",
+    "placeholder": "Escribe tu mensaje...",
+    "button": "Enviar",
+    "emailPlaceholder": "Tu correo electrónico (opcional)",
+    "sending": "Enviando...",
+    "orEmail": "O escríbeme a",
+    "success": "Mensaje enviado.",
+    "error": "El mensaje no se envió. Inténtalo de nuevo o escríbeme por correo."
+  },
+  "project": {
+    "title": "Proyectos",
+    "tool": "Herramientas",
+    "githublink": "Enlace a Github",
+    "close": "Cerrar",
+    "websitelink": "Sitio del Proyecto",
+    "projects": [
+      {
+        "title": "¿Cuánto Cuesta el Desayuno?",
+        "desc": "El café y los huevos subieron bastante de precio...\n\n¿Pero qué pasa con el resto del desayuno?\n\nEste proyecto surgió de esa duda. Desarrollé una solución integral para prever, durante los próximos 6 meses, el precio de los principales alimentos consumidos por la mañana. Todo el proceso fue automatizado con machine learning, scraping, visualización de datos y APIs.",
+        "tools": [
+          "Python",
+          "SQL",
+          "Pandas",
+          "NumPy",
+          "ScikitLearn",
+          "Airflow",
+          "Git",
+          "Docker",
+          "Google Cloud",
+          "FastAPI",
+          "Streamlit",
+          "Selenium",
+          "BeautifulSoup",
+          "Prophet",
+          "Algoritmo Genetico",
+          "Bash",
+          "Gemini",
+          "Plotly"
+        ],
+        "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
+        "websiteLink": "https://breakfast-forecast.streamlit.app/",
+        "img": "/imgs/breakfast_forecast.webp",
+        "summary": "Predice los precios de los alimentos del desayuno en Brasil para los próximos seis meses, del scraping a un panel en vivo."
+      },
+      {
+        "title": "Scraper de Productos Industriales",
+        "desc": "Herramienta automatizada que recolecta y organiza datos de productos industriales.\n\nConvierte páginas desordenadas en información clara, estructurada y lista para catálogos y análisis de mercado.",
+        "tools": [
+          "Python",
+          "UV",
+          "Pydantic",
+          "Regex",
+          "Requests",
+          "Playwright",
+          "BeautifulSoup"
+        ],
+        "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
+        "websiteLink": "",
+        "img": "/imgs/industrial_scraper.webp",
+        "summary": "Convierte páginas desordenadas de productos industriales en datos de catálogo limpios y estructurados."
+      },
+      {
+        "title": "Chatbot Financiero Personal",
+        "desc": "Un bot en WhatsApp que conversa contigo y te ayuda a organizar tus finanzas.\n\nPermite registrar gastos, seguir deudas, establecer presupuestos y resolver dudas de forma práctica, rápida y accesible.",
+        "tools": [
+          "Python",
+          "FastAPI",
+          "Ngrok",
+          "Gemini",
+          "Heyoo",
+          "TinyDB",
+          "Regex",
+          "WhatsApp"
+        ],
+        "githubLink": "https://github.com/Lrs50/wpp-automation",
+        "websiteLink": "",
+        "img": "/imgs/wpp_bot.webp",
+        "summary": "Un bot de WhatsApp que registra gastos, deudas y presupuestos a partir de mensajes simples."
+      },
+      {
+        "title": "Dados Cuánticos",
+        "desc": "Una forma interactiva de ver conceptos de computación cuántica en acción.\n\nCada resultado aleatorio proviene de un circuito cuántico simulado: un qubit se pone en superposición con una puerta Hadamard y se mide, colapsando a 0 o 1. El muestreo por rechazo evita el sesgo del módulo.\n\nLanza dados, tira monedas, divide grupos, sortea ganadores, genera contraseñas, mezcla listas de reproducción y crea paletas de colores, con animaciones de la esfera de Bloch en cada paso.\n\nSe ejecuta en un simulador clásico, así que la salida es pseudoaleatoria: es un proyecto educativo, no una fuente de aleatoriedad verdadera ni apta para uso crítico de seguridad.",
+        "tools": [
+          "Python",
+          "PennyLane",
+          "Streamlit",
+          "Plotly",
+          "NumPy",
+          "UV"
+        ],
+        "githubLink": "https://github.com/Lrs50/quantum-dice",
+        "websiteLink": "https://quantum-dice.streamlit.app",
+        "img": "/imgs/quantum_dice.webp",
+        "summary": "Dados, monedas y sorteos a partir de un circuito cuántico simulado, con animaciones de la esfera de Bloch."
+      },
+      {
+        "title": "Evolvium",
+        "desc": "Una biblioteca en Python que utiliza algoritmos genéticos para resolver problemas de optimización.\n\nEs sencilla, flexible y perfecta tanto para pruebas como para proyectos reales que requieren soluciones eficientes.",
+        "tools": [
+          "Python",
+          "Algoritmo Genetico",
+          "NumPy",
+          "Matplotlib"
+        ],
+        "githubLink": "https://github.com/Lrs50/Evolvium",
+        "websiteLink": "https://test.pypi.org/project/evolvium/",
+        "img": "/imgs/evolvium.webp",
+        "summary": "Una pequeña biblioteca de Python para optimización con algoritmos genéticos, publicada en TestPyPI."
+      },
+      {
+        "title": "Agente Autónomo con Algoritmos de Búsqueda",
+        "desc": "Simulación en la que un agente debe encontrar el mejor camino en un entorno con obstáculos.\n\nImplementé varios algoritmos de búsqueda, como A*, búsqueda voraz y evolución genética, todo visualizado de forma clara e intuitiva.",
+        "tools": [
+          "Unity",
+          "Csharp",
+          "Search Algorithm",
+          "Algoritmo Genetico"
+        ],
+        "githubLink": "https://github.com/Lrs50/Projeto_SI",
+        "websiteLink": "https://lrs50.github.io/Projeto_SI/WebGLBuild/",
+        "img": "/imgs/search_agent.webp",
+        "summary": "Un agente encuentra caminos entre obstáculos con A*, búsqueda voraz y algoritmos genéticos."
+      },
+      {
+        "title": "8 Reinas con Algoritmos Genéticos",
+        "desc": "Simulación visual del clásico problema de las 8 reinas usando algoritmos evolutivos.\n\nUna forma intuitiva y didáctica de comprender cómo las soluciones pueden evolucionar con el tiempo.",
+        "tools": [
+          "Csharp",
+          "Unity",
+          "Algoritmo Genetico"
+        ],
+        "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
+        "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
+        "img": "/imgs/8_queens.webp",
+        "summary": "Un algoritmo genético resuelve el problema de las 8 reinas, generación tras generación."
+      },
+      {
+        "title": "Generador de Sopas de Letras",
+        "desc": "Aplicación sencilla en Python para crear sopas de letras personalizadas.\n\nIdeal para docentes, estudiantes o cualquier persona que desee diseñar actividades educativas de manera ágil y fácil.",
+        "tools": [
+          "Python",
+          "Tkinter"
+        ],
+        "githubLink": "https://github.com/Lrs50/WordSearch",
+        "websiteLink": "",
+        "img": "/imgs/wordsearch.webp",
+        "summary": "Una aplicación de escritorio que crea sopas de letras personalizadas."
+      },
+      {
+        "title": "Ybý-Mokoĩ",
+        "desc": "Un RPG de acción en 2D inspirado en la mitología Tupi-Guaraní.\n\nEl jugador se enfrenta a criaturas legendarias, recolecta elementos como guaraná y açaí, y vive el relato del origen de la noche. Una experiencia educativa y entretenida que rinde homenaje a la cultura indígena.",
+        "tools": [
+          "Csharp",
+          "Unity"
+        ],
+        "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
+        "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
+        "img": "/imgs/game_unity.webp",
+        "summary": "Un RPG de acción 2D inspirado en la mitología tupí guaraní."
+      }
+    ],
+    "tryLive": "Probar en vivo",
+    "watch": "Ver video",
+    "package": "Ver paquete",
+    "details": "Leer más",
+    "code": "Código",
+    "prev": "Proyecto anterior",
+    "next": "Proyecto siguiente"
+  }
 }

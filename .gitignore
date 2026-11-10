@@ -27,3 +27,4 @@ target/
 .env.*.local
 # crash dumps from the shell
 *.stackdump
+specs.md

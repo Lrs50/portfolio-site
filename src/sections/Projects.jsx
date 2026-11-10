@@ -1,9 +1,8 @@
 import "keen-slider/keen-slider.min.css";
 import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
-import { BsBookmarkPlusFill, BsWhatsapp } from "react-icons/bs";
 import { createPortal } from "react-dom";
 import { useKeenSlider } from "keen-slider/react";
-import { useMediaQuery } from "react-responsive"
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import {
   SiApacheairflow,
   SiFastapi,
@@ -18,26 +17,20 @@ import {
   SiGooglegemini,
   SiMicrogenetics,
   SiPlotly,
+  SiNgrok,
+  SiUv,
+  SiPydantic,
 } from 'react-icons/si';
-import { FaGitAlt, FaPython, FaDocker, FaQuestionCircle } from 'react-icons/fa';
-import { TbSql, TbBrandGithubFilled, TbExternalLink } from 'react-icons/tb';
-import { LiaChartBarSolid } from 'react-icons/lia';
-import { BsGraphUpArrow } from 'react-icons/bs';
-import { MdOutlineSoupKitchen } from 'react-icons/md';
-import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
-import { Trans, useTranslation } from 'react-i18next';
-import { SiNgrok } from "react-icons/si";
-import { IoLogoWhatsapp } from "react-icons/io";
-import { HiOutlineChatBubbleLeftRight } from 'react-icons/hi2';
-import { FaDatabase } from "react-icons/fa";
-import { BsRegex } from "react-icons/bs";
-import { SiUv } from "react-icons/si";
-import { SiPydantic } from "react-icons/si";
-import { IoIosCodeDownload } from "react-icons/io";
+import { FaGitAlt, FaPython, FaDocker, FaQuestionCircle, FaDatabase } from 'react-icons/fa';
 import { FaMasksTheater } from "react-icons/fa6";
-import { TbBrandCSharp, TbAtom2 } from "react-icons/tb";
-import { MdScreenSearchDesktop } from "react-icons/md";
-import { TbBlocks } from "react-icons/tb";
+import { TbSql, TbBrandGithubFilled, TbExternalLink, TbBrandCSharp, TbAtom2, TbBlocks } from 'react-icons/tb';
+import { LiaChartBarSolid } from 'react-icons/lia';
+import { BsGraphUpArrow, BsRegex } from 'react-icons/bs';
+import { MdOutlineSoupKitchen, MdScreenSearchDesktop } from 'react-icons/md';
+import { IoLogoWhatsapp, IoIosCodeDownload } from "react-icons/io";
+import { HiOutlineChatBubbleLeftRight } from 'react-icons/hi2';
+import { useTranslation } from 'react-i18next';
+import Reveal from "../components/Reveal";
 
 const iconSources = {
   pennylane:{icon:TbAtom2, label: "PennyLane"},
@@ -75,10 +68,21 @@ const iconSources = {
   matplotlib:{ icon: BsGraphUpArrow, label: "Matplotlib" },
 };
 
+const toolKey = (tool) => tool.toLowerCase().replace(/\s+/g, '');
+const toolLabel = (tool) => iconSources[toolKey(tool)]?.label || tool;
+
+// The demo link says what it opens: a running app, a video or a package page.
+function useDemoLabel() {
+  const { t } = useTranslation();
+  return (url) => {
+    if (/youtube\.com|youtu\.be/.test(url)) return t("project.watch");
+    if (/pypi\.org/.test(url)) return t("project.package");
+    return t("project.tryLive");
+  };
+}
 
 // A title that stays within two lines: it starts at `max` px and shrinks one pixel at a time (down to `min`)
 // until the text fits. It re-fits when the text changes (language), when the width changes and when fonts finish loading.
-// line-clamp-2 stays as a last resort, so the box never grows past two lines.
 function FitTitle({ as: Tag = "h3", text, max, min, className = "", ...rest }) {
   const ref = useRef(null);
 
@@ -111,88 +115,107 @@ function FitTitle({ as: Tag = "h3", text, max, min, className = "", ...rest }) {
   );
 }
 
-function Project({ title = "", img = "",desc="",githubLink="", websiteLink="", tools=[]}) {
-  const [showDetails, setShowDetails] = useState(false);
+function ProjectLinks({ project, onDetails, openerRef, compact = false }) {
+  const { t } = useTranslation();
+  const demoLabel = useDemoLabel();
+  return (
+    <div className={`flex flex-wrap items-center gap-y-3 ${compact ? "gap-x-4 text-sm" : "gap-x-5"}`}>
+      {project.websiteLink && (
+        <a
+          href={project.websiteLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`inline-flex items-center gap-2 rounded-full bg-wine hover:bg-wineHover text-white font-semibold transition-colors ${compact ? "px-4 py-1.5 text-sm" : "px-5 py-2"}`}
+        >
+          {demoLabel(project.websiteLink)}
+          <TbExternalLink aria-hidden="true" />
+        </a>
+      )}
+      {project.githubLink && (
+        <a
+          href={project.githubLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-bone hover:text-white underline decoration-white/30 underline-offset-4 hover:decoration-white transition-colors"
+        >
+          <TbBrandGithubFilled aria-hidden="true" />
+          {t("project.code")}
+        </a>
+      )}
+      <button
+        ref={openerRef}
+        type="button"
+        onClick={onDetails}
+        aria-haspopup="dialog"
+        className="text-mist hover:text-white underline decoration-white/20 underline-offset-4 hover:decoration-white transition-colors"
+      >
+        {t("project.details")}
+      </button>
+    </div>
+  );
+}
+
+// Opens the long description in a dialog; keeps focus handling in one place.
+function useDetails() {
+  const [open, setOpen] = useState(false);
   const openerRef = useRef(null);
-  const closeDetails = () => {
-    setShowDetails(false);
+  const close = () => {
+    setOpen(false);
     openerRef.current?.focus();
   };
+  const { t } = useTranslation();
+  return { open, openerRef, show: () => setOpen(true), close, label: t("project.details") };
+}
+
+function ProjectCard({ project, index, revealed }) {
+  const details = useDetails();
+  const extra = project.tools.length - 4;
   return (
-    <>
-    <div
-      className="keen-slider__slide flex justify-center"
-      style={{ overflow: "visible" }}
-    >
-      <div
-        onPointerMove={(e) => {
-          const r = e.currentTarget.getBoundingClientRect();
-          e.currentTarget.style.setProperty("--x", `${e.clientX - r.left}px`);
-          e.currentTarget.style.setProperty("--y", `${e.clientY - r.top}px`);
-        }}
-        className="group relative w-full max-w-[300px] backdrop-blur-md bg-white/[0.04] border border-white/10 rounded-3xl
-        shadow-glass transition-transform duration-300 transform-gpu hover:scale-105 hover:z-30 z-10
-        px-3 pt-3 pb-0 rounded-br-none"
+    <div className="keen-slider__slide">
+      <article
+        style={{ animationDelay: `${250 + Math.min(index, 3) * 90}ms` }}
+        className={`group h-full flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-ink2/60 transition-colors duration-300 hover:border-white/25
+        ${revealed ? "animate-rise" : "opacity-0"}`}
       >
-        {/* soft light that follows the pointer */}
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 rounded-3xl rounded-br-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[radial-gradient(260px_circle_at_var(--x)_var(--y),rgba(255,111,174,0.12),transparent_70%)]" />
-        <div className="h-[3.8rem] flex items-center justify-center text-center px-0">
-          <FitTitle
-            text={title}
-            max={22}
-            min={13}
-            className="w-full text-white font-semibold tracking-wide leading-tight overflow-hidden"
-          />
-        </div>
-        <hr className="w-full border-t border-white/10 mb-10" />
-
-        <div className="relative mt-8 -mx-3" style={{ marginBottom: '-12px' }}>
-          <div className="absolute inset-0 -translate-y-6 scale-[0.92] rounded-3xl
-            bg-white/[0.05] backdrop-blur-md border border-white/10 z-0" />
-          <div className="absolute inset-0 -translate-y-3 scale-[0.96] rounded-3xl
-            bg-white/[0.08] backdrop-blur-md border border-white/10 z-0" />
-
-          <button
-          ref={openerRef}
+        <button
           type="button"
-          onClick={() => setShowDetails(true)}
+          onClick={details.show}
           aria-haspopup="dialog"
-          className="p-0 m-0 border-none bg-transparent appearance-none leading-none block"
+          aria-label={`${project.title}: ${details.label}`}
+          className="block border-b border-white/10"
         >
           <img
-            src={img}
-            alt={title}
+            src={project.img}
+            alt=""
             width="800"
             height="534"
             loading="lazy"
             decoding="async"
-            className="relative z-10 w-full rounded-3xl object-cover shadow-glass rounded-br-none block"
+            className="block w-full aspect-[3/2] object-cover transition-[filter] duration-300 group-hover:brightness-110"
           />
         </button>
-          <div className="absolute -bottom-9 -right-5 p-3 z-20">
-          <button type="button" onClick={() => setShowDetails(true)} aria-label={title} aria-haspopup="dialog">
-            <BsBookmarkPlusFill aria-hidden="true" className="text-glow w-16 h-16 transition hover:scale-125" />
-          </button>
+        <div className="flex flex-1 flex-col p-5">
+          <h3 className="font-display-sm font-bold text-bone text-[1.3rem] leading-tight line-clamp-2 min-h-[2.5em]">
+            {project.title}
+          </h3>
+          <p className="mt-2 flex-1 text-[0.95rem] leading-relaxed text-white/75 line-clamp-3">{project.summary}</p>
+          <ul className="mt-4 flex flex-wrap gap-x-3 gap-y-1 text-xs text-mist">
+            {project.tools.slice(0, 4).map((tool) => <li key={tool}>{toolLabel(tool)}</li>)}
+            {extra > 0 && <li>+{extra}</li>}
+          </ul>
+          <div className="mt-5 pt-4 border-t border-white/10">
+            <ProjectLinks project={project} onDetails={details.show} openerRef={details.openerRef} compact />
           </div>
         </div>
-      </div>
+      </article>
+      {details.open && <MoreDetails {...project} onClose={details.close} />}
     </div>
-    {showDetails && (
-      <MoreDetails
-        title={title}
-        desc={desc}
-        tools={tools}
-        githubLink={githubLink}
-        websiteLink={websiteLink}
-        onClose={closeDetails}
-      />
-    )}
-    </>
   );
 }
 
 function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "", tools = [], onClose }) {
   const { t } = useTranslation();
+  const demoLabel = useDemoLabel();
   const dialogRef = useRef(null);
   const closeRef = useRef(null);
   const onCloseRef = useRef(onClose);
@@ -228,11 +251,10 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
     };
   }, []);
 
-  // rendered straight into <body>: inside the section, the panel's backdrop-blur would make `fixed` relative to the panel,
-  // so the dark filter would cover only the Projects box and the navbar would stay on top
+  // rendered straight into <body> so `fixed` covers the whole page and the navbar
   return createPortal(
     <div
-      className="fixed inset-0 z-[999] bg-ink/70 backdrop-blur-sm flex justify-center items-center p-6"
+      className="fixed inset-0 z-[999] bg-ink/75 backdrop-blur-sm flex justify-center items-center p-6"
       onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
       <div
@@ -240,14 +262,14 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
         role="dialog"
         aria-modal="true"
         aria-labelledby="project-dialog-title"
-        className="relative bg-ink2 border border-white/10 text-white/80 rounded-3xl w-[92vw] desktop:w-[85vw] max-w-4xl max-h-[85vh] max-h-[85dvh] overflow-y-auto overscroll-contain p-6 shadow-glass"
+        className="relative bg-ink2 border border-white/10 text-white/80 rounded-2xl w-[92vw] desktop:w-[85vw] max-w-3xl max-h-[85vh] max-h-[85dvh] overflow-y-auto overscroll-contain p-6 desktop:p-10 shadow-glass"
       >
         <button
           ref={closeRef}
           type="button"
           onClick={onClose}
           aria-label={t("project.close")}
-          className="absolute -top-1 right-2 text-white/70 text-4xl hover:text-white"
+          className="absolute top-2 right-4 text-white/70 text-4xl leading-none hover:text-white"
         >
           <span aria-hidden="true">&times;</span>
         </button>
@@ -256,39 +278,30 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
           as="h2"
           id="project-dialog-title"
           text={title}
-          max={30}
-          min={15}
-          className="mb-5 px-4 text-center font-semibold leading-tight text-white"
+          max={36}
+          min={18}
+          className="mb-6 pr-8 font-display-sm font-bold leading-tight text-bone"
         />
 
-        <div className="mb-5">
-          <div className="flex items-center gap-2">
-            <p className="text-justify text-xs text-white/60">{t("project.tool")}</p>
-            <hr className="flex-grow border-t border-white/10" />
-          </div>
-
-          <div className="flex flex-wrap gap-2 justify-center">
+        <div className="mb-6">
+          <p className="text-sm text-mist mb-3">{t("project.tool")}</p>
+          <div className="flex flex-wrap gap-3">
             {tools.map((tool) => {
-              const toolKey = tool.toLowerCase().replace(/\s+/g, '');
-              const toolData = iconSources[toolKey];
-              const Icon = toolData?.icon || FaQuestionCircle;
-              const label = toolData?.label || tool;
-
+              const Icon = iconSources[toolKey(tool)]?.icon || FaQuestionCircle;
+              const label = toolLabel(tool);
               return (
                 <div key={tool} className="relative group flex flex-col items-center">
-                  <Icon role="img" aria-label={label} className="text-[25px] text-white/70 hover:text-white hover:scale-125 transition-transform duration-300 ease-in-out" />
-                  <div aria-hidden="true" className="absolute -bottom-6 opacity-0 group-hover:opacity-100 transition bg-ink border border-white/10 text-white text-xs px-2 py-1 rounded pointer-events-none whitespace-nowrap z-50">
+                  <Icon role="img" aria-label={label} className="text-[24px] text-white/70 group-hover:text-white transition-colors" />
+                  <div aria-hidden="true" className="absolute -bottom-7 opacity-0 group-hover:opacity-100 transition-opacity bg-ink border border-white/10 text-white text-xs px-2 py-1 rounded pointer-events-none whitespace-nowrap z-50">
                     {label}
                   </div>
                 </div>
               );
             })}
           </div>
-
-          <hr className="flex-grow border-t border-white/10 mt-4" />
         </div>
 
-        <p className="text-justify">
+        <p className="leading-relaxed max-w-[68ch]">
           {desc.split('\n').map((line, idx) => (
             <React.Fragment key={idx}>
               {line}
@@ -296,36 +309,23 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
             </React.Fragment>
           ))}
         </p>
-        
-        <hr className="flex-grow border-t border-white/10 my-4" />
 
-        <div className="flex items-center justify-start gap-4">
-          {githubLink && (
-            <a
-              href={githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-start gap-1 hover:scale-110 transition-transform duration-300 ease-in-out"
-            >
-              <TbBrandGithubFilled aria-hidden="true" className="text-white text-xl" />
-              <span className="text-white text-sm">{t("project.githublink")}</span>
-            </a>
-          )}
-
-          {websiteLink && (
-            <a
-              href={websiteLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-start gap-1 hover:scale-110 transition-transform duration-300 ease-in-out"
-            >
-              <TbExternalLink aria-hidden="true" className="text-white text-xl" />
-              <span className="text-white text-sm">{t("project.websitelink")}</span>
-            </a>
-          )}
-        </div>
-
-        {(githubLink || websiteLink) && (<hr className="flex-grow border-t border-white/10 mt-4" />)}
+        {(githubLink || websiteLink) && (
+          <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap items-center gap-6">
+            {websiteLink && (
+              <a href={websiteLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-wine hover:bg-wineHover text-white font-semibold px-5 py-2 transition-colors">
+                {demoLabel(websiteLink)}
+                <TbExternalLink aria-hidden="true" />
+              </a>
+            )}
+            {githubLink && (
+              <a href={githubLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-bone hover:text-white underline decoration-white/30 underline-offset-4">
+                <TbBrandGithubFilled aria-hidden="true" />
+                {t("project.code")}
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </div>,
     document.body
@@ -333,86 +333,72 @@ function MoreDetails({ title = "", desc = "", githubLink = "", websiteLink = "",
 }
 
 export default function Projects() {
+  const { t } = useTranslation();
+  const projects = t('project.projects', { returnObjects: true });
+  const [current, setCurrent] = useState(0);
+  const [revealed, setRevealed] = useState(false);
+  const sectionRef = useRef(null);
+  const [sliderRef, slider] = useKeenSlider({
+    loop: true,
+    renderMode: "performance",
+    dragSpeed: 0.6,
+    slides: { perView: 1.08, spacing: 16 },
+    breakpoints: {
+      "(min-width: 768px)": { slides: { perView: 2, spacing: 20 } },
+      "(min-width: 1100px)": { slides: { perView: 3, spacing: 24 } },
+      "(min-width: 1500px)": { slides: { perView: 4, spacing: 24 } },
+    },
+    slideChanged(s) {
+      setCurrent(s.track.details.rel);
+    },
+  });
 
+  // the cards rise in once, the first time the section is seen
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) { setRevealed(true); io.disconnect(); }
+    }, { threshold: 0.25 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
-    const { t } = useTranslation();
-    const projects = t('project.projects', { returnObjects: true });
+  const arrow = "grid place-items-center w-11 h-11 rounded-full border border-white/15 text-white/75 hover:text-white hover:border-white/40 transition-colors";
 
-    const isDesktop = useMediaQuery({ minWidth: 768 })
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const [sliderRef,slider] = useKeenSlider({
-        loop: true,
-        renderMode: "performance",
-        slides: {
-        perView: isDesktop? 4 : 1,
-        spacing: 15,
-
-        },
-        dragSpeed: 0.5,
-        slideChanged(s) {
-          setCurrentSlide(s.track.details.rel);
-        },
-    });
-    
-    return (
-        <div className="relative isolate justify-center px-3 overflow-x-clip">
-          {/* light pool under the carousel */}
-          <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[1100px] h-[520px] rounded-full bg-[radial-gradient(closest-side,rgba(167,139,250,0.14),rgba(226,54,127,0.08)_55%,transparent)]" />
-          </div>
-          {/* framed panel: dark glass lit from the top, a sibling of the About cards but not identical */}
-          <div className="w-full pt-16 pb-8 overflow-visible desktop:overflow-x-hidden rounded-3xl border border-white/10 shadow-glass backdrop-blur-md
-          bg-[radial-gradient(120%_70%_at_50%_0%,rgba(255,111,174,0.10),transparent_60%),linear-gradient(to_bottom,rgba(255,255,255,0.06),rgba(255,255,255,0.02))]">
-          <div className="-mt-10 mx-[40px]">
-              <h2 className="text-[clamp(1.875rem,9vw,3rem)] desktop:text-5xl text-center text-white font-medium font-inter [text-wrap:balance]">
-              <Trans
-              i18nKey="project.title"
-              components={{ 1: <span className="text-glow font-semibold">{t('project.title')}</span> }}
-              />
-              </h2>
-              <div className="relative" role="region" aria-roledescription="carousel" aria-label={t("nav.projects")}>
-
-              <button
-              type="button"
-              aria-label={t("project.next")}
-              className="absolute -right-10 top-1/2 transform -translate-y-1/2 z-10
-              hover:scale-125 transition-transform duration-300"
-              onClick={() => slider.current?.next()}>
-                <IoIosArrowForward aria-hidden="true" className="text-white/60 hover:text-white transition-colors text-7xl" />
-              </button>
-
-              <button
-              type="button"
-              aria-label={t("project.prev")}
-              className="absolute -left-10 top-1/2 transform -translate-y-1/2 z-10
-              hover:scale-125 transition-transform duration-300"
-              onClick={() => slider.current?.prev()}>
-                <IoIosArrowBack aria-hidden="true" className="text-white/60 hover:text-white transition-colors text-7xl" />
-              </button>
-
-              <div
-              ref={sliderRef}
-              className="keen-slider mt-12"
-              style={{ overflow: "visible" }}
-              >
-              {projects.map((proj, i) => (
-                  <Project key={i} title={proj.title} img={proj.img} desc={proj.desc} tools={proj.tools} githubLink={proj.githubLink} websiteLink={proj.websiteLink}/>
-              ))}
-              </div>
-              </div>
-
-          </div>
-            <div aria-hidden="true" className="flex flex-wrap items-center gap-1 justify-center mt-8">
-
-              {[...Array(projects.length)].map((_,i) => {
-                if (i===currentSlide){
-                  return <div key={i} className="rounded-full bg-glow w-7 h-2 transition-all"></div>
-                }
-                return <div key={i} className="rounded-full bg-white/25 justify-center w-2 h-2 transition-all"></div>
-            })}
-            </div>
-          </div>
+  return (
+    <div className="mx-auto w-full max-w-[1400px] min-[1920px]:max-w-[1680px] px-4 desktop:px-8 pt-8">
+    <Reveal>
+    <div ref={sectionRef} className="rounded-3xl border border-white/10 bg-white/[0.03] shadow-glass backdrop-blur-md p-6 desktop:p-10">
+      <div className="flex items-end justify-between gap-6">
+        <h2 className="font-display font-extrabold text-bone text-[clamp(2.25rem,7vw,3.5rem)] leading-none">
+          {t('project.title')}
+        </h2>
+        <div className="flex gap-3">
+          <button type="button" aria-label={t("project.prev")} className={arrow} onClick={() => slider.current?.prev()}>
+            <IoIosArrowBack aria-hidden="true" className="text-xl" />
+          </button>
+          <button type="button" aria-label={t("project.next")} className={arrow} onClick={() => slider.current?.next()}>
+            <IoIosArrowForward aria-hidden="true" className="text-xl" />
+          </button>
         </div>
+      </div>
 
-    );
+      <div role="region" aria-roledescription="carousel" aria-label={t("nav.projects")} className="mt-8">
+        <div ref={sliderRef} className="keen-slider">
+          {projects.map((p, i) => (
+            <ProjectCard key={p.githubLink || p.title} project={p} index={i} revealed={revealed} />
+          ))}
+        </div>
+      </div>
+
+      <div aria-hidden="true" className="mt-8 flex items-center gap-1.5">
+        {projects.map((_, i) => (
+          <span key={i} className={`h-1.5 rounded-full transition-all ${i === current ? "w-6 bg-rose" : "w-1.5 bg-white/25"}`} />
+        ))}
+      </div>
+    </div>
+    </Reveal>
+    </div>
+  );
 }

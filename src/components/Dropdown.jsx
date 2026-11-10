@@ -57,7 +57,7 @@ export default function Dropdown({label="Dropdown",options=[],onSelect,position=
 
             {/* Underline */}
             <span
-                className="absolute bottom-2 left-1/2 -translate-x-1/2 w-0 h-[3px] rounded-full bg-glow transition-all duration-500 group-hover:w-3/4"
+                className="absolute bottom-2 left-1/2 -translate-x-1/2 w-0 h-[3px] rounded-full bg-rose transition-all duration-500 group-hover:w-3/4"
             ></span>
             </button>
             {open && (
@@ -72,7 +72,7 @@ export default function Dropdown({label="Dropdown",options=[],onSelect,position=
                     {option}
 
                     <span
-                    className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-[3px] rounded-full bg-glow transition-all duration-500 group-hover:w-3/4"
+                    className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-[3px] rounded-full bg-rose transition-all duration-500 group-hover:w-3/4"
                     ></span>
 
                     </button>

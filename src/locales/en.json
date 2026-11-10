@@ -1,6 +1,6 @@
 {
   "nav": {
-    "portfolio": "My Portfolio",
+    "portfolio": "Lucas Reis",
     "home": "Home",
     "projects": "Projects",
     "about": "About",
@@ -9,20 +9,27 @@
     "resume": "Resume"
   },
   "hero": {
-    "hello": "HELLO!",
-    "introLine1": "I'm <1>Lucas</1>",
+    "introLine1": "Lucas Reis",
     "introLine2": "Computer Engineer",
-    "introLine3": "Building intelligent applications end-to-end",
+    "introLine3": "I build AI agents and data pipelines and take them from proof of concept to production.",
     "photoAlt": "Photo of Lucas Reis",
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "medium": "Medium",
     "whatsapp": "WhatsApp",
     "whatsappMessage": "Hi Lucas! I saw your portfolio and I'd like to talk to you about an opportunity.",
-    "email": "Email"
+    "email": "Email",
+    "proofLabel": "Worked and studied at",
+    "places": [
+      "Tractian",
+      "UFPE",
+      "CIn/Motorola",
+      "Sebrae",
+      "CNPq"
+    ]
   },
-  "aboutMe":{
-    "title":"About <1>Me</1>",
+  "aboutMe": {
+    "title": "About",
     "history": [
       "I'm Lucas Reis, a computer engineer graduated from the Federal University of Pernambuco (UFPE), passionate about building intelligent and scalable solutions.",
       "Originally from Bahia, I moved to Recife at the age of 18 to pursue my academic and professional goals in technology. Since then, I’ve gained solid experience in data science, MLOps, and machine learning engineering, handling projects from data collection to deployment.",
@@ -31,156 +38,228 @@
       "I’m comfortable working across the entire data project lifecycle and committed to delivering impactful, ethical, and technically sound solutions."
     ],
     "timeline": {
-        "title": "My <1>Trajectory</1>",
-        "events": [
-            {
-            "title": "Started Bachelor's in Computer Engineering",
-            "info": "August 2018",
-            "desc": "A dream began",
-            "side": "right"
-            },
-            {
-            "title": "Researcher at CIN/Motorola",
-            "info": "Jul 2020 – May 2021",
-            "desc": "5G network research, Linux automation with Docker & Bash, packet analysis.",
-            "side": "left"
-            },
-            {
-            "title": "PIBIC Researcher (CNPq)",
-            "info": "Sep 2022 – Oct 2023",
-            "desc": "Developed quantum/classical regression models with PyTorch and Pennylane.",
-            "side": "right"
-            },
-            {
-            "title": "VP at LACIQ (Quantum Comp. League)",
-            "info": "Jul 2023 – Nov 2024",
-            "desc": "Led events/workshops in quantum ML, mentored students, built academic partnerships.",
-            "side": "left"
-            },
-            {
-            "title": "Internship at Sebrae",
-            "info": "Nov 2024 – Apr 2025",
-            "desc": "Data analysis, ML models, API integration, ETL pipelines, technical reports.",
-            "side": "right"
-            },
-            {
-            "title": "Graduated!",
-            "info": "May 2025",
-            "desc": "Looking for my next big challenge.",
-            "side": "left"
-            },
-            {
-            "title": "AI Engineer at Tractian",
-            "info": "Jun 2025 – Oct 2026",
-            "desc": "Full-stack AI engineer: LLM agents + web-scraping data pipelines, from PoC to production.",
-            "side": "right"
-            },
-            {
-            "title": "Master's in Computer Science (UFPE)",
-            "info": "Aug 2025 – Present",
-            "desc": "Research in quantum computing, meta-learning and model selection.",
-            "side": "left"
-            }
-            ]
+      "title": "Trajectory",
+      "events": [
+        {
+          "title": "Started Bachelor's in Computer Engineering",
+          "info": "August 2018",
+          "desc": "Computer Engineering at UFPE.",
+          "side": "right"
+        },
+        {
+          "title": "Researcher at CIN/Motorola",
+          "info": "Jul 2020 – May 2021",
+          "desc": "5G network research, Linux automation with Docker & Bash, packet analysis.",
+          "side": "left"
+        },
+        {
+          "title": "PIBIC Researcher (CNPq)",
+          "info": "Sep 2022 – Oct 2023",
+          "desc": "Developed quantum/classical regression models with PyTorch and Pennylane.",
+          "side": "right"
+        },
+        {
+          "title": "VP at LACIQ (Quantum Comp. League)",
+          "info": "Jul 2023 – Nov 2024",
+          "desc": "Led events/workshops in quantum ML, mentored students, built academic partnerships.",
+          "side": "left"
+        },
+        {
+          "title": "Internship at Sebrae",
+          "info": "Nov 2024 – Apr 2025",
+          "desc": "Data analysis, ML models, API integration, ETL pipelines, technical reports.",
+          "side": "right"
+        },
+        {
+          "title": "Graduated in Computer Engineering",
+          "info": "May 2025",
+          "desc": "Bachelor's degree from UFPE.",
+          "side": "left"
+        },
+        {
+          "title": "AI Engineer at Tractian",
+          "info": "Jun 2025 – Oct 2026",
+          "desc": "Full-stack AI engineer: LLM agents + web-scraping data pipelines, from PoC to production.",
+          "side": "right"
+        },
+        {
+          "title": "Master's in Computer Science (UFPE)",
+          "info": "Aug 2025 – Present",
+          "desc": "Research in quantum computing, meta-learning and model selection.",
+          "side": "left"
         }
+      ]
+    }
   },
-    "contact": {
-    "title": "Got an awesome project idea or just want to connect?",
-    "highlight": "Let’s chat!",
+  "contact": {
+    "title": "Want to talk about a role or a project?",
+    "highlight": "Send me a message.",
     "placeholder": "Write your message...",
     "button": "Send",
     "emailPlaceholder": "Your email (optional)",
     "sending": "Sending...",
     "orEmail": "Or email me at",
-    "success": "Message sent successfully!",
-    "error": "Error sending the message!"
-    },
-    "project":{
-      "title": "My <1>Projects</1>",
-      "tool":"Tools",
-      "githublink":"Github Link",
-      "close": "Close",
-      "prev": "Previous project",
-      "next": "Next project",
-      "websitelink":"Project Website",
-  "projects": [
-    {
-      "title": "How Much Does Breakfast Cost?",
-      "desc": "Coffee and eggs have become more expensive...\n\nBut what about the rest of breakfast?\n\nThis project started with that question. I developed a complete solution to forecast, over the next 6 months, the prices of key breakfast foods. Everything was automated using machine learning, scraping, data visualization and APIs.",
-      "tools": [
-        "Python", "SQL", "Pandas", "NumPy", "ScikitLearn", "Airflow", "Git", "Docker", "Google Cloud", "FastAPI", "Streamlit", "Selenium", "BeautifulSoup", "Prophet", "Algoritmo Genetico", "Bash", "Gemini", "Plotly"
-      ],
-      "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
-      "websiteLink": "https://breakfast-forecast.streamlit.app/",
-      "img": "/imgs/breakfast_forecast.webp"
-    },
-    {
-      "title": "Industrial Product Scraper",
-      "desc": "An automated tool to extract and structure product data from industrial websites.\n\nIt turns unstructured and messy pages into clean, organized information ready for catalog systems and market analysis.",
-      "tools": ["Python", "UV", "Pydantic", "Regex", "Requests", "Playwright", "BeautifulSoup"],
-      "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
-      "websiteLink": "",
-      "img": "/imgs/industrial_scraper.webp"
-    },
-    {
-      "title": "Personal Finance Chatbot",
-      "desc": "A WhatsApp chatbot that helps you manage your finances through conversation.\n\nIt allows you to log expenses, track debts, set budgets, and get financial tips in a fast, simple, and accessible way.",
-      "tools": [
-        "Python", "FastAPI", "Ngrok", "Gemini", "Heyoo", "TinyDB", "Regex", "WhatsApp"
-      ],
-      "githubLink": "https://github.com/Lrs50/wpp-automation",
-      "websiteLink": "",
-      "img": "/imgs/wpp_bot.webp"
-    },
-    {
-      "title": "Quantum Dice",
-      "desc": "An interactive way to see quantum computing concepts at work.\n\nEvery random result comes from a simulated quantum circuit: a qubit is put in superposition with a Hadamard gate and measured, collapsing to 0 or 1. Rejection sampling avoids modulo bias.\n\nRoll dice, flip coins, draw groups and lottery winners, generate passwords, shuffle playlists and build color palettes, with Bloch sphere animations of each step.\n\nIt runs on a classical simulator, so the output is pseudo-random: an educational project, not a source of true randomness or for security-critical use.",
-      "tools": ["Python", "PennyLane", "Streamlit", "Plotly", "NumPy", "UV"],
-      "githubLink": "https://github.com/Lrs50/quantum-dice",
-      "websiteLink": "https://quantum-dice.streamlit.app",
-      "img": "/imgs/quantum_dice.webp"
-    },
-    {
-      "title": "Evolvium",
-      "desc": "A lightweight Python library that uses genetic algorithms to solve optimization problems.\n\nSimple to use and ideal for experimentation or real-world projects that need good solutions without exact formulas.",
-      "tools": ["Python", "Algoritmo Genetico", "NumPy", "Matplotlib"],
-      "githubLink": "https://github.com/Lrs50/Evolvium",
-      "websiteLink": "https://test.pypi.org/project/evolvium/",
-      "img": "/imgs/evolvium.webp"
-    },
-    {
-      "title": "Autonomous Agent with Search Algorithms",
-      "desc": "A simulation where an agent must find the best path in an environment full of obstacles.\n\nI implemented and compared different search strategies, including A*, greedy search, and even genetic algorithms, all within an intuitive visual interface.",
-      "tools": ["Unity", "Csharp", "Search Algorithm", "Algoritmo Genetico"],
-      "githubLink": "https://github.com/Lrs50/Projeto_SI",
-      "websiteLink": "https://lrs50.github.io/Projeto_SI/WebGLBuild/",
-      "img": "/imgs/search_agent.webp"
-    },
-    {
-      "title": "8 Queens with Genetic Algorithms",
-      "desc": "An interactive simulation of the classic 8 queens problem using genetic algorithms.\n\nIt’s a fun and visual way to understand how evolutionary algorithms build solutions over time.",
-      "tools": ["Csharp","Unity", "Algoritmo Genetico"],
-      "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
-      "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
-      "img": "/imgs/8_queens.webp"
-    },
-    {
-      "title": "Word Search Generator",
-      "desc": "A simple Python app to create personalized word search puzzles.\n\nPerfect for educators, students, or anyone looking to quickly build educational games and fun printable activities.",
-      "tools": ["Python", "Tkinter"],
-      "githubLink": "https://github.com/Lrs50/WordSearch",
-      "websiteLink": "",
-      "img": "/imgs/wordsearch.webp"
-    },
-    {
-      "title": "Ybý-Mokoĩ",
-      "desc": "A 2D action RPG inspired by Tupi-Guarani mythology.\n\nThe player battles legendary creatures, collects items like guaraná and açaí, and experiences the story behind the origin of night. A creative and educational way to celebrate Indigenous culture through engaging gameplay.",
-      "tools": ["Csharp","Unity"],
-      "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
-      "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
-      "img": "/imgs/game_unity.webp"
-    }
-  ]
-
-    }
+    "success": "Message sent.",
+    "error": "The message was not sent. Try again or email me directly."
+  },
+  "project": {
+    "title": "Projects",
+    "tool": "Tools",
+    "githublink": "Github Link",
+    "close": "Close",
+    "websitelink": "Project Website",
+    "projects": [
+      {
+        "title": "How Much Does Breakfast Cost?",
+        "desc": "Coffee and eggs have become more expensive...\n\nBut what about the rest of breakfast?\n\nThis project started with that question. I developed a complete solution to forecast, over the next 6 months, the prices of key breakfast foods. Everything was automated using machine learning, scraping, data visualization and APIs.",
+        "tools": [
+          "Python",
+          "SQL",
+          "Pandas",
+          "NumPy",
+          "ScikitLearn",
+          "Airflow",
+          "Git",
+          "Docker",
+          "Google Cloud",
+          "FastAPI",
+          "Streamlit",
+          "Selenium",
+          "BeautifulSoup",
+          "Prophet",
+          "Algoritmo Genetico",
+          "Bash",
+          "Gemini",
+          "Plotly"
+        ],
+        "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
+        "websiteLink": "https://breakfast-forecast.streamlit.app/",
+        "img": "/imgs/breakfast_forecast.webp",
+        "summary": "Forecasts Brazilian breakfast food prices six months ahead, from scraping to a live dashboard."
+      },
+      {
+        "title": "Industrial Product Scraper",
+        "desc": "An automated tool to extract and structure product data from industrial websites.\n\nIt turns unstructured and messy pages into clean, organized information ready for catalog systems and market analysis.",
+        "tools": [
+          "Python",
+          "UV",
+          "Pydantic",
+          "Regex",
+          "Requests",
+          "Playwright",
+          "BeautifulSoup"
+        ],
+        "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
+        "websiteLink": "",
+        "img": "/imgs/industrial_scraper.webp",
+        "summary": "Turns messy industrial product pages into clean, structured catalog data."
+      },
+      {
+        "title": "Personal Finance Chatbot",
+        "desc": "A WhatsApp chatbot that helps you manage your finances through conversation.\n\nIt allows you to log expenses, track debts, set budgets, and get financial tips in a fast, simple, and accessible way.",
+        "tools": [
+          "Python",
+          "FastAPI",
+          "Ngrok",
+          "Gemini",
+          "Heyoo",
+          "TinyDB",
+          "Regex",
+          "WhatsApp"
+        ],
+        "githubLink": "https://github.com/Lrs50/wpp-automation",
+        "websiteLink": "",
+        "img": "/imgs/wpp_bot.webp",
+        "summary": "A WhatsApp bot that logs expenses, debts and budgets from plain messages."
+      },
+      {
+        "title": "Quantum Dice",
+        "desc": "An interactive way to see quantum computing concepts at work.\n\nEvery random result comes from a simulated quantum circuit: a qubit is put in superposition with a Hadamard gate and measured, collapsing to 0 or 1. Rejection sampling avoids modulo bias.\n\nRoll dice, flip coins, draw groups and lottery winners, generate passwords, shuffle playlists and build color palettes, with Bloch sphere animations of each step.\n\nIt runs on a classical simulator, so the output is pseudo-random: an educational project, not a source of true randomness or for security-critical use.",
+        "tools": [
+          "Python",
+          "PennyLane",
+          "Streamlit",
+          "Plotly",
+          "NumPy",
+          "UV"
+        ],
+        "githubLink": "https://github.com/Lrs50/quantum-dice",
+        "websiteLink": "https://quantum-dice.streamlit.app",
+        "img": "/imgs/quantum_dice.webp",
+        "summary": "Dice, coins and draws from a simulated quantum circuit, with Bloch sphere animations."
+      },
+      {
+        "title": "Evolvium",
+        "desc": "A lightweight Python library that uses genetic algorithms to solve optimization problems.\n\nSimple to use and ideal for experimentation or real-world projects that need good solutions without exact formulas.",
+        "tools": [
+          "Python",
+          "Algoritmo Genetico",
+          "NumPy",
+          "Matplotlib"
+        ],
+        "githubLink": "https://github.com/Lrs50/Evolvium",
+        "websiteLink": "https://test.pypi.org/project/evolvium/",
+        "img": "/imgs/evolvium.webp",
+        "summary": "A small Python library for optimization with genetic algorithms, published on TestPyPI."
+      },
+      {
+        "title": "Autonomous Agent with Search Algorithms",
+        "desc": "A simulation where an agent must find the best path in an environment full of obstacles.\n\nI implemented and compared different search strategies, including A*, greedy search, and even genetic algorithms, all within an intuitive visual interface.",
+        "tools": [
+          "Unity",
+          "Csharp",
+          "Search Algorithm",
+          "Algoritmo Genetico"
+        ],
+        "githubLink": "https://github.com/Lrs50/Projeto_SI",
+        "websiteLink": "https://lrs50.github.io/Projeto_SI/WebGLBuild/",
+        "img": "/imgs/search_agent.webp",
+        "summary": "An agent finds paths through obstacles with A*, greedy search and genetic algorithms."
+      },
+      {
+        "title": "8 Queens with Genetic Algorithms",
+        "desc": "An interactive simulation of the classic 8 queens problem using genetic algorithms.\n\nIt’s a fun and visual way to understand how evolutionary algorithms build solutions over time.",
+        "tools": [
+          "Csharp",
+          "Unity",
+          "Algoritmo Genetico"
+        ],
+        "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
+        "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
+        "img": "/imgs/8_queens.webp",
+        "summary": "A genetic algorithm solves the 8 queens puzzle, one generation at a time."
+      },
+      {
+        "title": "Word Search Generator",
+        "desc": "A simple Python app to create personalized word search puzzles.\n\nPerfect for educators, students, or anyone looking to quickly build educational games and fun printable activities.",
+        "tools": [
+          "Python",
+          "Tkinter"
+        ],
+        "githubLink": "https://github.com/Lrs50/WordSearch",
+        "websiteLink": "",
+        "img": "/imgs/wordsearch.webp",
+        "summary": "A desktop app that builds custom word search puzzles."
+      },
+      {
+        "title": "Ybý-Mokoĩ",
+        "desc": "A 2D action RPG inspired by Tupi-Guarani mythology.\n\nThe player battles legendary creatures, collects items like guaraná and açaí, and experiences the story behind the origin of night. A creative and educational way to celebrate Indigenous culture through engaging gameplay.",
+        "tools": [
+          "Csharp",
+          "Unity"
+        ],
+        "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
+        "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
+        "img": "/imgs/game_unity.webp",
+        "summary": "A 2D action RPG inspired by Tupi Guarani mythology."
+      }
+    ],
+    "tryLive": "Try it live",
+    "watch": "Watch video",
+    "package": "View package",
+    "details": "Read more",
+    "code": "Code",
+    "prev": "Previous project",
+    "next": "Next project"
+  }
 }

@@ -22,13 +22,13 @@ function NavItem({ text, to, active }) {
     <div className="relative group p-1 rounded-full w-auto px-5">
       <a
         href={`#${to}`}
-        className={`text-white text-center whitespace-nowrap transition-all duration-300 ${
-          active ? "font-bold text-lg" : "font-normal text-base"
+        className={`text-center whitespace-nowrap text-base transition-colors ${
+          active ? "text-bone font-semibold" : "text-white/75 hover:text-white"
         }`}
       >
         {text}
       </a>
-      <span className="absolute bottom-1 left-1/2 -translate-x-1/2 h-[3px] w-0 rounded-full bg-glow shadow-glow transition-all duration-500 group-hover:w-3/4" />
+      <span className={`absolute bottom-1 left-1/2 -translate-x-1/2 h-[2px] rounded-full bg-rose transition-all duration-300 ${active ? "w-3/4" : "w-0 group-hover:w-3/4"}`} />
     </div>
   );
 }
@@ -67,7 +67,7 @@ export default function NavBar({ activeSection }) {
   return (
     <nav
       className={`fixed left-1/2 -translate-x-1/2 mx-auto flex items-center 
-        font-urbanist justify-between bg-ink/70 backdrop-blur-md border border-white/10 shadow-glass z-[100] transition-all duration-300 ease-in-out
+        justify-between bg-ink/70 backdrop-blur-md border border-white/10 shadow-glass z-[100] transition-all duration-300 ease-in-out
         ${isScrolled ? "w-full top-0 px-2" : "w-[95%] px-3 py-1 top-2 rounded-full"}`}
     >
       {/* Dropdown de idioma */}
@@ -82,7 +82,7 @@ export default function NavBar({ activeSection }) {
       />
 
       {/* Título central traduzido */}
-      <p className="flex-1 min-w-0 truncate text-center text-white text-[clamp(0.95rem,4.2vw,1.25rem)] px-1
+      <p className="flex-1 min-w-0 truncate text-center text-bone font-display-sm font-bold text-[clamp(0.95rem,4.2vw,1.25rem)] px-1
         desktop:flex-none desktop:text-left desktop:text-xl desktop:px-6 whitespace-nowrap">
         {t("nav.portfolio")}
       </p>

@@ -1,26 +1,26 @@
 import React, { useEffect, useRef, useState } from "react";
 import WordCloudSection from '../components/WordCloud';
-import { Trans, useTranslation } from 'react-i18next';
+import Reveal from '../components/Reveal';
+import { useTranslation } from 'react-i18next';
 
-function TimeLinePoint({ title = "", info = "", desc = "", side = "right", color = "glow" }) {
+function TimeLinePoint({ title = "", info = "", desc = "", side = "right", reached = true }) {
   const isLeft = side === "left";
   
   return (
     <div className={`relative py-4 group`}>
       {/* Centered Dot */}
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-3 h-3 flex items-center">
-        <div className={`bg-${color} w-full h-full rounded-full z-10 justify-center transition-transform duration-300 ease-in-out group-hover:scale-105`}></div>
-        <div className="absolute top-1/2 left-1/2 w-[150%] h-[150%] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dashed border-white/40 z-0"></div>
+        <div className={`w-full h-full rounded-full z-10 transition-colors duration-500 ${reached ? "bg-rose ring-2 ring-rose/30" : "bg-wine ring-2 ring-white/15"}`}></div>
       </div>
 
       {/* Text Block - positioned based on side */}
-      <div 
-        className={`absolute ${isLeft ? "right-[53%] text-right" : "left-[53%] text-left"} 
-        top-1/2 -translate-y-1/2 max-w-[90%] transition-transform duration-300 ease-in-out group-hover:scale-105`}
+      <div
+        className={`absolute ${isLeft ? "right-[53%] text-right" : "left-[53%] text-left"}
+        top-1/2 -translate-y-1/2 max-w-[90%]`}
       >
-        <span className="block text-[0.8rem] desktop:text-sm font-semibold text-white leading-tight">{title}</span>
-        <span className="block text-[0.6rem] desktop:text-xs text-white/60 leading-tight">{info}</span>
-        <div className={`mt-1 text-[0.7rem] desktop:text-[0.85rem] text-justify text-white/70 italic ${
+        <span className="block text-[0.8rem] desktop:text-sm font-semibold text-bone leading-tight">{title}</span>
+        <span className="block text-[0.7rem] desktop:text-xs text-mist leading-tight">{info}</span>
+        <div className={`mt-1 text-[0.75rem] desktop:text-[0.875rem] text-white/75 ${
           isLeft ? "border-r-2 pr-4" : "border-l-2 pl-4"
         } border-white/15`}>
           {desc}
@@ -37,6 +37,33 @@ function Timeline() {
   const { t } = useTranslation();
 
   const events = t("aboutMe.timeline.events", { returnObjects: true });
+
+  // the center line fills in rose as the visitor reads down; dots light up when the fill reaches them
+  const trackRef = useRef(null);
+  const [fill, setFill] = useState(0); // px from the top of the track
+  const [centers, setCenters] = useState([]);
+  useEffect(() => {
+    const reduced = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    let frame = 0;
+    const measure = () => {
+      frame = 0;
+      const track = trackRef.current;
+      if (!track) return;
+      const r = track.getBoundingClientRect();
+      const reading = window.innerHeight * 0.65;
+      setFill(reduced ? r.height : Math.max(0, Math.min(r.height, reading - r.top)));
+      setCenters([...timelineContentRef.current.children].map((c) => c.offsetTop + c.offsetHeight / 2));
+    };
+    const onScroll = () => { if (!frame) frame = requestAnimationFrame(measure); };
+    measure();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, [gap]);
 
   useEffect(() => {
     const updateGap = () => {
@@ -91,20 +118,17 @@ function Timeline() {
 
   return (
     <section 
-      className="flex flex-col items-center w-full h-full mt-3 px-2" 
+      className="flex flex-col items-center w-full h-full px-2" 
       ref={containerRef}
-      style={{ minHeight: '100vh' }} // Ensure container has height
     >
-      <h2 className="text-[clamp(1.875rem,9vw,3rem)] desktop:text-5xl text-center text-white font-medium font-inter mb-8 [text-wrap:balance]">
-        <Trans
-          i18nKey="aboutMe.timeline.title"
-          components={{ 1: <span className="text-glow font-semibold">{t('aboutMe.timeline.title')}</span> }}
-          />
+      <h2 className="self-start font-display font-extrabold text-bone text-[clamp(2.25rem,7vw,3.5rem)] leading-none mb-8">
+        {t('aboutMe.timeline.title')}
       </h2>
 
-      <div className="relative w-full max-w-3xl my-5 flex-grow">
-        {/* Vertical dashed line */}
+      <div ref={trackRef} className="relative w-full max-w-3xl my-5 flex-grow">
+        {/* Vertical dashed line, and the rose fill that follows the reader */}
         <div className="absolute left-1/2 top-0 bottom-0 w-0 border-l-2 border-dashed border-white/25 -translate-x-[1px]" />
+        <div aria-hidden="true" className="absolute left-1/2 top-0 w-[2px] -translate-x-[1px] bg-gradient-to-b from-rose/0 via-rose/70 to-rose" style={{ height: fill }} />
 
         {/* Timeline points */}
         <div ref={timelineContentRef} className="flex flex-col" style={{ gap: `${gap}px` }}>
@@ -115,7 +139,7 @@ function Timeline() {
               info={event.info}
               desc={event.desc}
               side={event.side}
-              color="glow"
+              reached={centers[i] === undefined || centers[i] <= fill}
             />
           ))}
         </div>
@@ -131,27 +155,24 @@ export default function AboutMe() {
 
   return (
     <div className="relative isolate w-full">
-      {/* violet light behind the two cards */}
+      {/* faint wine light behind the two cards */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute left-1/4 top-1/3 -translate-x-1/2 w-[900px] h-[700px] rounded-full bg-[radial-gradient(closest-side,rgba(167,139,250,0.12),transparent)]" />
-        <div className="absolute right-0 top-1/2 w-[800px] h-[600px] rounded-full bg-[radial-gradient(closest-side,rgba(226,54,127,0.10),transparent)]" />
+        <div className="absolute right-0 top-1/2 w-[800px] h-[600px] rounded-full bg-[radial-gradient(closest-side,rgba(112,20,56,0.18),transparent)]" />
       </div>
-      <div className="p-3">
-      <div className=" mx-auto grid grid-cols-1 desktop:w-full desktop:grid-cols-2 gap-3">
+      <div className="mx-auto w-full max-w-[1400px] min-[1920px]:max-w-[1680px] px-4 desktop:px-8 pt-6 desktop:pt-8">
+      <div className="grid grid-cols-1 desktop:grid-cols-2 gap-6 desktop:gap-8">
         
         {/* About Me block */}
-        <div className="bg-white/[0.04] border border-white/10 backdrop-blur-md rounded-3xl shadow-glass p-8">
-          <h2 className="text-[clamp(1.875rem,9vw,3rem)] desktop:text-5xl text-center text-white font-medium font-inter mt-3 mb-4 [text-wrap:balance]">
-              <Trans
-              i18nKey="aboutMe.title"
-              components={{ 1: <span className="text-glow font-semibold">{t('aboutMe.title')}</span> }}
-              />
+        <Reveal className="h-full">
+        <div className="h-full rounded-3xl border border-white/10 bg-white/[0.03] shadow-glass backdrop-blur-md p-6 desktop:p-10">
+          <h2 className="font-display font-extrabold text-bone text-[clamp(2.25rem,7vw,3.5rem)] leading-none mb-8">
+              {t('aboutMe.title')}
           </h2>
 
           {history.map((paragraph, i) => (
             <p
               key={i}
-              className="text-base text-white/80 text-justify leading-relaxed mb-4"
+              className="text-base text-white/80 leading-relaxed mb-4 max-w-[68ch]"
             >
               {paragraph}
             </p>
@@ -159,11 +180,14 @@ export default function AboutMe() {
 
           <WordCloudSection />
         </div>
+        </Reveal>
 
         {/* Timeline block */}
-        <div className="bg-white/[0.04] border border-white/10 backdrop-blur-md rounded-3xl shadow-glass p-8">
+        <Reveal delay={120} className="h-full">
+        <div className="h-full rounded-3xl border border-white/10 bg-white/[0.03] shadow-glass backdrop-blur-md p-6 desktop:p-10 flex">
           <Timeline />
         </div>
+        </Reveal>
       </div>
     </div>
     </div>

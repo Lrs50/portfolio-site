@@ -65,13 +65,20 @@ function WaxShapes({ fill }) {
   );
 }
 
+// The wax leans toward the pointer: the parent sets --px and --py (-1 to 1) on a wrapping element.
+// With reduced motion the lean is switched off.
+const LEAN = {
+  transform: "translate(calc(var(--px, 0) * 26px), calc(var(--py, 0) * 12px))",
+  transition: "transform 1.6s cubic-bezier(0.2, 0.7, 0.2, 1)",
+};
+
 export default function LavaDome({ className = "" }) {
   return (
     <svg
       viewBox="0 0 1200 600"
       aria-hidden="true"
       focusable="false"
-      className={`drop-shadow-[0_0_50px_rgba(226,54,127,0.45)] ${className}`}
+      className={`drop-shadow-[0_0_40px_rgba(112,20,56,0.55)] ${className}`}
     >
       <defs>
         <clipPath id="lava-glass">
@@ -85,13 +92,13 @@ export default function LavaDome({ className = "" }) {
           <stop offset="1" stopColor="#12040c" />
         </radialGradient>
 
-        {/* each wax shape: hot core, magenta body, wine rim */}
+        {/* each wax shape: warm rose core, wine body, dark rim */}
         <radialGradient id="lava-wax" cx="0.42" cy="0.38" r="0.66">
-          <stop offset="0" stopColor="#ffb3d6" />
-          <stop offset="0.28" stopColor="#ff5aa0" />
-          <stop offset="0.62" stopColor="#c81e6a" />
-          <stop offset="0.88" stopColor="#7e1240" />
-          <stop offset="1" stopColor="#5a0c2e" />
+          <stop offset="0" stopColor="#e6a3bd" />
+          <stop offset="0.3" stopColor="#b8436f" />
+          <stop offset="0.62" stopColor="#8a1a47" />
+          <stop offset="0.88" stopColor="#5a0f30" />
+          <stop offset="1" stopColor="#3f0a22" />
         </radialGradient>
 
         <linearGradient id="lava-sheen" x1="0" y1="0" x2="1" y2="0">
@@ -113,16 +120,18 @@ export default function LavaDome({ className = "" }) {
       <g clipPath="url(#lava-glass)">
         {/* dark glass with a faint tint of the wax colour */}
         <rect width="1200" height="600" fill="url(#lava-bg)" />
-        <rect width="1200" height="600" fill="#c2185b" opacity="0.08" />
+        <rect width="1200" height="600" fill="#701438" opacity="0.10" />
 
-        {/* light the wax gives off into the glass */}
-        <g filter="url(#lava-glow)" opacity="0.45">
-          <WaxShapes fill="#ff4f9a" />
-        </g>
+        <g style={LEAN} className="motion-reduce:![transform:none]">
+          {/* light the wax gives off into the glass */}
+          <g filter="url(#lava-glow)" opacity="0.4">
+            <WaxShapes fill="#a3305f" />
+          </g>
 
-        {/* the wax itself */}
-        <g filter="url(#lava-goo)">
-          <WaxShapes fill="url(#lava-wax)" />
+          {/* the wax itself */}
+          <g filter="url(#lava-goo)">
+            <WaxShapes fill="url(#lava-wax)" />
+          </g>
         </g>
 
         {/* glass sheen on the left */}
@@ -130,7 +139,7 @@ export default function LavaDome({ className = "" }) {
       </g>
 
       {/* thin bright rim so it reads as glass */}
-      <path d="M8,600 A592,592 0 0 1 1192,600" fill="none" stroke="#ff9cc8" strokeOpacity="0.35" strokeWidth="4" />
+      <path d="M8,600 A592,592 0 0 1 1192,600" fill="none" stroke="#d58aa6" strokeOpacity="0.28" strokeWidth="3" />
     </svg>
   );
 }

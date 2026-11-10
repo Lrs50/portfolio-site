@@ -1,6 +1,6 @@
 {
   "nav": {
-    "portfolio": "私のポートフォリオ",
+    "portfolio": "Lucas Reis",
     "home": "ホーム",
     "projects": "プロジェクト",
     "about": "概要",
@@ -9,34 +9,41 @@
     "resume": "履歴書"
   },
   "hero": {
-    "hello": "こんにちは！",
-    "introLine1": "私は<1>ルーカス</1>です",
+    "introLine1": "Lucas Reis",
     "introLine2": "コンピューターエンジニア",
-    "introLine3": "インテリジェントなアプリケーションをエンドツーエンドで構築します",
+    "introLine3": "AIエージェントとデータパイプラインを構築し、概念実証から本番運用まで届けています。",
     "photoAlt": "ルーカス・レイスの写真",
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "medium": "Medium",
     "whatsapp": "WhatsApp",
     "whatsappMessage": "こんにちは、ルーカスさん。ポートフォリオを拝見しました。ある機会についてお話しできればと思います。",
-    "email": "メール"
+    "email": "メール",
+    "proofLabel": "経歴",
+    "places": [
+      "Tractian",
+      "UFPE",
+      "CIn/Motorola",
+      "Sebrae",
+      "CNPq"
+    ]
   },
   "aboutMe": {
-    "title": "<1>私</1>について",
+    "title": "自己紹介",
     "history": [
-  "私はルーカス・レイスです。ペルナンブーコ連邦大学（UFPE）でコンピューター工学を学び、実用的かつインテリジェントな技術ソリューションの開発に情熱を注いでいます。",
-  "ブラジル・バイーア州出身で、18歳のときにレシフェに移り、技術分野での学術的および職業的キャリアを追求してきました。これまでに、データサイエンス、MLOps、機械学習エンジニアリングの分野で多くの経験を積んできました。",
-  "学部時代には、CIN/Motorolaとの共同プロジェクトとして5Gネットワークの研究に参加し、PIBIC奨学金を通じて量子ニューラルネットワークの研究も行いました。また、量子計算学術リーグ（LACIQ）の副会長として、産業界との橋渡しも経験しました。",
-  "Tractianでは、産業AIを支えるデータ基盤に取り組むAIエンジニアとして働きました。担当はフルスタックで、Webスクレイピングとデータパイプライン、LLMによるデータ拡充、AIエージェントを構築し、概念実証から本番まで進めました。現在はUFPEでコンピュータサイエンスの修士課程を修了間近で、量子コンピューティング、メタ学習、モデル選択を研究しています。",
-  "プロジェクトの初期段階から実装までを一貫して担当できる柔軟性と責任感を持ち、現実的で価値ある技術ソリューションの提供を目指しています。"
-   ],
+      "私はルーカス・レイスです。ペルナンブーコ連邦大学（UFPE）でコンピューター工学を学び、実用的かつインテリジェントな技術ソリューションの開発に情熱を注いでいます。",
+      "ブラジル・バイーア州出身で、18歳のときにレシフェに移り、技術分野での学術的および職業的キャリアを追求してきました。これまでに、データサイエンス、MLOps、機械学習エンジニアリングの分野で多くの経験を積んできました。",
+      "学部時代には、CIN/Motorolaとの共同プロジェクトとして5Gネットワークの研究に参加し、PIBIC奨学金を通じて量子ニューラルネットワークの研究も行いました。また、量子計算学術リーグ（LACIQ）の副会長として、産業界との橋渡しも経験しました。",
+      "Tractianでは、産業AIを支えるデータ基盤に取り組むAIエンジニアとして働きました。担当はフルスタックで、Webスクレイピングとデータパイプライン、LLMによるデータ拡充、AIエージェントを構築し、概念実証から本番まで進めました。現在はUFPEでコンピュータサイエンスの修士課程を修了間近で、量子コンピューティング、メタ学習、モデル選択を研究しています。",
+      "プロジェクトの初期段階から実装までを一貫して担当できる柔軟性と責任感を持ち、現実的で価値ある技術ソリューションの提供を目指しています。"
+    ],
     "timeline": {
-      "title": "私の<1>軌跡</1>",
+      "title": "経歴",
       "events": [
         {
           "title": "コンピューター工学の学士課程を開始",
           "info": "2018年8月",
-          "desc": "夢が始まりました",
+          "desc": "UFPEでコンピュータ工学を専攻。",
           "side": "right"
         },
         {
@@ -64,9 +71,9 @@
           "side": "right"
         },
         {
-          "title": "卒業！",
+          "title": "コンピュータ工学科を卒業",
           "info": "2025年5月",
-          "desc": "次の大きな挑戦を探しています。",
+          "desc": "UFPEで学士号を取得。",
           "side": "left"
         },
         {
@@ -85,103 +92,174 @@
     }
   },
   "contact": {
-    "title": "素晴らしいプロジェクトのアイデアがありますか？それともただつながりたいですか？",
-    "highlight": "お話ししましょう！",
+    "title": "採用やプロジェクトについて話しませんか？",
+    "highlight": "メッセージを送る。",
     "placeholder": "メッセージを入力してください...",
     "button": "送信",
     "emailPlaceholder": "メールアドレス（任意）",
     "sending": "送信中...",
     "orEmail": "または次のアドレスへ",
-    "success": "メッセージが正常に送信されました！",
-    "error": "メッセージの送信中にエラーが発生しました！"
+    "success": "メッセージを送信しました。",
+    "error": "メッセージを送信できませんでした。もう一度試すか、メールでご連絡ください。"
   },
   "project": {
-  "title": "私の<1>プロジェクト</1>",
-  "tool": "ツール",
-  "githublink": "GitHubリンク",
-  "close": "閉じる",
-  "prev": "前のプロジェクト",
-  "next": "次のプロジェクト",
-  "websitelink": "プロジェクトサイト",
-  "projects": [
-    {
-      "title": "朝食の値段はどれくらい？",
-      "desc": "コーヒーと卵の価格が大きく上昇しました\n\nでは、他の朝食食品はどうでしょうか？\n\nこの疑問からプロジェクトが始まりました。主要な朝食食材の価格を今後6ヶ月間予測するシステムを構築し、機械学習やスクレイピング、可視化、API連携を使って完全に自動化しています。",
-      "tools": [
-        "Python", "SQL", "Pandas", "NumPy", "ScikitLearn", "Airflow", "Git", "Docker", "Google Cloud", "FastAPI", "Streamlit", "Selenium", "BeautifulSoup", "Prophet", "Algoritmo Genetico", "Bash", "Gemini", "Plotly"
-      ],
-      "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
-      "websiteLink": "https://breakfast-forecast.streamlit.app/",
-      "img": "/imgs/breakfast_forecast.webp"
-    },
-    {
-      "title": "工業製品データスクレーパー",
-      "desc": "工業製品に関するデータを自動で収集・整理するツールです。\n\n構造化されていないウェブページから、分析やカタログ登録に使えるクリーンな情報を抽出できます。",
-      "tools": ["Python", "UV", "Pydantic", "Regex", "Requests", "Playwright", "BeautifulSoup"],
-      "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
-      "websiteLink": "",
-      "img": "/imgs/industrial_scraper.webp"
-    },
-    {
-      "title": "個人向けファイナンスチャットボット",
-      "desc": "WhatsAppで使えるファイナンスボットです。日々の会話感覚で、支出の記録、借金の管理、予算の設定、ちょっとした疑問の解決までサポートします。\n\nシンプルで実用的、誰でもすぐに使えます。",
-      "tools": [
-        "Python", "FastAPI", "Ngrok", "Gemini", "Heyoo", "TinyDB", "Regex", "WhatsApp"
-      ],
-      "githubLink": "https://github.com/Lrs50/wpp-automation",
-      "websiteLink": "",
-      "img": "/imgs/wpp_bot.webp"
-    },
-    {
-      "title": "量子サイコロ",
-      "desc": "量子コンピューティングの概念を実際に動かして確かめられるインタラクティブなアプリです。\n\nすべての乱数結果は、シミュレートされた量子回路から得られます。量子ビットをアダマールゲートで重ね合わせ状態にして測定し、0か1に収縮させます。棄却サンプリングによりモジュロバイアスを避けています。\n\nサイコロ、コイン投げ、グループ分け、くじ引き、パスワード生成、プレイリストのシャッフル、カラーパレット作成ができ、各ステップをブロッホ球のアニメーションで表示します。\n\n古典的なシミュレーター上で動作するため、出力は擬似乱数です。教育目的のプロジェクトであり、真の乱数源ではなく、セキュリティが重要な用途には向きません。",
-      "tools": ["Python", "PennyLane", "Streamlit", "Plotly", "NumPy", "UV"],
-      "githubLink": "https://github.com/Lrs50/quantum-dice",
-      "websiteLink": "https://quantum-dice.streamlit.app",
-      "img": "/imgs/quantum_dice.webp"
-    },
-    {
-      "title": "Evolvium",
-      "desc": "Pythonで開発された遺伝的アルゴリズムライブラリです。\n\n使いやすく柔軟で、最適化問題へのアプローチや実験・研究に最適です。",
-      "tools": ["Python", "Algoritmo Genetico", "NumPy", "Matplotlib"],
-      "githubLink": "https://github.com/Lrs50/Evolvium",
-      "websiteLink": "https://test.pypi.org/project/evolvium/",
-      "img": "/imgs/evolvium.webp"
-    },
-    {
-      "title": "探索アルゴリズムによる自律エージェント",
-      "desc": "障害物のある環境で、最適な経路を見つけるエージェントのシミュレーションです。\n\nA*や貪欲法、遺伝的アルゴリズムなど複数の手法を視覚的に比較しながら試すことができます。",
-      "tools": ["Unity", "Csharp", "Search Algorithm", "Algoritmo Genetico"],
-      "githubLink": "https://github.com/Lrs50/Projeto_SI",
-      "websiteLink": "https://lrs50.github.io/Projeto_SI/WebGLBuild/",
-      "img": "/imgs/search_agent.webp"
-    },
-    {
-      "title": "遺伝的アルゴリズムで解く8クイーン問題",
-      "desc": "クラシックな8クイーン問題を、遺伝的アルゴリズムで視覚的に解くシミュレーションです。\n\n進化の仕組みを学びたい人やAIの直感的な理解に役立ちます。",
-      "tools": ["Csharp","Unity", "Algoritmo Genetico"],
-      "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
-      "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
-      "img": "/imgs/8_queens.webp"
-    },
-    {
-      "title": "ワードサーチ生成ツール",
-      "desc": "任意の単語リストからオリジナルのワードサーチ（言葉探し）を作成できるPythonアプリです。\n\n教育やレクリエーション用途に便利で、使い方もとても簡単です。",
-      "tools": ["Python", "Tkinter"],
-      "githubLink": "https://github.com/Lrs50/WordSearch",
-      "websiteLink": "",
-      "img": "/imgs/wordsearch.webp"
-    },
-    {
-      "title": "Ybý-Mokoĩ",
-      "desc": "トゥピ・グアラニ神話にインスパイアされた2DアクションRPGです。\n\n伝説の生物と戦い、グアラナやアサイーなどのアイテムを集めながら「夜の起源」の物語を体験します。先住民族文化を楽しく学べる作品です。",
-      "tools": ["Csharp","Unity"],
-      "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
-      "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
-      "img": "/imgs/game_unity.webp"
-    }
-  ]
-}
-
-
+    "title": "プロジェクト",
+    "tool": "ツール",
+    "githublink": "GitHubリンク",
+    "close": "閉じる",
+    "websitelink": "プロジェクトサイト",
+    "projects": [
+      {
+        "title": "朝食の値段はどれくらい？",
+        "desc": "コーヒーと卵の価格が大きく上昇しました\n\nでは、他の朝食食品はどうでしょうか？\n\nこの疑問からプロジェクトが始まりました。主要な朝食食材の価格を今後6ヶ月間予測するシステムを構築し、機械学習やスクレイピング、可視化、API連携を使って完全に自動化しています。",
+        "tools": [
+          "Python",
+          "SQL",
+          "Pandas",
+          "NumPy",
+          "ScikitLearn",
+          "Airflow",
+          "Git",
+          "Docker",
+          "Google Cloud",
+          "FastAPI",
+          "Streamlit",
+          "Selenium",
+          "BeautifulSoup",
+          "Prophet",
+          "Algoritmo Genetico",
+          "Bash",
+          "Gemini",
+          "Plotly"
+        ],
+        "githubLink": "https://github.com/Lrs50/breakfast-forecast?tab=readme-ov-file",
+        "websiteLink": "https://breakfast-forecast.streamlit.app/",
+        "img": "/imgs/breakfast_forecast.webp",
+        "summary": "ブラジルの朝食食品の価格を6か月先まで予測。スクレイピングからライブダッシュボードまで。"
+      },
+      {
+        "title": "工業製品データスクレーパー",
+        "desc": "工業製品に関するデータを自動で収集・整理するツールです。\n\n構造化されていないウェブページから、分析やカタログ登録に使えるクリーンな情報を抽出できます。",
+        "tools": [
+          "Python",
+          "UV",
+          "Pydantic",
+          "Regex",
+          "Requests",
+          "Playwright",
+          "BeautifulSoup"
+        ],
+        "githubLink": "https://github.com/Lrs50/industrial-product-scraper",
+        "websiteLink": "",
+        "img": "/imgs/industrial_scraper.webp",
+        "summary": "乱雑な産業製品ページを、整理された構造化カタログデータに変換します。"
+      },
+      {
+        "title": "個人向けファイナンスチャットボット",
+        "desc": "WhatsAppで使えるファイナンスボットです。日々の会話感覚で、支出の記録、借金の管理、予算の設定、ちょっとした疑問の解決までサポートします。\n\nシンプルで実用的、誰でもすぐに使えます。",
+        "tools": [
+          "Python",
+          "FastAPI",
+          "Ngrok",
+          "Gemini",
+          "Heyoo",
+          "TinyDB",
+          "Regex",
+          "WhatsApp"
+        ],
+        "githubLink": "https://github.com/Lrs50/wpp-automation",
+        "websiteLink": "",
+        "img": "/imgs/wpp_bot.webp",
+        "summary": "普段のメッセージから支出、借金、予算を記録するWhatsAppボット。"
+      },
+      {
+        "title": "量子サイコロ",
+        "desc": "量子コンピューティングの概念を実際に動かして確かめられるインタラクティブなアプリです。\n\nすべての乱数結果は、シミュレートされた量子回路から得られます。量子ビットをアダマールゲートで重ね合わせ状態にして測定し、0か1に収縮させます。棄却サンプリングによりモジュロバイアスを避けています。\n\nサイコロ、コイン投げ、グループ分け、くじ引き、パスワード生成、プレイリストのシャッフル、カラーパレット作成ができ、各ステップをブロッホ球のアニメーションで表示します。\n\n古典的なシミュレーター上で動作するため、出力は擬似乱数です。教育目的のプロジェクトであり、真の乱数源ではなく、セキュリティが重要な用途には向きません。",
+        "tools": [
+          "Python",
+          "PennyLane",
+          "Streamlit",
+          "Plotly",
+          "NumPy",
+          "UV"
+        ],
+        "githubLink": "https://github.com/Lrs50/quantum-dice",
+        "websiteLink": "https://quantum-dice.streamlit.app",
+        "img": "/imgs/quantum_dice.webp",
+        "summary": "シミュレーションした量子回路によるサイコロ、コイン、抽選。ブロッホ球のアニメーション付き。"
+      },
+      {
+        "title": "Evolvium",
+        "desc": "Pythonで開発された遺伝的アルゴリズムライブラリです。\n\n使いやすく柔軟で、最適化問題へのアプローチや実験・研究に最適です。",
+        "tools": [
+          "Python",
+          "Algoritmo Genetico",
+          "NumPy",
+          "Matplotlib"
+        ],
+        "githubLink": "https://github.com/Lrs50/Evolvium",
+        "websiteLink": "https://test.pypi.org/project/evolvium/",
+        "img": "/imgs/evolvium.webp",
+        "summary": "遺伝的アルゴリズムによる最適化のための小さなPythonライブラリ。TestPyPIで公開。"
+      },
+      {
+        "title": "探索アルゴリズムによる自律エージェント",
+        "desc": "障害物のある環境で、最適な経路を見つけるエージェントのシミュレーションです。\n\nA*や貪欲法、遺伝的アルゴリズムなど複数の手法を視覚的に比較しながら試すことができます。",
+        "tools": [
+          "Unity",
+          "Csharp",
+          "Search Algorithm",
+          "Algoritmo Genetico"
+        ],
+        "githubLink": "https://github.com/Lrs50/Projeto_SI",
+        "websiteLink": "https://lrs50.github.io/Projeto_SI/WebGLBuild/",
+        "img": "/imgs/search_agent.webp",
+        "summary": "A*、貪欲法、遺伝的アルゴリズムで障害物の間の経路を見つけるエージェント。"
+      },
+      {
+        "title": "遺伝的アルゴリズムで解く8クイーン問題",
+        "desc": "クラシックな8クイーン問題を、遺伝的アルゴリズムで視覚的に解くシミュレーションです。\n\n進化の仕組みを学びたい人やAIの直感的な理解に役立ちます。",
+        "tools": [
+          "Csharp",
+          "Unity",
+          "Algoritmo Genetico"
+        ],
+        "githubLink": "https://github.com/Lrs50/Solving-8-Queens-with-genetic-algorithms",
+        "websiteLink": "https://lrs50.github.io/Solving-8-Queens-with-genetic-algorithms/WebGL%20Player/",
+        "img": "/imgs/8_queens.webp",
+        "summary": "遺伝的アルゴリズムが世代ごとに8クイーン問題を解いていきます。"
+      },
+      {
+        "title": "ワードサーチ生成ツール",
+        "desc": "任意の単語リストからオリジナルのワードサーチ（言葉探し）を作成できるPythonアプリです。\n\n教育やレクリエーション用途に便利で、使い方もとても簡単です。",
+        "tools": [
+          "Python",
+          "Tkinter"
+        ],
+        "githubLink": "https://github.com/Lrs50/WordSearch",
+        "websiteLink": "",
+        "img": "/imgs/wordsearch.webp",
+        "summary": "オリジナルの単語探しパズルを作るデスクトップアプリ。"
+      },
+      {
+        "title": "Ybý-Mokoĩ",
+        "desc": "トゥピ・グアラニ神話にインスパイアされた2DアクションRPGです。\n\n伝説の生物と戦い、グアラナやアサイーなどのアイテムを集めながら「夜の起源」の物語を体験します。先住民族文化を楽しく学べる作品です。",
+        "tools": [
+          "Csharp",
+          "Unity"
+        ],
+        "githubLink": "https://github.com/Lrs50/Projeto_Games_2D",
+        "websiteLink": "https://www.youtube.com/watch?v=CwzwKebkE7M",
+        "img": "/imgs/game_unity.webp",
+        "summary": "トゥピ・グアラニ神話に着想を得た2DアクションRPG。"
+      }
+    ],
+    "tryLive": "デモを試す",
+    "watch": "動画を見る",
+    "package": "パッケージを見る",
+    "details": "詳しく見る",
+    "code": "コード",
+    "prev": "前のプロジェクト",
+    "next": "次のプロジェクト"
+  }
 }
